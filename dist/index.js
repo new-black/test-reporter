@@ -377,7 +377,7 @@ class TestReporter {
         core.info(`Check run HTML: ${resp.data.html_url}`);
         if (isFailed && this.slackWebhook) {
             const webhook = new webhook_1.IncomingWebhook(this.slackWebhook);
-            await webhook.send("Test run failed: " + resp.data.html_url);
+            await webhook.send('Test run failed: ' + resp.data.html_url);
         }
         return results;
     }
