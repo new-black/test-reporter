@@ -19,6 +19,7 @@ import {MochaJsonParser} from './parsers/mocha-json/mocha-json-parser'
 import {normalizeDirPath, normalizeFilePath} from './utils/path-utils'
 import {getCheckRunContext} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
+import { IncomingWebhook } from '@slack/webhook'
 
 async function main(): Promise<void> {
   try {
@@ -42,6 +43,7 @@ class TestReporter {
   readonly workDirInput = core.getInput('working-directory', {required: false})
   readonly onlySummary = core.getInput('only-summary', {required: false}) === 'true'
   readonly token = core.getInput('token', {required: true})
+  readonly slackWebhook = core.getInput('slack-url', {required: false})
   readonly octokit: InstanceType<typeof GitHub>
   readonly context = getCheckRunContext()
 
@@ -193,6 +195,10 @@ class TestReporter {
     core.info(`Check run URL: ${resp.data.url}`)
     core.info(`Check run HTML: ${resp.data.html_url}`)
 
+    if (isFailed && this.slackWebhook) {
+      const webhook = new IncomingWebhook(this.slackWebhook);
+      await webhook.send("Test run failed: " + resp.data.html_url);
+    }
     return results
   }
 
