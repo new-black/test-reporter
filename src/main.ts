@@ -19,7 +19,7 @@ import {MochaJsonParser} from './parsers/mocha-json/mocha-json-parser'
 import {normalizeDirPath, normalizeFilePath} from './utils/path-utils'
 import {getCheckRunContext} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
-import { IncomingWebhook } from '@slack/webhook'
+import {IncomingWebhook} from '@slack/webhook'
 
 async function main(): Promise<void> {
   try {
@@ -196,8 +196,8 @@ class TestReporter {
     core.info(`Check run HTML: ${resp.data.html_url}`)
 
     if (isFailed && this.slackWebhook) {
-      const webhook = new IncomingWebhook(this.slackWebhook);
-      await webhook.send("Test run failed: " + resp.data.html_url);
+      const webhook = new IncomingWebhook(this.slackWebhook)
+      await webhook.send('Test run failed: ' + resp.data.html_url)
     }
     return results
   }
