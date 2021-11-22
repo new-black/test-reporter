@@ -380,51 +380,74 @@ class TestReporter {
             const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
             const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
             const failed = results.reduce((sum, tr) => sum + tr.failed, 0);
-            await webhook.send({
-                "blocks": [
+            const req = {
+                blocks: [
                     {
-                        "type": "header",
-                        "text": {
-                            "type": "plain_text",
-                            "text": "Test results",
-                            "emoji": true
+                        type: 'header',
+                        text: {
+                            type: 'plain_text',
+                            text: 'Test results'
                         }
                     },
                     {
-                        "type": "section",
-                        "fields": [
+                        type: 'section',
+                        fields: [
                             {
-                                "type": "mrkdwn",
-                                "text": `*Total:*\n${passed + skipped + failed}`
+                                type: 'mrkdwn',
+                                text: `*Total:*\n${passed + skipped + failed}`
                             },
                             {
-                                "type": "mrkdwn",
-                                "text": `*Passed:*\n:large_green_circle: ${passed}`
+                                type: 'mrkdwn',
+                                text: `*Passed:*\n:large_green_circle: ${passed}`
                             }
                         ]
                     },
                     {
-                        "type": "section",
-                        "fields": [
+                        type: 'section',
+                        fields: [
                             {
-                                "type": "mrkdwn",
-                                "text": `*Skipped:*\n:large_orange_circle: ${skipped}`
+                                type: 'mrkdwn',
+                                text: `*Skipped:*\n:large_orange_circle: ${skipped}`
                             },
                             {
-                                "type": "mrkdwn",
-                                "text": `*Failed:*\n:red_circle: ${failed}`
+                                type: 'mrkdwn',
+                                text: `*Failed:*\n:red_circle: ${failed}`
                             }
                         ]
                     },
                     {
-                        "type": "section",
-                        "text": {
-                            "type": "mrkdwn",
-                            "text": `<${resp.data.html_url}|View report>`
-                        }
+                        type: 'divider'
                     }
                 ]
+            };
+            results.map((tr, runIndex) => {
+                if (tr.failed === 0)
+                    return;
+                const runName = tr.path.slice(0, tr.path.indexOf('/TestResults/'));
+                req.blocks.push({
+                    type: 'section',
+                    fields: [
+                        {
+                            type: 'mrkdwn',
+                            text: `<${resp.data.html_url}#r${runIndex}|*${runName}*>`
+                        },
+                        {
+                            type: 'mrkdwn',
+                            text: `:red_circle: ${tr.failed}`
+                        }
+                    ]
+                });
             });
+            req.blocks.push({
+                type: 'divider'
+            }, {
+                type: 'section',
+                text: {
+                    type: 'mrkdwn',
+                    text: `<${resp.data.html_url}|View full report>`
+                }
+            });
+            await webhook.send(req);
         }
         return results;
     }
@@ -1518,7 +1541,8 @@ function getTestRunsReport(testRuns, options) {
     if (testRuns.length > 1 || options.onlySummary) {
         const tableData = testRuns.map((tr, runIndex) => {
             const time = markdown_utils_1.formatTime(tr.time);
-            const name = tr.path;
+            const folder = tr.path.indexOf('/TestResults/');
+            const name = folder > 0 ? tr.path.slice(0, folder) : tr.path;
             const addr = options.baseUrl + makeRunSlug(runIndex).link;
             const nameLink = markdown_utils_1.link(name, addr);
             const passed = tr.passed > 0 ? `${tr.passed}${markdown_utils_1.Icon.success}` : '';
@@ -1538,7 +1562,9 @@ function getTestRunsReport(testRuns, options) {
 function getSuitesReport(tr, runIndex, options) {
     const sections = [];
     const trSlug = makeRunSlug(runIndex);
-    const nameLink = `<a id="${trSlug.id}" href="${options.baseUrl + trSlug.link}">${tr.path}</a>`;
+    const folder = tr.path.indexOf('/TestResults/');
+    const name = folder > 0 ? tr.path.slice(0, folder) : tr.path;
+    const nameLink = `<a id="${trSlug.id}" href="${options.baseUrl + trSlug.link}">${name}</a>`;
     const icon = getResultIcon(tr.result);
     sections.push(`## ${icon}\xa0${nameLink}`);
     const time = markdown_utils_1.formatTime(tr.time);
