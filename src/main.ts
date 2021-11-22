@@ -195,7 +195,7 @@ class TestReporter {
     core.info(`Check run URL: ${resp.data.url}`)
     core.info(`Check run HTML: ${resp.data.html_url}`)
 
-    if (isFailed && this.slackWebhook) {
+    if (isFailed && this.slackWebhook && this.context.branch === 'master') {
       const webhook = new IncomingWebhook(this.slackWebhook)
       const passed = results.reduce((sum, tr) => sum + tr.passed, 0)
       const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0)
