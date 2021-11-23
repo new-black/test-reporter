@@ -1452,6 +1452,15 @@ function getReport(results, options = defaultOptions) {
             return report;
         }
     }
+    if (opts.listSuites === 'all') {
+        core.info("Test report summary is too big - setting 'listSuites' to 'failed'");
+        opts.listSuites = 'failed';
+        lines = renderReport(results, opts);
+        report = lines.join('\n');
+        if (getByteLength(report) <= MAX_REPORT_LENGTH) {
+            return report;
+        }
+    }
     core.warning(`Test report summary exceeded limit of ${MAX_REPORT_LENGTH} bytes and will be trimmed`);
     return trimReport(lines);
 }
@@ -1568,7 +1577,7 @@ function getSuitesReport(tr, runIndex, options) {
     if (suites.length > 0) {
         const suitesTable = markdown_utils_1.table(['Test suite', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...suites.map((s, suiteIndex) => {
             const tsTime = markdown_utils_1.formatTime(s.time);
-            const tsName = s.name.startsWith(name) ? s.name.slice(name.length) : s.name;
+            const tsName = s.name.startsWith(name) ? s.name.slice(name.length + 1) : s.name;
             const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed');
             const tsAddr = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
             const tsNameLink = skipLink ? tsName : markdown_utils_1.link(tsName, tsAddr);
