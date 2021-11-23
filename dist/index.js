@@ -251,9 +251,6 @@ class TestReporter {
         this.slackWebhook = core.getInput('slack-url', { required: false });
         this.context = github_utils_1.getCheckRunContext();
         this.octokit = github.getOctokit(this.token);
-        core.info('octokit: ' + JSON.stringify(this.octokit));
-        core.info('octokit.rest: ' + JSON.stringify(this.octokit.rest));
-        core.info('octokit.rest.git: ' + JSON.stringify(this.octokit.rest.git));
         if (this.listSuites !== 'all' && this.listSuites !== 'failed') {
             core.setFailed(`Input parameter 'list-suites' has invalid value`);
             return;
