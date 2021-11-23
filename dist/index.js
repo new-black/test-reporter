@@ -79,7 +79,7 @@ class ArtifactProvider {
     }
     async load() {
         const result = {};
-        const resp = await this.octokit.actions.listWorkflowRunArtifacts({
+        const resp = await this.octokit.rest.actions.listWorkflowRunArtifacts({
             ...github.context.repo,
             run_id: this.runId
         });
@@ -341,7 +341,7 @@ class TestReporter {
             results.push(tr);
         }
         core.info(`Creating check run ${name}`);
-        const createResp = await this.octokit.checks.create({
+        const createResp = await this.octokit.rest.checks.create({
             head_sha: this.context.sha,
             name,
             status: 'in_progress',
@@ -353,7 +353,7 @@ class TestReporter {
         });
         core.info('Creating report summary');
         const { listSuites, listTests, onlySummary } = this;
-        const baseUrl = createResp.data.html_url;
+        const baseUrl = createResp.data.html_url || "";
         const summary = get_report_1.getReport(results, { listSuites, listTests, baseUrl, onlySummary });
         core.info('Creating annotations');
         const annotations = get_annotations_1.getAnnotations(results, this.maxAnnotations);
@@ -361,7 +361,7 @@ class TestReporter {
         const conclusion = isFailed ? 'failure' : 'success';
         const icon = isFailed ? markdown_utils_1.Icon.fail : markdown_utils_1.Icon.success;
         core.info(`Updating check run conclusion (${conclusion}) and output`);
-        const resp = await this.octokit.checks.update({
+        const resp = await this.octokit.rest.checks.update({
             check_run_id: createResp.data.id,
             conclusion,
             status: 'completed',
@@ -375,6 +375,7 @@ class TestReporter {
         core.info(`Check run create response: ${resp.status}`);
         core.info(`Check run URL: ${resp.data.url}`);
         core.info(`Check run HTML: ${resp.data.html_url}`);
+        core.info(`Check run details: ${resp.data.details_url}`);
         if (isFailed && this.slackWebhook && this.context.branch === 'master') {
             const webhook = new webhook_1.IncomingWebhook(this.slackWebhook);
             const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
@@ -1923,7 +1924,7 @@ async function downloadArtifact(octokit, artifactId, fileName, token) {
     core.startGroup(`Downloading artifact ${fileName}`);
     try {
         core.info(`Artifact ID: ${artifactId}`);
-        const req = octokit.actions.downloadArtifact.endpoint({
+        const req = octokit.rest.actions.downloadArtifact.endpoint({
             ...github.context.repo,
             artifact_id: artifactId,
             archive_format: 'zip'
@@ -1964,7 +1965,7 @@ exports.downloadArtifact = downloadArtifact;
 async function listFiles(octokit, sha) {
     core.startGroup('Fetching list of tracked files from GitHub');
     try {
-        const commit = await octokit.git.getCommit({
+        const commit = await octokit.rest.git.getCommit({
             commit_sha: sha,
             ...github.context.repo
         });
@@ -1980,14 +1981,14 @@ async function listGitTree(octokit, sha, path) {
     const pathLog = path ? ` at ${path}` : '';
     core.info(`Fetching tree ${sha}${pathLog}`);
     let truncated = false;
-    let tree = await octokit.git.getTree({
+    let tree = await octokit.rest.git.getTree({
         recursive: 'true',
         tree_sha: sha,
         ...github.context.repo
     });
     if (tree.data.truncated) {
         truncated = true;
-        tree = await octokit.git.getTree({
+        tree = await octokit.rest.git.getTree({
             tree_sha: sha,
             ...github.context.repo
         });
@@ -1999,7 +2000,7 @@ async function listGitTree(octokit, sha, path) {
             result.push(file);
         }
         else if (tr.type === 'tree' && truncated) {
-            const files = await listGitTree(octokit, tr.sha, `${file}/`);
+            const files = await listGitTree(octokit, tr.sha || "", `${file}/`);
             result.push(...files);
         }
     }
