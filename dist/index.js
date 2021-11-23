@@ -375,7 +375,7 @@ class TestReporter {
         core.info(`Check run create response: ${resp.status}`);
         core.info(`Check run URL: ${resp.data.url}`);
         core.info(`Check run HTML: ${resp.data.html_url}`);
-        if (isFailed && this.slackWebhook && this.context.branch == 'master') {
+        if (isFailed && this.slackWebhook && this.context.branch === 'master') {
             const webhook = new webhook_1.IncomingWebhook(this.slackWebhook);
             const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
             const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
@@ -1576,7 +1576,7 @@ function getSuitesReport(tr, runIndex, options) {
     if (suites.length > 0) {
         const suitesTable = markdown_utils_1.table(['Test suite', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...suites.map((s, suiteIndex) => {
             const tsTime = markdown_utils_1.formatTime(s.time);
-            const tsName = s.name;
+            const tsName = s.name.startsWith(name) ? s.name.slice(name.length) : s.name;
             const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed');
             const tsAddr = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
             const tsNameLink = skipLink ? tsName : markdown_utils_1.link(tsName, tsAddr);
