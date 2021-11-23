@@ -353,7 +353,7 @@ class TestReporter {
         });
         core.info('Creating report summary');
         const { listSuites, listTests, onlySummary } = this;
-        const baseUrl = createResp.data.html_url || "";
+        const baseUrl = createResp.data.html_url || '';
         const summary = get_report_1.getReport(results, { listSuites, listTests, baseUrl, onlySummary });
         core.info('Creating annotations');
         const annotations = get_annotations_1.getAnnotations(results, this.maxAnnotations);
@@ -2000,7 +2000,7 @@ async function listGitTree(octokit, sha, path) {
             result.push(file);
         }
         else if (tr.type === 'tree' && truncated) {
-            const files = await listGitTree(octokit, tr.sha || "", `${file}/`);
+            const files = await listGitTree(octokit, tr.sha || '', `${file}/`);
             result.push(...files);
         }
     }
