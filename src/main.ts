@@ -129,6 +129,11 @@ class TestReporter {
     }
 
     for (const [reportName, files] of Object.entries(input)) {
+
+      if(reportName === 'artifactFilePaths') {
+        continue;
+      }
+
       try {
         core.startGroup(`Creating test report ${reportName}`)
         const tr = await this.createReport(parser, reportName, files)
