@@ -70,7 +70,8 @@ class ArtifactProvider {
     }
     async load() {
         const result = {
-            artifactFilePaths: []
+            artifactFilePaths: [],
+            reports: {}
         };
         const resp = await this.octokit.rest.actions.listWorkflowRunArtifacts({
             ...github.context.repo,
@@ -84,6 +85,14 @@ class ArtifactProvider {
         if (artifacts.length === 0) {
             core.warning(`No artifact matches ${this.artifact}`);
             return result;
+        }
+        const versionArtifact = resp.data.artifacts.find(a => a.name == "version.txt");
+        if (versionArtifact) {
+            await github_utils_1.downloadArtifact(this.octokit, versionArtifact.id, "version.txt", this.token);
+            result.versionArtifactPath = "version.txt";
+        }
+        else {
+            core.warning(`Could not find version.txt artifact among these artifacts: ${resp.data.artifacts.map(a => a.name).join(", ")}`);
         }
         for (const art of artifacts) {
             const fileName = `${art.name}.zip`;
@@ -109,11 +118,11 @@ class ArtifactProvider {
                     files.push({ file, content });
                     core.info(`Read ${file}: ${content.length} chars`);
                 }
-                if (result[reportName]) {
-                    result[reportName].push(...files);
+                if (result.reports[reportName]) {
+                    result.reports[reportName].push(...files);
                 }
                 else {
-                    result[reportName] = files;
+                    result.reports[reportName] = files;
                 }
             }
             finally {
@@ -177,7 +186,12 @@ class LocalFileProvider {
                 result.push({ file, content });
             }
         }
-        return { [this.name]: result, artifactFilePaths: [] };
+        return {
+            artifactFilePaths: [],
+            reports: {
+                [this.name]: result
+            }
+        };
     }
     async listTrackedFiles() {
         return git_1.listFiles();
@@ -301,23 +315,23 @@ class TestReporter {
         const parser = this.getParser(this.reporter, options);
         const results = [];
         const input = await inputProvider.load();
+        let version = null;
+        if (input.versionArtifactPath) {
+            version = fs_1.default.readFileSync(input.versionArtifactPath).toString();
+            core.info(`Using EVA version ${version}`);
+        }
         for (const a of input.artifactFilePaths) {
-            const stats = fs_1.default.statSync(a);
-            const fileSizeInBytes = stats.size;
             const readStream = fs_1.default.createReadStream(a);
             try {
                 const post = bent_1.default(this.resultsEndpoint, 'POST', {}, 200);
-                await post(`TestResults?Secret=${this.resultsEndpointSecret}`, readStream);
+                await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ''}`, readStream);
                 core.info(`Uploaded TRX files: ${a}`);
             }
             catch (ex) {
                 core.warning(`Could not upload file ${a}: ${ex}`);
             }
         }
-        for (const [reportName, files] of Object.entries(input)) {
-            if (reportName === 'artifactFilePaths') {
-                continue;
-            }
+        for (const [reportName, files] of Object.entries(input.reports)) {
             try {
                 core.startGroup(`Creating test report ${reportName}`);
                 const tr = await this.createReport(parser, reportName, files);
