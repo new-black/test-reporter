@@ -248,6 +248,7 @@ const webhook_1 = __nccwpck_require__(1095);
 const fs_1 = __importDefault(__nccwpck_require__(7147));
 //import fetch from 'node-fetch'
 const bent_1 = __importDefault(__nccwpck_require__(3113));
+const process_1 = __nccwpck_require__(7282);
 async function main() {
     try {
         const testReporter = new TestReporter();
@@ -318,7 +319,7 @@ class TestReporter {
         let version = null;
         if (input.versionArtifactPath) {
             version = fs_1.default.readFileSync(input.versionArtifactPath).toString();
-            core.info(`Using EVA version ${version}`);
+            core.info(`Using EVA version ${version}, current directory: ${process_1.cwd()}`);
         }
         for (const a of input.artifactFilePaths) {
             const readStream = fs_1.default.createReadStream(a);
@@ -40163,6 +40164,14 @@ module.exports = require("os");
 
 "use strict";
 module.exports = require("path");
+
+/***/ }),
+
+/***/ 7282:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("process");
 
 /***/ }),
 
