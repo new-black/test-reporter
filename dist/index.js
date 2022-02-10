@@ -249,6 +249,7 @@ const fs_1 = __importDefault(__nccwpck_require__(7147));
 //import fetch from 'node-fetch'
 const bent_1 = __importDefault(__nccwpck_require__(3113));
 const process_1 = __nccwpck_require__(7282);
+const adm_zip_1 = __importDefault(__nccwpck_require__(6761));
 async function main() {
     try {
         const testReporter = new TestReporter();
@@ -318,14 +319,16 @@ class TestReporter {
         const input = await inputProvider.load();
         let version = null;
         if (input.versionArtifactPath) {
-            version = fs_1.default.readFileSync(input.versionArtifactPath).toString();
+            const zip = new adm_zip_1.default(input.versionArtifactPath);
+            const entry = zip.getEntry('version.txt');
+            version = zip.readAsText(entry);
             core.info(`Using EVA version ${version}, current directory: ${process_1.cwd()}`);
         }
         for (const a of input.artifactFilePaths) {
             const readStream = fs_1.default.createReadStream(a);
             try {
                 const post = bent_1.default(this.resultsEndpoint, 'POST', {}, 200);
-                await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ''}`, readStream);
+                const response = await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ''}`, readStream);
                 core.info(`Uploaded TRX files: ${a}`);
             }
             catch (ex) {
