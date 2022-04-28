@@ -86,13 +86,13 @@ class ArtifactProvider {
             core.warning(`No artifact matches ${this.artifact}`);
             return result;
         }
-        const versionArtifact = resp.data.artifacts.find(a => a.name == "version.txt");
+        const versionArtifact = resp.data.artifacts.find(a => a.name === 'version.txt');
         if (versionArtifact) {
-            await github_utils_1.downloadArtifact(this.octokit, versionArtifact.id, "version.txt", this.token);
-            result.versionArtifactPath = "version.txt";
+            await github_utils_1.downloadArtifact(this.octokit, versionArtifact.id, 'version.txt', this.token);
+            result.versionArtifactPath = 'version.txt';
         }
         else {
-            core.warning(`Could not find version.txt artifact among these artifacts: ${resp.data.artifacts.map(a => a.name).join(", ")}`);
+            core.warning(`Could not find version.txt artifact among these artifacts: ${resp.data.artifacts.map(a => a.name).join(', ')}`);
         }
         for (const art of artifacts) {
             const fileName = `${art.name}.zip`;
@@ -328,7 +328,7 @@ class TestReporter {
             const readStream = fs_1.default.createReadStream(a);
             try {
                 const post = bent_1.default(this.resultsEndpoint, 'POST', {}, 200);
-                const response = await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ''}`, readStream);
+                await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}`, readStream);
                 core.info(`Uploaded TRX files: ${a}`);
             }
             catch (ex) {
@@ -412,7 +412,7 @@ class TestReporter {
         core.info(`Check run URL: ${resp.data.url}`);
         core.info(`Check run HTML: ${resp.data.html_url}`);
         core.info(`Check run details: ${resp.data.details_url}`);
-        if (isFailed && this.slackWebhook && this.context.branch === 'master') {
+        if (this.slackWebhook && this.context.branch === 'master') {
             const webhook = new webhook_1.IncomingWebhook(this.slackWebhook);
             const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
             const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
@@ -420,40 +420,11 @@ class TestReporter {
             const req = {
                 blocks: [
                     {
-                        type: 'header',
+                        type: 'section',
                         text: {
-                            type: 'plain_text',
-                            text: 'Test results'
+                            type: 'mrkdwn',
+                            text: `<${resp.data.html_url}|Result>: :large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed}`
                         }
-                    },
-                    {
-                        type: 'section',
-                        fields: [
-                            {
-                                type: 'mrkdwn',
-                                text: `*Total:*\n${passed + skipped + failed}`
-                            },
-                            {
-                                type: 'mrkdwn',
-                                text: `*Passed:*\n:large_green_circle: ${passed}`
-                            }
-                        ]
-                    },
-                    {
-                        type: 'section',
-                        fields: [
-                            {
-                                type: 'mrkdwn',
-                                text: `*Skipped:*\n:large_orange_circle: ${skipped}`
-                            },
-                            {
-                                type: 'mrkdwn',
-                                text: `*Failed:*\n:red_circle: ${failed}`
-                            }
-                        ]
-                    },
-                    {
-                        type: 'divider'
                     }
                 ]
             };
@@ -463,26 +434,11 @@ class TestReporter {
                 const runName = tr.path.slice(0, tr.path.indexOf('/TestResults/'));
                 req.blocks.push({
                     type: 'section',
-                    fields: [
-                        {
-                            type: 'mrkdwn',
-                            text: `<${resp.data.html_url}#r${runIndex}|*${runName}*>`
-                        },
-                        {
-                            type: 'mrkdwn',
-                            text: `:red_circle: ${tr.failed}`
-                        }
-                    ]
+                    text: {
+                        type: 'mrkdwn',
+                        text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
+                    }
                 });
-            });
-            req.blocks.push({
-                type: 'divider'
-            }, {
-                type: 'section',
-                text: {
-                    type: 'mrkdwn',
-                    text: `<${resp.data.html_url}|View full report>`
-                }
             });
             await webhook.send(req);
         }
