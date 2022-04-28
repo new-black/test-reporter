@@ -247,7 +247,7 @@ class TestReporter {
           fields: [
             {
               type: 'mrkdwn',
-              text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|*${runName}*>`
+              text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
             }
           ]
         })
