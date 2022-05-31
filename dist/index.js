@@ -42,7 +42,7 @@ class LocalFileProvider {
     }
     async load() {
         const result = [];
-        const zip = new adm_zip_1.default('test-results');
+        const zip = new adm_zip_1.default();
         for (const pat of this.pattern) {
             const paths = await fast_glob_1.default(pat, { dot: true });
             for (const file of paths) {
