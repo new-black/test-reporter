@@ -181,24 +181,7 @@ class TestReporter {
         const input = await inputProvider.load();
         try {
             const readStream = input.trxZip.toBuffer();
-            try {
-                core.info(`exists 1: ${fs_1.default.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt')}`);
-                core.info(`exists 2: ${fs_1.default.existsSync('/src/EVA.TestSuite.Core/bin/Release/version.txt')}`);
-                try {
-                    core.info(`current dir ${__dirname}`);
-                }
-                catch (error) {
-                    core.info("couldnt get current dir");
-                }
-                core.info('src exists ' + fs_1.default.existsSync('src'));
-                fs_1.default.readdirSync('./').map(x => {
-                    core.info('file: ' + x);
-                });
-            }
-            catch (error) {
-                core.warning("couldnt do debug stuff" + error);
-            }
-            const version = fs_1.default.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString();
+            const version = fs_1.default.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt') ? fs_1.default.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString() : null;
             core.info(`Using EVA version ${version}, current directory: ${process_1.cwd()}`);
             const post = bent_1.default(this.resultsEndpoint, 'POST', {}, 200);
             await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}`, readStream);

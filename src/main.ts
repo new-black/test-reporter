@@ -108,28 +108,8 @@ class TestReporter {
 
     try {
       const readStream = input.trxZip.toBuffer();
-
-      try {
-        core.info(`exists 1: ${fs.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt')}`);
-        core.info(`exists 2: ${fs.existsSync('/src/EVA.TestSuite.Core/bin/Release/version.txt')}`);
-        try {
-          core.info(`current dir ${__dirname}`);
-        }
-        catch (error: any) {
-          core.info("couldnt get current dir");
-        }
-        core.info('src exists ' + fs.existsSync('src'));
-
-        fs.readdirSync('./').map(x => {
-          core.info('file: ' + x);
-        });
-
-      }
-      catch (error: any) {
-        core.warning("couldnt do debug stuff" + error);
-      }
-
-      const version = fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString();
+      const version = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt') ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString() : null;
+      
       core.info(`Using EVA version ${version}, current directory: ${cwd()}`)
 
       const post = bent(this.resultsEndpoint, 'POST', {}, 200)
