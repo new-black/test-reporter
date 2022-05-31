@@ -2,21 +2,31 @@ import * as fs from 'fs'
 import glob from 'fast-glob'
 import {FileContent, InputProvider, ReportInput} from './input-provider'
 import {listFiles} from '../utils/git'
+import Zip from 'adm-zip'
+import path from 'path'
 
 export class LocalFileProvider implements InputProvider {
   constructor(readonly name: string, readonly pattern: string[]) {}
 
   async load(): Promise<ReportInput> {
     const result: FileContent[] = []
+    const zip = new Zip('test-results')
     for (const pat of this.pattern) {
       const paths = await glob(pat, {dot: true})
       for (const file of paths) {
+        var dir = path.dirname(file);
+        zip.addLocalFile(file, dir)
         const content = await fs.promises.readFile(file, {encoding: 'utf8'})
         result.push({file, content})
       }
     }
 
-    return {[this.name]: result, artifactFilePaths: []}
+    return {
+      trxZip: zip,
+      reports: {
+        [this.name]: result
+      }
+    }
   }
 
   async listTrackedFiles(): Promise<string[]> {
