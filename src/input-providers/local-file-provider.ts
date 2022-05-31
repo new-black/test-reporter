@@ -10,7 +10,7 @@ export class LocalFileProvider implements InputProvider {
 
   async load(): Promise<ReportInput> {
     const result: FileContent[] = []
-    const zip = new Zip('test-results')
+    const zip = new Zip()
     for (const pat of this.pattern) {
       const paths = await glob(pat, {dot: true})
       for (const file of paths) {
