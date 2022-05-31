@@ -24,6 +24,7 @@ import fs from 'fs'
 import bent from 'bent'
 import { cwd } from 'process'
 import Zip from 'adm-zip'
+import path from 'path'
 
 async function main(): Promise<void> {
   try {
@@ -107,6 +108,26 @@ class TestReporter {
 
     try {
       const readStream = input.trxZip.toBuffer();
+
+      try {
+        core.info(`exists 1: ${fs.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt')}`);
+        core.info(`exists 2: ${fs.existsSync('/src/EVA.TestSuite.Core/bin/Release/version.txt')}`);
+        try {
+          core.info(`current dir ${__dirname}`);
+        }
+        catch (error: any) {
+          core.info("couldnt get current dir");
+        }
+        core.info('src exists ' + fs.existsSync('src'));
+
+        fs.readdirSync('./').map(x => {
+          core.info('file: ' + x);
+        });
+
+      }
+      catch (error: any) {
+        core.warning("couldnt do debug stuff" + error);
+      }
 
       const version = fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString();
       core.info(`Using EVA version ${version}, current directory: ${cwd()}`)
@@ -231,7 +252,7 @@ class TestReporter {
       results.map((tr, runIndex) => {
         if (tr.failed === 0) return
         const runName = tr.path.slice(0, tr.path.indexOf('/TestResults/'))
-   
+
         req.blocks.push({
           type: 'section',
           text: {
