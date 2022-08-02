@@ -109,12 +109,13 @@ class TestReporter {
     try {
       const readStream = input.trxZip.toBuffer();
       const version = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt') ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString() : null;
+      const commitID = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/commit.txt') ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/commit.txt').toString() : null;
       
-      core.info(`Using EVA version ${version}, current directory: ${cwd()}`)
+      core.info(`Using EVA version ${version}, commit ${commitID}, current directory: ${cwd()}`)
 
       const post = bent(this.resultsEndpoint, 'POST', {}, 200)
       await post(
-        `TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}`,
+        `TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${commitID ? '&EVACommitID=' + commitID : ''}`,
         readStream
       )
       core.info(`Uploaded TRX files`)
