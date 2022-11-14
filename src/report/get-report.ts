@@ -1,8 +1,8 @@
 import * as core from '@actions/core'
-import {TestExecutionResult, TestRunResult, TestSuiteResult} from '../test-results'
-import {Align, formatTime, Icon, link, table} from '../utils/markdown-utils'
-import {getFirstNonEmptyLine} from '../utils/parse-utils'
-import {slug} from '../utils/slugger'
+import {TestExecutionResult, TestRunResult, TestSuiteResult} from '../test-results.js'
+import {Align, formatTime, Icon, link, table} from '../utils/markdown-utils.js'
+import {getFirstNonEmptyLine} from '../utils/parse-utils.js'
+import {slug} from '../utils/slugger.js'
 
 const MAX_REPORT_LENGTH = 65535
 

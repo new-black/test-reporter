@@ -1,4 +1,4 @@
-import {normalizeFilePath} from './path-utils'
+import {normalizeFilePath} from './path-utils.js'
 
 export function getExceptionSource(
   stackTrace: string,

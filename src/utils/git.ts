@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import exec from './exec'
+import exec from './exec.js'
 
 export async function listFiles(): Promise<string[]> {
   core.startGroup('Listing all files tracked by git')

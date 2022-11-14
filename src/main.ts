@@ -1,30 +1,28 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import { GitHub } from '@actions/github/lib/utils'
+import {GitHub} from '@actions/github/lib/utils.js'
 
-import { LocalFileProvider } from './input-providers/local-file-provider'
-import { FileContent } from './input-providers/input-provider'
-import { ParseOptions, TestParser } from './test-parser'
-import { TestRunResult } from './test-results'
-import { getAnnotations } from './report/get-annotations'
-import { getReport } from './report/get-report'
+import {LocalFileProvider} from './input-providers/local-file-provider.js'
+import {FileContent} from './input-providers/input-provider.js'
+import {ParseOptions, TestParser} from './test-parser.js'
+import {TestRunResult} from './test-results.js'
+import {getAnnotations} from './report/get-annotations.js'
+import {getReport} from './report/get-report.js'
 
-import { DartJsonParser } from './parsers/dart-json/dart-json-parser'
-import { DotnetTrxParser } from './parsers/dotnet-trx/dotnet-trx-parser'
-import { JavaJunitParser } from './parsers/java-junit/java-junit-parser'
-import { JestJunitParser } from './parsers/jest-junit/jest-junit-parser'
-import { MochaJsonParser } from './parsers/mocha-json/mocha-json-parser'
+import {DartJsonParser} from './parsers/dart-json/dart-json-parser.js'
+import {DotnetTrxParser} from './parsers/dotnet-trx/dotnet-trx-parser.js'
+import {JavaJunitParser} from './parsers/java-junit/java-junit-parser.js'
+import {JestJunitParser} from './parsers/jest-junit/jest-junit-parser.js'
+import {MochaJsonParser} from './parsers/mocha-json/mocha-json-parser.js'
 
-import { normalizeDirPath, normalizeFilePath } from './utils/path-utils'
-import { getCheckRunContext } from './utils/github-utils'
-import { Icon } from './utils/markdown-utils'
-import { IncomingWebhook } from '@slack/webhook'
+import {normalizeDirPath, normalizeFilePath} from './utils/path-utils.js'
+import {getCheckRunContext} from './utils/github-utils.js'
+import {Icon} from './utils/markdown-utils.js'
+import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
 //import fetch from 'node-fetch'
 import bent from 'bent'
-import { cwd } from 'process'
-import Zip from 'adm-zip'
-import path from 'path'
+import {cwd} from 'process'
 
 async function main(): Promise<void> {
   try {
@@ -36,21 +34,21 @@ async function main(): Promise<void> {
 }
 
 class TestReporter {
-  readonly artifact = core.getInput('artifact', { required: false })
-  readonly name = core.getInput('name', { required: true })
-  readonly path = core.getInput('path', { required: true })
-  readonly pathReplaceBackslashes = core.getInput('path-replace-backslashes', { required: false }) === 'true'
-  readonly reporter = core.getInput('reporter', { required: true })
-  readonly listSuites = core.getInput('list-suites', { required: true }) as 'all' | 'failed'
-  readonly listTests = core.getInput('list-tests', { required: true }) as 'all' | 'failed' | 'none'
-  readonly maxAnnotations = parseInt(core.getInput('max-annotations', { required: true }))
-  readonly failOnError = core.getInput('fail-on-error', { required: true }) === 'true'
-  readonly workDirInput = core.getInput('working-directory', { required: false })
-  readonly onlySummary = core.getInput('only-summary', { required: false }) === 'true'
-  readonly token = core.getInput('token', { required: true })
-  readonly slackWebhook = core.getInput('slack-url', { required: false })
-  readonly resultsEndpoint = core.getInput('test-results-endpoint', { required: true })
-  readonly resultsEndpointSecret = core.getInput('test-results-endpoint-secret', { required: true })
+  readonly artifact = core.getInput('artifact', {required: false})
+  readonly name = core.getInput('name', {required: true})
+  readonly path = core.getInput('path', {required: true})
+  readonly pathReplaceBackslashes = core.getInput('path-replace-backslashes', {required: false}) === 'true'
+  readonly reporter = core.getInput('reporter', {required: true})
+  readonly listSuites = core.getInput('list-suites', {required: true}) as 'all' | 'failed'
+  readonly listTests = core.getInput('list-tests', {required: true}) as 'all' | 'failed' | 'none'
+  readonly maxAnnotations = parseInt(core.getInput('max-annotations', {required: true}))
+  readonly failOnError = core.getInput('fail-on-error', {required: true}) === 'true'
+  readonly workDirInput = core.getInput('working-directory', {required: false})
+  readonly onlySummary = core.getInput('only-summary', {required: false}) === 'true'
+  readonly token = core.getInput('token', {required: true})
+  readonly slackWebhook = core.getInput('slack-url', {required: false})
+  readonly resultsEndpoint = core.getInput('test-results-endpoint', {required: true})
+  readonly resultsEndpointSecret = core.getInput('test-results-endpoint-secret', {required: true})
   readonly octokit: InstanceType<typeof GitHub>
   readonly context = getCheckRunContext()
 
@@ -107,22 +105,27 @@ class TestReporter {
     const input = await inputProvider.load()
 
     try {
-      const readStream = input.trxZip.toBuffer();
-      const version = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt') ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString() : null;
-      const commitID = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/commit.txt') ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/commit.txt').toString() : null;
-      
+      const readStream = input.trxZip.toBuffer()
+      const version = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt')
+        ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString()
+        : null
+      const commitID = fs.existsSync('src/EVA.TestSuite.Core/bin/Release/commit.txt')
+        ? fs.readFileSync('src/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
+        : null
+
       core.info(`Using EVA version ${version}, commit ${commitID}, current directory: ${cwd()}`)
 
       const post = bent(this.resultsEndpoint, 'POST', {}, 200)
       await post(
-        `TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${commitID ? '&EVACommitID=' + commitID : ''}`,
+        `TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${
+          commitID ? '&EVACommitID=' + commitID : ''
+        }`,
         readStream
       )
       core.info(`Uploaded TRX files`)
     } catch (ex) {
       core.warning(`Could not upload TRX ZIP file: ${ex}`)
     }
-
 
     for (const [reportName, files] of Object.entries(input.reports)) {
       try {
@@ -165,7 +168,7 @@ class TestReporter {
     }
 
     const results: TestRunResult[] = []
-    for (const { file, content } of files) {
+    for (const {file, content} of files) {
       core.info(`Processing test results from ${file}`)
       const tr = await parser.parse(file, content)
       results.push(tr)
@@ -184,9 +187,9 @@ class TestReporter {
     })
 
     core.info('Creating report summary')
-    const { listSuites, listTests, onlySummary } = this
+    const {listSuites, listTests, onlySummary} = this
     const baseUrl = createResp.data.html_url || ''
-    const summary = getReport(results, { listSuites, listTests, baseUrl, onlySummary })
+    const summary = getReport(results, {listSuites, listTests, baseUrl, onlySummary})
 
     core.info('Creating annotations')
     const annotations = getAnnotations(results, this.maxAnnotations)
