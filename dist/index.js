@@ -1,4 +1,5 @@
-require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
+require('./sourcemap-register.js');import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 9399:
@@ -8,7 +9,11 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -44,7 +49,7 @@ class LocalFileProvider {
         const result = [];
         const zip = new adm_zip_1.default();
         for (const pat of this.pattern) {
-            const paths = await fast_glob_1.default(pat, { dot: true });
+            const paths = await (0, fast_glob_1.default)(pat, { dot: true });
             for (const file of paths) {
                 const dir = path_1.default.dirname(file);
                 zip.addLocalFile(file, dir);
@@ -60,7 +65,7 @@ class LocalFileProvider {
         };
     }
     async listTrackedFiles() {
-        return git_1.listFiles();
+        return (0, git_1.listFiles)();
     }
 }
 exports.LocalFileProvider = LocalFileProvider;
@@ -75,7 +80,11 @@ exports.LocalFileProvider = LocalFileProvider;
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -140,7 +149,7 @@ class TestReporter {
         this.slackWebhook = core.getInput('slack-url', { required: false });
         this.resultsEndpoint = core.getInput('test-results-endpoint', { required: true });
         this.resultsEndpointSecret = core.getInput('test-results-endpoint-secret', { required: true });
-        this.context = github_utils_1.getCheckRunContext();
+        this.context = (0, github_utils_1.getCheckRunContext)();
         this.octokit = github.getOctokit(this.token);
         if (this.listSuites !== 'all' && this.listSuites !== 'failed') {
             core.setFailed(`Input parameter 'list-suites' has invalid value`);
@@ -168,7 +177,7 @@ class TestReporter {
         const inputProvider = new local_file_provider_1.LocalFileProvider(this.name, pattern);
         const parseErrors = this.maxAnnotations > 0;
         const trackedFiles = await inputProvider.listTrackedFiles();
-        const workDir = this.artifact ? undefined : path_utils_1.normalizeDirPath(process.cwd(), true);
+        const workDir = this.artifact ? undefined : (0, path_utils_1.normalizeDirPath)(process.cwd(), true);
         core.info(`Found ${trackedFiles.length} files tracked by GitHub`);
         const options = {
             workDir,
@@ -187,8 +196,8 @@ class TestReporter {
             const commitID = fs_1.default.existsSync('src/EVA.TestSuite.Core/bin/Release/commit.txt')
                 ? fs_1.default.readFileSync('src/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
                 : null;
-            core.info(`Using EVA version ${version}, commit ${commitID}, current directory: ${process_1.cwd()}`);
-            const post = bent_1.default(this.resultsEndpoint, 'POST', {}, 200);
+            core.info(`Using EVA version ${version}, commit ${commitID}, current directory: ${(0, process_1.cwd)()}`);
+            const post = (0, bent_1.default)(this.resultsEndpoint, 'POST', {}, 200);
             await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${commitID ? '&EVACommitID=' + commitID : ''}`, readStream);
             core.info(`Uploaded TRX files`);
         }
@@ -250,9 +259,9 @@ class TestReporter {
         core.info('Creating report summary');
         const { listSuites, listTests, onlySummary } = this;
         const baseUrl = createResp.data.html_url || '';
-        const summary = get_report_1.getReport(results, { listSuites, listTests, baseUrl, onlySummary });
+        const summary = (0, get_report_1.getReport)(results, { listSuites, listTests, baseUrl, onlySummary });
         core.info('Creating annotations');
-        const annotations = get_annotations_1.getAnnotations(results, this.maxAnnotations);
+        const annotations = (0, get_annotations_1.getAnnotations)(results, this.maxAnnotations);
         const isFailed = results.some(tr => tr.result === 'failed');
         const conclusion = isFailed ? 'failure' : 'success';
         const icon = isFailed ? markdown_utils_1.Icon.fail : markdown_utils_1.Icon.success;
@@ -402,7 +411,8 @@ class DartJsonParser {
                 return JSON.parse(str);
             }
             catch (e) {
-                const col = e.columnNumber !== undefined ? `:${e.columnNumber}` : '';
+                const errWithCol = e;
+                const col = errWithCol.columnNumber !== undefined ? `:${errWithCol.columnNumber}` : '';
                 throw new Error(`Invalid JSON at ${path}:${i + 1}${col}\n\n${e}`);
             }
         })
@@ -412,29 +422,29 @@ class DartJsonParser {
         const suites = {};
         const tests = {};
         for (const evt of events) {
-            if (dart_json_types_1.isSuiteEvent(evt)) {
+            if ((0, dart_json_types_1.isSuiteEvent)(evt)) {
                 suites[evt.suite.id] = new TestSuite(evt.suite);
             }
-            else if (dart_json_types_1.isGroupEvent(evt)) {
+            else if ((0, dart_json_types_1.isGroupEvent)(evt)) {
                 suites[evt.group.suiteID].groups[evt.group.id] = new TestGroup(evt.group);
             }
-            else if (dart_json_types_1.isTestStartEvent(evt) && evt.test.url !== null) {
+            else if ((0, dart_json_types_1.isTestStartEvent)(evt) && evt.test.url !== null) {
                 const test = new TestCase(evt);
                 const suite = suites[evt.test.suiteID];
                 const group = suite.groups[evt.test.groupIDs[evt.test.groupIDs.length - 1]];
                 group.tests.push(test);
                 tests[evt.test.id] = test;
             }
-            else if (dart_json_types_1.isTestDoneEvent(evt) && !evt.hidden && tests[evt.testID]) {
+            else if ((0, dart_json_types_1.isTestDoneEvent)(evt) && !evt.hidden && tests[evt.testID]) {
                 tests[evt.testID].testDone = evt;
             }
-            else if (dart_json_types_1.isErrorEvent(evt) && tests[evt.testID]) {
+            else if ((0, dart_json_types_1.isErrorEvent)(evt) && tests[evt.testID]) {
                 tests[evt.testID].error = evt;
             }
-            else if (dart_json_types_1.isMessageEvent(evt) && tests[evt.testID]) {
+            else if ((0, dart_json_types_1.isMessageEvent)(evt) && tests[evt.testID]) {
                 tests[evt.testID].print.push(evt);
             }
-            else if (dart_json_types_1.isDoneEvent(evt)) {
+            else if ((0, dart_json_types_1.isDoneEvent)(evt)) {
                 success = evt.success;
                 totalTime = evt.time;
             }
@@ -519,7 +529,7 @@ class DartJsonParser {
             const match = str.match(re);
             if (match !== null) {
                 const [_, pathStr, lineStr] = match;
-                const path = path_utils_1.normalizeFilePath(this.getRelativePath(pathStr));
+                const path = (0, path_utils_1.normalizeFilePath)(this.getRelativePath(pathStr));
                 if (trackedFiles.includes(path)) {
                     const line = parseInt(lineStr);
                     return { path, line };
@@ -532,7 +542,7 @@ class DartJsonParser {
         if (path.startsWith(prefix)) {
             path = path.substr(prefix.length);
         }
-        path = path_utils_1.normalizeFilePath(path);
+        path = (0, path_utils_1.normalizeFilePath)(path);
         const workDir = this.getWorkDir(path);
         if (workDir !== undefined && path.startsWith(workDir)) {
             path = path.substr(workDir.length);
@@ -541,7 +551,7 @@ class DartJsonParser {
     }
     getWorkDir(path) {
         var _a, _b;
-        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = path_utils_1.getBasePath(path, this.options.trackedFiles)));
+        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = (0, path_utils_1.getBasePath)(path, this.options.trackedFiles)));
     }
 }
 exports.DartJsonParser = DartJsonParser;
@@ -637,7 +647,7 @@ class DotnetTrxParser {
     }
     async getTrxReport(path, content) {
         try {
-            return (await xml2js_1.parseStringPromise(content));
+            return (await (0, xml2js_1.parseStringPromise)(content));
         }
         catch (e) {
             throw new Error(`Invalid XML at ${path}\n\n${e}`);
@@ -667,7 +677,7 @@ class DotnetTrxParser {
             }
             const error = this.getErrorInfo(r.result);
             const durationAttr = r.result.$.duration;
-            const duration = durationAttr ? parse_utils_1.parseNetDuration(durationAttr) : 0;
+            const duration = durationAttr ? (0, parse_utils_1.parseNetDuration)(durationAttr) : 0;
             const resultTestName = r.result.$.testName;
             const testName = resultTestName.startsWith(className) && resultTestName[className.length] === '.'
                 ? resultTestName.substr(className.length + 1)
@@ -680,7 +690,7 @@ class DotnetTrxParser {
     }
     getTestRunResult(path, trx, testClasses) {
         const times = trx.TestRun.Times[0].$;
-        const totalTime = parse_utils_1.parseIsoDate(times.finish).getTime() - parse_utils_1.parseIsoDate(times.start).getTime();
+        const totalTime = (0, parse_utils_1.parseIsoDate)(times.finish).getTime() - (0, parse_utils_1.parseIsoDate)(times.start).getTime();
         const suites = testClasses.map(testClass => {
             const tests = testClass.tests.map(test => {
                 const error = this.getError(test);
@@ -735,7 +745,7 @@ class DotnetTrxParser {
             const match = str.match(re);
             if (match !== null) {
                 const [_, fileStr, lineStr] = match;
-                const filePath = path_utils_1.normalizeFilePath(fileStr);
+                const filePath = (0, path_utils_1.normalizeFilePath)(fileStr);
                 const workDir = this.getWorkDir(filePath);
                 if (workDir) {
                     const file = filePath.substr(workDir.length);
@@ -749,7 +759,7 @@ class DotnetTrxParser {
     }
     getWorkDir(path) {
         var _a, _b;
-        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = path_utils_1.getBasePath(path, this.options.trackedFiles)));
+        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = (0, path_utils_1.getBasePath)(path, this.options.trackedFiles)));
     }
 }
 exports.DotnetTrxParser = DotnetTrxParser;
@@ -764,7 +774,11 @@ exports.DotnetTrxParser = DotnetTrxParser;
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -796,7 +810,7 @@ class JavaJunitParser {
         for (const filePath of options.trackedFiles) {
             const fileName = path.basename(filePath);
             const files = (_a = this.trackedFiles[fileName]) !== null && _a !== void 0 ? _a : (this.trackedFiles[fileName] = []);
-            files.push(path_utils_1.normalizeFilePath(filePath));
+            files.push((0, path_utils_1.normalizeFilePath)(filePath));
         }
     }
     async parse(filePath, content) {
@@ -823,7 +837,7 @@ class JavaJunitParser {
     }
     async getJunitReport(filePath, content) {
         try {
-            return await xml2js_1.parseStringPromise(content);
+            return await (0, xml2js_1.parseStringPromise)(content);
         }
         catch (e) {
             throw new Error(`Invalid XML at ${filePath}\n\n${e}`);
@@ -986,7 +1000,7 @@ class JestJunitParser {
     }
     async getJunitReport(path, content) {
         try {
-            return (await xml2js_1.parseStringPromise(content));
+            return (await (0, xml2js_1.parseStringPromise)(content));
         }
         catch (e) {
             throw new Error(`Invalid XML at ${path}\n\n${e}`);
@@ -1039,7 +1053,7 @@ class JestJunitParser {
         const details = tc.failure[0];
         let path;
         let line;
-        const src = node_utils_1.getExceptionSource(details, this.options.trackedFiles, file => this.getRelativePath(file));
+        const src = (0, node_utils_1.getExceptionSource)(details, this.options.trackedFiles, file => this.getRelativePath(file));
         if (src) {
             path = src.path;
             line = src.line;
@@ -1051,7 +1065,7 @@ class JestJunitParser {
         };
     }
     getRelativePath(path) {
-        path = path_utils_1.normalizeFilePath(path);
+        path = (0, path_utils_1.normalizeFilePath)(path);
         const workDir = this.getWorkDir(path);
         if (workDir !== undefined && path.startsWith(workDir)) {
             path = path.substr(workDir.length);
@@ -1060,7 +1074,7 @@ class JestJunitParser {
     }
     getWorkDir(path) {
         var _a, _b;
-        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = path_utils_1.getBasePath(path, this.options.trackedFiles)));
+        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = (0, path_utils_1.getBasePath)(path, this.options.trackedFiles)));
     }
 }
 exports.JestJunitParser = JestJunitParser;
@@ -1140,7 +1154,7 @@ class MochaJsonParser {
         }
         let path;
         let line;
-        const src = node_utils_1.getExceptionSource(details, this.options.trackedFiles, file => this.getRelativePath(file));
+        const src = (0, node_utils_1.getExceptionSource)(details, this.options.trackedFiles, file => this.getRelativePath(file));
         if (src) {
             path = src.path;
             line = src.line;
@@ -1153,7 +1167,7 @@ class MochaJsonParser {
         };
     }
     getRelativePath(path) {
-        path = path_utils_1.normalizeFilePath(path);
+        path = (0, path_utils_1.normalizeFilePath)(path);
         const workDir = this.getWorkDir(path);
         if (workDir !== undefined && path.startsWith(workDir)) {
             path = path.substr(workDir.length);
@@ -1162,7 +1176,7 @@ class MochaJsonParser {
     }
     getWorkDir(path) {
         var _a, _b;
-        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = path_utils_1.getBasePath(path, this.options.trackedFiles)));
+        return ((_b = (_a = this.options.workDir) !== null && _a !== void 0 ? _a : this.assumedWorkDir) !== null && _b !== void 0 ? _b : (this.assumedWorkDir = (0, path_utils_1.getBasePath)(path, this.options.trackedFiles)));
     }
 }
 exports.MochaJsonParser = MochaJsonParser;
@@ -1210,7 +1224,7 @@ function getAnnotations(results, maxCount) {
                         suiteName: ts.name,
                         testName: tg.name ? `${tg.name} ► ${tc.name}` : tc.name,
                         details: err.details,
-                        message: (_d = (_c = err.message) !== null && _c !== void 0 ? _c : parse_utils_1.getFirstNonEmptyLine(err.details)) !== null && _d !== void 0 ? _d : 'Test failed',
+                        message: (_d = (_c = err.message) !== null && _c !== void 0 ? _c : (0, parse_utils_1.getFirstNonEmptyLine)(err.details)) !== null && _d !== void 0 ? _d : 'Test failed',
                         path,
                         line
                     });
@@ -1225,7 +1239,7 @@ function getAnnotations(results, maxCount) {
             'Failed test found in:',
             e.testRunPaths.map(p => `  ${p}`).join('\n'),
             'Error:',
-            ident(markdown_utils_1.fixEol(e.message), '  ')
+            ident((0, markdown_utils_1.fixEol)(e.message), '  ')
         ].join('\n');
         return enforceCheckRunLimits({
             path: e.path,
@@ -1233,7 +1247,7 @@ function getAnnotations(results, maxCount) {
             end_line: e.line,
             annotation_level: 'failure',
             title: `${e.suiteName} ► ${e.testName}`,
-            raw_details: markdown_utils_1.fixEol(e.details),
+            raw_details: (0, markdown_utils_1.fixEol)(e.details),
             message
         });
     });
@@ -1241,10 +1255,10 @@ function getAnnotations(results, maxCount) {
 }
 exports.getAnnotations = getAnnotations;
 function enforceCheckRunLimits(err) {
-    err.title = markdown_utils_1.ellipsis(err.title || '', 255);
-    err.message = markdown_utils_1.ellipsis(err.message, 65535);
+    err.title = (0, markdown_utils_1.ellipsis)(err.title || '', 255);
+    err.message = (0, markdown_utils_1.ellipsis)(err.message, 65535);
     if (err.raw_details) {
-        err.raw_details = markdown_utils_1.ellipsis(err.raw_details, 65535);
+        err.raw_details = (0, markdown_utils_1.ellipsis)(err.raw_details, 65535);
     }
     return err;
 }
@@ -1265,7 +1279,11 @@ function ident(text, prefix) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -1402,17 +1420,17 @@ function getTestRunsReport(testRuns, options) {
     const sections = [];
     if (testRuns.length > 1 || options.onlySummary) {
         const tableData = testRuns.map((tr, runIndex) => {
-            const time = markdown_utils_1.formatTime(tr.time);
+            const time = (0, markdown_utils_1.formatTime)(tr.time);
             const folder = tr.path.indexOf('/TestResults/');
             const name = folder > 0 ? tr.path.slice(0, folder) : tr.path;
             const addr = options.baseUrl + makeRunSlug(runIndex).link;
-            const nameLink = markdown_utils_1.link(name, addr);
+            const nameLink = (0, markdown_utils_1.link)(name, addr);
             const passed = tr.passed > 0 ? `${tr.passed}${markdown_utils_1.Icon.success}` : '';
             const failed = tr.failed > 0 ? `${tr.failed}${markdown_utils_1.Icon.fail}` : '';
             const skipped = tr.skipped > 0 ? `${tr.skipped}${markdown_utils_1.Icon.skip}` : '';
             return [nameLink, passed, failed, skipped, time];
         });
-        const resultsTable = markdown_utils_1.table(['Report', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...tableData);
+        const resultsTable = (0, markdown_utils_1.table)(['Report', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...tableData);
         sections.push(resultsTable);
     }
     if (options.onlySummary === false) {
@@ -1429,19 +1447,19 @@ function getSuitesReport(tr, runIndex, options) {
     const nameLink = `<a id="${trSlug.id}" href="${options.baseUrl + trSlug.link}">${name}</a>`;
     const icon = getResultIcon(tr.result);
     sections.push(`## ${icon}\xa0${nameLink}`);
-    const time = markdown_utils_1.formatTime(tr.time);
+    const time = (0, markdown_utils_1.formatTime)(tr.time);
     const headingLine2 = tr.tests > 0
         ? `**${tr.tests}** tests were completed in **${time}** with **${tr.passed}** passed, **${tr.failed}** failed and **${tr.skipped}** skipped.`
         : 'No tests found';
     sections.push(headingLine2);
     const suites = options.listSuites === 'failed' ? tr.failedSuites : tr.suites;
     if (suites.length > 0) {
-        const suitesTable = markdown_utils_1.table(['Test suite', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...suites.map((s, suiteIndex) => {
-            const tsTime = markdown_utils_1.formatTime(s.time);
+        const suitesTable = (0, markdown_utils_1.table)(['Test suite', 'Passed', 'Failed', 'Skipped', 'Time'], [markdown_utils_1.Align.Left, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right, markdown_utils_1.Align.Right], ...suites.map((s, suiteIndex) => {
+            const tsTime = (0, markdown_utils_1.formatTime)(s.time);
             const tsName = s.name.startsWith(name) ? s.name.slice(name.length + 1) : s.name;
             const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed');
             const tsAddr = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
-            const tsNameLink = skipLink ? tsName : markdown_utils_1.link(tsName, tsAddr);
+            const tsNameLink = skipLink ? tsName : (0, markdown_utils_1.link)(tsName, tsAddr);
             const passed = s.passed > 0 ? `${s.passed}${markdown_utils_1.Icon.success}` : '';
             const failed = s.failed > 0 ? `${s.failed}${markdown_utils_1.Icon.fail}` : '';
             const skipped = s.skipped > 0 ? `${s.skipped}${markdown_utils_1.Icon.skip}` : '';
@@ -1482,7 +1500,7 @@ function getTestsReport(ts, runIndex, suiteIndex, options) {
             const result = getResultIcon(tc.result);
             sections.push(`${space}${result} ${tc.name}`);
             if (tc.error) {
-                const lines = (_c = ((_a = tc.error.message) !== null && _a !== void 0 ? _a : (_b = parse_utils_1.getFirstNonEmptyLine(tc.error.details)) === null || _b === void 0 ? void 0 : _b.trim())) === null || _c === void 0 ? void 0 : _c.split(/\r?\n/g).map(l => '\t' + l);
+                const lines = (_c = ((_a = tc.error.message) !== null && _a !== void 0 ? _a : (_b = (0, parse_utils_1.getFirstNonEmptyLine)(tc.error.details)) === null || _b === void 0 ? void 0 : _b.trim())) === null || _c === void 0 ? void 0 : _c.split(/\r?\n/g).map(l => '\t' + l);
                 if (lines) {
                     sections.push(...lines);
                 }
@@ -1494,11 +1512,11 @@ function getTestsReport(ts, runIndex, suiteIndex, options) {
 }
 function makeRunSlug(runIndex) {
     // use prefix to avoid slug conflicts after escaping the paths
-    return slugger_1.slug(`r${runIndex}`);
+    return (0, slugger_1.slug)(`r${runIndex}`);
 }
 function makeSuiteSlug(runIndex, suiteIndex) {
     // use prefix to avoid slug conflicts after escaping the paths
-    return slugger_1.slug(`r${runIndex}s${suiteIndex}`);
+    return (0, slugger_1.slug)(`r${runIndex}s${suiteIndex}`);
 }
 function getResultIcon(result) {
     switch (result) {
@@ -1647,7 +1665,11 @@ exports.TestCaseResult = TestCaseResult;
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -1672,7 +1694,7 @@ async function listFiles() {
     core.startGroup('Listing all files tracked by git');
     let output = '';
     try {
-        output = (await exec_1.getExecOutput('git', ['ls-files', '-z'])).stdout;
+        output = (await (0, exec_1.getExecOutput)('git', ['ls-files', '-z'])).stdout;
     }
     finally {
         fixStdOutNullTermination();
@@ -1698,7 +1720,11 @@ function fixStdOutNullTermination() {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -1726,7 +1752,7 @@ const github = __importStar(__nccwpck_require__(5438));
 const stream = __importStar(__nccwpck_require__(2781));
 const util_1 = __nccwpck_require__(3837);
 const got_1 = __importDefault(__nccwpck_require__(3061));
-const asyncStream = util_1.promisify(stream.pipeline);
+const asyncStream = (0, util_1.promisify)(stream.pipeline);
 function getCheckRunContext() {
     let branch = github.context.ref;
     if (branch.startsWith('refs/heads'))
@@ -1765,7 +1791,7 @@ async function downloadArtifact(octokit, artifactId, fileName, token) {
         const headers = {
             Authorization: `Bearer ${token}`
         };
-        const resp = await got_1.default(req.url, {
+        const resp = await (0, got_1.default)(req.url, {
             headers,
             followRedirect: false
         });
@@ -1783,7 +1809,7 @@ async function downloadArtifact(octokit, artifactId, fileName, token) {
             throw new Error(`Location header has unexpected value: ${url}`);
         }
         const downloadStream = got_1.default.stream(url, { headers });
-        const fileWriterStream = fs_1.createWriteStream(fileName);
+        const fileWriterStream = (0, fs_1.createWriteStream)(fileName);
         core.info(`Downloading ${url}`);
         downloadStream.on('downloadProgress', ({ transferred }) => {
             core.info(`Progress: ${transferred} B`);
@@ -1915,7 +1941,7 @@ function getExceptionSource(stackTrace, trackedFiles, getRelativePath) {
         const match = str.match(re);
         if (match !== null) {
             const [_, fileStr, lineStr] = match;
-            const filePath = path_utils_1.normalizeFilePath(fileStr);
+            const filePath = (0, path_utils_1.normalizeFilePath)(fileStr);
             if (filePath.startsWith('internal/') || filePath.includes('/node_modules/')) {
                 continue;
             }
@@ -24759,6 +24785,11 @@ events.forEach(function (event) {
   };
 });
 
+var InvalidUrlError = createErrorType(
+  "ERR_INVALID_URL",
+  "Invalid URL",
+  TypeError
+);
 // Error types with codes
 var RedirectionError = createErrorType(
   "ERR_FR_REDIRECTION_FAILURE",
@@ -24819,10 +24850,10 @@ RedirectableRequest.prototype.write = function (data, encoding, callback) {
   }
 
   // Validate input and shift parameters if necessary
-  if (!(typeof data === "string" || typeof data === "object" && ("length" in data))) {
+  if (!isString(data) && !isBuffer(data)) {
     throw new TypeError("data should be a string, Buffer or Uint8Array");
   }
-  if (typeof encoding === "function") {
+  if (isFunction(encoding)) {
     callback = encoding;
     encoding = null;
   }
@@ -24851,11 +24882,11 @@ RedirectableRequest.prototype.write = function (data, encoding, callback) {
 // Ends the current native request
 RedirectableRequest.prototype.end = function (data, encoding, callback) {
   // Shift parameters if necessary
-  if (typeof data === "function") {
+  if (isFunction(data)) {
     callback = data;
     data = encoding = null;
   }
-  else if (typeof encoding === "function") {
+  else if (isFunction(encoding)) {
     callback = encoding;
     encoding = null;
   }
@@ -25014,25 +25045,30 @@ RedirectableRequest.prototype._performRequest = function () {
   // If specified, use the agent corresponding to the protocol
   // (HTTP and HTTPS use different types of agents)
   if (this._options.agents) {
-    var scheme = protocol.substr(0, protocol.length - 1);
+    var scheme = protocol.slice(0, -1);
     this._options.agent = this._options.agents[scheme];
   }
 
-  // Create the native request
+  // Create the native request and set up its event handlers
   var request = this._currentRequest =
         nativeProtocol.request(this._options, this._onNativeResponse);
-  this._currentUrl = url.format(this._options);
-
-  // Set up event handlers
   request._redirectable = this;
-  for (var e = 0; e < events.length; e++) {
-    request.on(events[e], eventHandlers[events[e]]);
+  for (var event of events) {
+    request.on(event, eventHandlers[event]);
   }
+
+  // RFC7230§5.3.1: When making a request directly to an origin server, […]
+  // a client MUST send only the absolute path […] as the request-target.
+  this._currentUrl = /^\//.test(this._options.path) ?
+    url.format(this._options) :
+    // When making a request to a proxy, […]
+    // a client MUST send the target URI in absolute-form […].
+    this._options.path;
 
   // End a redirected request
   // (The first request must be ended explicitly with RedirectableRequest#end)
   if (this._isRedirect) {
-    // Write the request entity and end.
+    // Write the request entity and end
     var i = 0;
     var self = this;
     var buffers = this._requestBodyBuffers;
@@ -25080,96 +25116,120 @@ RedirectableRequest.prototype._processResponse = function (response) {
   // the user agent MAY automatically redirect its request to the URI
   // referenced by the Location field value,
   // even if the specific status code is not understood.
+
+  // If the response is not a redirect; return it as-is
   var location = response.headers.location;
-  if (location && this._options.followRedirects !== false &&
-      statusCode >= 300 && statusCode < 400) {
-    // Abort the current request
-    abortRequest(this._currentRequest);
-    // Discard the remainder of the response to avoid waiting for data
-    response.destroy();
-
-    // RFC7231§6.4: A client SHOULD detect and intervene
-    // in cyclical redirections (i.e., "infinite" redirection loops).
-    if (++this._redirectCount > this._options.maxRedirects) {
-      this.emit("error", new TooManyRedirectsError());
-      return;
-    }
-
-    // RFC7231§6.4: Automatic redirection needs to done with
-    // care for methods not known to be safe, […]
-    // RFC7231§6.4.2–3: For historical reasons, a user agent MAY change
-    // the request method from POST to GET for the subsequent request.
-    if ((statusCode === 301 || statusCode === 302) && this._options.method === "POST" ||
-        // RFC7231§6.4.4: The 303 (See Other) status code indicates that
-        // the server is redirecting the user agent to a different resource […]
-        // A user agent can perform a retrieval request targeting that URI
-        // (a GET or HEAD request if using HTTP) […]
-        (statusCode === 303) && !/^(?:GET|HEAD)$/.test(this._options.method)) {
-      this._options.method = "GET";
-      // Drop a possible entity and headers related to it
-      this._requestBodyBuffers = [];
-      removeMatchingHeaders(/^content-/i, this._options.headers);
-    }
-
-    // Drop the Host header, as the redirect might lead to a different host
-    var currentHostHeader = removeMatchingHeaders(/^host$/i, this._options.headers);
-
-    // If the redirect is relative, carry over the host of the last request
-    var currentUrlParts = url.parse(this._currentUrl);
-    var currentHost = currentHostHeader || currentUrlParts.host;
-    var currentUrl = /^\w+:/.test(location) ? this._currentUrl :
-      url.format(Object.assign(currentUrlParts, { host: currentHost }));
-
-    // Determine the URL of the redirection
-    var redirectUrl;
-    try {
-      redirectUrl = url.resolve(currentUrl, location);
-    }
-    catch (cause) {
-      this.emit("error", new RedirectionError(cause));
-      return;
-    }
-
-    // Create the redirected request
-    debug("redirecting to", redirectUrl);
-    this._isRedirect = true;
-    var redirectUrlParts = url.parse(redirectUrl);
-    Object.assign(this._options, redirectUrlParts);
-
-    // Drop the Authorization header if redirecting to another domain
-    if (!(redirectUrlParts.host === currentHost || isSubdomainOf(redirectUrlParts.host, currentHost))) {
-      removeMatchingHeaders(/^authorization$/i, this._options.headers);
-    }
-
-    // Evaluate the beforeRedirect callback
-    if (typeof this._options.beforeRedirect === "function") {
-      var responseDetails = { headers: response.headers };
-      try {
-        this._options.beforeRedirect.call(null, this._options, responseDetails);
-      }
-      catch (err) {
-        this.emit("error", err);
-        return;
-      }
-      this._sanitizeOptions(this._options);
-    }
-
-    // Perform the redirected request
-    try {
-      this._performRequest();
-    }
-    catch (cause) {
-      this.emit("error", new RedirectionError(cause));
-    }
-  }
-  else {
-    // The response is not a redirect; return it as-is
+  if (!location || this._options.followRedirects === false ||
+      statusCode < 300 || statusCode >= 400) {
     response.responseUrl = this._currentUrl;
     response.redirects = this._redirects;
     this.emit("response", response);
 
     // Clean up
     this._requestBodyBuffers = [];
+    return;
+  }
+
+  // The response is a redirect, so abort the current request
+  abortRequest(this._currentRequest);
+  // Discard the remainder of the response to avoid waiting for data
+  response.destroy();
+
+  // RFC7231§6.4: A client SHOULD detect and intervene
+  // in cyclical redirections (i.e., "infinite" redirection loops).
+  if (++this._redirectCount > this._options.maxRedirects) {
+    this.emit("error", new TooManyRedirectsError());
+    return;
+  }
+
+  // Store the request headers if applicable
+  var requestHeaders;
+  var beforeRedirect = this._options.beforeRedirect;
+  if (beforeRedirect) {
+    requestHeaders = Object.assign({
+      // The Host header was set by nativeProtocol.request
+      Host: response.req.getHeader("host"),
+    }, this._options.headers);
+  }
+
+  // RFC7231§6.4: Automatic redirection needs to done with
+  // care for methods not known to be safe, […]
+  // RFC7231§6.4.2–3: For historical reasons, a user agent MAY change
+  // the request method from POST to GET for the subsequent request.
+  var method = this._options.method;
+  if ((statusCode === 301 || statusCode === 302) && this._options.method === "POST" ||
+      // RFC7231§6.4.4: The 303 (See Other) status code indicates that
+      // the server is redirecting the user agent to a different resource […]
+      // A user agent can perform a retrieval request targeting that URI
+      // (a GET or HEAD request if using HTTP) […]
+      (statusCode === 303) && !/^(?:GET|HEAD)$/.test(this._options.method)) {
+    this._options.method = "GET";
+    // Drop a possible entity and headers related to it
+    this._requestBodyBuffers = [];
+    removeMatchingHeaders(/^content-/i, this._options.headers);
+  }
+
+  // Drop the Host header, as the redirect might lead to a different host
+  var currentHostHeader = removeMatchingHeaders(/^host$/i, this._options.headers);
+
+  // If the redirect is relative, carry over the host of the last request
+  var currentUrlParts = url.parse(this._currentUrl);
+  var currentHost = currentHostHeader || currentUrlParts.host;
+  var currentUrl = /^\w+:/.test(location) ? this._currentUrl :
+    url.format(Object.assign(currentUrlParts, { host: currentHost }));
+
+  // Determine the URL of the redirection
+  var redirectUrl;
+  try {
+    redirectUrl = url.resolve(currentUrl, location);
+  }
+  catch (cause) {
+    this.emit("error", new RedirectionError({ cause: cause }));
+    return;
+  }
+
+  // Create the redirected request
+  debug("redirecting to", redirectUrl);
+  this._isRedirect = true;
+  var redirectUrlParts = url.parse(redirectUrl);
+  Object.assign(this._options, redirectUrlParts);
+
+  // Drop confidential headers when redirecting to a less secure protocol
+  // or to a different domain that is not a superdomain
+  if (redirectUrlParts.protocol !== currentUrlParts.protocol &&
+     redirectUrlParts.protocol !== "https:" ||
+     redirectUrlParts.host !== currentHost &&
+     !isSubdomain(redirectUrlParts.host, currentHost)) {
+    removeMatchingHeaders(/^(?:authorization|cookie)$/i, this._options.headers);
+  }
+
+  // Evaluate the beforeRedirect callback
+  if (isFunction(beforeRedirect)) {
+    var responseDetails = {
+      headers: response.headers,
+      statusCode: statusCode,
+    };
+    var requestDetails = {
+      url: currentUrl,
+      method: method,
+      headers: requestHeaders,
+    };
+    try {
+      beforeRedirect(this._options, responseDetails, requestDetails);
+    }
+    catch (err) {
+      this.emit("error", err);
+      return;
+    }
+    this._sanitizeOptions(this._options);
+  }
+
+  // Perform the redirected request
+  try {
+    this._performRequest();
+  }
+  catch (cause) {
+    this.emit("error", new RedirectionError({ cause: cause }));
   }
 };
 
@@ -25191,15 +25251,19 @@ function wrap(protocols) {
     // Executes a request, following redirects
     function request(input, options, callback) {
       // Parse parameters
-      if (typeof input === "string") {
-        var urlStr = input;
+      if (isString(input)) {
+        var parsed;
         try {
-          input = urlToOptions(new URL(urlStr));
+          parsed = urlToOptions(new URL(input));
         }
         catch (err) {
           /* istanbul ignore next */
-          input = url.parse(urlStr);
+          parsed = url.parse(input);
         }
+        if (!isString(parsed.protocol)) {
+          throw new InvalidUrlError({ input });
+        }
+        input = parsed;
       }
       else if (URL && (input instanceof URL)) {
         input = urlToOptions(input);
@@ -25209,7 +25273,7 @@ function wrap(protocols) {
         options = input;
         input = { protocol: protocol };
       }
-      if (typeof options === "function") {
+      if (isFunction(options)) {
         callback = options;
         options = null;
       }
@@ -25220,6 +25284,9 @@ function wrap(protocols) {
         maxBodyLength: exports.maxBodyLength,
       }, input, options);
       options.nativeProtocols = nativeProtocols;
+      if (!isString(options.host) && !isString(options.hostname)) {
+        options.hostname = "::1";
+      }
 
       assert.equal(options.protocol, protocol, "protocol mismatch");
       debug("options", options);
@@ -25269,42 +25336,54 @@ function removeMatchingHeaders(regex, headers) {
   var lastValue;
   for (var header in headers) {
     if (regex.test(header)) {
-      lastValue = headers[header].toString().trim();
+      lastValue = headers[header];
       delete headers[header];
     }
   }
-  return lastValue;
+  return (lastValue === null || typeof lastValue === "undefined") ?
+    undefined : String(lastValue).trim();
 }
 
-function createErrorType(code, defaultMessage) {
-  function CustomError(cause) {
+function createErrorType(code, message, baseClass) {
+  // Create constructor
+  function CustomError(properties) {
     Error.captureStackTrace(this, this.constructor);
-    if (!cause) {
-      this.message = defaultMessage;
-    }
-    else {
-      this.message = defaultMessage + ": " + cause.message;
-      this.cause = cause;
-    }
+    Object.assign(this, properties || {});
+    this.code = code;
+    this.message = this.cause ? message + ": " + this.cause.message : message;
   }
-  CustomError.prototype = new Error();
+
+  // Attach constructor and set default properties
+  CustomError.prototype = new (baseClass || Error)();
   CustomError.prototype.constructor = CustomError;
   CustomError.prototype.name = "Error [" + code + "]";
-  CustomError.prototype.code = code;
   return CustomError;
 }
 
 function abortRequest(request) {
-  for (var e = 0; e < events.length; e++) {
-    request.removeListener(events[e], eventHandlers[events[e]]);
+  for (var event of events) {
+    request.removeListener(event, eventHandlers[event]);
   }
   request.on("error", noop);
   request.abort();
 }
 
-function isSubdomainOf(subdomain, domain) {
-  const dot = subdomain.length - domain.length - 1;
+function isSubdomain(subdomain, domain) {
+  assert(isString(subdomain) && isString(domain));
+  var dot = subdomain.length - domain.length - 1;
   return dot > 0 && subdomain[dot] === "." && subdomain.endsWith(domain);
+}
+
+function isString(value) {
+  return typeof value === "string" || value instanceof String;
+}
+
+function isFunction(value) {
+  return typeof value === "function";
+}
+
+function isBuffer(value) {
+  return typeof value === "object" && ("length" in value);
 }
 
 // Exports
@@ -25326,7 +25405,7 @@ var isWin32 = (__nccwpck_require__(2037).platform)() === 'win32';
 
 var slash = '/';
 var backslash = /\\/g;
-var enclosure = /[\{\[].*[\/]*.*[\}\]]$/;
+var enclosure = /[\{\[].*[\}\]]$/;
 var globby = /(^|[^\\])([\{\[]|\([^\)]+$)/;
 var escaped = /\\([\!\*\?\|\[\]\(\)\{\}])/g;
 
@@ -25334,6 +25413,7 @@ var escaped = /\\([\!\*\?\|\[\]\(\)\{\}])/g;
  * @param {string} str
  * @param {Object} opts
  * @param {boolean} [opts.flipBackslashes=true]
+ * @returns {string}
  */
 module.exports = function globParent(str, opts) {
   var options = Object.assign({ flipBackslashes: true }, opts);
@@ -25520,11 +25600,11 @@ function asPromise(normalizedOptions) {
                     request._beforeError(new types_1.RequestError(error.message, error, request));
                     return;
                 }
+                globalResponse = response;
                 if (!is_response_ok_1.isResponseOk(response)) {
                     request._beforeError(new types_1.HTTPError(response));
                     return;
                 }
-                globalResponse = response;
                 resolve(request.options.resolveBodyOnly ? response.body : response);
             });
             const onError = (error) => {
@@ -25730,6 +25810,7 @@ class ParseError extends core_1.RequestError {
         const { options } = response.request;
         super(`${error.message} in "${options.url.toString()}"`, error, response.request);
         this.name = 'ParseError';
+        this.code = this.code === 'ERR_GOT_REQUEST_ERROR' ? 'ERR_BODY_PARSE_FAILURE' : this.code;
     }
 }
 exports.ParseError = ParseError;
@@ -25740,6 +25821,7 @@ class CancelError extends core_1.RequestError {
     constructor(request) {
         super('Promise was canceled', {}, request);
         this.name = 'CancelError';
+        this.code = 'ERR_CANCELED';
     }
     get isCanceled() {
         return true;
@@ -25915,11 +25997,11 @@ Contains a `code` property with error class code, like `ECONNREFUSED`.
 */
 class RequestError extends Error {
     constructor(message, error, self) {
-        var _a;
+        var _a, _b;
         super(message);
         Error.captureStackTrace(this, this.constructor);
         this.name = 'RequestError';
-        this.code = error.code;
+        this.code = (_a = error.code) !== null && _a !== void 0 ? _a : 'ERR_GOT_REQUEST_ERROR';
         if (self instanceof Request) {
             Object.defineProperty(this, 'request', {
                 enumerable: false,
@@ -25944,7 +26026,7 @@ class RequestError extends Error {
                 value: self
             });
         }
-        this.timings = (_a = this.request) === null || _a === void 0 ? void 0 : _a.timings;
+        this.timings = (_b = this.request) === null || _b === void 0 ? void 0 : _b.timings;
         // Recover the original stacktrace
         if (is_1.default.string(error.stack) && is_1.default.string(this.stack)) {
             const indexOfMessage = this.stack.indexOf(this.message) + this.message.length;
@@ -25967,6 +26049,7 @@ class MaxRedirectsError extends RequestError {
     constructor(request) {
         super(`Redirected ${request.options.maxRedirects} times. Aborting.`, {}, request);
         this.name = 'MaxRedirectsError';
+        this.code = 'ERR_TOO_MANY_REDIRECTS';
     }
 }
 exports.MaxRedirectsError = MaxRedirectsError;
@@ -25978,6 +26061,7 @@ class HTTPError extends RequestError {
     constructor(response) {
         super(`Response code ${response.statusCode} (${response.statusMessage})`, {}, response.request);
         this.name = 'HTTPError';
+        this.code = 'ERR_NON_2XX_3XX_RESPONSE';
     }
 }
 exports.HTTPError = HTTPError;
@@ -25989,6 +26073,7 @@ class CacheError extends RequestError {
     constructor(error, request) {
         super(error.message, error, request);
         this.name = 'CacheError';
+        this.code = this.code === 'ERR_GOT_REQUEST_ERROR' ? 'ERR_CACHE_ACCESS' : this.code;
     }
 }
 exports.CacheError = CacheError;
@@ -25999,6 +26084,7 @@ class UploadError extends RequestError {
     constructor(error, request) {
         super(error.message, error, request);
         this.name = 'UploadError';
+        this.code = this.code === 'ERR_GOT_REQUEST_ERROR' ? 'ERR_UPLOAD' : this.code;
     }
 }
 exports.UploadError = UploadError;
@@ -26022,6 +26108,7 @@ class ReadError extends RequestError {
     constructor(error, request) {
         super(error.message, error, request);
         this.name = 'ReadError';
+        this.code = this.code === 'ERR_GOT_REQUEST_ERROR' ? 'ERR_READING_RESPONSE_STREAM' : this.code;
     }
 }
 exports.ReadError = ReadError;
@@ -26032,6 +26119,7 @@ class UnsupportedProtocolError extends RequestError {
     constructor(options) {
         super(`Unsupported protocol "${options.url.protocol}"`, {}, options);
         this.name = 'UnsupportedProtocolError';
+        this.code = 'ERR_UNSUPPORTED_PROTOCOL';
     }
 }
 exports.UnsupportedProtocolError = UnsupportedProtocolError;
@@ -26654,6 +26742,14 @@ class Request extends stream_1.Duplex {
                 const redirectUrl = new url_1.URL(redirectBuffer, url);
                 const redirectString = redirectUrl.toString();
                 decodeURI(redirectString);
+                // eslint-disable-next-line no-inner-declarations
+                function isUnixSocketURL(url) {
+                    return url.protocol === 'unix:' || url.hostname === 'unix';
+                }
+                if (!isUnixSocketURL(url) && isUnixSocketURL(redirectUrl)) {
+                    this._beforeError(new RequestError('Cannot redirect to UNIX socket', {}, this));
+                    return;
+                }
                 // Redirecting to a different site, clear sensitive data.
                 if (redirectUrl.hostname !== url.hostname || redirectUrl.port !== url.port) {
                     if ('host' in options.headers) {
@@ -30557,72 +30653,184 @@ exports.parse = function (s) {
 const EventEmitter = __nccwpck_require__(2361);
 const JSONB = __nccwpck_require__(2820);
 
-const loadStore = opts => {
+const loadStore = options => {
 	const adapters = {
 		redis: '@keyv/redis',
+		rediss: '@keyv/redis',
 		mongodb: '@keyv/mongo',
 		mongo: '@keyv/mongo',
 		sqlite: '@keyv/sqlite',
 		postgresql: '@keyv/postgres',
 		postgres: '@keyv/postgres',
-		mysql: '@keyv/mysql'
+		mysql: '@keyv/mysql',
+		etcd: '@keyv/etcd',
+		offline: '@keyv/offline',
+		tiered: '@keyv/tiered',
 	};
-	if (opts.adapter || opts.uri) {
-		const adapter = opts.adapter || /^[^:]*/.exec(opts.uri)[0];
-		return new (require(adapters[adapter]))(opts);
+	if (options.adapter || options.uri) {
+		const adapter = options.adapter || /^[^:+]*/.exec(options.uri)[0];
+		return new (require(adapters[adapter]))(options);
 	}
 
 	return new Map();
 };
 
+const iterableAdapters = [
+	'sqlite',
+	'postgres',
+	'mysql',
+	'mongo',
+	'redis',
+	'tiered',
+];
+
 class Keyv extends EventEmitter {
-	constructor(uri, opts) {
+	constructor(uri, {emitErrors = true, ...options} = {}) {
 		super();
-		this.opts = Object.assign(
-			{
-				namespace: 'keyv',
-				serialize: JSONB.stringify,
-				deserialize: JSONB.parse
-			},
-			(typeof uri === 'string') ? { uri } : uri,
-			opts
-		);
+		this.opts = {
+			namespace: 'keyv',
+			serialize: JSONB.stringify,
+			deserialize: JSONB.parse,
+			...((typeof uri === 'string') ? {uri} : uri),
+			...options,
+		};
 
 		if (!this.opts.store) {
-			const adapterOpts = Object.assign({}, this.opts);
-			this.opts.store = loadStore(adapterOpts);
+			const adapterOptions = {...this.opts};
+			this.opts.store = loadStore(adapterOptions);
 		}
 
-		if (typeof this.opts.store.on === 'function') {
-			this.opts.store.on('error', err => this.emit('error', err));
+		if (this.opts.compression) {
+			const compression = this.opts.compression;
+			this.opts.serialize = compression.serialize.bind(compression);
+			this.opts.deserialize = compression.deserialize.bind(compression);
+		}
+
+		if (typeof this.opts.store.on === 'function' && emitErrors) {
+			this.opts.store.on('error', error => this.emit('error', error));
 		}
 
 		this.opts.store.namespace = this.opts.namespace;
+
+		const generateIterator = iterator => async function * () {
+			for await (const [key, raw] of typeof iterator === 'function'
+				? iterator(this.opts.store.namespace)
+				: iterator) {
+				const data = this.opts.deserialize(raw);
+				if (this.opts.store.namespace && !key.includes(this.opts.store.namespace)) {
+					continue;
+				}
+
+				if (typeof data.expires === 'number' && Date.now() > data.expires) {
+					this.delete(key);
+					continue;
+				}
+
+				yield [this._getKeyUnprefix(key), data.value];
+			}
+		};
+
+		// Attach iterators
+		if (typeof this.opts.store[Symbol.iterator] === 'function' && this.opts.store instanceof Map) {
+			this.iterator = generateIterator(this.opts.store);
+		} else if (typeof this.opts.store.iterator === 'function' && this.opts.store.opts
+			&& this._checkIterableAdaptar()) {
+			this.iterator = generateIterator(this.opts.store.iterator.bind(this.opts.store));
+		}
+	}
+
+	_checkIterableAdaptar() {
+		return iterableAdapters.includes(this.opts.store.opts.dialect)
+			|| iterableAdapters.findIndex(element => this.opts.store.opts.url.includes(element)) >= 0;
 	}
 
 	_getKeyPrefix(key) {
 		return `${this.opts.namespace}:${key}`;
 	}
 
-	get(key, opts) {
-		const keyPrefixed = this._getKeyPrefix(key);
-		const { store } = this.opts;
+	_getKeyPrefixArray(keys) {
+		return keys.map(key => `${this.opts.namespace}:${key}`);
+	}
+
+	_getKeyUnprefix(key) {
+		return key
+			.split(':')
+			.splice(1)
+			.join(':');
+	}
+
+	get(key, options) {
+		const {store} = this.opts;
+		const isArray = Array.isArray(key);
+		const keyPrefixed = isArray ? this._getKeyPrefixArray(key) : this._getKeyPrefix(key);
+		if (isArray && store.getMany === undefined) {
+			const promises = [];
+			for (const key of keyPrefixed) {
+				promises.push(Promise.resolve()
+					.then(() => store.get(key))
+					.then(data => (typeof data === 'string') ? this.opts.deserialize(data) : (this.opts.compression ? this.opts.deserialize(data) : data))
+					.then(data => {
+						if (data === undefined || data === null) {
+							return undefined;
+						}
+
+						if (typeof data.expires === 'number' && Date.now() > data.expires) {
+							return this.delete(key).then(() => undefined);
+						}
+
+						return (options && options.raw) ? data : data.value;
+					}),
+				);
+			}
+
+			return Promise.allSettled(promises)
+				.then(values => {
+					const data = [];
+					for (const value of values) {
+						data.push(value.value);
+					}
+
+					return data;
+				});
+		}
+
 		return Promise.resolve()
-			.then(() => store.get(keyPrefixed))
+			.then(() => isArray ? store.getMany(keyPrefixed) : store.get(keyPrefixed))
+			.then(data => (typeof data === 'string') ? this.opts.deserialize(data) : (this.opts.compression ? this.opts.deserialize(data) : data))
 			.then(data => {
-				return (typeof data === 'string') ? this.opts.deserialize(data) : data;
-			})
-			.then(data => {
-				if (data === undefined) {
+				if (data === undefined || data === null) {
 					return undefined;
+				}
+
+				if (isArray) {
+					const result = [];
+
+					for (let row of data) {
+						if ((typeof row === 'string')) {
+							row = this.opts.deserialize(row);
+						}
+
+						if (row === undefined || row === null) {
+							result.push(undefined);
+							continue;
+						}
+
+						if (typeof row.expires === 'number' && Date.now() > row.expires) {
+							this.delete(key).then(() => undefined);
+							result.push(undefined);
+						} else {
+							result.push((options && options.raw) ? row : row.value);
+						}
+					}
+
+					return result;
 				}
 
 				if (typeof data.expires === 'number' && Date.now() > data.expires) {
-					this.delete(key);
-					return undefined;
+					return this.delete(key).then(() => undefined);
 				}
 
-				return (opts && opts.raw) ? data : data.value;
+				return (options && options.raw) ? data : data.value;
 			});
 	}
 
@@ -30636,12 +30844,16 @@ class Keyv extends EventEmitter {
 			ttl = undefined;
 		}
 
-		const { store } = this.opts;
+		const {store} = this.opts;
 
 		return Promise.resolve()
 			.then(() => {
 				const expires = (typeof ttl === 'number') ? (Date.now() + ttl) : null;
-				value = { value, expires };
+				if (typeof value === 'symbol') {
+					this.emit('error', 'symbol cannot be serialized');
+				}
+
+				value = {value, expires};
 				return this.opts.serialize(value);
 			})
 			.then(value => store.set(keyPrefixed, value, ttl))
@@ -30649,16 +30861,53 @@ class Keyv extends EventEmitter {
 	}
 
 	delete(key) {
+		const {store} = this.opts;
+		if (Array.isArray(key)) {
+			const keyPrefixed = this._getKeyPrefixArray(key);
+			if (store.deleteMany === undefined) {
+				const promises = [];
+				for (const key of keyPrefixed) {
+					promises.push(store.delete(key));
+				}
+
+				return Promise.allSettled(promises)
+					.then(values => values.every(x => x.value === true));
+			}
+
+			return Promise.resolve()
+				.then(() => store.deleteMany(keyPrefixed));
+		}
+
 		const keyPrefixed = this._getKeyPrefix(key);
-		const { store } = this.opts;
 		return Promise.resolve()
 			.then(() => store.delete(keyPrefixed));
 	}
 
 	clear() {
-		const { store } = this.opts;
+		const {store} = this.opts;
 		return Promise.resolve()
 			.then(() => store.clear());
+	}
+
+	has(key) {
+		const keyPrefixed = this._getKeyPrefix(key);
+		const {store} = this.opts;
+		return Promise.resolve()
+			.then(async () => {
+				if (typeof store.has === 'function') {
+					return store.has(keyPrefixed);
+				}
+
+				const value = await store.get(keyPrefixed);
+				return value !== undefined;
+			});
+	}
+
+	disconnect() {
+		const {store} = this.opts;
+		if (typeof store.disconnect === 'function') {
+			return store.disconnect();
+		}
 	}
 }
 
@@ -31047,12 +31296,10 @@ function plural(ms, msAbs, n, name) {
 /***/ }),
 
 /***/ 7952:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+/***/ ((module) => {
 
 "use strict";
 
-// TODO: Use the `URL` global when targeting Node.js 10
-const URLParser = typeof URL === 'undefined' ? (__nccwpck_require__(7310).URL) : URL;
 
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 const DATA_URL_DEFAULT_MIME_TYPE = 'text/plain';
@@ -31063,21 +31310,20 @@ const testParameter = (name, filters) => {
 };
 
 const normalizeDataURL = (urlString, {stripHash}) => {
-	const parts = urlString.match(/^data:(.*?),(.*?)(?:#(.*))?$/);
+	const match = /^data:(?<type>[^,]*?),(?<data>[^#]*?)(?:#(?<hash>.*))?$/.exec(urlString);
 
-	if (!parts) {
+	if (!match) {
 		throw new Error(`Invalid URL: ${urlString}`);
 	}
 
-	const mediaType = parts[1].split(';');
-	const body = parts[2];
-	const hash = stripHash ? '' : parts[3];
+	let {type, data, hash} = match.groups;
+	const mediaType = type.split(';');
+	hash = stripHash ? '' : hash;
 
-	let base64 = false;
-
+	let isBase64 = false;
 	if (mediaType[mediaType.length - 1] === 'base64') {
 		mediaType.pop();
-		base64 = true;
+		isBase64 = true;
 	}
 
 	// Lowercase MIME type
@@ -31103,7 +31349,7 @@ const normalizeDataURL = (urlString, {stripHash}) => {
 		...attributes
 	];
 
-	if (base64) {
+	if (isBase64) {
 		normalizedMediaType.push('base64');
 	}
 
@@ -31111,7 +31357,7 @@ const normalizeDataURL = (urlString, {stripHash}) => {
 		normalizedMediaType.unshift(mimeType);
 	}
 
-	return `data:${normalizedMediaType.join(';')},${base64 ? body.trim() : body}${hash ? `#${hash}` : ''}`;
+	return `data:${normalizedMediaType.join(';')},${isBase64 ? data.trim() : data}${hash ? `#${hash}` : ''}`;
 };
 
 const normalizeUrl = (urlString, options) => {
@@ -31122,32 +31368,25 @@ const normalizeUrl = (urlString, options) => {
 		forceHttps: false,
 		stripAuthentication: true,
 		stripHash: false,
+		stripTextFragment: true,
 		stripWWW: true,
 		removeQueryParameters: [/^utm_\w+/i],
 		removeTrailingSlash: true,
+		removeSingleSlash: true,
 		removeDirectoryIndex: false,
 		sortQueryParameters: true,
 		...options
 	};
-
-	// TODO: Remove this at some point in the future
-	if (Reflect.has(options, 'normalizeHttps')) {
-		throw new Error('options.normalizeHttps is renamed to options.forceHttp');
-	}
-
-	if (Reflect.has(options, 'normalizeHttp')) {
-		throw new Error('options.normalizeHttp is renamed to options.forceHttps');
-	}
-
-	if (Reflect.has(options, 'stripFragment')) {
-		throw new Error('options.stripFragment is renamed to options.stripHash');
-	}
 
 	urlString = urlString.trim();
 
 	// Data URL
 	if (/^data:/i.test(urlString)) {
 		return normalizeDataURL(urlString, options);
+	}
+
+	if (/^view-source:/i.test(urlString)) {
+		throw new Error('`view-source:` is not supported as it is a non-standard protocol');
 	}
 
 	const hasRelativeProtocol = urlString.startsWith('//');
@@ -31158,7 +31397,7 @@ const normalizeUrl = (urlString, options) => {
 		urlString = urlString.replace(/^(?!(?:\w+:)?\/\/)|^\/\//, options.defaultProtocol);
 	}
 
-	const urlObj = new URLParser(urlString);
+	const urlObj = new URL(urlString);
 
 	if (options.forceHttp && options.forceHttps) {
 		throw new Error('The `forceHttp` and `forceHttps` options cannot be used together');
@@ -31181,24 +31420,20 @@ const normalizeUrl = (urlString, options) => {
 	// Remove hash
 	if (options.stripHash) {
 		urlObj.hash = '';
+	} else if (options.stripTextFragment) {
+		urlObj.hash = urlObj.hash.replace(/#?:~:text.*?$/i, '');
 	}
 
 	// Remove duplicate slashes if not preceded by a protocol
 	if (urlObj.pathname) {
-		// TODO: Use the following instead when targeting Node.js 10
-		// `urlObj.pathname = urlObj.pathname.replace(/(?<!https?:)\/{2,}/g, '/');`
-		urlObj.pathname = urlObj.pathname.replace(/((?!:).|^)\/{2,}/g, (_, p1) => {
-			if (/^(?!\/)/g.test(p1)) {
-				return `${p1}/`;
-			}
-
-			return '/';
-		});
+		urlObj.pathname = urlObj.pathname.replace(/(?<!\b(?:[a-z][a-z\d+\-.]{1,50}:))\/{2,}/g, '/');
 	}
 
 	// Decode URI octets
 	if (urlObj.pathname) {
-		urlObj.pathname = decodeURI(urlObj.pathname);
+		try {
+			urlObj.pathname = decodeURI(urlObj.pathname);
+		} catch (_) {}
 	}
 
 	// Remove directory index
@@ -31221,10 +31456,11 @@ const normalizeUrl = (urlString, options) => {
 		urlObj.hostname = urlObj.hostname.replace(/\.$/, '');
 
 		// Remove `www.`
-		if (options.stripWWW && /^www\.([a-z\-\d]{2,63})\.([a-z.]{2,5})$/.test(urlObj.hostname)) {
-			// Each label should be max 63 at length (min: 2).
-			// The extension should be max 5 at length (min: 2).
+		if (options.stripWWW && /^www\.(?!www\.)(?:[a-z\-\d]{1,63})\.(?:[a-z.\-\d]{2,63})$/.test(urlObj.hostname)) {
+			// Each label should be max 63 at length (min: 1).
 			// Source: https://en.wikipedia.org/wiki/Hostname#Restrictions_on_valid_host_names
+			// Each TLD should be up to 63 characters long (min: 2).
+			// It is technically possible to have a single character TLD, but none currently exist.
 			urlObj.hostname = urlObj.hostname.replace(/^www\./, '');
 		}
 	}
@@ -31238,6 +31474,10 @@ const normalizeUrl = (urlString, options) => {
 		}
 	}
 
+	if (options.removeQueryParameters === true) {
+		urlObj.search = '';
+	}
+
 	// Sort query parameters
 	if (options.sortQueryParameters) {
 		urlObj.searchParams.sort();
@@ -31247,11 +31487,17 @@ const normalizeUrl = (urlString, options) => {
 		urlObj.pathname = urlObj.pathname.replace(/\/$/, '');
 	}
 
+	const oldUrlString = urlString;
+
 	// Take advantage of many of the Node `url` normalizations
 	urlString = urlObj.toString();
 
-	// Remove ending `/`
-	if ((options.removeTrailingSlash || urlObj.pathname === '/') && urlObj.hash === '') {
+	if (!options.removeSingleSlash && urlObj.pathname === '/' && !oldUrlString.endsWith('/') && urlObj.hash === '') {
+		urlString = urlString.replace(/\/$/, '');
+	}
+
+	// Remove ending `/` unless removeSingleSlash is false
+	if ((options.removeTrailingSlash || urlObj.pathname === '/') && urlObj.hash === '' && options.removeSingleSlash) {
 		urlString = urlString.replace(/\/$/, '');
 	}
 
@@ -31269,8 +31515,6 @@ const normalizeUrl = (urlString, options) => {
 };
 
 module.exports = normalizeUrl;
-// TODO: Remove this for the next major release
-module.exports["default"] = normalizeUrl;
 
 
 /***/ }),
@@ -40996,7 +41240,7 @@ module.exports = eval("require")("original-fs");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("assert");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("assert");
 
 /***/ }),
 
@@ -41004,7 +41248,7 @@ module.exports = require("assert");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("buffer");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("buffer");
 
 /***/ }),
 
@@ -41012,7 +41256,7 @@ module.exports = require("buffer");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("child_process");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("child_process");
 
 /***/ }),
 
@@ -41020,7 +41264,7 @@ module.exports = require("child_process");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("crypto");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("crypto");
 
 /***/ }),
 
@@ -41036,7 +41280,7 @@ module.exports = require("dns");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("events");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("events");
 
 /***/ }),
 
@@ -41044,7 +41288,7 @@ module.exports = require("events");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("fs");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("fs");
 
 /***/ }),
 
@@ -41052,7 +41296,7 @@ module.exports = require("fs");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("http");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("http");
 
 /***/ }),
 
@@ -41060,7 +41304,7 @@ module.exports = require("http");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("http2");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("http2");
 
 /***/ }),
 
@@ -41068,7 +41312,7 @@ module.exports = require("http2");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("https");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("https");
 
 /***/ }),
 
@@ -41076,7 +41320,7 @@ module.exports = require("https");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("net");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("net");
 
 /***/ }),
 
@@ -41084,7 +41328,7 @@ module.exports = require("net");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("os");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("os");
 
 /***/ }),
 
@@ -41092,7 +41336,7 @@ module.exports = require("os");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("path");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("path");
 
 /***/ }),
 
@@ -41100,7 +41344,7 @@ module.exports = require("path");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("process");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("process");
 
 /***/ }),
 
@@ -41108,7 +41352,7 @@ module.exports = require("process");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("punycode");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("punycode");
 
 /***/ }),
 
@@ -41116,7 +41360,7 @@ module.exports = require("punycode");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("stream");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("stream");
 
 /***/ }),
 
@@ -41124,7 +41368,7 @@ module.exports = require("stream");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("string_decoder");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("string_decoder");
 
 /***/ }),
 
@@ -41132,7 +41376,7 @@ module.exports = require("string_decoder");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("timers");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("timers");
 
 /***/ }),
 
@@ -41140,7 +41384,7 @@ module.exports = require("timers");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("tls");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("tls");
 
 /***/ }),
 
@@ -41148,7 +41392,7 @@ module.exports = require("tls");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("tty");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("tty");
 
 /***/ }),
 
@@ -41156,7 +41400,7 @@ module.exports = require("tty");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("url");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("url");
 
 /***/ }),
 
@@ -41164,7 +41408,7 @@ module.exports = require("url");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("util");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("util");
 
 /***/ }),
 
@@ -41172,7 +41416,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("zlib");
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("zlib");
 
 /***/ }),
 
@@ -41188,7 +41432,7 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"@slack/webhook@^6.1.0","_id":"@slack/webhook@6.1.0","_inBundle":false,"_integrity":"sha512-7AYNISyAjn/lA/VDwZ307K5ft5DojXgBd3DRrGoFN8XxIwIyRALdFhxBiMgAqeJH8eWoktvNwLK24R9hREEqpA==","_location":"/@slack/webhook","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"@slack/webhook@^6.1.0","name":"@slack/webhook","escapedName":"@slack%2fwebhook","scope":"@slack","rawSpec":"^6.1.0","saveSpec":null,"fetchSpec":"^6.1.0"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/@slack/webhook/-/webhook-6.1.0.tgz","_shasum":"ac9c8add919f0f5ab9440a24e76b2f83adcc0f2c","_spec":"@slack/webhook@^6.1.0","_where":"D:\\\\code\\\\test-reporter","author":{"name":"Slack Technologies, LLC"},"bugs":{"url":"https://github.com/slackapi/node-slack-sdk/issues"},"bundleDependencies":false,"dependencies":{"@slack/types":"^1.2.1","@types/node":">=12.0.0","axios":"^0.21.4"},"deprecated":false,"description":"Official library for using the Slack Platform\'s Incoming Webhooks","devDependencies":{"@microsoft/api-extractor":"^7.3.4","@types/chai":"^4.1.7","@types/mocha":"^5.2.6","@typescript-eslint/eslint-plugin":"^4.4.1","@typescript-eslint/parser":"^4.4.0","chai":"^4.2.0","codecov":"^3.2.0","eslint":"^7.32.0","eslint-config-airbnb-base":"^14.2.1","eslint-config-airbnb-typescript":"^12.3.1","eslint-plugin-import":"^2.22.1","eslint-plugin-jsdoc":"^30.6.1","eslint-plugin-node":"^11.1.0","mocha":"^9.1.0","nock":"^13.0.0","nyc":"^14.1.1","shx":"^0.3.2","sinon":"^7.2.7","source-map-support":"^0.5.10","ts-node":"^8.0.3","typescript":"^4.1.0"},"engines":{"node":">= 12.13.0","npm":">= 6.12.0"},"files":["dist/**/*"],"homepage":"https://slack.dev/node-slack-sdk/webhook","keywords":["slack","request","client","http","api","proxy"],"license":"MIT","main":"dist/index.js","name":"@slack/webhook","publishConfig":{"access":"public"},"repository":{"type":"git","url":"git+https://github.com/slackapi/node-slack-sdk.git"},"scripts":{"build":"npm run build:clean && tsc","build:clean":"shx rm -rf ./dist ./coverage ./.nyc_output","coverage":"codecov -F webhook --root=$PWD","lint":"eslint --ext .ts src","prepare":"npm run build","ref-docs:model":"api-extractor run","test":"npm run lint && npm run build && nyc mocha --config .mocharc.json src/*.spec.js"},"types":"./dist/index.d.ts","version":"6.1.0"}');
+module.exports = JSON.parse('{"name":"@slack/webhook","version":"6.1.0","description":"Official library for using the Slack Platform\'s Incoming Webhooks","author":"Slack Technologies, LLC","license":"MIT","keywords":["slack","request","client","http","api","proxy"],"main":"dist/index.js","types":"./dist/index.d.ts","files":["dist/**/*"],"engines":{"node":">= 12.13.0","npm":">= 6.12.0"},"repository":"slackapi/node-slack-sdk","homepage":"https://slack.dev/node-slack-sdk/webhook","publishConfig":{"access":"public"},"bugs":{"url":"https://github.com/slackapi/node-slack-sdk/issues"},"scripts":{"prepare":"npm run build","build":"npm run build:clean && tsc","build:clean":"shx rm -rf ./dist ./coverage ./.nyc_output","lint":"eslint --ext .ts src","test":"npm run lint && npm run build && nyc mocha --config .mocharc.json src/*.spec.js","coverage":"codecov -F webhook --root=$PWD","ref-docs:model":"api-extractor run"},"dependencies":{"@slack/types":"^1.2.1","@types/node":">=12.0.0","axios":"^0.21.4"},"devDependencies":{"@microsoft/api-extractor":"^7.3.4","@typescript-eslint/eslint-plugin":"^4.4.1","@typescript-eslint/parser":"^4.4.0","@types/chai":"^4.1.7","@types/mocha":"^5.2.6","chai":"^4.2.0","codecov":"^3.2.0","eslint":"^7.32.0","eslint-config-airbnb-base":"^14.2.1","eslint-config-airbnb-typescript":"^12.3.1","eslint-plugin-import":"^2.22.1","eslint-plugin-jsdoc":"^30.6.1","eslint-plugin-node":"^11.1.0","mocha":"^9.1.0","nock":"^13.0.0","nyc":"^14.1.1","shx":"^0.3.2","sinon":"^7.2.7","source-map-support":"^0.5.10","ts-node":"^8.0.3","typescript":"^4.1.0"}}');
 
 /***/ }),
 
@@ -41196,7 +41440,7 @@ module.exports = JSON.parse('{"_from":"@slack/webhook@^6.1.0","_id":"@slack/webh
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21.4","name":"axios","escapedName":"axios","rawSpec":"^0.21.4","saveSpec":null,"fetchSpec":"^0.21.4"},"_requiredBy":["/@slack/webhook"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21.4","_where":"D:\\\\code\\\\test-reporter\\\\node_modules\\\\@slack\\\\webhook","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
