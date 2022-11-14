@@ -14,7 +14,7 @@ export class LocalFileProvider implements InputProvider {
     for (const pat of this.pattern) {
       const paths = await glob(pat, {dot: true})
       for (const file of paths) {
-        var dir = path.dirname(file);
+        const dir = path.dirname(file)
         zip.addLocalFile(file, dir)
         const content = await fs.promises.readFile(file, {encoding: 'utf8'})
         result.push({file, content})
