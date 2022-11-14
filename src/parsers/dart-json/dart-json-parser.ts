@@ -1,6 +1,6 @@
-import {ParseOptions, TestParser} from '../../test-parser.js'
+import {ParseOptions, TestParser} from '../../test-parser'
 
-import {getBasePath, normalizeFilePath} from '../../utils/path-utils.js'
+import {getBasePath, normalizeFilePath} from '../../utils/path-utils'
 
 import {
   ReportEvent,
@@ -17,7 +17,7 @@ import {
   isDoneEvent,
   isMessageEvent,
   MessageEvent
-} from './dart-json-types.js'
+} from './dart-json-types'
 
 import {
   TestExecutionResult,
@@ -26,7 +26,7 @@ import {
   TestGroupResult,
   TestCaseResult,
   TestCaseError
-} from '../../test-results.js'
+} from '../../test-results'
 
 class TestRun {
   constructor(readonly path: string, readonly suites: TestSuite[], readonly success: boolean, readonly time: number) {}
@@ -91,7 +91,7 @@ export class DartJsonParser implements TestParser {
         }
         try {
           return JSON.parse(str)
-        } catch (e: any) {
+        } catch (e) {
           const col = e.columnNumber !== undefined ? `:${e.columnNumber}` : ''
           throw new Error(`Invalid JSON at ${path}:${i + 1}${col}\n\n${e}`)
         }
@@ -194,8 +194,7 @@ export class DartJsonParser implements TestParser {
   private getErrorMessage(message: string, print: string): string {
     if (this.sdk === 'flutter') {
       const uselessMessageRe = /^Test failed\. See exception logs above\.\nThe test description was:/m
-      const flutterPrintRe =
-        /^══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞═+\s+(.*)\s+When the exception was thrown, this was the stack:/ms
+      const flutterPrintRe = /^══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞═+\s+(.*)\s+When the exception was thrown, this was the stack:/ms
       if (uselessMessageRe.test(message)) {
         const match = print.match(flutterPrintRe)
         if (match !== null) {

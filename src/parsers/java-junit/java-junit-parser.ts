@@ -1,9 +1,9 @@
 import * as path from 'path'
-import {ParseOptions, TestParser} from '../../test-parser.js'
+import {ParseOptions, TestParser} from '../../test-parser'
 import {parseStringPromise} from 'xml2js'
 
-import {JunitReport, SingleSuiteReport, TestCase, TestSuite} from './java-junit-types.js'
-import {normalizeFilePath} from '../../utils/path-utils.js'
+import {JunitReport, SingleSuiteReport, TestCase, TestSuite} from './java-junit-types'
+import {normalizeFilePath} from '../../utils/path-utils'
 
 import {
   TestExecutionResult,
@@ -12,7 +12,7 @@ import {
   TestGroupResult,
   TestCaseResult,
   TestCaseError
-} from '../../test-results.js'
+} from '../../test-results'
 
 export class JavaJunitParser implements TestParser {
   readonly trackedFiles: {[fileName: string]: string[]}

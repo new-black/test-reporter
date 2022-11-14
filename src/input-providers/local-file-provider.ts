@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import glob from 'fast-glob'
-import {FileContent, InputProvider, ReportInput} from './input-provider.js'
-import {listFiles} from '../utils/git.js'
+import {FileContent, InputProvider, ReportInput} from './input-provider'
+import {listFiles} from '../utils/git'
 import Zip from 'adm-zip'
 import path from 'path'
 
@@ -14,7 +14,7 @@ export class LocalFileProvider implements InputProvider {
     for (const pat of this.pattern) {
       const paths = await glob(pat, {dot: true})
       for (const file of paths) {
-        const dir = path.dirname(file)
+        var dir = path.dirname(file);
         zip.addLocalFile(file, dir)
         const content = await fs.promises.readFile(file, {encoding: 'utf8'})
         result.push({file, content})
