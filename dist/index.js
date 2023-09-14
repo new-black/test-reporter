@@ -138,8 +138,8 @@ class TestReporter {
         this.onlySummary = core.getInput('only-summary', { required: false }) === 'true';
         this.token = core.getInput('token', { required: true });
         this.slackWebhook = core.getInput('slack-url', { required: false });
-        this.resultsEndpoint = core.getInput('test-results-endpoint', { required: true });
-        this.resultsEndpointSecret = core.getInput('test-results-endpoint-secret', { required: true });
+        this.resultsEndpoint = core.getInput('test-results-endpoint', { required: false });
+        this.resultsEndpointSecret = core.getInput('test-results-endpoint-secret', { required: false });
         this.context = github_utils_1.getCheckRunContext();
         this.octokit = github.getOctokit(this.token);
         if (this.listSuites !== 'all' && this.listSuites !== 'failed') {
