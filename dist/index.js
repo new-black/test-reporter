@@ -181,13 +181,13 @@ class TestReporter {
         const input = await inputProvider.load();
         try {
             const readStream = input.trxZip.toBuffer();
-            const version = fs_1.default.existsSync('src/EVA.TestSuite.Core/bin/Release/version.txt')
-                ? fs_1.default.readFileSync('src/EVA.TestSuite.Core/bin/Release/version.txt').toString()
+            const version = fs_1.default.existsSync('test/EVA.TestSuite.Core/bin/Release/version.txt')
+                ? fs_1.default.readFileSync('test/EVA.TestSuite.Core/bin/Release/version.txt').toString()
                 : null;
-            const commitID = fs_1.default.existsSync('src/EVA.TestSuite.Core/bin/Release/commit.txt')
-                ? fs_1.default.readFileSync('src/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
+            const commitID = fs_1.default.existsSync('test/EVA.TestSuite.Core/bin/Release/commit.txt')
+                ? fs_1.default.readFileSync('test/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
                 : null;
-            core.info(`Using EVA version ${version}, commit ${commitID}, current directory: ${process_1.cwd()}`);
+            core.info(`Using EVA version ${version}, commit ${commitID}, branch ${this.context.branch}, current directory: ${process_1.cwd()}`);
             const post = bent_1.default(this.resultsEndpoint, 'POST', {}, 200);
             await post(`TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${commitID ? '&EVACommitID=' + commitID : ''}&EVABranch=${encodeURI(this.context.branch)}`, readStream);
             core.info(`Uploaded TRX files`);
