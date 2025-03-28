@@ -335,11 +335,14 @@ class TestReporter {
                 }
                 const groupedResults = [];
                 pathMap.forEach((results, path) => {
-                    groupedResults.push(new test_results_1.TestRunResult(path, results.flatMap(r => r.suites), results.reduce((sum, r) => sum + r.time, 0)));
+                    var newResult = new test_results_1.TestRunResult(path, results.flatMap(r => r.suites), results.reduce((sum, r) => sum + r.time, 0));
+                    newResult.sort(true);
+                    groupedResults.push(newResult);
                 });
                 return groupedResults;
             }
             results = groupByPath(results);
+            results.sort((a, b) => a.path.localeCompare(b.path, 'en'));
             core.info(`Creating check run ${name}`);
             try {
                 const existingChecks = yield this.octokit.rest.checks.listForRef(Object.assign(Object.assign({ ref: this.context.sha }, github.context.repo), { check_name: name, status: 'queued' }));

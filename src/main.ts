@@ -223,19 +223,20 @@ class TestReporter {
       const groupedResults: TestRunResult[] = []
 
       pathMap.forEach((results, path) => {
-        groupedResults.push(
-          new TestRunResult(
-            path,
-            results.flatMap(r => r.suites),
-            results.reduce((sum, r) => sum + r.time, 0)
-          )
+        var newResult = new TestRunResult(
+          path,
+          results.flatMap(r => r.suites),
+          results.reduce((sum, r) => sum + r.time, 0)
         )
+        newResult.sort(true)
+        groupedResults.push(newResult)
       })
 
       return groupedResults
     }
 
     results = groupByPath(results)
+    results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
 
     core.info(`Creating check run ${name}`)
     try {
