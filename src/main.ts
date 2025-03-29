@@ -16,6 +16,7 @@ import {getCheckRunContext} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
+import path from 'path'
 import bent from 'bent'
 import {cwd} from 'process'
 
@@ -212,20 +213,21 @@ class TestReporter {
       }
     }
 
-    function groupByPath(results: TestRunResult[]): TestRunResult[] {
+    function groupByDirectory(results: TestRunResult[]): TestRunResult[] {
       const pathMap = new Map<string, TestRunResult[]>()
 
       for (const result of results) {
-        core.info(`Grouping test results from ${result.path}`)
-        const existing = pathMap.get(result.path) || []
-        pathMap.set(result.path, [...existing, result])
+        var dir = path.dirname(result.path)
+        core.info(`Grouping test results from ${dir}`)
+        const existing = pathMap.get(dir) || []
+        pathMap.set(dir, [...existing, result])
       }
 
       const groupedResults: TestRunResult[] = []
 
-      pathMap.forEach((results, path) => {
+      pathMap.forEach(results => {
         var newResult = new TestRunResult(
-          path,
+          results[0].path,
           results.flatMap(r => r.suites),
           results.reduce((sum, r) => sum + r.time, 0)
         )
@@ -236,7 +238,7 @@ class TestReporter {
       return groupedResults
     }
 
-    results = groupByPath(results)
+    results = groupByDirectory(results)
     results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
 
     core.info(`Creating check run ${name}`)

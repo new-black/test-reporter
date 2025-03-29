@@ -157,6 +157,7 @@ const github_utils_1 = __nccwpck_require__(6667);
 const markdown_utils_1 = __nccwpck_require__(5129);
 const webhook_1 = __nccwpck_require__(4443);
 const fs_1 = __importDefault(__nccwpck_require__(9896));
+const path_1 = __importDefault(__nccwpck_require__(6928));
 const bent_1 = __importDefault(__nccwpck_require__(5519));
 const process_1 = __nccwpck_require__(932);
 function main() {
@@ -327,22 +328,23 @@ class TestReporter {
                     throw error;
                 }
             }
-            function groupByPath(results) {
+            function groupByDirectory(results) {
                 const pathMap = new Map();
                 for (const result of results) {
-                    core.info(`Grouping test results from ${result.path}`);
-                    const existing = pathMap.get(result.path) || [];
-                    pathMap.set(result.path, [...existing, result]);
+                    var dir = path_1.default.dirname(result.path);
+                    core.info(`Grouping test results from ${dir}`);
+                    const existing = pathMap.get(dir) || [];
+                    pathMap.set(dir, [...existing, result]);
                 }
                 const groupedResults = [];
-                pathMap.forEach((results, path) => {
-                    var newResult = new test_results_1.TestRunResult(path, results.flatMap(r => r.suites), results.reduce((sum, r) => sum + r.time, 0));
+                pathMap.forEach(results => {
+                    var newResult = new test_results_1.TestRunResult(results[0].path, results.flatMap(r => r.suites), results.reduce((sum, r) => sum + r.time, 0));
                     newResult.sort(true);
                     groupedResults.push(newResult);
                 });
                 return groupedResults;
             }
-            results = groupByPath(results);
+            results = groupByDirectory(results);
             results.sort((a, b) => a.path.localeCompare(b.path, 'en'));
             core.info(`Creating check run ${name}`);
             try {
@@ -783,6 +785,9 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getReport = getReport;
 const core = __importStar(__nccwpck_require__(7484));
@@ -790,6 +795,7 @@ const node_utils_1 = __nccwpck_require__(5384);
 const markdown_utils_1 = __nccwpck_require__(5129);
 const parse_utils_1 = __nccwpck_require__(9633);
 const slugger_1 = __nccwpck_require__(9537);
+const path_1 = __importDefault(__nccwpck_require__(6928));
 const MAX_REPORT_LENGTH = 65535;
 const defaultOptions = {
     listSuites: 'all',
@@ -904,8 +910,7 @@ function getTestRunsReport(testRuns, options) {
     if (testRuns.length > 1 || options.onlySummary) {
         const tableData = testRuns.map((tr, runIndex) => {
             const time = (0, markdown_utils_1.formatTime)(tr.time);
-            const folder = tr.path.indexOf('/TestResults/');
-            const name = folder > 0 ? tr.path.slice(0, folder) : tr.path;
+            const name = path_1.default.basename(path_1.default.dirname(path_1.default.dirname(tr.path)));
             const addr = options.baseUrl + makeRunSlug(runIndex).link;
             const nameLink = (0, markdown_utils_1.link)(name, addr);
             const passed = tr.passed > 0 ? `${tr.passed}${markdown_utils_1.Icon.success}` : '';
@@ -925,12 +930,11 @@ function getTestRunsReport(testRuns, options) {
 function getSuitesReport(tr, runIndex, options) {
     const sections = [];
     const trSlug = makeRunSlug(runIndex);
-    const folder = tr.path.indexOf('/TestResults/');
-    const name = folder > 0 ? tr.path.slice(0, folder) : tr.path;
+    const name = path_1.default.basename(path_1.default.dirname(path_1.default.dirname(tr.path)));
     const nameLink = `<a id="${trSlug.id}" href="${options.baseUrl + trSlug.link}">${name}</a>`;
     const icon = getResultIcon(tr.result);
     sections.push(`## ${icon}\xa0${nameLink}`);
-    core.info(`Generating report for ${tr.path}, ${name}, ${folder}`);
+    core.info(`Generating report for ${tr.path}: ${name}`);
     const time = (0, markdown_utils_1.formatTime)(tr.time);
     const headingLine2 = tr.tests > 0
         ? `**${tr.tests}** tests were completed in **${time}** with **${tr.passed}** passed, **${tr.failed}** failed and **${tr.skipped}** skipped.`

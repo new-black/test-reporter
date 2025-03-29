@@ -4,6 +4,7 @@ import {TestExecutionResult, TestRunResult, TestSuiteResult} from '../test-resul
 import {Align, formatTime, Icon, link, table} from '../utils/markdown-utils'
 import {getFirstNonEmptyLine} from '../utils/parse-utils'
 import {slug} from '../utils/slugger'
+import path from 'path'
 
 const MAX_REPORT_LENGTH = 65535
 
@@ -148,8 +149,7 @@ function getTestRunsReport(testRuns: TestRunResult[], options: ReportOptions): s
   if (testRuns.length > 1 || options.onlySummary) {
     const tableData = testRuns.map((tr, runIndex) => {
       const time = formatTime(tr.time)
-      const folder = tr.path.indexOf('/TestResults/')
-      const name = folder > 0 ? tr.path.slice(0, folder) : tr.path
+      const name = path.basename(path.dirname(path.dirname(tr.path)))
       const addr = options.baseUrl + makeRunSlug(runIndex).link
       const nameLink = link(name, addr)
       const passed = tr.passed > 0 ? `${tr.passed}${Icon.success}` : ''
@@ -177,13 +177,12 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
   const sections: string[] = []
 
   const trSlug = makeRunSlug(runIndex)
-  const folder = tr.path.indexOf('/TestResults/')
-  const name = folder > 0 ? tr.path.slice(0, folder) : tr.path
+  const name = path.basename(path.dirname(path.dirname(tr.path)))
   const nameLink = `<a id="${trSlug.id}" href="${options.baseUrl + trSlug.link}">${name}</a>`
   const icon = getResultIcon(tr.result)
   sections.push(`## ${icon}\xa0${nameLink}`)
 
-  core.info(`Generating report for ${tr.path}, ${name}, ${folder}`)
+  core.info(`Generating report for ${tr.path}: ${name}`)
 
   const time = formatTime(tr.time)
   const headingLine2 =
