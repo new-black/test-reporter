@@ -216,7 +216,7 @@ class TestReporter {
       const pathMap = new Map<string, TestRunResult[]>()
 
       for (const result of results) {
-        core.debug(`Grouping test results from ${result.path}`)
+        core.info(`Grouping test results from ${result.path}`)
         const existing = pathMap.get(result.path) || []
         pathMap.set(result.path, [...existing, result])
       }
