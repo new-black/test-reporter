@@ -86,6 +86,17 @@ export class DotnetTrxParser implements TestParser {
         tc = new TestClass(className)
         testClasses[tc.name] = tc
       }
+
+      if (r.result.$.outcome === 'NotExecuted') {
+        if (r.result.Output?.length > 0) {
+          if (r.result.Output[0].ErrorInfo?.length > 0) {
+            if (r.result.Output[0].ErrorInfo[0].Message[0].trim().match(/it does not belong to this partition/)) {
+              continue
+            }
+          }
+        }
+      }
+
       const error = this.getErrorInfo(r.result)
       const durationAttr = r.result.$.duration
       const duration = durationAttr ? parseNetDuration(durationAttr) : 0

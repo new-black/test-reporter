@@ -528,6 +528,7 @@ class DotnetTrxParser {
         });
     }
     getTestClasses(trx) {
+        var _a, _b;
         if (trx.TestRun.TestDefinitions === undefined || trx.TestRun.Results === undefined) {
             return [];
         }
@@ -548,6 +549,15 @@ class DotnetTrxParser {
             if (tc === undefined) {
                 tc = new TestClass(className);
                 testClasses[tc.name] = tc;
+            }
+            if (r.result.$.outcome === 'NotExecuted') {
+                if (((_a = r.result.Output) === null || _a === void 0 ? void 0 : _a.length) > 0) {
+                    if (((_b = r.result.Output[0].ErrorInfo) === null || _b === void 0 ? void 0 : _b.length) > 0) {
+                        if (r.result.Output[0].ErrorInfo[0].Message[0].trim().match(/it does not belong to this partition/)) {
+                            continue;
+                        }
+                    }
+                }
             }
             const error = this.getErrorInfo(r.result);
             const durationAttr = r.result.$.duration;
