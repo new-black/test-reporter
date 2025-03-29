@@ -238,11 +238,11 @@ class TestReporter {
             if (((_a = this.resultsEndpoint) === null || _a === void 0 ? void 0 : _a.length) > 0) {
                 try {
                     const readStream = input.trxZip.toBuffer();
-                    const version = fs_1.default.existsSync('test/EVA.TestSuite.Core/bin/Release/version.txt')
-                        ? fs_1.default.readFileSync('test/EVA.TestSuite.Core/bin/Release/version.txt').toString()
+                    const version = fs_1.default.existsSync('./metadata/version.txt')
+                        ? fs_1.default.readFileSync('./metadata/version.txt').toString()
                         : null;
-                    const commitID = fs_1.default.existsSync('test/EVA.TestSuite.Core/bin/Release/commit.txt')
-                        ? fs_1.default.readFileSync('test/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
+                    const commitID = fs_1.default.existsSync('./metadata/commit.txt')
+                        ? fs_1.default.readFileSync('./metadata/commit.txt').toString()
                         : null;
                     core.info(`Using EVA version ${version}, commit ${commitID}, branch ${this.context.branch}, current directory: ${(0, process_1.cwd)()}`);
                     const post = (0, bent_1.default)(this.resultsEndpoint, 'POST', {}, 200);

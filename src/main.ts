@@ -106,11 +106,11 @@ class TestReporter {
     if (this.resultsEndpoint?.length > 0) {
       try {
         const readStream = input.trxZip.toBuffer()
-        const version = fs.existsSync('test/EVA.TestSuite.Core/bin/Release/version.txt')
-          ? fs.readFileSync('test/EVA.TestSuite.Core/bin/Release/version.txt').toString()
+        const version = fs.existsSync('./metadata/version.txt')
+          ? fs.readFileSync('./metadata/version.txt').toString()
           : null
-        const commitID = fs.existsSync('test/EVA.TestSuite.Core/bin/Release/commit.txt')
-          ? fs.readFileSync('test/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
+        const commitID = fs.existsSync('./metadata/commit.txt')
+          ? fs.readFileSync('./metadata/commit.txt').toString()
           : null
 
         core.info(
