@@ -86,6 +86,17 @@ export class DotnetTrxParser implements TestParser {
         tc = new TestClass(className)
         testClasses[tc.name] = tc
       }
+
+      if (r.result.$.outcome === 'NotExecuted') {
+        if (r.result.Output?.length > 0) {
+          if (r.result.Output[0].ErrorInfo?.length > 0) {
+            if (r.result.Output[0].ErrorInfo[0].Message[0].trim().match(/it does not belong to this partition/)) {
+              continue
+            }
+          }
+        }
+      }
+
       const error = this.getErrorInfo(r.result)
       const durationAttr = r.result.$.duration
       const duration = durationAttr ? parseNetDuration(durationAttr) : 0
@@ -109,10 +120,17 @@ export class DotnetTrxParser implements TestParser {
     const totalTime = parseIsoDate(times.finish).getTime() - parseIsoDate(times.start).getTime()
 
     const suites = testClasses.map(testClass => {
-      const tests = testClass.tests.map(test => {
-        const error = this.getError(test)
-        return new TestCaseResult(test.name, test.result, test.duration, error)
-      })
+      const tests = testClass.tests
+        .map(test => {
+          const error = this.getError(test)
+
+          if (error?.message?.trim().match(/it does not belong to this partition/)) {
+            return null
+          }
+
+          return new TestCaseResult(test.name, test.result, test.duration, error)
+        })
+        .filter(t => t != null)
       const group = new TestGroupResult(null, tests)
       return new TestSuiteResult(testClass.name, [group])
     })

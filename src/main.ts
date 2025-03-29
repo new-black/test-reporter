@@ -16,6 +16,7 @@ import {getCheckRunContext} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
+import path from 'path'
 import bent from 'bent'
 import {cwd} from 'process'
 
@@ -105,11 +106,11 @@ class TestReporter {
     if (this.resultsEndpoint?.length > 0) {
       try {
         const readStream = input.trxZip.toBuffer()
-        const version = fs.existsSync('test/EVA.TestSuite.Core/bin/Release/version.txt')
-          ? fs.readFileSync('test/EVA.TestSuite.Core/bin/Release/version.txt').toString()
+        const version = fs.existsSync('./metadata/version.txt')
+          ? fs.readFileSync('./metadata/version.txt').toString()
           : null
-        const commitID = fs.existsSync('test/EVA.TestSuite.Core/bin/Release/commit.txt')
-          ? fs.readFileSync('test/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
+        const commitID = fs.existsSync('./metadata/commit.txt')
+          ? fs.readFileSync('./metadata/commit.txt').toString()
           : null
 
         core.info(
@@ -198,7 +199,7 @@ class TestReporter {
 
     core.info(`Processing test results for check run ${name}`)
 
-    const results: TestRunResult[] = []
+    var results: TestRunResult[] = []
     const result: TestRunResultWithUrl = new TestRunResultWithUrl(results, null)
 
     for (const {file, content} of files) {
@@ -211,6 +212,34 @@ class TestReporter {
         throw error
       }
     }
+
+    function groupByDirectory(results: TestRunResult[]): TestRunResult[] {
+      const pathMap = new Map<string, TestRunResult[]>()
+
+      for (const result of results) {
+        var dir = path.dirname(result.path)
+        core.info(`Grouping test results from ${dir}`)
+        const existing = pathMap.get(dir) || []
+        pathMap.set(dir, [...existing, result])
+      }
+
+      const groupedResults: TestRunResult[] = []
+
+      pathMap.forEach(results => {
+        var newResult = new TestRunResult(
+          results[0].path,
+          results.flatMap(r => r.suites),
+          results.reduce((sum, r) => sum + r.time, 0)
+        )
+        newResult.sort(true)
+        groupedResults.push(newResult)
+      })
+
+      return groupedResults
+    }
+
+    results = groupByDirectory(results)
+    results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
 
     core.info(`Creating check run ${name}`)
     try {
