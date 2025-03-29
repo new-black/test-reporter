@@ -183,6 +183,8 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
   const icon = getResultIcon(tr.result)
   sections.push(`## ${icon}\xa0${nameLink}`)
 
+  core.debug(`Generating report for ${tr.path}, ${name}, ${folder}`)
+
   const time = formatTime(tr.time)
   const headingLine2 =
     tr.tests > 0

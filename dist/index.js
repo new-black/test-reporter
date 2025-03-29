@@ -330,6 +330,7 @@ class TestReporter {
             function groupByPath(results) {
                 const pathMap = new Map();
                 for (const result of results) {
+                    core.debug(`Grouping test results from ${result.path}`);
                     const existing = pathMap.get(result.path) || [];
                     pathMap.set(result.path, [...existing, result]);
                 }
@@ -929,6 +930,7 @@ function getSuitesReport(tr, runIndex, options) {
     const nameLink = `<a id="${trSlug.id}" href="${options.baseUrl + trSlug.link}">${name}</a>`;
     const icon = getResultIcon(tr.result);
     sections.push(`## ${icon}\xa0${nameLink}`);
+    core.debug(`Generating report for ${tr.path}, ${name}, ${folder}`);
     const time = (0, markdown_utils_1.formatTime)(tr.time);
     const headingLine2 = tr.tests > 0
         ? `**${tr.tests}** tests were completed in **${time}** with **${tr.passed}** passed, **${tr.failed}** failed and **${tr.skipped}** skipped.`
