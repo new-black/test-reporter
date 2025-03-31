@@ -5,7 +5,7 @@ import {GitHub} from '@actions/github/lib/utils'
 import {LocalFileProvider} from './input-providers/local-file-provider'
 import {FileContent} from './input-providers/input-provider'
 import {ParseOptions, TestParser} from './test-parser'
-import {TestRunResult, TestRunResultWithUrl} from './test-results'
+import {TestRunResult, TestRunResultWithUrl, TestSuiteResult} from './test-results'
 import {getAnnotations} from './report/get-annotations'
 import {getReport} from './report/get-report'
 
@@ -228,7 +228,7 @@ class TestReporter {
       pathMap.forEach(results => {
         var newResult = new TestRunResult(
           results[0].path,
-          results.flatMap(r => r.suites),
+          results.flatMap(r => r.suites.map(s => new TestSuiteResult(s.name, s.groups, s.time))),
           results.reduce((sum, r) => sum + r.time, 0)
         )
         newResult.sort(true)

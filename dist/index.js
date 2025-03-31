@@ -338,7 +338,7 @@ class TestReporter {
                 }
                 const groupedResults = [];
                 pathMap.forEach(results => {
-                    var newResult = new test_results_1.TestRunResult(results[0].path, results.flatMap(r => r.suites), results.reduce((sum, r) => sum + r.time, 0));
+                    var newResult = new test_results_1.TestRunResult(results[0].path, results.flatMap(r => r.suites.map(s => new test_results_1.TestSuiteResult(s.name, s.groups, s.time))), results.reduce((sum, r) => sum + r.time, 0));
                     newResult.sort(true);
                     groupedResults.push(newResult);
                 });
@@ -490,7 +490,8 @@ class TestClass {
     }
 }
 class Test {
-    constructor(name, outcome, duration, error) {
+    constructor(id, name, outcome, duration, error) {
+        this.id = id;
         this.name = name;
         this.outcome = outcome;
         this.duration = duration;
@@ -569,7 +570,7 @@ class DotnetTrxParser {
             const testName = resultTestName.startsWith(className) && resultTestName[className.length] === '.'
                 ? resultTestName.substr(className.length + 1)
                 : resultTestName;
-            const test = new Test(testName, r.result.$.outcome, duration, error);
+            const test = new Test(r.test.$.id, testName, r.result.$.outcome, duration, error);
             tc.tests.push(test);
         }
         const result = Object.values(testClasses);

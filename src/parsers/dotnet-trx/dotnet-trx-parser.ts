@@ -22,6 +22,7 @@ class TestClass {
 
 class Test {
   constructor(
+    readonly id: string,
     readonly name: string,
     readonly outcome: Outcome,
     readonly duration: number,
@@ -107,7 +108,7 @@ export class DotnetTrxParser implements TestParser {
           ? resultTestName.substr(className.length + 1)
           : resultTestName
 
-      const test = new Test(testName, r.result.$.outcome, duration, error)
+      const test = new Test(r.test.$.id, testName, r.result.$.outcome, duration, error)
       tc.tests.push(test)
     }
 
