@@ -328,6 +328,64 @@ class TestReporter {
                     throw error;
                 }
             }
+            function mergeTestRunResults(results) {
+                if (results.length === 0) {
+                    throw new Error('Cannot merge empty array of TestRunResults');
+                }
+                if (results.length === 1) {
+                    return results[0];
+                }
+                // Create a map to group suites by name
+                const suitesMap = new Map();
+                // Collect all suites from all results
+                for (const result of results) {
+                    for (const suite of result.suites) {
+                        const existingSuites = suitesMap.get(suite.name) || [];
+                        suitesMap.set(suite.name, [...existingSuites, suite]);
+                    }
+                }
+                // Merge suites with the same name
+                const mergedSuites = Array.from(suitesMap.values()).map(suites => {
+                    var _a, _b;
+                    if (suites.length === 1) {
+                        return suites[0];
+                    }
+                    // Create a map to group groups by name
+                    const groupsMap = new Map();
+                    // Collect all groups from all suites
+                    for (const suite of suites) {
+                        for (const group of suite.groups) {
+                            const existingGroups = groupsMap.get((_a = group.name) !== null && _a !== void 0 ? _a : '') || [];
+                            groupsMap.set((_b = group.name) !== null && _b !== void 0 ? _b : '', [...existingGroups, group]);
+                        }
+                    }
+                    // Merge groups with the same name
+                    const mergedGroups = Array.from(groupsMap.values()).map(groups => {
+                        if (groups.length === 1) {
+                            return groups[0];
+                        }
+                        // Create a map to group tests by id
+                        const testsMap = new Map();
+                        // Collect all tests from all groups
+                        for (const group of groups) {
+                            for (const test of group.tests) {
+                                const existingTests = testsMap.get(test.id) || [];
+                                testsMap.set(test.id, [...existingTests, test]);
+                            }
+                        }
+                        // Take the first test for each id (assuming they are identical)
+                        const mergedTests = Array.from(testsMap.values()).map(tests => tests[0]);
+                        // Create new merged group
+                        return new test_results_1.TestGroupResult(groups[0].name, mergedTests);
+                    });
+                    // Create new merged suite
+                    return new test_results_1.TestSuiteResult(suites[0].name, mergedGroups);
+                });
+                // Calculate total time from all results
+                const totalTime = results.reduce((sum, result) => sum + result.time, 0);
+                // Create new merged result
+                return new test_results_1.TestRunResult(results[0].path, mergedSuites, totalTime);
+            }
             function groupByDirectory(results) {
                 const pathMap = new Map();
                 for (const result of results) {
@@ -338,9 +396,9 @@ class TestReporter {
                 }
                 const groupedResults = [];
                 pathMap.forEach(results => {
-                    var newResult = new test_results_1.TestRunResult(results[0].path, results.flatMap(r => r.suites.map(s => new test_results_1.TestSuiteResult(s.name, s.groups, s.time))), results.reduce((sum, r) => sum + r.time, 0));
-                    newResult.sort(true);
-                    groupedResults.push(newResult);
+                    const mergedResult = mergeTestRunResults(results);
+                    mergedResult.sort(true);
+                    groupedResults.push(mergedResult);
                 });
                 return groupedResults;
             }
@@ -587,7 +645,7 @@ class DotnetTrxParser {
                 if ((_a = error === null || error === void 0 ? void 0 : error.message) === null || _a === void 0 ? void 0 : _a.trim().match(/it does not belong to this partition/)) {
                     return null;
                 }
-                return new test_results_1.TestCaseResult(test.name, test.result, test.duration, error);
+                return new test_results_1.TestCaseResult(test.id, test.name, test.result, test.duration, error);
             })
                 .filter(t => t != null);
             const group = new test_results_1.TestGroupResult(null, tests);
@@ -1102,6 +1160,19 @@ class TestSuiteResult {
         this.name = name;
         this.groups = groups;
         this.totalTime = totalTime;
+        for (const grp of groups) {
+            var map = new Map();
+            for (const tc of grp.tests) {
+                var key = tc.id;
+                var existing = map.get(key) || [];
+                existing.push(tc);
+                map.set(key, existing);
+            }
+            grp.tests.length = 0;
+            for (const t of map.values()) {
+                grp.tests.push(t[0]);
+            }
+        }
     }
     get tests() {
         return this.groups.reduce((sum, g) => sum + g.tests.length, 0);
@@ -1164,7 +1235,8 @@ class TestGroupResult {
 }
 exports.TestGroupResult = TestGroupResult;
 class TestCaseResult {
-    constructor(name, result, time, error) {
+    constructor(id, name, result, time, error) {
+        this.id = id;
         this.name = name;
         this.result = result;
         this.time = time;

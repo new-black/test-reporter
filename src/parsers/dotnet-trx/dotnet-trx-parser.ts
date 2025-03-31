@@ -29,7 +29,7 @@ class Test {
     readonly error?: ErrorInfo
   ) {}
 
-  get result(): TestExecutionResult | undefined {
+  get result(): TestExecutionResult {
     switch (this.outcome) {
       case 'Passed':
         return 'success'
@@ -129,7 +129,7 @@ export class DotnetTrxParser implements TestParser {
             return null
           }
 
-          return new TestCaseResult(test.name, test.result, test.duration, error)
+          return new TestCaseResult(test.id, test.name, test.result, test.duration, error)
         })
         .filter(t => t != null)
       const group = new TestGroupResult(null, tests)
