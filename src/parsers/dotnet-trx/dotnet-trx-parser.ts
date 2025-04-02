@@ -1,10 +1,11 @@
-import {parseStringPromise} from 'xml2js'
+import { parseStringPromise } from 'xml2js'
 
-import {ErrorInfo, Outcome, TrxReport, UnitTest, UnitTestResult} from './dotnet-trx-types'
-import {ParseOptions, TestParser} from '../../test-parser'
+import { ErrorInfo, Outcome, TrxReport, UnitTest, UnitTestResult } from './dotnet-trx-types'
+import { ParseOptions, TestParser } from '../../test-parser'
 
-import {getBasePath, normalizeFilePath} from '../../utils/path-utils'
-import {parseIsoDate, parseNetDuration} from '../../utils/parse-utils'
+import { getBasePath, normalizeFilePath } from '../../utils/path-utils'
+import { parseIsoDate, parseNetDuration } from '../../utils/parse-utils'
+import fs from 'fs'
 
 import {
   TestExecutionResult,
@@ -16,7 +17,7 @@ import {
 } from '../../test-results'
 
 class TestClass {
-  constructor(readonly name: string) {}
+  constructor(readonly name: string) { }
   readonly tests: Test[] = []
 }
 
@@ -27,7 +28,7 @@ class Test {
     readonly outcome: Outcome,
     readonly duration: number,
     readonly error?: ErrorInfo
-  ) {}
+  ) { }
 
   get result(): TestExecutionResult {
     switch (this.outcome) {
@@ -44,7 +45,7 @@ class Test {
 export class DotnetTrxParser implements TestParser {
   assumedWorkDir: string | undefined
 
-  constructor(readonly options: ParseOptions) {}
+  constructor(readonly options: ParseOptions) { }
 
   async parse(path: string, content: string): Promise<TestRunResult> {
     const trx = await this.getTrxReport(path, content)
@@ -67,7 +68,7 @@ export class DotnetTrxParser implements TestParser {
       return []
     }
 
-    const unitTests: {[id: string]: UnitTest} = {}
+    const unitTests: { [id: string]: UnitTest } = {}
     for (const td of trx.TestRun.TestDefinitions) {
       for (const ut of td.UnitTest) {
         unitTests[ut.$.id] = ut
@@ -79,7 +80,7 @@ export class DotnetTrxParser implements TestParser {
       test: unitTests[result.$.testId]
     }))
 
-    const testClasses: {[name: string]: TestClass} = {}
+    const testClasses: { [name: string]: TestClass } = {}
     for (const r of unitTestsResults) {
       const className = r.test.TestMethod[0].$.className
       let tc = testClasses[className]
@@ -183,10 +184,10 @@ export class DotnetTrxParser implements TestParser {
     }
   }
 
-  private exceptionThrowSource(stackTrace: string): {path: string; line: number} | undefined {
+  private exceptionThrowSource(stackTrace: string): { path: string; line: number } | undefined {
     const lines = stackTrace.split(/\r*\n/)
     const re = / in (.+):line (\d+)$/
-    const {trackedFiles} = this.options
+    const { trackedFiles } = this.options
 
     for (const str of lines) {
       const match = str.match(re)
@@ -198,7 +199,7 @@ export class DotnetTrxParser implements TestParser {
           const file = filePath.substr(workDir.length)
           if (trackedFiles.includes(file)) {
             const line = parseInt(lineStr)
-            return {path: file, line}
+            return { path: file, line }
           }
         }
       }

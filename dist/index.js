@@ -145,6 +145,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.TestReporter = void 0;
 const core = __importStar(__nccwpck_require__(7484));
 const github = __importStar(__nccwpck_require__(3228));
 const local_file_provider_1 = __nccwpck_require__(922);
@@ -160,6 +161,7 @@ const fs_1 = __importDefault(__nccwpck_require__(9896));
 const path_1 = __importDefault(__nccwpck_require__(6928));
 const bent_1 = __importDefault(__nccwpck_require__(5519));
 const process_1 = __nccwpck_require__(932);
+const merge_utils_1 = __nccwpck_require__(1246);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -328,81 +330,7 @@ class TestReporter {
                     throw error;
                 }
             }
-            function mergeTestRunResults(results) {
-                if (results.length === 0) {
-                    throw new Error('Cannot merge empty array of TestRunResults');
-                }
-                if (results.length === 1) {
-                    return results[0];
-                }
-                // Create a map to group suites by name
-                const suitesMap = new Map();
-                // Collect all suites from all results
-                for (const result of results) {
-                    for (const suite of result.suites) {
-                        const existingSuites = suitesMap.get(suite.name) || [];
-                        suitesMap.set(suite.name, [...existingSuites, suite]);
-                    }
-                }
-                // Merge suites with the same name
-                const mergedSuites = Array.from(suitesMap.values()).map(suites => {
-                    var _a, _b;
-                    if (suites.length === 1) {
-                        return suites[0];
-                    }
-                    // Create a map to group groups by name
-                    const groupsMap = new Map();
-                    // Collect all groups from all suites
-                    for (const suite of suites) {
-                        for (const group of suite.groups) {
-                            const existingGroups = groupsMap.get((_a = group.name) !== null && _a !== void 0 ? _a : '') || [];
-                            groupsMap.set((_b = group.name) !== null && _b !== void 0 ? _b : '', [...existingGroups, group]);
-                        }
-                    }
-                    // Merge groups with the same name
-                    const mergedGroups = Array.from(groupsMap.values()).map(groups => {
-                        if (groups.length === 1) {
-                            return groups[0];
-                        }
-                        // Create a map to group tests by id
-                        const testsMap = new Map();
-                        // Collect all tests from all groups
-                        for (const group of groups) {
-                            for (const test of group.tests) {
-                                const existingTests = testsMap.get(test.id) || [];
-                                testsMap.set(test.id, [...existingTests, test]);
-                            }
-                        }
-                        // Take the first test for each id (assuming they are identical)
-                        const mergedTests = Array.from(testsMap.values()).map(tests => tests[0]);
-                        // Create new merged group
-                        return new test_results_1.TestGroupResult(groups[0].name, mergedTests);
-                    });
-                    // Create new merged suite
-                    return new test_results_1.TestSuiteResult(suites[0].name, mergedGroups);
-                });
-                // Calculate total time from all results
-                const totalTime = results.reduce((sum, result) => sum + result.time, 0);
-                // Create new merged result
-                return new test_results_1.TestRunResult(results[0].path, mergedSuites, totalTime);
-            }
-            function groupByDirectory(results) {
-                const pathMap = new Map();
-                for (const result of results) {
-                    var dir = path_1.default.dirname(result.path);
-                    core.info(`Grouping test results from ${dir}`);
-                    const existing = pathMap.get(dir) || [];
-                    pathMap.set(dir, [...existing, result]);
-                }
-                const groupedResults = [];
-                pathMap.forEach(results => {
-                    const mergedResult = mergeTestRunResults(results);
-                    mergedResult.sort(true);
-                    groupedResults.push(mergedResult);
-                });
-                return groupedResults;
-            }
-            results = groupByDirectory(results);
+            results = (0, merge_utils_1.groupByDirectory)(results);
             results.sort((a, b) => a.path.localeCompare(b.path, 'en'));
             core.info(`Creating check run ${name}`);
             try {
@@ -448,63 +376,7 @@ class TestReporter {
                 core.setOutput('url_html', resp.data.html_url);
                 core.info(`Check run details: ${resp.data.details_url}`);
                 result.checkUrl = resp.data.html_url;
-                if (this.slackWebhook && this.context.branch === 'master') {
-                    const webhook = new webhook_1.IncomingWebhook(this.slackWebhook);
-                    const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
-                    const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
-                    const failed = results.reduce((sum, tr) => sum + tr.failed, 0);
-                    const req = {
-                        blocks: [
-                            {
-                                type: 'section',
-                                text: {
-                                    type: 'mrkdwn',
-                                    text: `*${name}*`
-                                }
-                            },
-                            {
-                                type: 'section',
-                                text: {
-                                    type: 'mrkdwn',
-                                    text: `:large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed} <${resp.data.html_url}|(view)>`
-                                }
-                            }
-                        ]
-                    };
-                    results.map((tr, runIndex) => {
-                        if (tr.failed === 0)
-                            return;
-                        let runName = tr.path.slice(0, tr.path.indexOf('/TestResults/'));
-                        runName = runName.startsWith('test/') ? runName.slice(5) : runName;
-                        req.blocks.push({
-                            type: 'section',
-                            text: {
-                                type: 'mrkdwn',
-                                text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
-                            }
-                        });
-                        if (failed <= 10) {
-                            const failedTests = [];
-                            tr.failedSuites.map(suite => {
-                                suite.failedGroups.map(group => {
-                                    group.failedTests.map(test => {
-                                        failedTests.push(`- <${suite.link}|${test.name}>`);
-                                    });
-                                });
-                            });
-                            req.blocks.push({
-                                type: 'section',
-                                text: {
-                                    type: 'mrkdwn',
-                                    text: failedTests.join('\n')
-                                }
-                            });
-                        }
-                    });
-                    if (this.githubEvent === 'schedule' || failed > 0) {
-                        yield webhook.send(req);
-                    }
-                }
+                yield this.reportToSlack(results, name, resp);
             }
             catch (error) {
                 core.error(`Could not create check to store the results`);
@@ -512,10 +384,72 @@ class TestReporter {
             return result;
         });
     }
+    reportToSlack(results, name, resp) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (this.slackWebhook && this.context.branch === 'master') {
+                const webhook = new webhook_1.IncomingWebhook(this.slackWebhook);
+                const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
+                const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
+                const failed = results.reduce((sum, tr) => sum + tr.failed, 0);
+                const req = {
+                    blocks: [
+                        {
+                            type: 'section',
+                            text: {
+                                type: 'mrkdwn',
+                                text: `*${name}*`
+                            }
+                        },
+                        {
+                            type: 'section',
+                            text: {
+                                type: 'mrkdwn',
+                                text: `:large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed} <${resp.data.html_url}|(view)>`
+                            }
+                        }
+                    ]
+                };
+                results.map((tr, runIndex) => {
+                    if (tr.failed === 0)
+                        return;
+                    let runName = path_1.default.basename(path_1.default.dirname(path_1.default.dirname(tr.path)));
+                    runName = runName.startsWith('test/') ? runName.slice(5) : runName;
+                    req.blocks.push({
+                        type: 'section',
+                        text: {
+                            type: 'mrkdwn',
+                            text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
+                        }
+                    });
+                    if (failed <= 10) {
+                        const failedTests = [];
+                        tr.failedSuites.map(suite => {
+                            suite.failedGroups.map(group => {
+                                group.failedTests.map(test => {
+                                    failedTests.push(`- <${suite.link}|${test.name}>`);
+                                });
+                            });
+                        });
+                        req.blocks.push({
+                            type: 'section',
+                            text: {
+                                type: 'mrkdwn',
+                                text: failedTests.join('\n')
+                            }
+                        });
+                    }
+                });
+                if (this.githubEvent === 'schedule' || failed > 0) {
+                    yield webhook.send(req);
+                }
+            }
+        });
+    }
     getParser(reporter, options) {
         return new dotnet_trx_parser_1.DotnetTrxParser(options);
     }
 }
+exports.TestReporter = TestReporter;
 main();
 
 
@@ -1466,6 +1400,130 @@ function formatTime(ms) {
         return `${Math.round(ms / 1000)}s`;
     }
     return `${Math.round(ms)}ms`;
+}
+
+
+/***/ }),
+
+/***/ 1246:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.groupByDirectory = groupByDirectory;
+const test_results_1 = __nccwpck_require__(613);
+const core = __importStar(__nccwpck_require__(7484));
+const path_1 = __importDefault(__nccwpck_require__(6928));
+function mergeTestRunResults(results) {
+    if (results.length === 0) {
+        throw new Error('Cannot merge empty array of TestRunResults');
+    }
+    if (results.length === 1) {
+        return results[0];
+    }
+    // Create a map to group suites by name
+    const suitesMap = new Map();
+    // Collect all suites from all results
+    for (const result of results) {
+        for (const suite of result.suites) {
+            const existingSuites = suitesMap.get(suite.name) || [];
+            suitesMap.set(suite.name, [...existingSuites, suite]);
+        }
+    }
+    // Merge suites with the same name
+    const mergedSuites = Array.from(suitesMap.values()).map(suites => {
+        var _a, _b;
+        if (suites.length === 1) {
+            return suites[0];
+        }
+        // Create a map to group groups by name
+        const groupsMap = new Map();
+        // Collect all groups from all suites
+        for (const suite of suites) {
+            for (const group of suite.groups) {
+                const existingGroups = groupsMap.get((_a = group.name) !== null && _a !== void 0 ? _a : '') || [];
+                groupsMap.set((_b = group.name) !== null && _b !== void 0 ? _b : '', [...existingGroups, group]);
+            }
+        }
+        // Merge groups with the same name
+        const mergedGroups = Array.from(groupsMap.values()).map(groups => {
+            if (groups.length === 1) {
+                return groups[0];
+            }
+            // Create a map to group tests by id
+            const testsMap = new Map();
+            // Collect all tests from all groups
+            for (const group of groups) {
+                for (const test of group.tests) {
+                    const existingTests = testsMap.get(test.id) || [];
+                    testsMap.set(test.id, [...existingTests, test]);
+                }
+            }
+            // Take the first test for each id (assuming they are identical)
+            const mergedTests = Array.from(testsMap.values()).map(tests => tests[0]);
+            // Create new merged group
+            return new test_results_1.TestGroupResult(groups[0].name, mergedTests);
+        });
+        // Create new merged suite
+        return new test_results_1.TestSuiteResult(suites[0].name, mergedGroups);
+    });
+    // Calculate total time from all results
+    const totalTime = results.reduce((sum, result) => sum + result.time, 0);
+    // Create new merged result
+    return new test_results_1.TestRunResult(results[0].path, mergedSuites, totalTime);
+}
+function groupByDirectory(results) {
+    const pathMap = new Map();
+    for (const result of results) {
+        var dir = path_1.default.dirname(result.path);
+        core.info(`Grouping test results from ${dir}`);
+        const existing = pathMap.get(dir) || [];
+        pathMap.set(dir, [...existing, result]);
+    }
+    const groupedResults = [];
+    pathMap.forEach(results => {
+        const mergedResult = mergeTestRunResults(results);
+        mergedResult.sort(true);
+        groupedResults.push(mergedResult);
+    });
+    return groupedResults;
 }
 
 

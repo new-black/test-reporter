@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b8995846-1f13-437d-a7ac-92a377f2cf93" name="@ip-10-1-13-52 2025-04-02 13:11:16" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:11:16.6720535+00:00" queuing="2025-04-02T13:11:16.6720535+00:00" start="2025-04-02T13:11:15.2439756+00:00" finish="2025-04-02T13:11:17.7046664+00:00" />
+  <TestSettings name="default" id="8db9fbbf-1be7-4a09-aca5-46a248133d1a">
+    <Deployment runDeploymentRoot="_ip-10-1-13-52_2025-04-02_13_11_16" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="91743b67-76d8-487e-87ed-439f6c984c77" testId="ea6f8979-6700-0af6-bbcf-dd3083d8279f" testName="Should_be_available" computerName="ip-10-1-13-52" duration="00:00:00.0001180" startTime="2025-04-02T13:11:16.5906014+00:00" endTime="2025-04-02T13:11:16.5907196+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91743b67-76d8-487e-87ed-439f6c984c77">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f41d1f83-429d-4c5a-a926-9c8f94766522" testId="edb9e9e1-e8eb-1edf-40f2-3f4d0f8e9d7f" testName="FlexibleTypeMappingShouldWork" computerName="ip-10-1-13-52" duration="00:00:00.0001090" startTime="2025-04-02T13:11:16.5912861+00:00" endTime="2025-04-02T13:11:16.5913948+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f41d1f83-429d-4c5a-a926-9c8f94766522">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="881c7f86-fcc0-478e-848e-bd1e0472867c" testId="f666babe-28ab-a5d8-ac97-ae0622f4d6ea" testName="Create_pending_payment_transaction_for_Interac_when_refunding" computerName="ip-10-1-13-52" duration="00:00:00.0001710" startTime="2025-04-02T13:11:16.5901293+00:00" endTime="2025-04-02T13:11:16.5903002+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="881c7f86-fcc0-478e-848e-bd1e0472867c">
+      <Output>
+        <StdOut>This test fails if the OrganizationUnitSetID of the PaymentType in the call to CreateOrUpdateOrganizationUnitSetPaymentType is set to an actual SetID instead of an OU ID.</StdOut>
+        <ErrorInfo>
+          <Message>This test fails if the OrganizationUnitSetID of the PaymentType in the call to CreateOrUpdateOrganizationUnitSetPaymentType is set to an actual SetID instead of an OU ID.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b9d1b83b-5192-40de-8955-a29909d2493e" testId="ac0ade3e-a5dd-abe4-b8f6-7bc7d5cbcf40" testName="HappyFlowWorks" computerName="ip-10-1-13-52" duration="00:00:00.0000810" startTime="2025-04-02T13:11:16.5895475+00:00" endTime="2025-04-02T13:11:16.5896280+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9d1b83b-5192-40de-8955-a29909d2493e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5c11afc6-0a97-4df9-a7de-3156e5033977" testId="6b46da1b-6cce-4023-59aa-26ea3011c792" testName="AdyenSettlementsWork" computerName="ip-10-1-13-52" duration="00:00:00.0008710" startTime="2025-04-02T13:11:17.5647868+00:00" endTime="2025-04-02T13:11:17.5656577+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c11afc6-0a97-4df9-a7de-3156e5033977">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5ea9b7bc-138a-4722-bb30-de840b751381" testId="7a298811-f90e-26ed-4e6a-b81bc6a0ef85" testName="PaymentCaptureCancelWorks" computerName="ip-10-1-13-52" duration="00:00:00.0007159" startTime="2025-04-02T13:11:17.6334509+00:00" endTime="2025-04-02T13:11:17.6341670+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ea9b7bc-138a-4722-bb30-de840b751381">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d1279ea3-3572-422c-a5bc-04f335a37984" testId="43d59ee3-36a9-82c4-8d7c-7957d45ddbe0" testName="PaymentAuthorizationModificationWorks" computerName="ip-10-1-13-52" duration="00:00:00.0004670" startTime="2025-04-02T13:11:17.6303581+00:00" endTime="2025-04-02T13:11:17.6308252+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1279ea3-3572-422c-a5bc-04f335a37984">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a0362ccf-5e38-4064-b2d9-48151791bfb0" testId="3b74ce56-2eb2-8090-40a4-c7edbd7b64cc" testName="PaymentRefundBeforeCaptureWorks" computerName="ip-10-1-13-52" duration="00:00:00.0002040" startTime="2025-04-02T13:11:17.6342079+00:00" endTime="2025-04-02T13:11:17.6344123+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0362ccf-5e38-4064-b2d9-48151791bfb0">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d95f7a2a-dbc5-458c-a590-26adcd589165" testId="536b7d09-78d2-c6ac-4f39-1d81e51c3fed" testName="Adyen_PIN_currency_conversion_data_is_attached_to_transactions" computerName="ip-10-1-13-52" duration="00:00:00.0001010" startTime="2025-04-02T13:11:16.5907862+00:00" endTime="2025-04-02T13:11:16.5908872+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d95f7a2a-dbc5-458c-a590-26adcd589165">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="11784f05-2956-46cc-ad78-42da2d9c90ed" testId="bc22ae93-c243-c2c8-7825-f20067f38796" testName="ManualKeyEntryWorks" computerName="ip-10-1-13-52" duration="00:00:00.0000720" startTime="2025-04-02T13:11:16.5914000+00:00" endTime="2025-04-02T13:11:16.5914724+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11784f05-2956-46cc-ad78-42da2d9c90ed">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fba660e6-dd98-4512-bd58-6aa9c12845e5" testId="7e4a6db6-456a-853a-80ff-5eb44c007400" testName="Duplication_works" computerName="ip-10-1-13-52" duration="00:00:00.0004520" startTime="2025-04-02T13:11:16.5889703+00:00" endTime="2025-04-02T13:11:16.5894216+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fba660e6-dd98-4512-bd58-6aa9c12845e5">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="501fa1ed-57d3-4947-a977-48f2030e5662" testId="11e25f1a-e9c2-5204-3960-668112c4c284" testName="Start_transaction_response_contains_countryID" computerName="ip-10-1-13-52" duration="00:00:00.0000699" startTime="2025-04-02T13:11:16.5914761+00:00" endTime="2025-04-02T13:11:16.5915461+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="501fa1ed-57d3-4947-a977-48f2030e5662">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ccb8b99c-9847-43d1-8bf3-a0e1b11f5b80" testId="4141c379-df92-d6f3-0d7f-d1483507cc51" testName="Employee_can_cancel_possdk_payment" computerName="ip-10-1-13-52" duration="00:00:00.3469070" startTime="2025-04-02T13:11:17.2174736+00:00" endTime="2025-04-02T13:11:17.5643797+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccb8b99c-9847-43d1-8bf3-a0e1b11f5b80" />
+    <UnitTestResult executionId="c7697bc1-6472-4b82-a33e-56bb83f628a1" testId="50fd6c0c-8c7a-9032-1df9-ed9453d848b3" testName="Validate_service_works" computerName="ip-10-1-13-52" duration="00:00:00.0001660" startTime="2025-04-02T13:11:16.5903758+00:00" endTime="2025-04-02T13:11:16.5905415+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7697bc1-6472-4b82-a33e-56bb83f628a1">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="93668456-5899-40a9-b068-d873638d70a3" testId="fb313f3b-00d3-536e-5b5b-c564d64baad6" testName="AdyenSettlementsWorkWithOldUploadPaymentSettlementFileDataFlow" computerName="ip-10-1-13-52" duration="00:00:00.0011869" startTime="2025-04-02T13:11:17.5657156+00:00" endTime="2025-04-02T13:11:17.5669022+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93668456-5899-40a9-b068-d873638d70a3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0049d9b1-4d9d-40a8-be02-bddc48a7e25f" testId="9ff231fc-986a-a66b-afaf-a58b8fa9e92a" testName="Payment_transaction_description_is_updated_when_updating_payment_type_for_dropin" computerName="ip-10-1-13-52" duration="00:00:00.0000870" startTime="2025-04-02T13:11:16.5898494+00:00" endTime="2025-04-02T13:11:16.5899361+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0049d9b1-4d9d-40a8-be02-bddc48a7e25f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cade2542-da80-481b-8d62-f95f930b9d1c" testId="e6841cda-7817-ee12-5fd0-97181e9db761" testName="HappyFlowWorks" computerName="ip-10-1-13-52" duration="00:00:00.0002700" startTime="2025-04-02T13:11:17.5671133+00:00" endTime="2025-04-02T13:11:17.5673831+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cade2542-da80-481b-8d62-f95f930b9d1c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c4cd0aa9-d5e4-483c-8220-648d45e43e6a" testId="fb5a1490-45a7-cc31-9627-53dfce746ddc" testName="Can_create_possdk_payment" computerName="ip-10-1-13-52" duration="00:00:00.6257640" startTime="2025-04-02T13:11:16.5916485+00:00" endTime="2025-04-02T13:11:17.2174115+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4cd0aa9-d5e4-483c-8220-648d45e43e6a" />
+    <UnitTestResult executionId="741d28a1-55a8-4ba5-8bda-e9bda8d9775c" testId="d1e6fc26-4855-2207-52cb-b58523890b13" testName="PaymentCaptureCancel_Failure_Works" computerName="ip-10-1-13-52" duration="00:00:00.0025290" startTime="2025-04-02T13:11:17.6308666+00:00" endTime="2025-04-02T13:11:17.6333952+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="741d28a1-55a8-4ba5-8bda-e9bda8d9775c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6966bb33-f224-4087-b712-321874d3a508" testId="4b46d226-fdae-c903-693f-9618f7049c3d" testName="EmptyNotificationsWork" computerName="ip-10-1-13-52" duration="00:00:00.0001070" startTime="2025-04-02T13:11:16.5894357+00:00" endTime="2025-04-02T13:11:16.5895426+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6966bb33-f224-4087-b712-321874d3a508">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0e9ca88c-53bf-4711-be75-8eaf029d78fe" testId="80bfd713-3505-019e-01fb-70704e3b94be" testName="Partial_payments_work" computerName="ip-10-1-13-52" duration="00:00:00.0000910" startTime="2025-04-02T13:11:16.5897542+00:00" endTime="2025-04-02T13:11:16.5898449+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e9ca88c-53bf-4711-be75-8eaf029d78fe">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0cd92b16-8b92-4dba-ae62-05988999834d" testId="2d99b25c-66f1-4e41-1336-8d9f6be7a3e0" testName="InvalidAddressIsHandled" computerName="ip-10-1-13-52" duration="00:00:00.0613240" startTime="2025-04-02T13:11:17.5673991+00:00" endTime="2025-04-02T13:11:17.6287225+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0cd92b16-8b92-4dba-ae62-05988999834d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="adff65c4-d6f7-45cc-9a44-83630b50661b" testId="e55afe91-572c-f6f2-889a-630fe9ec7e22" testName="Adyen_PIN_works" computerName="ip-10-1-13-52" duration="00:00:00.0002660" startTime="2025-04-02T13:11:16.5909195+00:00" endTime="2025-04-02T13:11:16.5911856+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="adff65c4-d6f7-45cc-9a44-83630b50661b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="db652853-2531-4ea3-8ee1-54a08f0ab902" testId="c92d9416-eeab-ec4e-639d-76feb569a82f" testName="Can_get_payment_transaction_settlements_with_captures" computerName="ip-10-1-13-52" duration="00:00:00.0003080" startTime="2025-04-02T13:11:17.6368549+00:00" endTime="2025-04-02T13:11:17.6371623+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db652853-2531-4ea3-8ee1-54a08f0ab902">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9749a16f-4406-4c79-9ab3-5f75a5fe7188" testId="42db2585-47c9-69d6-1d80-a5aedb38dda9" testName="PaymentChargebackFlowWorks" computerName="ip-10-1-13-52" duration="00:00:00.0008300" startTime="2025-04-02T13:11:17.6348216+00:00" endTime="2025-04-02T13:11:17.6356519+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9749a16f-4406-4c79-9ab3-5f75a5fe7188">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e12a7a3f-25c3-484e-b66b-37e46520f0f9" testId="f4ea3dd4-11ba-a13f-9a45-98e082c9e024" testName="Add_shopper_reference_to_session_request" computerName="ip-10-1-13-52" duration="00:00:00.0003920" startTime="2025-04-02T13:11:16.5885633+00:00" endTime="2025-04-02T13:11:16.5889552+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e12a7a3f-25c3-484e-b66b-37e46520f0f9">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="19eefd38-6ef9-4b43-ac29-9c48a31f78b3" testId="fd1d4366-bbae-cd04-523e-1ae0b3fbbf87" testName="NotificationsWork" computerName="ip-10-1-13-52" duration="00:00:00.0001150" startTime="2025-04-02T13:11:16.5896317+00:00" endTime="2025-04-02T13:11:16.5897468+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19eefd38-6ef9-4b43-ac29-9c48a31f78b3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6032b1c-fdd7-4548-aec8-7cb8ab0262ca" testId="ed5e0975-0241-b048-8f37-c0b8968020b1" testName="Can_get_payment_transaction_settlements_that_have_no_payment_reference" computerName="ip-10-1-13-52" duration="00:00:00.0005109" startTime="2025-04-02T13:11:17.6362977+00:00" endTime="2025-04-02T13:11:17.6368079+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6032b1c-fdd7-4548-aec8-7cb8ab0262ca">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b732f144-765b-441b-afab-5f87c83fdbe0" testId="219f7365-7012-cb2f-35f5-16b6b846fb3d" testName="Can_get_payment_transaction_settlements_for_payment_transaction_without_captures" computerName="ip-10-1-13-52" duration="00:00:00.0002810" startTime="2025-04-02T13:11:17.6359991+00:00" endTime="2025-04-02T13:11:17.6362798+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b732f144-765b-441b-afab-5f87c83fdbe0">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="13b276ed-8945-4c43-8ea1-3da8de5cafca" testId="38bebc1b-3ef9-4602-ff06-70d9f22e190a" testName="Add_shopper_reference_to_session_request" computerName="ip-10-1-13-52" duration="00:00:00.0137990" startTime="2025-04-02T13:11:16.5724989+00:00" endTime="2025-04-02T13:11:16.5862629+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13b276ed-8945-4c43-8ea1-3da8de5cafca">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9496dd3f-a534-4b5f-8e72-a075e3f819d3" testId="9b3961b7-67d0-c114-9a25-57b025fd12b6" testName="Adyen_PIN_works_with_captures" computerName="ip-10-1-13-52" duration="00:00:00.0000850" startTime="2025-04-02T13:11:16.5911963+00:00" endTime="2025-04-02T13:11:16.5912815+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9496dd3f-a534-4b5f-8e72-a075e3f819d3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="HappyFlowWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="e6841cda-7817-ee12-5fd0-97181e9db761">
+      <Execution id="cade2542-da80-481b-8d62-f95f930b9d1c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.ApplePayTests" name="HappyFlowWorks" />
+    </UnitTest>
+    <UnitTest name="Add_shopper_reference_to_session_request" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="38bebc1b-3ef9-4602-ff06-70d9f22e190a">
+      <Execution id="13b276ed-8945-4c43-8ea1-3da8de5cafca" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenCheckoutSDKTests" name="Add_shopper_reference_to_session_request" />
+    </UnitTest>
+    <UnitTest name="HappyFlowWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="ac0ade3e-a5dd-abe4-b8f6-7bc7d5cbcf40">
+      <Execution id="b9d1b83b-5192-40de-8955-a29909d2493e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="HappyFlowWorks" />
+    </UnitTest>
+    <UnitTest name="Should_be_available" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="ea6f8979-6700-0af6-bbcf-dd3083d8279f">
+      <Execution id="91743b67-76d8-487e-87ed-439f6c984c77" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPayByLinkTests" name="Should_be_available" />
+    </UnitTest>
+    <UnitTest name="PaymentCaptureCancelWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="7a298811-f90e-26ed-4e6a-b81bc6a0ef85">
+      <Execution id="5ea9b7bc-138a-4722-bb30-de840b751381" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentCaptureTests" name="PaymentCaptureCancelWorks" />
+    </UnitTest>
+    <UnitTest name="Partial_payments_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="80bfd713-3505-019e-01fb-70704e3b94be">
+      <Execution id="0e9ca88c-53bf-4711-be75-8eaf029d78fe" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="Partial_payments_work" />
+    </UnitTest>
+    <UnitTest name="Add_shopper_reference_to_session_request" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="f4ea3dd4-11ba-a13f-9a45-98e082c9e024">
+      <Execution id="e12a7a3f-25c3-484e-b66b-37e46520f0f9" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="Add_shopper_reference_to_session_request" />
+    </UnitTest>
+    <UnitTest name="Validate_service_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="50fd6c0c-8c7a-9032-1df9-ed9453d848b3">
+      <Execution id="c7697bc1-6472-4b82-a33e-56bb83f628a1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenManagementTests" name="Validate_service_works" />
+    </UnitTest>
+    <UnitTest name="PaymentCaptureCancel_Failure_Works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="d1e6fc26-4855-2207-52cb-b58523890b13">
+      <Execution id="741d28a1-55a8-4ba5-8bda-e9bda8d9775c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentCaptureTests" name="PaymentCaptureCancel_Failure_Works" />
+    </UnitTest>
+    <UnitTest name="Employee_can_cancel_possdk_payment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="4141c379-df92-d6f3-0d7f-d1483507cc51">
+      <Execution id="ccb8b99c-9847-43d1-8bf3-a0e1b11f5b80" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPOSSDKTests" name="Employee_can_cancel_possdk_payment" />
+    </UnitTest>
+    <UnitTest name="Start_transaction_response_contains_countryID" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="11e25f1a-e9c2-5204-3960-668112c4c284">
+      <Execution id="501fa1ed-57d3-4947-a977-48f2030e5662" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPinTests" name="Start_transaction_response_contains_countryID" />
+    </UnitTest>
+    <UnitTest name="NotificationsWork" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="fd1d4366-bbae-cd04-523e-1ae0b3fbbf87">
+      <Execution id="19eefd38-6ef9-4b43-ac29-9c48a31f78b3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="NotificationsWork" />
+    </UnitTest>
+    <UnitTest name="FlexibleTypeMappingShouldWork" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="edb9e9e1-e8eb-1edf-40f2-3f4d0f8e9d7f">
+      <Execution id="f41d1f83-429d-4c5a-a926-9c8f94766522" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPinTests" name="FlexibleTypeMappingShouldWork" />
+    </UnitTest>
+    <UnitTest name="InvalidAddressIsHandled" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="2d99b25c-66f1-4e41-1336-8d9f6be7a3e0">
+      <Execution id="0cd92b16-8b92-4dba-ae62-05988999834d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.ApplePayTests" name="InvalidAddressIsHandled" />
+    </UnitTest>
+    <UnitTest name="Can_get_payment_transaction_settlements_that_have_no_payment_reference" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="ed5e0975-0241-b048-8f37-c0b8968020b1">
+      <Execution id="e6032b1c-fdd7-4548-aec8-7cb8ab0262ca" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentTransactionSettlementsTests" name="Can_get_payment_transaction_settlements_that_have_no_payment_reference" />
+    </UnitTest>
+    <UnitTest name="Duplication_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="7e4a6db6-456a-853a-80ff-5eb44c007400">
+      <Execution id="fba660e6-dd98-4512-bd58-6aa9c12845e5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="Duplication_works" />
+    </UnitTest>
+    <UnitTest name="Adyen_PIN_works_with_captures" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="9b3961b7-67d0-c114-9a25-57b025fd12b6">
+      <Execution id="9496dd3f-a534-4b5f-8e72-a075e3f819d3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPinTests" name="Adyen_PIN_works_with_captures" />
+    </UnitTest>
+    <UnitTest name="Can_get_payment_transaction_settlements_with_captures" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="c92d9416-eeab-ec4e-639d-76feb569a82f">
+      <Execution id="db652853-2531-4ea3-8ee1-54a08f0ab902" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentTransactionSettlementsTests" name="Can_get_payment_transaction_settlements_with_captures" />
+    </UnitTest>
+    <UnitTest name="PaymentChargebackFlowWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="42db2585-47c9-69d6-1d80-a5aedb38dda9">
+      <Execution id="9749a16f-4406-4c79-9ab3-5f75a5fe7188" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentChargebackTests" name="PaymentChargebackFlowWorks" />
+    </UnitTest>
+    <UnitTest name="EmptyNotificationsWork" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="4b46d226-fdae-c903-693f-9618f7049c3d">
+      <Execution id="6966bb33-f224-4087-b712-321874d3a508" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="EmptyNotificationsWork" />
+    </UnitTest>
+    <UnitTest name="AdyenSettlementsWork" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="6b46da1b-6cce-4023-59aa-26ea3011c792">
+      <Execution id="5c11afc6-0a97-4df9-a7de-3156e5033977" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenSettlementTests" name="AdyenSettlementsWork" />
+    </UnitTest>
+    <UnitTest name="Create_pending_payment_transaction_for_Interac_when_refunding" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="f666babe-28ab-a5d8-ac97-ae0622f4d6ea">
+      <Execution id="881c7f86-fcc0-478e-848e-bd1e0472867c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenInteracRefundTest" name="Create_pending_payment_transaction_for_Interac_when_refunding" />
+    </UnitTest>
+    <UnitTest name="AdyenSettlementsWorkWithOldUploadPaymentSettlementFileDataFlow" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="fb313f3b-00d3-536e-5b5b-c564d64baad6">
+      <Execution id="93668456-5899-40a9-b068-d873638d70a3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenSettlementTests" name="AdyenSettlementsWorkWithOldUploadPaymentSettlementFileDataFlow" />
+    </UnitTest>
+    <UnitTest name="Adyen_PIN_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="e55afe91-572c-f6f2-889a-630fe9ec7e22">
+      <Execution id="adff65c4-d6f7-45cc-9a44-83630b50661b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPinTests" name="Adyen_PIN_works" />
+    </UnitTest>
+    <UnitTest name="Payment_transaction_description_is_updated_when_updating_payment_type_for_dropin" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="9ff231fc-986a-a66b-afaf-a58b8fa9e92a">
+      <Execution id="0049d9b1-4d9d-40a8-be02-bddc48a7e25f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenDropInTests" name="Payment_transaction_description_is_updated_when_updating_payment_type_for_dropin" />
+    </UnitTest>
+    <UnitTest name="Adyen_PIN_currency_conversion_data_is_attached_to_transactions" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="536b7d09-78d2-c6ac-4f39-1d81e51c3fed">
+      <Execution id="d95f7a2a-dbc5-458c-a590-26adcd589165" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPinTests" name="Adyen_PIN_currency_conversion_data_is_attached_to_transactions" />
+    </UnitTest>
+    <UnitTest name="Can_get_payment_transaction_settlements_for_payment_transaction_without_captures" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="219f7365-7012-cb2f-35f5-16b6b846fb3d">
+      <Execution id="b732f144-765b-441b-afab-5f87c83fdbe0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentTransactionSettlementsTests" name="Can_get_payment_transaction_settlements_for_payment_transaction_without_captures" />
+    </UnitTest>
+    <UnitTest name="Can_create_possdk_payment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="fb5a1490-45a7-cc31-9627-53dfce746ddc">
+      <Execution id="c4cd0aa9-d5e4-483c-8220-648d45e43e6a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPOSSDKTests" name="Can_create_possdk_payment" />
+    </UnitTest>
+    <UnitTest name="ManualKeyEntryWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="bc22ae93-c243-c2c8-7825-f20067f38796">
+      <Execution id="11784f05-2956-46cc-ad78-42da2d9c90ed" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.AdyenPinTests" name="ManualKeyEntryWorks" />
+    </UnitTest>
+    <UnitTest name="PaymentRefundBeforeCaptureWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="3b74ce56-2eb2-8090-40a4-c7edbd7b64cc">
+      <Execution id="a0362ccf-5e38-4064-b2d9-48151791bfb0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentCaptureTests" name="PaymentRefundBeforeCaptureWorks" />
+    </UnitTest>
+    <UnitTest name="PaymentAuthorizationModificationWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.adyen/bin/release/eva.testsuite.adyen.dll" id="43d59ee3-36a9-82c4-8d7c-7957d45ddbe0">
+      <Execution id="d1279ea3-3572-422c-a5bc-04f335a37984" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Adyen.PaymentCaptureTests" name="PaymentAuthorizationModificationWorks" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ea6f8979-6700-0af6-bbcf-dd3083d8279f" executionId="91743b67-76d8-487e-87ed-439f6c984c77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edb9e9e1-e8eb-1edf-40f2-3f4d0f8e9d7f" executionId="f41d1f83-429d-4c5a-a926-9c8f94766522" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f666babe-28ab-a5d8-ac97-ae0622f4d6ea" executionId="881c7f86-fcc0-478e-848e-bd1e0472867c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac0ade3e-a5dd-abe4-b8f6-7bc7d5cbcf40" executionId="b9d1b83b-5192-40de-8955-a29909d2493e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b46da1b-6cce-4023-59aa-26ea3011c792" executionId="5c11afc6-0a97-4df9-a7de-3156e5033977" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a298811-f90e-26ed-4e6a-b81bc6a0ef85" executionId="5ea9b7bc-138a-4722-bb30-de840b751381" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43d59ee3-36a9-82c4-8d7c-7957d45ddbe0" executionId="d1279ea3-3572-422c-a5bc-04f335a37984" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b74ce56-2eb2-8090-40a4-c7edbd7b64cc" executionId="a0362ccf-5e38-4064-b2d9-48151791bfb0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="536b7d09-78d2-c6ac-4f39-1d81e51c3fed" executionId="d95f7a2a-dbc5-458c-a590-26adcd589165" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc22ae93-c243-c2c8-7825-f20067f38796" executionId="11784f05-2956-46cc-ad78-42da2d9c90ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e4a6db6-456a-853a-80ff-5eb44c007400" executionId="fba660e6-dd98-4512-bd58-6aa9c12845e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11e25f1a-e9c2-5204-3960-668112c4c284" executionId="501fa1ed-57d3-4947-a977-48f2030e5662" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4141c379-df92-d6f3-0d7f-d1483507cc51" executionId="ccb8b99c-9847-43d1-8bf3-a0e1b11f5b80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50fd6c0c-8c7a-9032-1df9-ed9453d848b3" executionId="c7697bc1-6472-4b82-a33e-56bb83f628a1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb313f3b-00d3-536e-5b5b-c564d64baad6" executionId="93668456-5899-40a9-b068-d873638d70a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ff231fc-986a-a66b-afaf-a58b8fa9e92a" executionId="0049d9b1-4d9d-40a8-be02-bddc48a7e25f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6841cda-7817-ee12-5fd0-97181e9db761" executionId="cade2542-da80-481b-8d62-f95f930b9d1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb5a1490-45a7-cc31-9627-53dfce746ddc" executionId="c4cd0aa9-d5e4-483c-8220-648d45e43e6a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1e6fc26-4855-2207-52cb-b58523890b13" executionId="741d28a1-55a8-4ba5-8bda-e9bda8d9775c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b46d226-fdae-c903-693f-9618f7049c3d" executionId="6966bb33-f224-4087-b712-321874d3a508" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80bfd713-3505-019e-01fb-70704e3b94be" executionId="0e9ca88c-53bf-4711-be75-8eaf029d78fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d99b25c-66f1-4e41-1336-8d9f6be7a3e0" executionId="0cd92b16-8b92-4dba-ae62-05988999834d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e55afe91-572c-f6f2-889a-630fe9ec7e22" executionId="adff65c4-d6f7-45cc-9a44-83630b50661b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c92d9416-eeab-ec4e-639d-76feb569a82f" executionId="db652853-2531-4ea3-8ee1-54a08f0ab902" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42db2585-47c9-69d6-1d80-a5aedb38dda9" executionId="9749a16f-4406-4c79-9ab3-5f75a5fe7188" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4ea3dd4-11ba-a13f-9a45-98e082c9e024" executionId="e12a7a3f-25c3-484e-b66b-37e46520f0f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd1d4366-bbae-cd04-523e-1ae0b3fbbf87" executionId="19eefd38-6ef9-4b43-ac29-9c48a31f78b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed5e0975-0241-b048-8f37-c0b8968020b1" executionId="e6032b1c-fdd7-4548-aec8-7cb8ab0262ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="219f7365-7012-cb2f-35f5-16b6b846fb3d" executionId="b732f144-765b-441b-afab-5f87c83fdbe0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38bebc1b-3ef9-4602-ff06-70d9f22e190a" executionId="13b276ed-8945-4c43-8ea1-3da8de5cafca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b3961b7-67d0-c114-9a25-57b025fd12b6" executionId="9496dd3f-a534-4b5f-8e72-a075e3f819d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="31" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Adyen/bin/Release/EVA.TestSuite.Adyen.dll
+   NUnit3TestExecutor discovered 31 of 31 NUnit test cases using Current Discovery mode, Non-Explicit run
+Add_shopper_reference_to_session_request: Skipping test: it does not belong to this partition.
+Add_shopper_reference_to_session_request: Skipping test: it does not belong to this partition.
+Duplication_works: Skipping test: it does not belong to this partition.
+EmptyNotificationsWork: Skipping test: it does not belong to this partition.
+HappyFlowWorks: Skipping test: it does not belong to this partition.
+NotificationsWork: Skipping test: it does not belong to this partition.
+Partial_payments_work: Skipping test: it does not belong to this partition.
+Payment_transaction_description_is_updated_when_updating_payment_type_for_dropin: Skipping test: it does not belong to this partition.
+Create_pending_payment_transaction_for_Interac_when_refunding: This test fails if the OrganizationUnitSetID of the PaymentType in the call to CreateOrUpdateOrganizationUnitSetPaymentType is set to an actual SetID instead of an OU ID.
+Test 'Add_shopper_reference_to_session_request' was skipped in the test run.
+Test 'Add_shopper_reference_to_session_request' was skipped in the test run.
+Test 'Duplication_works' was skipped in the test run.
+Test 'EmptyNotificationsWork' was skipped in the test run.
+Test 'HappyFlowWorks' was skipped in the test run.
+Test 'NotificationsWork' was skipped in the test run.
+Test 'Partial_payments_work' was skipped in the test run.
+Test 'Payment_transaction_description_is_updated_when_updating_payment_type_for_dropin' was skipped in the test run.
+Test 'Create_pending_payment_transaction_for_Interac_when_refunding' was skipped in the test run.
+Validate_service_works: Skipping test: it does not belong to this partition.
+Should_be_available: Skipping test: it does not belong to this partition.
+Adyen_PIN_currency_conversion_data_is_attached_to_transactions: Skipping test: it does not belong to this partition.
+Adyen_PIN_works: Skipping test: it does not belong to this partition.
+Adyen_PIN_works_with_captures: Skipping test: it does not belong to this partition.
+FlexibleTypeMappingShouldWork: Skipping test: it does not belong to this partition.
+ManualKeyEntryWorks: Skipping test: it does not belong to this partition.
+Start_transaction_response_contains_countryID: Skipping test: it does not belong to this partition.
+Test 'Validate_service_works' was skipped in the test run.
+Test 'Should_be_available' was skipped in the test run.
+Test 'Adyen_PIN_currency_conversion_data_is_attached_to_transactions' was skipped in the test run.
+Test 'Adyen_PIN_works' was skipped in the test run.
+Test 'Adyen_PIN_works_with_captures' was skipped in the test run.
+Test 'FlexibleTypeMappingShouldWork' was skipped in the test run.
+Test 'ManualKeyEntryWorks' was skipped in the test run.
+Test 'Start_transaction_response_contains_countryID' was skipped in the test run.
+AdyenSettlementsWork: Skipping test: it does not belong to this partition.
+AdyenSettlementsWorkWithOldUploadPaymentSettlementFileDataFlow: Skipping test: it does not belong to this partition.
+HappyFlowWorks: Skipping test: it does not belong to this partition.
+InvalidAddressIsHandled: Skipping test: it does not belong to this partition.
+PaymentAuthorizationModificationWorks: Skipping test: it does not belong to this partition.
+PaymentCaptureCancel_Failure_Works: Skipping test: it does not belong to this partition.
+PaymentCaptureCancelWorks: Skipping test: it does not belong to this partition.
+PaymentRefundBeforeCaptureWorks: Skipping test: it does not belong to this partition.
+Test 'AdyenSettlementsWork' was skipped in the test run.
+Test 'AdyenSettlementsWorkWithOldUploadPaymentSettlementFileDataFlow' was skipped in the test run.
+Test 'HappyFlowWorks' was skipped in the test run.
+Test 'InvalidAddressIsHandled' was skipped in the test run.
+Test 'PaymentAuthorizationModificationWorks' was skipped in the test run.
+Test 'PaymentCaptureCancel_Failure_Works' was skipped in the test run.
+Test 'PaymentCaptureCancelWorks' was skipped in the test run.
+Test 'PaymentRefundBeforeCaptureWorks' was skipped in the test run.
+PaymentChargebackFlowWorks: Skipping test: it does not belong to this partition.
+Can_get_payment_transaction_settlements_for_payment_transaction_without_captures: Skipping test: it does not belong to this partition.
+Can_get_payment_transaction_settlements_that_have_no_payment_reference: Skipping test: it does not belong to this partition.
+Can_get_payment_transaction_settlements_with_captures: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'PaymentChargebackFlowWorks' was skipped in the test run.
+Test 'Can_get_payment_transaction_settlements_for_payment_transaction_without_captures' was skipped in the test run.
+Test 'Can_get_payment_transaction_settlements_that_have_no_payment_reference' was skipped in the test run.
+Test 'Can_get_payment_transaction_settlements_with_captures' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

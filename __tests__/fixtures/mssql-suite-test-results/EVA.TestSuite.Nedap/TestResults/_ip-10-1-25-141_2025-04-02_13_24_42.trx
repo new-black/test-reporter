@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="fe3fa055-f7f3-40d0-bce0-dadf8a050f98" name="@ip-10-1-25-141 2025-04-02 13:24:42" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:24:42.6806663+00:00" queuing="2025-04-02T13:24:42.6806663+00:00" start="2025-04-02T13:24:41.6311275+00:00" finish="2025-04-02T13:24:42.6852940+00:00" />
+  <TestSettings name="default" id="07fad304-950d-4b6d-a8d8-edc6d7b8e4b3">
+    <Deployment runDeploymentRoot="_ip-10-1-25-141_2025-04-02_13_24_42" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="84607d06-1b4b-4fe4-88ea-f85aa082f13f" testId="147905b9-5caf-7524-ecad-fede3ba005fb" testName="SaleIsCommunicatedToNedap" computerName="ip-10-1-25-141" duration="00:00:00.0140070" startTime="2025-04-02T13:24:42.5400967+00:00" endTime="2025-04-02T13:24:42.5540703+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84607d06-1b4b-4fe4-88ea-f85aa082f13f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SaleIsCommunicatedToNedap" storage="/home/runner/_work/eva/eva/test/eva.testsuite.nedap/bin/release/eva.testsuite.nedap.dll" id="147905b9-5caf-7524-ecad-fede3ba005fb">
+      <Execution id="84607d06-1b4b-4fe4-88ea-f85aa082f13f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Nedap/bin/Release/EVA.TestSuite.Nedap.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Nedap.NedapSaleTests" name="SaleIsCommunicatedToNedap" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="147905b9-5caf-7524-ecad-fede3ba005fb" executionId="84607d06-1b4b-4fe4-88ea-f85aa082f13f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="0" passed="0" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Nedap/bin/Release/EVA.TestSuite.Nedap.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+SaleIsCommunicatedToNedap: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'SaleIsCommunicatedToNedap' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

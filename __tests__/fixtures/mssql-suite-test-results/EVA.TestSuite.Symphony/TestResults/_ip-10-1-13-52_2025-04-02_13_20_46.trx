@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="9293b254-e324-4490-afd5-9290eca9f52f" name="@ip-10-1-13-52 2025-04-02 13:20:46" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:20:46.2691218+00:00" queuing="2025-04-02T13:20:46.2691219+00:00" start="2025-04-02T13:20:42.9188257+00:00" finish="2025-04-02T13:21:25.3946429+00:00" />
+  <TestSettings name="default" id="f2b1eab0-299b-43b8-a032-b6f05fde2c5a">
+    <Deployment runDeploymentRoot="_ip-10-1-13-52_2025-04-02_13_20_46" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="6473a85a-d144-4129-a221-984c5d109eca" testId="593d354a-c66f-4193-7154-4b05ee94523b" testName="Can_use_stock_to_influence_score(False)" computerName="ip-10-1-13-52" duration="00:00:00.0000800" startTime="2025-04-02T13:20:53.3288544+00:00" endTime="2025-04-02T13:20:53.3289347+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6473a85a-d144-4129-a221-984c5d109eca">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6cab383-3ce8-478b-a6a3-9be1833eb7bf" testId="68d4ede0-3258-19bc-e3e4-222b9fac0567" testName="Bundles_are_fulfilled_together(True,4)" computerName="ip-10-1-13-52" duration="00:00:00.9957100" startTime="2025-04-02T13:20:44.6481361+00:00" endTime="2025-04-02T13:20:45.6438070+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6cab383-3ce8-478b-a6a3-9be1833eb7bf" />
+    <UnitTestResult executionId="53558336-795d-47d2-9895-afe51bbaff1e" testId="fe2f8086-3b62-3d38-7430-e4ccbcba9d26" testName="Can_add_labels_to_SFS_task(&quot;AmazonLabel, 'SFS_task', MangoLabel, IsLimitedEdition&quot;,[&quot;NotAmazon&quot;, &quot;SFS_task&quot;, &quot;NotLimitedEdition&quot;])" computerName="ip-10-1-13-52" duration="00:00:00.6224610" startTime="2025-04-02T13:20:55.8151685+00:00" endTime="2025-04-02T13:20:56.4376289+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53558336-795d-47d2-9895-afe51bbaff1e">
+      <Output>
+        <StdOut>Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a1dfc6ff-597b-4dff-9a04-53310e50b7ec" testId="dbd20827-5f71-7689-ff8f-250c78136bf9" testName="Allow_set_shipping_method_after_cancellation_orchestration" computerName="ip-10-1-13-52" duration="00:00:00.0001940" startTime="2025-04-02T13:20:53.3279816+00:00" endTime="2025-04-02T13:20:53.3281759+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a1dfc6ff-597b-4dff-9a04-53310e50b7ec">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c9d25126-9404-49da-a294-70814ffd6a1c" testId="c62ebb5f-12c5-efb5-1da1-8d916a029da3" testName="PackTaskWithProductRequirementsOnUnpickedLine_RemainingPackProduct" computerName="ip-10-1-13-52" duration="00:00:00.9491170" startTime="2025-04-02T13:21:05.5904872+00:00" endTime="2025-04-02T13:21:06.5396037+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9d25126-9404-49da-a294-70814ffd6a1c">
+      <Output>
+        <StdOut>Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a6e24352-985d-4a5d-9b97-2213f28bd79f" testId="89cf9f63-74c3-7c2f-691b-d719da430488" testName="Can_cancel_a_pending_fulfillment" computerName="ip-10-1-13-52" duration="00:00:00.0000820" startTime="2025-04-02T13:20:53.3313718+00:00" endTime="2025-04-02T13:20:53.3314535+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6e24352-985d-4a5d-9b97-2213f28bd79f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5893c973-5910-414d-8454-5fcdea211eaa" testId="fd34e2cd-5d8d-c3ca-5375-8799d16d11f9" testName="Ship_from_is_guessed_correctly" computerName="ip-10-1-13-52" duration="00:00:00.0001499" startTime="2025-04-02T13:20:53.6161721+00:00" endTime="2025-04-02T13:20:53.6163219+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5893c973-5910-414d-8454-5fcdea211eaa">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="32b02460-a3ba-4df1-839d-7680204bb8d5" testId="d746ee77-32e3-0cf9-87ae-66e77d3a9103" testName="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_true_and_ShipFromStoreExternalLabelHandlerPrintType_is_asynchronous" computerName="ip-10-1-13-52" duration="00:00:00.7484400" startTime="2025-04-02T13:21:18.5875618+00:00" endTime="2025-04-02T13:21:19.3360021+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32b02460-a3ba-4df1-839d-7680204bb8d5" />
+    <UnitTestResult executionId="f7d96c87-102d-454c-81a9-3d27d756118c" testId="82585f7e-f948-6fd2-bacd-9df8c45d1746" testName="Score_multiplying_works" computerName="ip-10-1-13-52" duration="00:00:00.0953890" startTime="2025-04-02T13:20:53.3315090+00:00" endTime="2025-04-02T13:20:53.4268965+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7d96c87-102d-454c-81a9-3d27d756118c" />
+    <UnitTestResult executionId="739af79e-2895-4239-9b65-57af9e8968f0" testId="7a5e0e8a-07b5-299f-178e-5d14eb0ec905" testName="Can_get_alternative_fulfillment_options" computerName="ip-10-1-13-52" duration="00:00:00.0003570" startTime="2025-04-02T13:20:53.6141876+00:00" endTime="2025-04-02T13:20:53.6145443+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="739af79e-2895-4239-9b65-57af9e8968f0">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="61477856-1978-44d8-9eaa-11c19eb2d910" testId="0111b4dd-57d1-f184-22cd-15c234fe3773" testName="Partial_pick_test" computerName="ip-10-1-13-52" duration="00:00:00.6804780" startTime="2025-04-02T13:21:06.5396608+00:00" endTime="2025-04-02T13:21:07.2201372+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61477856-1978-44d8-9eaa-11c19eb2d910" />
+    <UnitTestResult executionId="8a461a63-64b5-4a31-9b74-723445b42dc7" testId="3bbeed40-3375-9ee9-6ee4-b3a41ae22310" testName="Works(False)" computerName="ip-10-1-13-52" duration="00:00:00.0003010" startTime="2025-04-02T13:20:53.3299645+00:00" endTime="2025-04-02T13:20:53.3302654+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a461a63-64b5-4a31-9b74-723445b42dc7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d1f36d87-bae8-406d-bab4-d272922003d1" testId="a1783381-1cdf-5e07-3e6b-76bf393595d9" testName="PrintShipFromStoreTasksWithBlobsWorks" computerName="ip-10-1-13-52" duration="00:00:01.0319380" startTime="2025-04-02T13:21:09.2815461+00:00" endTime="2025-04-02T13:21:10.3134838+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1f36d87-bae8-406d-bab4-d272922003d1" />
+    <UnitTestResult executionId="8109866c-7992-40f7-916c-05ca9af4e77a" testId="e5b1c762-e282-29c5-1c75-39698dbfc3f1" testName="Combined_picking_works(True)" computerName="ip-10-1-13-52" duration="00:00:00.8734210" startTime="2025-04-02T13:20:59.8829876+00:00" endTime="2025-04-02T13:21:00.7564080+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8109866c-7992-40f7-916c-05ca9af4e77a" />
+    <UnitTestResult executionId="6fe4d922-5df9-49b9-8b18-6a1ce24f81f3" testId="064014d6-5a1f-2d1b-c516-fd15bd79dc25" testName="SUPPORT_5035" computerName="ip-10-1-13-52" duration="00:00:00.0000910" startTime="2025-04-02T13:21:25.3072297+00:00" endTime="2025-04-02T13:21:25.3073203+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6fe4d922-5df9-49b9-8b18-6a1ce24f81f3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fb4e774e-beac-452e-97e5-7e1ef35a1c20" testId="33e248b2-3a4b-0b51-e2fd-a56b88561ca4" testName="PackTaskCancelledWithProductRequirements" computerName="ip-10-1-13-52" duration="00:00:00.9967280" startTime="2025-04-02T13:21:02.7781861+00:00" endTime="2025-04-02T13:21:03.7749137+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb4e774e-beac-452e-97e5-7e1ef35a1c20">
+      <Output>
+        <StdOut>Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="35fe4f8c-5dc0-4a61-b3f3-0d1b981c838e" testId="50f9f215-6964-3114-8cab-596457577e8d" testName="ShipFromStoreTasksLabelLocalization(&quot;nl&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.7987180" startTime="2025-04-02T13:21:20.7606507+00:00" endTime="2025-04-02T13:21:21.5593687+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35fe4f8c-5dc0-4a61-b3f3-0d1b981c838e">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ed5dc479-acfa-489c-888e-e304bd2df9ff" testId="8710ed58-efeb-b7dd-897e-f81efec02f87" testName="Ship_From_Store_cannot_create_shipment_with_mismatched_package" computerName="ip-10-1-13-52" duration="00:00:00.6176239" startTime="2025-04-02T13:21:12.7590198+00:00" endTime="2025-04-02T13:21:13.3766441+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed5dc479-acfa-489c-888e-e304bd2df9ff" />
+    <UnitTestResult executionId="71fd2a56-9533-47f7-99f4-bd83272bdfa2" testId="eb02e926-db75-368b-9ce0-a30b34670a23" testName="Get_ship_from_store_task_by_barcode_test" computerName="ip-10-1-13-52" duration="00:00:00.4022860" startTime="2025-04-02T13:21:01.5673088+00:00" endTime="2025-04-02T13:21:01.9695946+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71fd2a56-9533-47f7-99f4-bd83272bdfa2" />
+    <UnitTestResult executionId="bb96810f-1308-4833-b736-6a3e3618b7f4" testId="12867b82-5d0f-0398-5912-4f9f57473836" testName="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_false_and_ShipFromStoreExternalLabelHandlerPrintType_is_asynchronous" computerName="ip-10-1-13-52" duration="00:00:00.7762640" startTime="2025-04-02T13:21:17.0676294+00:00" endTime="2025-04-02T13:21:17.8438936+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb96810f-1308-4833-b736-6a3e3618b7f4" />
+    <UnitTestResult executionId="fdbbf833-f716-49dc-959c-e6226ba39945" testId="9f222c2d-f79f-68de-0fa1-2805565b3b70" testName="Can_get_sheet_documentation_for_sheet_that_doesnt_compile" computerName="ip-10-1-13-52" duration="00:00:00.0004200" startTime="2025-04-02T13:20:53.3273906+00:00" endTime="2025-04-02T13:20:53.3278104+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdbbf833-f716-49dc-959c-e6226ba39945">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e44dc96e-6768-42a3-bc10-d78df5d446ba" testId="d94a455a-995f-6f56-1459-8745848f1bd9" testName="Test1(False)" computerName="ip-10-1-13-52" duration="00:00:00.0000670" startTime="2025-04-02T13:20:53.3312063+00:00" endTime="2025-04-02T13:20:53.3312730+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e44dc96e-6768-42a3-bc10-d78df5d446ba">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="09f18969-fb2c-4e21-b100-67ac54fbb59c" testId="a60563d4-5632-24d5-2b54-2dd18e245851" testName="Starting_a_SFS_task_does_not_cancel_other_SFS_tasks_for_different_parts_of_the_same_order" computerName="ip-10-1-13-52" duration="00:00:00.8602020" startTime="2025-04-02T13:21:22.8496355+00:00" endTime="2025-04-02T13:21:23.7098377+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09f18969-fb2c-4e21-b100-67ac54fbb59c" />
+    <UnitTestResult executionId="23c4131c-0918-4896-bd9f-e428eb8bd7dd" testId="9be6175a-72ec-48f6-4c89-527abf7f6806" testName="Bundles_are_fulfilled_together(True,30)" computerName="ip-10-1-13-52" duration="00:00:03.7187120" startTime="2025-04-02T13:20:46.3068227+00:00" endTime="2025-04-02T13:20:50.0255334+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23c4131c-0918-4896-bd9f-e428eb8bd7dd" />
+    <UnitTestResult executionId="10f9c61f-765e-4eb3-8ce3-dd740807ccd4" testId="d53db237-d501-a3b6-a5bb-ceb40c2e51a3" testName="Works" computerName="ip-10-1-13-52" duration="00:00:00.0866280" startTime="2025-04-02T13:20:53.5272627+00:00" endTime="2025-04-02T13:20:53.6138894+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10f9c61f-765e-4eb3-8ce3-dd740807ccd4" />
+    <UnitTestResult executionId="c49699be-6978-422d-860b-1fba708490f7" testId="e02f8bbd-801e-403e-925c-1f40cd6327ca" testName="Combined_picking_works(False)" computerName="ip-10-1-13-52" duration="00:00:01.0425380" startTime="2025-04-02T13:20:58.8404046+00:00" endTime="2025-04-02T13:20:59.8829423+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c49699be-6978-422d-860b-1fba708490f7" />
+    <UnitTestResult executionId="f9691afc-38bf-482f-8734-b2b9c5cea5be" testId="8b852c46-2000-b524-34af-be00fee46b7a" testName="cant_change_shipping_method_on_ship_from_store_completed_tasks_work" computerName="ip-10-1-13-52" duration="00:00:00.8518290" startTime="2025-04-02T13:20:57.9881142+00:00" endTime="2025-04-02T13:20:58.8399422+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9691afc-38bf-482f-8734-b2b9c5cea5be" />
+    <UnitTestResult executionId="6a5a4f3f-8c12-4835-bf6d-0aa30d819dd2" testId="87f5e320-5c60-abe2-31f5-7f79f17361c7" testName="Ship_From_Store_can_create_shipment_with_package" computerName="ip-10-1-13-52" duration="00:00:00.6837800" startTime="2025-04-02T13:21:12.0751890+00:00" endTime="2025-04-02T13:21:12.7589692+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a5a4f3f-8c12-4835-bf6d-0aa30d819dd2" />
+    <UnitTestResult executionId="15ed255a-d58b-42df-8271-e57f838c5c39" testId="dc5070c5-480e-8f98-a74b-1365849cdfbe" testName="SFS_Pick_Task_With_Unpicked_Service_Products" computerName="ip-10-1-13-52" duration="00:00:00.5024540" startTime="2025-04-02T13:21:11.5726729+00:00" endTime="2025-04-02T13:21:12.0751268+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15ed255a-d58b-42df-8271-e57f838c5c39" />
+    <UnitTestResult executionId="812e8be2-c0bb-4cc8-b159-7a82feed1fa2" testId="3963bf40-a270-69b6-ff15-381e650c35ed" testName="Bundles_are_fulfilled_together(False,4)" computerName="ip-10-1-13-52" duration="00:00:00.6619960" startTime="2025-04-02T13:20:45.6447425+00:00" endTime="2025-04-02T13:20:46.3067384+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="812e8be2-c0bb-4cc8-b159-7a82feed1fa2" />
+    <UnitTestResult executionId="39b7432c-7e06-4a2a-ac44-10ebe2de86ac" testId="585ba0a6-dca0-4fb2-ab33-030a7b7a72d4" testName="Can_specify_preferred_fulfillment_OU" computerName="ip-10-1-13-52" duration="00:00:00.0000710" startTime="2025-04-02T13:20:53.3286094+00:00" endTime="2025-04-02T13:20:53.3286807+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39b7432c-7e06-4a2a-ac44-10ebe2de86ac">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1b50c26a-46c2-4dc5-913c-04fced3d3df5" testId="6d1dd42c-02f4-1842-0c30-f247dad384dc" testName="Pickup_orders_create_an_interbranch_SFS_task" computerName="ip-10-1-13-52" duration="00:00:01.3349660" startTime="2025-04-02T13:21:07.9465345+00:00" endTime="2025-04-02T13:21:09.2815001+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b50c26a-46c2-4dc5-913c-04fced3d3df5">
+      <Output>
+        <StdOut>Warning message/ListPurchaseOrderShipments limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="781dfb43-10e7-4e53-9aba-ea731e1d3f43" testId="77d00fae-b879-67f6-0ea9-517ae3e69b77" testName="Basic_test" computerName="ip-10-1-13-52" duration="00:00:00.0002110" startTime="2025-04-02T13:20:53.3281860+00:00" endTime="2025-04-02T13:20:53.3283968+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="781dfb43-10e7-4e53-9aba-ea731e1d3f43">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f6889fcb-618e-42e3-8383-d105c595fa24" testId="43263228-b1a5-b05e-cb5d-8061d3fd18c4" testName="Stock_check_takes_replacement_products_into_consideration" computerName="ip-10-1-13-52" duration="00:00:00.0002799" startTime="2025-04-02T13:21:25.3075089+00:00" endTime="2025-04-02T13:21:25.3077884+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6889fcb-618e-42e3-8383-d105c595fa24">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a94f3e0b-9f65-412c-bdb5-b1358679d653" testId="a55ce991-4bf2-ca16-74fb-7288212674a3" testName="Modifying_sheets_should_reflect_in_list_and_history_services" computerName="ip-10-1-13-52" duration="00:00:00.0001660" startTime="2025-04-02T13:20:53.6158534+00:00" endTime="2025-04-02T13:20:53.6160194+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a94f3e0b-9f65-412c-bdb5-b1358679d653">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="31528b40-ca8a-4688-b965-2c23adee61a5" testId="8e23741c-b033-4218-902f-57639dad886f" testName="Big_order_test" computerName="ip-10-1-13-52" duration="00:00:00.0001490" startTime="2025-04-02T13:20:53.3304156+00:00" endTime="2025-04-02T13:20:53.3305642+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31528b40-ca8a-4688-b965-2c23adee61a5">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="10d90a99-073e-4e8f-ba2f-3200d4b6f0a4" testId="600c0cb3-b8a8-7ea4-0812-1fa531172940" testName="OrderLines_can_be_split(35,25,10,34,6,10,3)" computerName="ip-10-1-13-52" duration="00:00:00.0001550" startTime="2025-04-02T13:21:25.3069340+00:00" endTime="2025-04-02T13:21:25.3070887+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10d90a99-073e-4e8f-ba2f-3200d4b6f0a4">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="94aca81a-ea13-48b0-82d0-0b9787de24c8" testId="1058b7e4-4ff7-50da-3184-473344e0174b" testName="Test" computerName="ip-10-1-13-52" duration="00:00:00.0001140" startTime="2025-04-02T13:20:53.3309989+00:00" endTime="2025-04-02T13:20:53.3311126+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94aca81a-ea13-48b0-82d0-0b9787de24c8">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f438c1a4-83bc-494e-a102-3791e3973b93" testId="3cfc3d37-d06d-1514-8b42-86c13678cb4f" testName="Can_reject_SDD_based_on_stock" computerName="ip-10-1-13-52" duration="00:00:00.0001600" startTime="2025-04-02T13:20:53.6151994+00:00" endTime="2025-04-02T13:20:53.6153593+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f438c1a4-83bc-494e-a102-3791e3973b93">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b220e3d4-47ee-4460-94eb-711d85599084" testId="5a522e5a-4fbf-b4b5-64e4-bc15a625e653" testName="Can_use_SupplierCount(True)" computerName="ip-10-1-13-52" duration="00:00:00.0001060" startTime="2025-04-02T13:20:53.3292803+00:00" endTime="2025-04-02T13:20:53.3293866+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b220e3d4-47ee-4460-94eb-711d85599084">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ebbf7434-204c-49a8-82ef-e7d9801855ca" testId="1bb3d030-3a2b-d65d-0854-a8733d3071e5" testName="Test1(True)" computerName="ip-10-1-13-52" duration="00:00:00.0000699" startTime="2025-04-02T13:20:53.3311319+00:00" endTime="2025-04-02T13:20:53.3312016+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ebbf7434-204c-49a8-82ef-e7d9801855ca">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b536d26b-4732-43fc-8fe3-97e315b27373" testId="4039c962-590e-fb15-7f94-e1cb6148b9aa" testName="Works(True)" computerName="ip-10-1-13-52" duration="00:00:00.0001750" startTime="2025-04-02T13:20:53.3297787+00:00" endTime="2025-04-02T13:20:53.3299537+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b536d26b-4732-43fc-8fe3-97e315b27373">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a8e71d13-c0d1-4a9b-a87f-5c08d096a730" testId="716032a6-7f12-c9b2-0119-f8f87fc8c578" testName="Ship_From_Store_tasks_work_when_AutoAssignNextUserTask_is_enabled" computerName="ip-10-1-13-52" duration="00:00:00.5450810" startTime="2025-04-02T13:21:16.5224900+00:00" endTime="2025-04-02T13:21:17.0675714+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8e71d13-c0d1-4a9b-a87f-5c08d096a730" />
+    <UnitTestResult executionId="e2fc5040-a86c-4a04-bb07-a10d95cfed4e" testId="004dbfdb-b2f5-ca40-b4fd-9686f1df0a2b" testName="Ship_From_Store_print_tasks_work" computerName="ip-10-1-13-52" duration="00:00:01.8484680" startTime="2025-04-02T13:21:13.3767103+00:00" endTime="2025-04-02T13:21:15.2251778+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2fc5040-a86c-4a04-bb07-a10d95cfed4e" />
+    <UnitTestResult executionId="284b22d5-4641-4f74-ba25-1d8fb7c26e30" testId="89338030-5796-ed82-5f8c-a4f7736e517d" testName="An_order_can_have_multiple_SFS_tasks_for_different_OrderLines" computerName="ip-10-1-13-52" duration="00:00:00.9701830" startTime="2025-04-02T13:20:54.8449011+00:00" endTime="2025-04-02T13:20:55.8150838+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="284b22d5-4641-4f74-ba25-1d8fb7c26e30" />
+    <UnitTestResult executionId="e035ea7d-f605-40d9-b6e3-9e829e0164e7" testId="1311132a-6fea-41fb-0976-3bf762d2814d" testName="OrderLines_can_be_split(42,5,5,42,4,4,3)" computerName="ip-10-1-13-52" duration="00:00:00.0005230" startTime="2025-04-02T13:21:25.3058428+00:00" endTime="2025-04-02T13:21:25.3063658+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e035ea7d-f605-40d9-b6e3-9e829e0164e7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8006f6f9-2fe1-4c98-9250-c4c7a132dd1c" testId="48115999-2eb9-2e84-7737-57b292467dc9" testName="Can_use_SupplierCount(False)" computerName="ip-10-1-13-52" duration="00:00:00.0002270" startTime="2025-04-02T13:20:53.3293923+00:00" endTime="2025-04-02T13:20:53.3296196+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8006f6f9-2fe1-4c98-9250-c4c7a132dd1c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b48ebebc-86a8-473a-8a17-5f6900c4e09a" testId="1acb1fc2-858d-5f19-7231-f8ebfdfad0b5" testName="Basic_test2" computerName="ip-10-1-13-52" duration="00:00:00.0001030" startTime="2025-04-02T13:20:53.3284076+00:00" endTime="2025-04-02T13:20:53.3285118+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b48ebebc-86a8-473a-8a17-5f6900c4e09a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3d5e0fe5-f4f6-451e-b399-96e8a3828adc" testId="3df3e1e0-29f8-3ce9-a145-624bf9068be7" testName="Replacement_product_pick_test" computerName="ip-10-1-13-52" duration="00:00:00.6231010" startTime="2025-04-02T13:21:10.3135369+00:00" endTime="2025-04-02T13:21:10.9366380+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d5e0fe5-f4f6-451e-b399-96e8a3828adc" />
+    <UnitTestResult executionId="ff72a24c-bb24-47c6-8f5f-62985ec300d0" testId="62fc2515-0668-3d46-a92c-e534c9842570" testName="SFS_Pick_Task_With_Unpicked_Products_With_Requirements" computerName="ip-10-1-13-52" duration="00:00:00.6358260" startTime="2025-04-02T13:21:10.9367083+00:00" endTime="2025-04-02T13:21:11.5725345+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff72a24c-bb24-47c6-8f5f-62985ec300d0">
+      <Output>
+        <StdOut>Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9566209f-8477-4524-86f2-6549d424eb8d" testId="86994d91-74cd-f400-e98c-db8b0c4961b1" testName="Can_use_supplier_cancellation_rate_in_sheet" computerName="ip-10-1-13-52" duration="00:00:00.0001480" startTime="2025-04-02T13:21:25.3079786+00:00" endTime="2025-04-02T13:21:25.3081269+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9566209f-8477-4524-86f2-6549d424eb8d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="325aa6c5-5f9d-4185-b4c1-f4ec54e83ffb" testId="9f3c360f-38d6-480f-c673-023ade4394b7" testName="SDD_works" computerName="ip-10-1-13-52" duration="00:00:00.0000690" startTime="2025-04-02T13:20:53.6154581+00:00" endTime="2025-04-02T13:20:53.6155274+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="325aa6c5-5f9d-4185-b4c1-f4ec54e83ffb">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4e6576c2-27d7-4a64-841f-fc4db4dca2da" testId="3f059bf4-d366-bbf4-27d7-e3cc37705a8a" testName="Ship_From_Store_tasks_work" computerName="ip-10-1-13-52" duration="00:00:00.7037050" startTime="2025-04-02T13:21:15.8187249+00:00" endTime="2025-04-02T13:21:16.5224298+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e6576c2-27d7-4a64-841f-fc4db4dca2da" />
+    <UnitTestResult executionId="d45fab6f-2b37-4273-9c46-0974770acd47" testId="afb9442b-22ea-a8f0-a734-caa1b008dd22" testName="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_true" computerName="ip-10-1-13-52" duration="00:00:00.7435500" startTime="2025-04-02T13:21:17.8439552+00:00" endTime="2025-04-02T13:21:18.5875032+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d45fab6f-2b37-4273-9c46-0974770acd47" />
+    <UnitTestResult executionId="a6fb9a76-d13a-4411-a78c-f41d0d3243e2" testId="f7422c32-68e9-c418-35b6-607db951bef6" testName="Can_reject_SDD_for_a_store" computerName="ip-10-1-13-52" duration="00:00:00.0000820" startTime="2025-04-02T13:20:53.6153697+00:00" endTime="2025-04-02T13:20:53.6154517+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6fb9a76-d13a-4411-a78c-f41d0d3243e2">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="59e6015e-7012-4667-9ab1-97d8d603cecc" testId="7c9dfba4-4202-9b33-fff0-d0871936cbc1" testName="ChildLines_ProductRequirements_AndMoreJuicyDetails" computerName="ip-10-1-13-52" duration="00:00:00.0003330" startTime="2025-04-02T13:20:58.8400075+00:00" endTime="2025-04-02T13:20:58.8403411+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59e6015e-7012-4667-9ab1-97d8d603cecc">
+      <Output>
+        <StdOut>STRING-ID-SKIP-WithConfetti actually does not have a value but the peanut butter coating does..?</StdOut>
+        <ErrorInfo>
+          <Message>STRING-ID-SKIP-WithConfetti actually does not have a value but the peanut butter coating does..?</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9b14fcb9-a8b6-4d85-9b75-284c06d4c9f6" testId="b71bdb82-5c4c-c493-2e39-111de3c4695e" testName="Can_specify_included_product_properties" computerName="ip-10-1-13-52" duration="00:00:00.0000770" startTime="2025-04-02T13:20:53.3285212+00:00" endTime="2025-04-02T13:20:53.3285978+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b14fcb9-a8b6-4d85-9b75-284c06d4c9f6">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5eeb4422-cb00-493f-ab5f-dbe6f1188484" testId="04a0ea40-b77f-50f5-5376-ae3d16b897e9" testName="Deactivating_the_ship_from_store_task_creates_a_new_task" computerName="ip-10-1-13-52" duration="00:00:00.8107500" startTime="2025-04-02T13:21:00.7565031+00:00" endTime="2025-04-02T13:21:01.5672525+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5eeb4422-cb00-493f-ab5f-dbe6f1188484" />
+    <UnitTestResult executionId="3ef87f08-d8ce-4850-a759-a66b087aebd8" testId="531f969c-27cb-5eef-29d7-fd9657cc6515" testName="Can_use_stock_to_influence_score(True)" computerName="ip-10-1-13-52" duration="00:00:00.0001050" startTime="2025-04-02T13:20:53.3287416+00:00" endTime="2025-04-02T13:20:53.3288467+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ef87f08-d8ce-4850-a759-a66b087aebd8">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4237c9f0-e5e8-4c84-8441-e23925545708" testId="57138c3e-9aac-c1ba-a46b-efc821883b1e" testName="Can_partially_cancel_OrderLineFulfillment" computerName="ip-10-1-13-52" duration="00:00:00.0005860" startTime="2025-04-02T13:20:53.3263795+00:00" endTime="2025-04-02T13:20:53.3269651+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4237c9f0-e5e8-4c84-8441-e23925545708">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ee304b8-81d7-4339-8e4b-825d577464bb" testId="bec3ea51-7296-c5a8-cd19-87c1a96d45c2" testName="Can_reject_SDD_based_on_date" computerName="ip-10-1-13-52" duration="00:00:00.0006220" startTime="2025-04-02T13:20:53.6145555+00:00" endTime="2025-04-02T13:20:53.6151771+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ee304b8-81d7-4339-8e4b-825d577464bb">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="09faab1f-ad61-45c9-a2f5-989fd55beb06" testId="85d407ef-09d8-5cfa-ef0e-d59ec25d5d89" testName="SUPPORT_4995" computerName="ip-10-1-13-52" duration="00:00:00.0001120" startTime="2025-04-02T13:21:25.3071140+00:00" endTime="2025-04-02T13:21:25.3072257+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09faab1f-ad61-45c9-a2f5-989fd55beb06">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bf98d22e-0e97-4720-b493-3ee70a0ca0e1" testId="300cca3f-6688-f0d4-582f-01eed32c7b2e" testName="FulfillmentOrderWorksInCookbook" computerName="ip-10-1-13-52" duration="00:00:00.0001170" startTime="2025-04-02T13:20:53.3290341+00:00" endTime="2025-04-02T13:20:53.3291504+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf98d22e-0e97-4720-b493-3ee70a0ca0e1">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3cc73166-cf78-4d03-b07b-758e17ec8863" testId="eb8b90df-1fed-0a44-547e-3f0e02634f90" testName="Simple_warehouse" computerName="ip-10-1-13-52" duration="00:00:00.1001510" startTime="2025-04-02T13:20:53.4269578+00:00" endTime="2025-04-02T13:20:53.5271074+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3cc73166-cf78-4d03-b07b-758e17ec8863" />
+    <UnitTestResult executionId="40b9842d-0aa6-4aa8-a1c9-5b10e857e291" testId="cc83171c-31a5-b810-84b7-5c219bf54547" testName="Bundles_are_fulfilled_together(False,30)" computerName="ip-10-1-13-52" duration="00:00:03.2848940" startTime="2025-04-02T13:20:50.0255982+00:00" endTime="2025-04-02T13:20:53.3104916+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40b9842d-0aa6-4aa8-a1c9-5b10e857e291" />
+    <UnitTestResult executionId="4dff4244-bb0a-4e53-846c-0560e9430879" testId="5cc1fc07-a076-da6f-6201-35c991e2b64c" testName="PackTaskWithProductRequirementsOnUnpickedLine_RemainingNonPackProduct" computerName="ip-10-1-13-52" duration="00:00:01.0737360" startTime="2025-04-02T13:21:04.5166881+00:00" endTime="2025-04-02T13:21:05.5904239+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4dff4244-bb0a-4e53-846c-0560e9430879">
+      <Output>
+        <StdOut>Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fa8d16c3-7496-4509-93fe-81da4741990d" testId="c4a8a4a7-cf02-3b41-5b93-222aa66f97ca" testName="SDD_works_new" computerName="ip-10-1-13-52" duration="00:00:00.0000710" startTime="2025-04-02T13:20:53.6155324+00:00" endTime="2025-04-02T13:20:53.6156030+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa8d16c3-7496-4509-93fe-81da4741990d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4755ed7b-7cf2-4f65-af8e-7a3b1a6793a9" testId="c417373a-f093-4003-b082-71982157114c" testName="Canceling_a_pickup_SFS_task_reroutes_the_order" computerName="ip-10-1-13-52" duration="00:00:00.8658230" startTime="2025-04-02T13:20:57.1222484+00:00" endTime="2025-04-02T13:20:57.9880716+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4755ed7b-7cf2-4f65-af8e-7a3b1a6793a9" />
+    <UnitTestResult executionId="79934eaf-43bd-493e-bad7-e4699fdad4ba" testId="500fe94a-b73b-7412-4e79-67f925f399a1" testName="ShipFromStoreTasksLabelLocalization(&quot;en&quot;)" computerName="ip-10-1-13-52" duration="00:00:01.4243250" startTime="2025-04-02T13:21:19.3363001+00:00" endTime="2025-04-02T13:21:20.7606250+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79934eaf-43bd-493e-bad7-e4699fdad4ba">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="228e5eb6-0582-4ac2-9e84-2097d88fc98e" testId="02a83319-9533-1e45-e602-d82c28fd8d94" testName="SUPPORT_1552" computerName="ip-10-1-13-52" duration="00:00:00.8611200" startTime="2025-04-02T13:21:23.7099196+00:00" endTime="2025-04-02T13:21:24.5710394+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="228e5eb6-0582-4ac2-9e84-2097d88fc98e" />
+    <UnitTestResult executionId="935259d6-b695-49a9-a7a5-eec5129851a0" testId="d8fdf074-71ab-e215-7bf3-0bfa309f97a5" testName="PackTaskWithProductRequirements" computerName="ip-10-1-13-52" duration="00:00:00.7416070" startTime="2025-04-02T13:21:03.7749814+00:00" endTime="2025-04-02T13:21:04.5165885+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="935259d6-b695-49a9-a7a5-eec5129851a0">
+      <Output>
+        <StdOut>Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ef504a40-2d1b-410b-b049-440ad1983779" testId="a38e05f4-754a-2ff8-acc1-c8813c6339cf" testName="Interbranch_partial_pick" computerName="ip-10-1-13-52" duration="00:00:00.8084970" startTime="2025-04-02T13:21:01.9696440+00:00" endTime="2025-04-02T13:21:02.7781408+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef504a40-2d1b-410b-b049-440ad1983779" />
+    <UnitTestResult executionId="1b9a22d8-b3be-4a15-9e4c-9fe836e99300" testId="4d54c5fa-b51f-bdea-606c-ec2dff42ebf4" testName="CancelExternalOrderWorks" computerName="ip-10-1-13-52" duration="00:00:00.0000760" startTime="2025-04-02T13:20:53.3289510+00:00" endTime="2025-04-02T13:20:53.3290266+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b9a22d8-b3be-4a15-9e4c-9fe836e99300">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="256ff628-7901-4908-b477-7db1b2820236" testId="dae92645-d76c-11f2-c28c-d51f0a3941a7" testName="Can_get_sheet_documentation" computerName="ip-10-1-13-52" duration="00:00:00.0002250" startTime="2025-04-02T13:20:53.3271535+00:00" endTime="2025-04-02T13:20:53.3273780+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="256ff628-7901-4908-b477-7db1b2820236">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f9abc39a-8b51-4f90-8c87-e7ab15bc9284" testId="8dddb11c-8019-2f5e-e6ec-10c19934f615" testName="Line_splitting_can_be_disabled(True)" computerName="ip-10-1-13-52" duration="00:00:00.0002320" startTime="2025-04-02T13:20:53.3305831+00:00" endTime="2025-04-02T13:20:53.3308151+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9abc39a-8b51-4f90-8c87-e7ab15bc9284">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae17e2b9-35e7-4f02-b03a-ad7a1a617053" testId="caee47b6-53de-fcf5-fe16-5eb82cb9faa3" testName="Starting_a_SFS_task_deactivates_other_tasks" computerName="ip-10-1-13-52" duration="00:00:01.2901470" startTime="2025-04-02T13:21:21.5594640+00:00" endTime="2025-04-02T13:21:22.8496111+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae17e2b9-35e7-4f02-b03a-ad7a1a617053">
+      <Output>
+        <StdOut>Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5fb42b48-084d-46ed-8652-451146d41ced" testId="66aa8540-1fb5-332b-7a1d-fff8652c7b56" testName="OrderLines_can_be_split(35,25,0,34,16,0,2)" computerName="ip-10-1-13-52" duration="00:00:00.0005330" startTime="2025-04-02T13:21:25.3063835+00:00" endTime="2025-04-02T13:21:25.3069161+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5fb42b48-084d-46ed-8652-451146d41ced">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="44e9b911-febf-44a0-a608-c4f1da027e5c" testId="f405e8ce-345d-d3e9-d707-2f085343f837" testName="SUPPORT_1616" computerName="ip-10-1-13-52" duration="00:00:00.7341270" startTime="2025-04-02T13:21:24.5710694+00:00" endTime="2025-04-02T13:21:25.3051966+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44e9b911-febf-44a0-a608-c4f1da027e5c">
+      <Output>
+        <StdOut>Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="253c3218-f0d6-48e7-b2a8-4e302bb6fa8e" testId="39e25498-3958-04da-1011-6c4c8f5479fe" testName="Can_add_labels_to_SFS_task(&quot;'my_label'&quot;,[&quot;my_label&quot;])" computerName="ip-10-1-13-52" duration="00:00:00.6844660" startTime="2025-04-02T13:20:56.4376821+00:00" endTime="2025-04-02T13:20:57.1221475+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="253c3218-f0d6-48e7-b2a8-4e302bb6fa8e">
+      <Output>
+        <StdOut>Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ca5253f1-614c-4a3e-910a-7ef99881d968" testId="bd13c074-a359-2ea2-9c96-83b9a31e7cba" testName="Partial_quantity_pick_test" computerName="ip-10-1-13-52" duration="00:00:00.7262729" startTime="2025-04-02T13:21:07.2202064+00:00" endTime="2025-04-02T13:21:07.9464794+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca5253f1-614c-4a3e-910a-7ef99881d968" />
+    <UnitTestResult executionId="82911337-5265-4d06-942b-289f423d8dd2" testId="e349e8df-9d00-d9a6-2375-62ca3cfd49d8" testName="An_expired_ship_task_reroutes_the_order" computerName="ip-10-1-13-52" duration="00:00:01.2284340" startTime="2025-04-02T13:20:53.6164243+00:00" endTime="2025-04-02T13:20:54.8448579+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82911337-5265-4d06-942b-289f423d8dd2">
+      <Output>
+        <StdOut>Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="96df3b69-15b9-4edf-bf8f-c461d1ac0ed1" testId="c521ea5f-db27-9197-e42b-e0123ebd90b4" testName="Line_splitting_can_be_disabled(False)" computerName="ip-10-1-13-52" duration="00:00:00.0001010" startTime="2025-04-02T13:20:53.3308293+00:00" endTime="2025-04-02T13:20:53.3309306+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96df3b69-15b9-4edf-bf8f-c461d1ac0ed1">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ffe7fda3-4420-4310-8b7f-a3ebd8b5d88e" testId="1563b781-f948-78c3-9752-e36974ad47d2" testName="Ship_From_Store_sheet_works" computerName="ip-10-1-13-52" duration="00:00:00.5934150" startTime="2025-04-02T13:21:15.2252441+00:00" endTime="2025-04-02T13:21:15.8186589+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffe7fda3-4420-4310-8b7f-a3ebd8b5d88e">
+      <Output>
+        <StdOut>Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="638a8df0-00bd-4b2c-a6bb-3c1a464e44b7" testId="61308e46-f954-f24f-5b83-5779d925a2b6" testName="Can_cancel_OrderLineFulfillment" computerName="ip-10-1-13-52" duration="00:00:00.0127920" startTime="2025-04-02T13:20:53.3134893+00:00" endTime="2025-04-02T13:20:53.3262810+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="638a8df0-00bd-4b2c-a6bb-3c1a464e44b7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SUPPORT_4995" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="85d407ef-09d8-5cfa-ef0e-d59ec25d5d89">
+      <Execution id="09faab1f-ad61-45c9-a2f5-989fd55beb06" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SplitOrderLinesTests" name="SUPPORT_4995" />
+    </UnitTest>
+    <UnitTest name="Canceling_a_pickup_SFS_task_reroutes_the_order" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="c417373a-f093-4003-b082-71982157114c">
+      <Execution id="4755ed7b-7cf2-4f65-af8e-7a3b1a6793a9" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Canceling_a_pickup_SFS_task_reroutes_the_order" />
+    </UnitTest>
+    <UnitTest name="Combined_picking_works(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="e5b1c762-e282-29c5-1c75-39698dbfc3f1">
+      <Execution id="8109866c-7992-40f7-916c-05ca9af4e77a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Combined_picking_works(True)" />
+    </UnitTest>
+    <UnitTest name="SDD_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="9f3c360f-38d6-480f-c673-023ade4394b7">
+      <Execution id="325aa6c5-5f9d-4185-b4c1-f4ec54e83ffb" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SameDayDelivery" name="SDD_works" />
+    </UnitTest>
+    <UnitTest name="PackTaskCancelledWithProductRequirements" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="33e248b2-3a4b-0b51-e2fd-a56b88561ca4">
+      <Execution id="fb4e774e-beac-452e-97e5-7e1ef35a1c20" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="PackTaskCancelledWithProductRequirements" />
+    </UnitTest>
+    <UnitTest name="Can_use_stock_to_influence_score(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="593d354a-c66f-4193-7154-4b05ee94523b">
+      <Execution id="6473a85a-d144-4129-a221-984c5d109eca" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Can_use_stock_to_influence_score(False)" />
+    </UnitTest>
+    <UnitTest name="Test1(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="1bb3d030-3a2b-d65d-0854-a8733d3071e5">
+      <Execution id="ebbf7434-204c-49a8-82ef-e7d9801855ca" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PartialFulfillmentTests" name="Test1(True)" />
+    </UnitTest>
+    <UnitTest name="Can_reject_SDD_based_on_stock" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="3cfc3d37-d06d-1514-8b42-86c13678cb4f">
+      <Execution id="f438c1a4-83bc-494e-a102-3791e3973b93" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SameDayDelivery" name="Can_reject_SDD_based_on_stock" />
+    </UnitTest>
+    <UnitTest name="Basic_test2" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="1acb1fc2-858d-5f19-7231-f8ebfdfad0b5">
+      <Execution id="b48ebebc-86a8-473a-8a17-5f6900c4e09a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Basic_test2" />
+    </UnitTest>
+    <UnitTest name="Can_get_alternative_fulfillment_options" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="7a5e0e8a-07b5-299f-178e-5d14eb0ec905">
+      <Execution id="739af79e-2895-4239-9b65-57af9e8968f0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SameDayDelivery" name="Can_get_alternative_fulfillment_options" />
+    </UnitTest>
+    <UnitTest name="Basic_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="77d00fae-b879-67f6-0ea9-517ae3e69b77">
+      <Execution id="781dfb43-10e7-4e53-9aba-ea731e1d3f43" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Basic_test" />
+    </UnitTest>
+    <UnitTest name="Stock_check_takes_replacement_products_into_consideration" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="43263228-b1a5-b05e-cb5d-8061d3fd18c4">
+      <Execution id="f6889fcb-618e-42e3-8383-d105c595fa24" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.StockReplacementTests" name="Stock_check_takes_replacement_products_into_consideration" />
+    </UnitTest>
+    <UnitTest name="Can_cancel_a_pending_fulfillment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="89cf9f63-74c3-7c2f-691b-d719da430488">
+      <Execution id="a6e24352-985d-4a5d-9b97-2213f28bd79f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PendingFulfillmentTests" name="Can_cancel_a_pending_fulfillment" />
+    </UnitTest>
+    <UnitTest name="Deactivating_the_ship_from_store_task_creates_a_new_task" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="04a0ea40-b77f-50f5-5376-ae3d16b897e9">
+      <Execution id="5eeb4422-cb00-493f-ab5f-dbe6f1188484" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Deactivating_the_ship_from_store_task_creates_a_new_task" />
+    </UnitTest>
+    <UnitTest name="Can_use_SupplierCount(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="48115999-2eb9-2e84-7737-57b292467dc9">
+      <Execution id="8006f6f9-2fe1-4c98-9250-c4c7a132dd1c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderLineSupplierScopeTests" name="Can_use_SupplierCount(False)" />
+    </UnitTest>
+    <UnitTest name="Can_use_supplier_cancellation_rate_in_sheet" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="86994d91-74cd-f400-e98c-db8b0c4961b1">
+      <Execution id="9566209f-8477-4524-86f2-6549d424eb8d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SupplierPerformanceTests" name="Can_use_supplier_cancellation_rate_in_sheet" />
+    </UnitTest>
+    <UnitTest name="Big_order_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="8e23741c-b033-4218-902f-57639dad886f">
+      <Execution id="31528b40-ca8a-4688-b965-2c23adee61a5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PartialFulfillmentTests" name="Big_order_test" />
+    </UnitTest>
+    <UnitTest name="Works(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="4039c962-590e-fb15-7f94-e1cb6148b9aa">
+      <Execution id="b536d26b-4732-43fc-8fe3-97e315b27373" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ParseSheetTests" name="Works(True)" />
+    </UnitTest>
+    <UnitTest name="FulfillmentOrderWorksInCookbook" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="300cca3f-6688-f0d4-582f-01eed32c7b2e">
+      <Execution id="bf98d22e-0e97-4720-b493-3ee70a0ca0e1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="FulfillmentOrderWorksInCookbook" />
+    </UnitTest>
+    <UnitTest name="Pickup_orders_create_an_interbranch_SFS_task" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="6d1dd42c-02f4-1842-0c30-f247dad384dc">
+      <Execution id="1b50c26a-46c2-4dc5-913c-04fced3d3df5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Pickup_orders_create_an_interbranch_SFS_task" />
+    </UnitTest>
+    <UnitTest name="PackTaskWithProductRequirements" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="d8fdf074-71ab-e215-7bf3-0bfa309f97a5">
+      <Execution id="935259d6-b695-49a9-a7a5-eec5129851a0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="PackTaskWithProductRequirements" />
+    </UnitTest>
+    <UnitTest name="Can_use_SupplierCount(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="5a522e5a-4fbf-b4b5-64e4-bc15a625e653">
+      <Execution id="b220e3d4-47ee-4460-94eb-711d85599084" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderLineSupplierScopeTests" name="Can_use_SupplierCount(True)" />
+    </UnitTest>
+    <UnitTest name="Can_partially_cancel_OrderLineFulfillment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="57138c3e-9aac-c1ba-a46b-efc821883b1e">
+      <Execution id="4237c9f0-e5e8-4c84-8441-e23925545708" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.CancelOrderLineFulfillmentTests" name="Can_partially_cancel_OrderLineFulfillment" />
+    </UnitTest>
+    <UnitTest name="PrintShipFromStoreTasksWithBlobsWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="a1783381-1cdf-5e07-3e6b-76bf393595d9">
+      <Execution id="d1f36d87-bae8-406d-bab4-d272922003d1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="PrintShipFromStoreTasksWithBlobsWorks" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_true" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="afb9442b-22ea-a8f0-a734-caa1b008dd22">
+      <Execution id="d45fab6f-2b37-4273-9c46-0974770acd47" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_true" />
+    </UnitTest>
+    <UnitTest name="Works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="d53db237-d501-a3b6-a5bb-ceb40c2e51a3">
+      <Execution id="10f9c61f-765e-4eb3-8ce3-dd740807ccd4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PreviewOrderFulfillmentTests" name="Works" />
+    </UnitTest>
+    <UnitTest name="An_expired_ship_task_reroutes_the_order" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="e349e8df-9d00-d9a6-2375-62ca3cfd49d8">
+      <Execution id="82911337-5265-4d06-942b-289f423d8dd2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="An_expired_ship_task_reroutes_the_order" />
+    </UnitTest>
+    <UnitTest name="Works(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="3bbeed40-3375-9ee9-6ee4-b3a41ae22310">
+      <Execution id="8a461a63-64b5-4a31-9b74-723445b42dc7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ParseSheetTests" name="Works(False)" />
+    </UnitTest>
+    <UnitTest name="ChildLines_ProductRequirements_AndMoreJuicyDetails" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="7c9dfba4-4202-9b33-fff0-d0871936cbc1">
+      <Execution id="59e6015e-7012-4667-9ab1-97d8d603cecc" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="ChildLines_ProductRequirements_AndMoreJuicyDetails" />
+    </UnitTest>
+    <UnitTest name="Can_add_labels_to_SFS_task(&quot;AmazonLabel, 'SFS_task', MangoLabel, IsLimitedEdition&quot;,[&quot;NotAmazon&quot;, &quot;SFS_task&quot;, &quot;NotLimitedEdition&quot;])" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="fe2f8086-3b62-3d38-7430-e4ccbcba9d26">
+      <Execution id="53558336-795d-47d2-9895-afe51bbaff1e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Can_add_labels_to_SFS_task(&quot;AmazonLabel, 'SFS_task', MangoLabel, IsLimitedEdition&quot;,[&quot;NotAmazon&quot;, &quot;SFS_task&quot;, &quot;NotLimitedEdition&quot;])" />
+    </UnitTest>
+    <UnitTest name="Modifying_sheets_should_reflect_in_list_and_history_services" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="a55ce991-4bf2-ca16-74fb-7288212674a3">
+      <Execution id="a94f3e0b-9f65-412c-bdb5-b1358679d653" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SheetTests" name="Modifying_sheets_should_reflect_in_list_and_history_services" />
+    </UnitTest>
+    <UnitTest name="Partial_quantity_pick_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="bd13c074-a359-2ea2-9c96-83b9a31e7cba">
+      <Execution id="ca5253f1-614c-4a3e-910a-7ef99881d968" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Partial_quantity_pick_test" />
+    </UnitTest>
+    <UnitTest name="Line_splitting_can_be_disabled(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="c521ea5f-db27-9197-e42b-e0123ebd90b4">
+      <Execution id="96df3b69-15b9-4edf-bf8f-c461d1ac0ed1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PartialFulfillmentTests" name="Line_splitting_can_be_disabled(False)" />
+    </UnitTest>
+    <UnitTest name="Can_use_stock_to_influence_score(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="531f969c-27cb-5eef-29d7-fd9657cc6515">
+      <Execution id="3ef87f08-d8ce-4850-a759-a66b087aebd8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Can_use_stock_to_influence_score(True)" />
+    </UnitTest>
+    <UnitTest name="Get_ship_from_store_task_by_barcode_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="eb02e926-db75-368b-9ce0-a30b34670a23">
+      <Execution id="71fd2a56-9533-47f7-99f4-bd83272bdfa2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Get_ship_from_store_task_by_barcode_test" />
+    </UnitTest>
+    <UnitTest name="Can_get_sheet_documentation_for_sheet_that_doesnt_compile" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="9f222c2d-f79f-68de-0fa1-2805565b3b70">
+      <Execution id="fdbbf833-f716-49dc-959c-e6226ba39945" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.GetSheetDocumentationTests" name="Can_get_sheet_documentation_for_sheet_that_doesnt_compile" />
+    </UnitTest>
+    <UnitTest name="SUPPORT_1552" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="02a83319-9533-1e45-e602-d82c28fd8d94">
+      <Execution id="228e5eb6-0582-4ac2-9e84-2097d88fc98e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="SUPPORT_1552" />
+    </UnitTest>
+    <UnitTest name="OrderLines_can_be_split(35,25,0,34,16,0,2)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="66aa8540-1fb5-332b-7a1d-fff8652c7b56">
+      <Execution id="5fb42b48-084d-46ed-8652-451146d41ced" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SplitOrderLinesTests" name="OrderLines_can_be_split(35,25,0,34,16,0,2)" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_false_and_ShipFromStoreExternalLabelHandlerPrintType_is_asynchronous" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="12867b82-5d0f-0398-5912-4f9f57473836">
+      <Execution id="bb96810f-1308-4833-b736-6a3e3618b7f4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_false_and_ShipFromStoreExternalLabelHandlerPrintType_is_asynchronous" />
+    </UnitTest>
+    <UnitTest name="ShipFromStoreTasksLabelLocalization(&quot;nl&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="50f9f215-6964-3114-8cab-596457577e8d">
+      <Execution id="35fe4f8c-5dc0-4a61-b3f3-0d1b981c838e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="ShipFromStoreTasksLabelLocalization(&quot;nl&quot;)" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_can_create_shipment_with_package" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="87f5e320-5c60-abe2-31f5-7f79f17361c7">
+      <Execution id="6a5a4f3f-8c12-4835-bf6d-0aa30d819dd2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_can_create_shipment_with_package" />
+    </UnitTest>
+    <UnitTest name="CancelExternalOrderWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="4d54c5fa-b51f-bdea-606c-ec2dff42ebf4">
+      <Execution id="1b9a22d8-b3be-4a15-9e4c-9fe836e99300" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="CancelExternalOrderWorks" />
+    </UnitTest>
+    <UnitTest name="PackTaskWithProductRequirementsOnUnpickedLine_RemainingNonPackProduct" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="5cc1fc07-a076-da6f-6201-35c991e2b64c">
+      <Execution id="4dff4244-bb0a-4e53-846c-0560e9430879" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="PackTaskWithProductRequirementsOnUnpickedLine_RemainingNonPackProduct" />
+    </UnitTest>
+    <UnitTest name="Can_get_sheet_documentation" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="dae92645-d76c-11f2-c28c-d51f0a3941a7">
+      <Execution id="256ff628-7901-4908-b477-7db1b2820236" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.GetSheetDocumentationTests" name="Can_get_sheet_documentation" />
+    </UnitTest>
+    <UnitTest name="Starting_a_SFS_task_does_not_cancel_other_SFS_tasks_for_different_parts_of_the_same_order" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="a60563d4-5632-24d5-2b54-2dd18e245851">
+      <Execution id="09f18969-fb2c-4e21-b100-67ac54fbb59c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Starting_a_SFS_task_does_not_cancel_other_SFS_tasks_for_different_parts_of_the_same_order" />
+    </UnitTest>
+    <UnitTest name="Bundles_are_fulfilled_together(True,4)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="68d4ede0-3258-19bc-e3e4-222b9fac0567">
+      <Execution id="e6cab383-3ce8-478b-a6a3-9be1833eb7bf" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.BundleFulfillmentTests" name="Bundles_are_fulfilled_together(True,4)" />
+    </UnitTest>
+    <UnitTest name="Bundles_are_fulfilled_together(False,4)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="3963bf40-a270-69b6-ff15-381e650c35ed">
+      <Execution id="812e8be2-c0bb-4cc8-b159-7a82feed1fa2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.BundleFulfillmentTests" name="Bundles_are_fulfilled_together(False,4)" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_print_tasks_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="004dbfdb-b2f5-ca40-b4fd-9686f1df0a2b">
+      <Execution id="e2fc5040-a86c-4a04-bb07-a10d95cfed4e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_print_tasks_work" />
+    </UnitTest>
+    <UnitTest name="Partial_pick_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="0111b4dd-57d1-f184-22cd-15c234fe3773">
+      <Execution id="61477856-1978-44d8-9eaa-11c19eb2d910" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Partial_pick_test" />
+    </UnitTest>
+    <UnitTest name="Can_reject_SDD_based_on_date" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="bec3ea51-7296-c5a8-cd19-87c1a96d45c2">
+      <Execution id="2ee304b8-81d7-4339-8e4b-825d577464bb" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SameDayDelivery" name="Can_reject_SDD_based_on_date" />
+    </UnitTest>
+    <UnitTest name="Combined_picking_works(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="e02f8bbd-801e-403e-925c-1f40cd6327ca">
+      <Execution id="c49699be-6978-422d-860b-1fba708490f7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Combined_picking_works(False)" />
+    </UnitTest>
+    <UnitTest name="PackTaskWithProductRequirementsOnUnpickedLine_RemainingPackProduct" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="c62ebb5f-12c5-efb5-1da1-8d916a029da3">
+      <Execution id="c9d25126-9404-49da-a294-70814ffd6a1c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="PackTaskWithProductRequirementsOnUnpickedLine_RemainingPackProduct" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_tasks_work_when_AutoAssignNextUserTask_is_enabled" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="716032a6-7f12-c9b2-0119-f8f87fc8c578">
+      <Execution id="a8e71d13-c0d1-4a9b-a87f-5c08d096a730" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_tasks_work_when_AutoAssignNextUserTask_is_enabled" />
+    </UnitTest>
+    <UnitTest name="Score_multiplying_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="82585f7e-f948-6fd2-bacd-9df8c45d1746">
+      <Execution id="f7d96c87-102d-454c-81a9-3d27d756118c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PreviewOrderFulfillmentTests" name="Score_multiplying_works" />
+    </UnitTest>
+    <UnitTest name="Can_reject_SDD_for_a_store" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="f7422c32-68e9-c418-35b6-607db951bef6">
+      <Execution id="a6fb9a76-d13a-4411-a78c-f41d0d3243e2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SameDayDelivery" name="Can_reject_SDD_for_a_store" />
+    </UnitTest>
+    <UnitTest name="Ship_from_is_guessed_correctly" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="fd34e2cd-5d8d-c3ca-5375-8799d16d11f9">
+      <Execution id="5893c973-5910-414d-8454-5fcdea211eaa" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromGuessTests" name="Ship_from_is_guessed_correctly" />
+    </UnitTest>
+    <UnitTest name="Bundles_are_fulfilled_together(True,30)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="9be6175a-72ec-48f6-4c89-527abf7f6806">
+      <Execution id="23c4131c-0918-4896-bd9f-e428eb8bd7dd" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.BundleFulfillmentTests" name="Bundles_are_fulfilled_together(True,30)" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_cannot_create_shipment_with_mismatched_package" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="8710ed58-efeb-b7dd-897e-f81efec02f87">
+      <Execution id="ed5dc479-acfa-489c-888e-e304bd2df9ff" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_cannot_create_shipment_with_mismatched_package" />
+    </UnitTest>
+    <UnitTest name="Test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="1058b7e4-4ff7-50da-3184-473344e0174b">
+      <Execution id="94aca81a-ea13-48b0-82d0-0b9787de24c8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PartialFulfillmentTests" name="Test" />
+    </UnitTest>
+    <UnitTest name="OrderLines_can_be_split(42,5,5,42,4,4,3)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="1311132a-6fea-41fb-0976-3bf762d2814d">
+      <Execution id="e035ea7d-f605-40d9-b6e3-9e829e0164e7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SplitOrderLinesTests" name="OrderLines_can_be_split(42,5,5,42,4,4,3)" />
+    </UnitTest>
+    <UnitTest name="ShipFromStoreTasksLabelLocalization(&quot;en&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="500fe94a-b73b-7412-4e79-67f925f399a1">
+      <Execution id="79934eaf-43bd-493e-bad7-e4699fdad4ba" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="ShipFromStoreTasksLabelLocalization(&quot;en&quot;)" />
+    </UnitTest>
+    <UnitTest name="Can_cancel_OrderLineFulfillment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="61308e46-f954-f24f-5b83-5779d925a2b6">
+      <Execution id="638a8df0-00bd-4b2c-a6bb-3c1a464e44b7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.CancelOrderLineFulfillmentTests" name="Can_cancel_OrderLineFulfillment" />
+    </UnitTest>
+    <UnitTest name="OrderLines_can_be_split(35,25,10,34,6,10,3)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="600c0cb3-b8a8-7ea4-0812-1fa531172940">
+      <Execution id="10d90a99-073e-4e8f-ba2f-3200d4b6f0a4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SplitOrderLinesTests" name="OrderLines_can_be_split(35,25,10,34,6,10,3)" />
+    </UnitTest>
+    <UnitTest name="Can_add_labels_to_SFS_task(&quot;'my_label'&quot;,[&quot;my_label&quot;])" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="39e25498-3958-04da-1011-6c4c8f5479fe">
+      <Execution id="253c3218-f0d6-48e7-b2a8-4e302bb6fa8e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Can_add_labels_to_SFS_task(&quot;'my_label'&quot;,[&quot;my_label&quot;])" />
+    </UnitTest>
+    <UnitTest name="Allow_set_shipping_method_after_cancellation_orchestration" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="dbd20827-5f71-7689-ff8f-250c78136bf9">
+      <Execution id="a1dfc6ff-597b-4dff-9a04-53310e50b7ec" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Allow_set_shipping_method_after_cancellation_orchestration" />
+    </UnitTest>
+    <UnitTest name="SDD_works_new" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="c4a8a4a7-cf02-3b41-5b93-222aa66f97ca">
+      <Execution id="fa8d16c3-7496-4509-93fe-81da4741990d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SameDayDelivery" name="SDD_works_new" />
+    </UnitTest>
+    <UnitTest name="Bundles_are_fulfilled_together(False,30)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="cc83171c-31a5-b810-84b7-5c219bf54547">
+      <Execution id="40b9842d-0aa6-4aa8-a1c9-5b10e857e291" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.BundleFulfillmentTests" name="Bundles_are_fulfilled_together(False,30)" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_tasks_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="3f059bf4-d366-bbf4-27d7-e3cc37705a8a">
+      <Execution id="4e6576c2-27d7-4a64-841f-fc4db4dca2da" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_tasks_work" />
+    </UnitTest>
+    <UnitTest name="Simple_warehouse" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="eb8b90df-1fed-0a44-547e-3f0e02634f90">
+      <Execution id="3cc73166-cf78-4d03-b07b-758e17ec8863" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PreviewOrderFulfillmentTests" name="Simple_warehouse" />
+    </UnitTest>
+    <UnitTest name="Test1(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="d94a455a-995f-6f56-1459-8745848f1bd9">
+      <Execution id="e44dc96e-6768-42a3-bc10-d78df5d446ba" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PartialFulfillmentTests" name="Test1(False)" />
+    </UnitTest>
+    <UnitTest name="Starting_a_SFS_task_deactivates_other_tasks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="caee47b6-53de-fcf5-fe16-5eb82cb9faa3">
+      <Execution id="ae17e2b9-35e7-4f02-b03a-ad7a1a617053" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Starting_a_SFS_task_deactivates_other_tasks" />
+    </UnitTest>
+    <UnitTest name="SFS_Pick_Task_With_Unpicked_Products_With_Requirements" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="62fc2515-0668-3d46-a92c-e534c9842570">
+      <Execution id="ff72a24c-bb24-47c6-8f5f-62985ec300d0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="SFS_Pick_Task_With_Unpicked_Products_With_Requirements" />
+    </UnitTest>
+    <UnitTest name="SUPPORT_5035" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="064014d6-5a1f-2d1b-c516-fd15bd79dc25">
+      <Execution id="6fe4d922-5df9-49b9-8b18-6a1ce24f81f3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.SplitOrderLinesTests" name="SUPPORT_5035" />
+    </UnitTest>
+    <UnitTest name="SFS_Pick_Task_With_Unpicked_Service_Products" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="dc5070c5-480e-8f98-a74b-1365849cdfbe">
+      <Execution id="15ed255a-d58b-42df-8271-e57f838c5c39" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="SFS_Pick_Task_With_Unpicked_Service_Products" />
+    </UnitTest>
+    <UnitTest name="Can_specify_preferred_fulfillment_OU" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="585ba0a6-dca0-4fb2-ab33-030a7b7a72d4">
+      <Execution id="39b7432c-7e06-4a2a-ac44-10ebe2de86ac" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Can_specify_preferred_fulfillment_OU" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_true_and_ShipFromStoreExternalLabelHandlerPrintType_is_asynchronous" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="d746ee77-32e3-0cf9-87ae-66e77d3a9103">
+      <Execution id="32b02460-a3ba-4df1-839d-7680204bb8d5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_tasks_work_when_DisableAutomaticReceiveShipment_is_true_and_ShipFromStoreExternalLabelHandlerPrintType_is_asynchronous" />
+    </UnitTest>
+    <UnitTest name="cant_change_shipping_method_on_ship_from_store_completed_tasks_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="8b852c46-2000-b524-34af-be00fee46b7a">
+      <Execution id="f9691afc-38bf-482f-8734-b2b9c5cea5be" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="cant_change_shipping_method_on_ship_from_store_completed_tasks_work" />
+    </UnitTest>
+    <UnitTest name="Can_specify_included_product_properties" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="b71bdb82-5c4c-c493-2e39-111de3c4695e">
+      <Execution id="9b14fcb9-a8b6-4d85-9b75-284c06d4c9f6" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.OrderFulfillmentTests" name="Can_specify_included_product_properties" />
+    </UnitTest>
+    <UnitTest name="SUPPORT_1616" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="f405e8ce-345d-d3e9-d707-2f085343f837">
+      <Execution id="44e9b911-febf-44a0-a608-c4f1da027e5c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="SUPPORT_1616" />
+    </UnitTest>
+    <UnitTest name="Ship_From_Store_sheet_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="1563b781-f948-78c3-9752-e36974ad47d2">
+      <Execution id="ffe7fda3-4420-4310-8b7f-a3ebd8b5d88e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Ship_From_Store_sheet_works" />
+    </UnitTest>
+    <UnitTest name="Line_splitting_can_be_disabled(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="8dddb11c-8019-2f5e-e6ec-10c19934f615">
+      <Execution id="f9abc39a-8b51-4f90-8c87-e7ab15bc9284" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.PartialFulfillmentTests" name="Line_splitting_can_be_disabled(True)" />
+    </UnitTest>
+    <UnitTest name="Replacement_product_pick_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="3df3e1e0-29f8-3ce9-a145-624bf9068be7">
+      <Execution id="3d5e0fe5-f4f6-451e-b399-96e8a3828adc" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Replacement_product_pick_test" />
+    </UnitTest>
+    <UnitTest name="Interbranch_partial_pick" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="a38e05f4-754a-2ff8-acc1-c8813c6339cf">
+      <Execution id="ef504a40-2d1b-410b-b049-440ad1983779" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="Interbranch_partial_pick" />
+    </UnitTest>
+    <UnitTest name="An_order_can_have_multiple_SFS_tasks_for_different_OrderLines" storage="/home/runner/_work/eva/eva/test/eva.testsuite.symphony/bin/release/eva.testsuite.symphony.dll" id="89338030-5796-ed82-5f8c-a4f7736e517d">
+      <Execution id="284b22d5-4641-4f74-ba25-1d8fb7c26e30" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Symphony.ShipFromStoreTests" name="An_order_can_have_multiple_SFS_tasks_for_different_OrderLines" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="593d354a-c66f-4193-7154-4b05ee94523b" executionId="6473a85a-d144-4129-a221-984c5d109eca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68d4ede0-3258-19bc-e3e4-222b9fac0567" executionId="e6cab383-3ce8-478b-a6a3-9be1833eb7bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe2f8086-3b62-3d38-7430-e4ccbcba9d26" executionId="53558336-795d-47d2-9895-afe51bbaff1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dbd20827-5f71-7689-ff8f-250c78136bf9" executionId="a1dfc6ff-597b-4dff-9a04-53310e50b7ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c62ebb5f-12c5-efb5-1da1-8d916a029da3" executionId="c9d25126-9404-49da-a294-70814ffd6a1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89cf9f63-74c3-7c2f-691b-d719da430488" executionId="a6e24352-985d-4a5d-9b97-2213f28bd79f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd34e2cd-5d8d-c3ca-5375-8799d16d11f9" executionId="5893c973-5910-414d-8454-5fcdea211eaa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d746ee77-32e3-0cf9-87ae-66e77d3a9103" executionId="32b02460-a3ba-4df1-839d-7680204bb8d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82585f7e-f948-6fd2-bacd-9df8c45d1746" executionId="f7d96c87-102d-454c-81a9-3d27d756118c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a5e0e8a-07b5-299f-178e-5d14eb0ec905" executionId="739af79e-2895-4239-9b65-57af9e8968f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0111b4dd-57d1-f184-22cd-15c234fe3773" executionId="61477856-1978-44d8-9eaa-11c19eb2d910" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bbeed40-3375-9ee9-6ee4-b3a41ae22310" executionId="8a461a63-64b5-4a31-9b74-723445b42dc7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1783381-1cdf-5e07-3e6b-76bf393595d9" executionId="d1f36d87-bae8-406d-bab4-d272922003d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5b1c762-e282-29c5-1c75-39698dbfc3f1" executionId="8109866c-7992-40f7-916c-05ca9af4e77a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="064014d6-5a1f-2d1b-c516-fd15bd79dc25" executionId="6fe4d922-5df9-49b9-8b18-6a1ce24f81f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33e248b2-3a4b-0b51-e2fd-a56b88561ca4" executionId="fb4e774e-beac-452e-97e5-7e1ef35a1c20" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50f9f215-6964-3114-8cab-596457577e8d" executionId="35fe4f8c-5dc0-4a61-b3f3-0d1b981c838e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8710ed58-efeb-b7dd-897e-f81efec02f87" executionId="ed5dc479-acfa-489c-888e-e304bd2df9ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb02e926-db75-368b-9ce0-a30b34670a23" executionId="71fd2a56-9533-47f7-99f4-bd83272bdfa2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12867b82-5d0f-0398-5912-4f9f57473836" executionId="bb96810f-1308-4833-b736-6a3e3618b7f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f222c2d-f79f-68de-0fa1-2805565b3b70" executionId="fdbbf833-f716-49dc-959c-e6226ba39945" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d94a455a-995f-6f56-1459-8745848f1bd9" executionId="e44dc96e-6768-42a3-bc10-d78df5d446ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a60563d4-5632-24d5-2b54-2dd18e245851" executionId="09f18969-fb2c-4e21-b100-67ac54fbb59c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9be6175a-72ec-48f6-4c89-527abf7f6806" executionId="23c4131c-0918-4896-bd9f-e428eb8bd7dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d53db237-d501-a3b6-a5bb-ceb40c2e51a3" executionId="10f9c61f-765e-4eb3-8ce3-dd740807ccd4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e02f8bbd-801e-403e-925c-1f40cd6327ca" executionId="c49699be-6978-422d-860b-1fba708490f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b852c46-2000-b524-34af-be00fee46b7a" executionId="f9691afc-38bf-482f-8734-b2b9c5cea5be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87f5e320-5c60-abe2-31f5-7f79f17361c7" executionId="6a5a4f3f-8c12-4835-bf6d-0aa30d819dd2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc5070c5-480e-8f98-a74b-1365849cdfbe" executionId="15ed255a-d58b-42df-8271-e57f838c5c39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3963bf40-a270-69b6-ff15-381e650c35ed" executionId="812e8be2-c0bb-4cc8-b159-7a82feed1fa2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="585ba0a6-dca0-4fb2-ab33-030a7b7a72d4" executionId="39b7432c-7e06-4a2a-ac44-10ebe2de86ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d1dd42c-02f4-1842-0c30-f247dad384dc" executionId="1b50c26a-46c2-4dc5-913c-04fced3d3df5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77d00fae-b879-67f6-0ea9-517ae3e69b77" executionId="781dfb43-10e7-4e53-9aba-ea731e1d3f43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43263228-b1a5-b05e-cb5d-8061d3fd18c4" executionId="f6889fcb-618e-42e3-8383-d105c595fa24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a55ce991-4bf2-ca16-74fb-7288212674a3" executionId="a94f3e0b-9f65-412c-bdb5-b1358679d653" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e23741c-b033-4218-902f-57639dad886f" executionId="31528b40-ca8a-4688-b965-2c23adee61a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="600c0cb3-b8a8-7ea4-0812-1fa531172940" executionId="10d90a99-073e-4e8f-ba2f-3200d4b6f0a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1058b7e4-4ff7-50da-3184-473344e0174b" executionId="94aca81a-ea13-48b0-82d0-0b9787de24c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3cfc3d37-d06d-1514-8b42-86c13678cb4f" executionId="f438c1a4-83bc-494e-a102-3791e3973b93" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a522e5a-4fbf-b4b5-64e4-bc15a625e653" executionId="b220e3d4-47ee-4460-94eb-711d85599084" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1bb3d030-3a2b-d65d-0854-a8733d3071e5" executionId="ebbf7434-204c-49a8-82ef-e7d9801855ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4039c962-590e-fb15-7f94-e1cb6148b9aa" executionId="b536d26b-4732-43fc-8fe3-97e315b27373" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="716032a6-7f12-c9b2-0119-f8f87fc8c578" executionId="a8e71d13-c0d1-4a9b-a87f-5c08d096a730" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="004dbfdb-b2f5-ca40-b4fd-9686f1df0a2b" executionId="e2fc5040-a86c-4a04-bb07-a10d95cfed4e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89338030-5796-ed82-5f8c-a4f7736e517d" executionId="284b22d5-4641-4f74-ba25-1d8fb7c26e30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1311132a-6fea-41fb-0976-3bf762d2814d" executionId="e035ea7d-f605-40d9-b6e3-9e829e0164e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48115999-2eb9-2e84-7737-57b292467dc9" executionId="8006f6f9-2fe1-4c98-9250-c4c7a132dd1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1acb1fc2-858d-5f19-7231-f8ebfdfad0b5" executionId="b48ebebc-86a8-473a-8a17-5f6900c4e09a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3df3e1e0-29f8-3ce9-a145-624bf9068be7" executionId="3d5e0fe5-f4f6-451e-b399-96e8a3828adc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62fc2515-0668-3d46-a92c-e534c9842570" executionId="ff72a24c-bb24-47c6-8f5f-62985ec300d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86994d91-74cd-f400-e98c-db8b0c4961b1" executionId="9566209f-8477-4524-86f2-6549d424eb8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f3c360f-38d6-480f-c673-023ade4394b7" executionId="325aa6c5-5f9d-4185-b4c1-f4ec54e83ffb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f059bf4-d366-bbf4-27d7-e3cc37705a8a" executionId="4e6576c2-27d7-4a64-841f-fc4db4dca2da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="afb9442b-22ea-a8f0-a734-caa1b008dd22" executionId="d45fab6f-2b37-4273-9c46-0974770acd47" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7422c32-68e9-c418-35b6-607db951bef6" executionId="a6fb9a76-d13a-4411-a78c-f41d0d3243e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c9dfba4-4202-9b33-fff0-d0871936cbc1" executionId="59e6015e-7012-4667-9ab1-97d8d603cecc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b71bdb82-5c4c-c493-2e39-111de3c4695e" executionId="9b14fcb9-a8b6-4d85-9b75-284c06d4c9f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="04a0ea40-b77f-50f5-5376-ae3d16b897e9" executionId="5eeb4422-cb00-493f-ab5f-dbe6f1188484" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="531f969c-27cb-5eef-29d7-fd9657cc6515" executionId="3ef87f08-d8ce-4850-a759-a66b087aebd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57138c3e-9aac-c1ba-a46b-efc821883b1e" executionId="4237c9f0-e5e8-4c84-8441-e23925545708" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bec3ea51-7296-c5a8-cd19-87c1a96d45c2" executionId="2ee304b8-81d7-4339-8e4b-825d577464bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85d407ef-09d8-5cfa-ef0e-d59ec25d5d89" executionId="09faab1f-ad61-45c9-a2f5-989fd55beb06" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="300cca3f-6688-f0d4-582f-01eed32c7b2e" executionId="bf98d22e-0e97-4720-b493-3ee70a0ca0e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eb8b90df-1fed-0a44-547e-3f0e02634f90" executionId="3cc73166-cf78-4d03-b07b-758e17ec8863" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc83171c-31a5-b810-84b7-5c219bf54547" executionId="40b9842d-0aa6-4aa8-a1c9-5b10e857e291" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cc1fc07-a076-da6f-6201-35c991e2b64c" executionId="4dff4244-bb0a-4e53-846c-0560e9430879" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4a8a4a7-cf02-3b41-5b93-222aa66f97ca" executionId="fa8d16c3-7496-4509-93fe-81da4741990d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c417373a-f093-4003-b082-71982157114c" executionId="4755ed7b-7cf2-4f65-af8e-7a3b1a6793a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="500fe94a-b73b-7412-4e79-67f925f399a1" executionId="79934eaf-43bd-493e-bad7-e4699fdad4ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02a83319-9533-1e45-e602-d82c28fd8d94" executionId="228e5eb6-0582-4ac2-9e84-2097d88fc98e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d8fdf074-71ab-e215-7bf3-0bfa309f97a5" executionId="935259d6-b695-49a9-a7a5-eec5129851a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a38e05f4-754a-2ff8-acc1-c8813c6339cf" executionId="ef504a40-2d1b-410b-b049-440ad1983779" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d54c5fa-b51f-bdea-606c-ec2dff42ebf4" executionId="1b9a22d8-b3be-4a15-9e4c-9fe836e99300" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dae92645-d76c-11f2-c28c-d51f0a3941a7" executionId="256ff628-7901-4908-b477-7db1b2820236" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8dddb11c-8019-2f5e-e6ec-10c19934f615" executionId="f9abc39a-8b51-4f90-8c87-e7ab15bc9284" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="caee47b6-53de-fcf5-fe16-5eb82cb9faa3" executionId="ae17e2b9-35e7-4f02-b03a-ad7a1a617053" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66aa8540-1fb5-332b-7a1d-fff8652c7b56" executionId="5fb42b48-084d-46ed-8652-451146d41ced" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f405e8ce-345d-d3e9-d707-2f085343f837" executionId="44e9b911-febf-44a0-a608-c4f1da027e5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39e25498-3958-04da-1011-6c4c8f5479fe" executionId="253c3218-f0d6-48e7-b2a8-4e302bb6fa8e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd13c074-a359-2ea2-9c96-83b9a31e7cba" executionId="ca5253f1-614c-4a3e-910a-7ef99881d968" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e349e8df-9d00-d9a6-2375-62ca3cfd49d8" executionId="82911337-5265-4d06-942b-289f423d8dd2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c521ea5f-db27-9197-e42b-e0123ebd90b4" executionId="96df3b69-15b9-4edf-bf8f-c461d1ac0ed1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1563b781-f948-78c3-9752-e36974ad47d2" executionId="ffe7fda3-4420-4310-8b7f-a3ebd8b5d88e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61308e46-f954-f24f-5b83-5779d925a2b6" executionId="638a8df0-00bd-4b2c-a6bb-3c1a464e44b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="84" executed="44" passed="44" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Symphony/bin/Release/EVA.TestSuite.Symphony.dll
+   NUnit3TestExecutor discovered 84 of 84 NUnit test cases using Current Discovery mode, Non-Explicit run
+Can_cancel_OrderLineFulfillment: Skipping test: it does not belong to this partition.
+Can_partially_cancel_OrderLineFulfillment: Skipping test: it does not belong to this partition.
+Can_get_sheet_documentation: Skipping test: it does not belong to this partition.
+Can_get_sheet_documentation_for_sheet_that_doesnt_compile: Skipping test: it does not belong to this partition.
+Allow_set_shipping_method_after_cancellation_orchestration: Skipping test: it does not belong to this partition.
+Basic_test: Skipping test: it does not belong to this partition.
+Basic_test2: Skipping test: it does not belong to this partition.
+Can_specify_included_product_properties: Skipping test: it does not belong to this partition.
+Can_specify_preferred_fulfillment_OU: Skipping test: it does not belong to this partition.
+Test 'Can_cancel_OrderLineFulfillment' was skipped in the test run.
+Test 'Can_partially_cancel_OrderLineFulfillment' was skipped in the test run.
+Test 'Can_get_sheet_documentation' was skipped in the test run.
+Test 'Can_get_sheet_documentation_for_sheet_that_doesnt_compile' was skipped in the test run.
+Test 'Allow_set_shipping_method_after_cancellation_orchestration' was skipped in the test run.
+Test 'Basic_test' was skipped in the test run.
+Test 'Basic_test2' was skipped in the test run.
+Test 'Can_specify_included_product_properties' was skipped in the test run.
+Test 'Can_specify_preferred_fulfillment_OU' was skipped in the test run.
+Can_use_stock_to_influence_score(True): Skipping test: it does not belong to this partition.
+Can_use_stock_to_influence_score(False): Skipping test: it does not belong to this partition.
+CancelExternalOrderWorks: Skipping test: it does not belong to this partition.
+FulfillmentOrderWorksInCookbook: Skipping test: it does not belong to this partition.
+Can_use_SupplierCount(True): Skipping test: it does not belong to this partition.
+Can_use_SupplierCount(False): Skipping test: it does not belong to this partition.
+Works(True): Skipping test: it does not belong to this partition.
+Works(False): Skipping test: it does not belong to this partition.
+Big_order_test: Skipping test: it does not belong to this partition.
+Test 'Can_use_stock_to_influence_score(True)' was skipped in the test run.
+Test 'Can_use_stock_to_influence_score(False)' was skipped in the test run.
+Test 'CancelExternalOrderWorks' was skipped in the test run.
+Test 'FulfillmentOrderWorksInCookbook' was skipped in the test run.
+Test 'Can_use_SupplierCount(True)' was skipped in the test run.
+Test 'Can_use_SupplierCount(False)' was skipped in the test run.
+Test 'Works(True)' was skipped in the test run.
+Test 'Works(False)' was skipped in the test run.
+Test 'Big_order_test' was skipped in the test run.
+Line_splitting_can_be_disabled(True): Skipping test: it does not belong to this partition.
+Line_splitting_can_be_disabled(False): Skipping test: it does not belong to this partition.
+Test: Skipping test: it does not belong to this partition.
+Test1(True): Skipping test: it does not belong to this partition.
+Test1(False): Skipping test: it does not belong to this partition.
+Can_cancel_a_pending_fulfillment: Skipping test: it does not belong to this partition.
+Test 'Line_splitting_can_be_disabled(True)' was skipped in the test run.
+Test 'Line_splitting_can_be_disabled(False)' was skipped in the test run.
+Test 'Test' was skipped in the test run.
+Test 'Test1(True)' was skipped in the test run.
+Test 'Test1(False)' was skipped in the test run.
+Test 'Can_cancel_a_pending_fulfillment' was skipped in the test run.
+Can_get_alternative_fulfillment_options: Skipping test: it does not belong to this partition.
+Can_reject_SDD_based_on_date: Skipping test: it does not belong to this partition.
+Can_reject_SDD_based_on_stock: Skipping test: it does not belong to this partition.
+Can_reject_SDD_for_a_store: Skipping test: it does not belong to this partition.
+SDD_works: Skipping test: it does not belong to this partition.
+SDD_works_new: Skipping test: it does not belong to this partition.
+Modifying_sheets_should_reflect_in_list_and_history_services: Skipping test: it does not belong to this partition.
+Ship_from_is_guessed_correctly: Skipping test: it does not belong to this partition.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Test 'Can_get_alternative_fulfillment_options' was skipped in the test run.
+Test 'Can_reject_SDD_based_on_date' was skipped in the test run.
+Test 'Can_reject_SDD_based_on_stock' was skipped in the test run.
+Test 'Can_reject_SDD_for_a_store' was skipped in the test run.
+Test 'SDD_works' was skipped in the test run.
+Test 'SDD_works_new' was skipped in the test run.
+Test 'Modifying_sheets_should_reflect_in_list_and_history_services' was skipped in the test run.
+Test 'Ship_from_is_guessed_correctly' was skipped in the test run.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+
+ChildLines_ProductRequirements_AndMoreJuicyDetails: STRING-ID-SKIP-WithConfetti actually does not have a value but the peanut butter coating does..?
+Test 'ChildLines_ProductRequirements_AndMoreJuicyDetails' was skipped in the test run.
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+
+Warning message/ListPurchaseOrderShipments limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/CreateProductRequirement obsolete_field:IsRequired - IsRequired is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsRequired.
+Warning message/CreateProductRequirement obsolete_field:IsArray - IsArray is deprecated and will be removed in 2.0.626: Enum values are moved to Options.IsArray.
+
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillments limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListOrderFulfillmentLines limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListOrderLedgerForOrder limit_too_large - Limit parameter 100000 exceeded maximum of 10000.
+Warning message/ListOrderLedgerForOrder ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+OrderLines_can_be_split(42,5,5,42,4,4,3): Skipping test: it does not belong to this partition.
+OrderLines_can_be_split(35,25,0,34,16,0,2): Skipping test: it does not belong to this partition.
+OrderLines_can_be_split(35,25,10,34,6,10,3): Skipping test: it does not belong to this partition.
+SUPPORT_4995: Skipping test: it does not belong to this partition.
+SUPPORT_5035: Skipping test: it does not belong to this partition.
+Stock_check_takes_replacement_products_into_consideration: Skipping test: it does not belong to this partition.
+Can_use_supplier_cancellation_rate_in_sheet: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'OrderLines_can_be_split(42,5,5,42,4,4,3)' was skipped in the test run.
+Test 'OrderLines_can_be_split(35,25,0,34,16,0,2)' was skipped in the test run.
+Test 'OrderLines_can_be_split(35,25,10,34,6,10,3)' was skipped in the test run.
+Test 'SUPPORT_4995' was skipped in the test run.
+Test 'SUPPORT_5035' was skipped in the test run.
+Test 'Stock_check_takes_replacement_products_into_consideration' was skipped in the test run.
+Test 'Can_use_supplier_cancellation_rate_in_sheet' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

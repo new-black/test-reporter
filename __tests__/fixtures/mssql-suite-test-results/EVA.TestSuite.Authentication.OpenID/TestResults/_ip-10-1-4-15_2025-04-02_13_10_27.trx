@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="4e8a958e-f8b6-44c7-8d9c-2df141f38c41" name="@ip-10-1-4-15 2025-04-02 13:10:27" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:10:27.4537199+00:00" queuing="2025-04-02T13:10:27.4537200+00:00" start="2025-04-02T13:10:25.6572237+00:00" finish="2025-04-02T13:10:47.4238348+00:00" />
+  <TestSettings name="default" id="7324c7da-928f-4715-84eb-0b55075a37ec">
+    <Deployment runDeploymentRoot="_ip-10-1-4-15_2025-04-02_13_10_27" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e2fa8cfd-ed27-4994-9a11-26aafb97780e" testId="99d2526f-8331-70fd-0257-1c0214a4a52e" testName="NonResponsiveEndpointFails" computerName="ip-10-1-4-15" duration="00:00:05.0649100" startTime="2025-04-02T13:10:26.9939239+00:00" endTime="2025-04-02T13:10:32.0588333+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e2fa8cfd-ed27-4994-9a11-26aafb97780e" />
+    <UnitTestResult executionId="6b2f9a70-f61f-4e8c-b143-21641f663a92" testId="aa865691-a716-2230-6a8e-e24bb2ee7936" testName="OpenIDCanAssignRoleWithScripting_V2" computerName="ip-10-1-4-15" duration="00:00:00.3205750" startTime="2025-04-02T13:10:37.9706144+00:00" endTime="2025-04-02T13:10:38.2911890+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b2f9a70-f61f-4e8c-b143-21641f663a92" />
+    <UnitTestResult executionId="647db22d-a653-4e0d-bc73-6d8ccfd3a9fd" testId="faacac3d-41aa-8cc4-00e4-99dc1a26fb4f" testName="OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles" computerName="ip-10-1-4-15" duration="00:00:00.5152540" startTime="2025-04-02T13:10:42.5995890+00:00" endTime="2025-04-02T13:10:43.1148418+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="647db22d-a653-4e0d-bc73-6d8ccfd3a9fd">
+      <Output>
+        <StdOut>Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/CreateEmployeeUser obsolete_field:RoleID - RoleID is deprecated and will be removed in 2.0.799: Use UserRoles instead for assigning roles.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4bf24ea6-1ff5-4074-87fd-1cd7ec82564b" testId="e77d5439-17b4-df4d-40a9-5e9a7ab5fc44" testName="OpenIDCanHandleVGs" computerName="ip-10-1-4-15" duration="00:00:00.6821180" startTime="2025-04-02T13:10:40.8883136+00:00" endTime="2025-04-02T13:10:41.5704304+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bf24ea6-1ff5-4074-87fd-1cd7ec82564b">
+      <Output>
+        <StdOut>Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="53443072-34e7-4efb-bde3-b08635c09b24" testId="fb156aed-8bc4-f357-dbc2-89c979483592" testName="LoginWithOpenIDWorks" computerName="ip-10-1-4-15" duration="00:00:00.2222160" startTime="2025-04-02T13:10:26.7716109+00:00" endTime="2025-04-02T13:10:26.9938267+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53443072-34e7-4efb-bde3-b08635c09b24" />
+    <UnitTestResult executionId="0f3e9195-7e7a-4886-82a8-bcb0ddbabab5" testId="0209170d-65f0-8eb7-27f2-dd04667145c1" testName="OpenIDCanUpdateUserThroughSCIM" computerName="ip-10-1-4-15" duration="00:00:02.6270800" startTime="2025-04-02T13:10:44.7469403+00:00" endTime="2025-04-02T13:10:47.3740194+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f3e9195-7e7a-4886-82a8-bcb0ddbabab5" />
+    <UnitTestResult executionId="5aa05bcd-d6f7-4a55-9998-54ce74e50f1d" testId="9ca5bb3a-c597-b6ea-4fb1-2015076032de" testName="OpenIDCanHandleVGsThatHaveACircularReference" computerName="ip-10-1-4-15" duration="00:00:00.5607340" startTime="2025-04-02T13:10:41.5705042+00:00" endTime="2025-04-02T13:10:42.1312371+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5aa05bcd-d6f7-4a55-9998-54ce74e50f1d">
+      <Output>
+        <StdOut>Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2c75bf3c-7546-4567-83ba-0cc0c3894d28" testId="2f544945-ef64-1e6e-3dc5-f0a5efba2a51" testName="OpenIDCanUpdateEmailAddress" computerName="ip-10-1-4-15" duration="00:00:01.1207730" startTime="2025-04-02T13:10:43.6261065+00:00" endTime="2025-04-02T13:10:44.7468783+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c75bf3c-7546-4567-83ba-0cc0c3894d28" />
+    <UnitTestResult executionId="bd54ce77-3718-4501-af79-94b6ba0bef7c" testId="4760a766-083d-9cf9-4d70-e5db850ef3a9" testName="Crud_operations_on_Providers_work" computerName="ip-10-1-4-15" duration="00:00:00.2839120" startTime="2025-04-02T13:10:26.4870021+00:00" endTime="2025-04-02T13:10:26.7708789+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd54ce77-3718-4501-af79-94b6ba0bef7c" />
+    <UnitTestResult executionId="f11f3acd-2e73-4ae2-b23f-3131f94c2eec" testId="fdc4f543-1475-5609-1bba-39f685ac6efa" testName="OpenIDCanHandleVGsThatIncludeEachOther" computerName="ip-10-1-4-15" duration="00:00:00.4682030" startTime="2025-04-02T13:10:42.1313139+00:00" endTime="2025-04-02T13:10:42.5995159+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f11f3acd-2e73-4ae2-b23f-3131f94c2eec">
+      <Output>
+        <StdOut>Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="365ee306-f49e-4361-8454-52bc348013ce" testId="b0e7a5a1-6f00-a26d-3e8f-1e7e9cc57bfb" testName="OpenIDCanAssignRoleWithScripting" computerName="ip-10-1-4-15" duration="00:00:00.7031700" startTime="2025-04-02T13:10:37.2673745+00:00" endTime="2025-04-02T13:10:37.9705436+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="365ee306-f49e-4361-8454-52bc348013ce" />
+    <UnitTestResult executionId="fe92a327-448b-44e2-bed7-f60d50e6d2a1" testId="24de7347-f1f7-a965-44f6-f0079abee056" testName="OpenID_Handles_Username_As_Expected" computerName="ip-10-1-4-15" duration="00:00:05.2083920" startTime="2025-04-02T13:10:32.0588996+00:00" endTime="2025-04-02T13:10:37.2672908+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe92a327-448b-44e2-bed7-f60d50e6d2a1" />
+    <UnitTestResult executionId="24ff7e04-cdc8-47b7-b245-4cf9dba512d7" testId="1fdf5966-f405-dc2d-9646-890febbda907" testName="OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles" computerName="ip-10-1-4-15" duration="00:00:00.5110730" startTime="2025-04-02T13:10:43.1149599+00:00" endTime="2025-04-02T13:10:43.6260320+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24ff7e04-cdc8-47b7-b245-4cf9dba512d7">
+      <Output>
+        <StdOut>Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ac520b73-658c-4b75-b89e-7d27fa742ac1" testId="9f27ab77-e9f7-2f12-c742-cb3a62cdb67b" testName="OpenIDCanCreateNewUser" computerName="ip-10-1-4-15" duration="00:00:01.0760010" startTime="2025-04-02T13:10:39.8122583+00:00" endTime="2025-04-02T13:10:40.8882586+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac520b73-658c-4b75-b89e-7d27fa742ac1" />
+    <UnitTestResult executionId="ace51005-dd11-4444-8996-8ba966315429" testId="034be58e-f3bf-81dd-3350-4fd2aad58d86" testName="OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets" computerName="ip-10-1-4-15" duration="00:00:01.5209330" startTime="2025-04-02T13:10:38.2912632+00:00" endTime="2025-04-02T13:10:39.8121955+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ace51005-dd11-4444-8996-8ba966315429">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="OpenIDCanCreateNewUser" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="9f27ab77-e9f7-2f12-c742-cb3a62cdb67b">
+      <Execution id="ac520b73-658c-4b75-b89e-7d27fa742ac1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanCreateNewUser" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanHandleVGsThatIncludeEachOther" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="fdc4f543-1475-5609-1bba-39f685ac6efa">
+      <Execution id="f11f3acd-2e73-4ae2-b23f-3131f94c2eec" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanHandleVGsThatIncludeEachOther" />
+    </UnitTest>
+    <UnitTest name="LoginWithOpenIDWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="fb156aed-8bc4-f357-dbc2-89c979483592">
+      <Execution id="53443072-34e7-4efb-bde3-b08635c09b24" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="LoginWithOpenIDWorks" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="faacac3d-41aa-8cc4-00e4-99dc1a26fb4f">
+      <Execution id="647db22d-a653-4e0d-bc73-6d8ccfd3a9fd" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanHandleVGsThatHaveACircularReference" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="9ca5bb3a-c597-b6ea-4fb1-2015076032de">
+      <Execution id="5aa05bcd-d6f7-4a55-9998-54ce74e50f1d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanHandleVGsThatHaveACircularReference" />
+    </UnitTest>
+    <UnitTest name="Crud_operations_on_Providers_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="4760a766-083d-9cf9-4d70-e5db850ef3a9">
+      <Execution id="bd54ce77-3718-4501-af79-94b6ba0bef7c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="Crud_operations_on_Providers_work" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanUpdateUserThroughSCIM" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="0209170d-65f0-8eb7-27f2-dd04667145c1">
+      <Execution id="0f3e9195-7e7a-4886-82a8-bcb0ddbabab5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanUpdateUserThroughSCIM" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanAssignRoleWithScripting" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="b0e7a5a1-6f00-a26d-3e8f-1e7e9cc57bfb">
+      <Execution id="365ee306-f49e-4361-8454-52bc348013ce" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanAssignRoleWithScripting" />
+    </UnitTest>
+    <UnitTest name="OpenID_Handles_Username_As_Expected" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="24de7347-f1f7-a965-44f6-f0079abee056">
+      <Execution id="fe92a327-448b-44e2-bed7-f60d50e6d2a1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenID_Handles_Username_As_Expected" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanUpdateEmailAddress" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="2f544945-ef64-1e6e-3dc5-f0a5efba2a51">
+      <Execution id="2c75bf3c-7546-4567-83ba-0cc0c3894d28" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanUpdateEmailAddress" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="1fdf5966-f405-dc2d-9646-890febbda907">
+      <Execution id="24ff7e04-cdc8-47b7-b245-4cf9dba512d7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="034be58e-f3bf-81dd-3350-4fd2aad58d86">
+      <Execution id="ace51005-dd11-4444-8996-8ba966315429" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanHandleVGs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="e77d5439-17b4-df4d-40a9-5e9a7ab5fc44">
+      <Execution id="4bf24ea6-1ff5-4074-87fd-1cd7ec82564b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanHandleVGs" />
+    </UnitTest>
+    <UnitTest name="NonResponsiveEndpointFails" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="99d2526f-8331-70fd-0257-1c0214a4a52e">
+      <Execution id="e2fa8cfd-ed27-4994-9a11-26aafb97780e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="NonResponsiveEndpointFails" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanAssignRoleWithScripting_V2" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="aa865691-a716-2230-6a8e-e24bb2ee7936">
+      <Execution id="6b2f9a70-f61f-4e8c-b143-21641f663a92" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanAssignRoleWithScripting_V2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="99d2526f-8331-70fd-0257-1c0214a4a52e" executionId="e2fa8cfd-ed27-4994-9a11-26aafb97780e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa865691-a716-2230-6a8e-e24bb2ee7936" executionId="6b2f9a70-f61f-4e8c-b143-21641f663a92" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="faacac3d-41aa-8cc4-00e4-99dc1a26fb4f" executionId="647db22d-a653-4e0d-bc73-6d8ccfd3a9fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e77d5439-17b4-df4d-40a9-5e9a7ab5fc44" executionId="4bf24ea6-1ff5-4074-87fd-1cd7ec82564b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb156aed-8bc4-f357-dbc2-89c979483592" executionId="53443072-34e7-4efb-bde3-b08635c09b24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0209170d-65f0-8eb7-27f2-dd04667145c1" executionId="0f3e9195-7e7a-4886-82a8-bcb0ddbabab5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ca5bb3a-c597-b6ea-4fb1-2015076032de" executionId="5aa05bcd-d6f7-4a55-9998-54ce74e50f1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f544945-ef64-1e6e-3dc5-f0a5efba2a51" executionId="2c75bf3c-7546-4567-83ba-0cc0c3894d28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4760a766-083d-9cf9-4d70-e5db850ef3a9" executionId="bd54ce77-3718-4501-af79-94b6ba0bef7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fdc4f543-1475-5609-1bba-39f685ac6efa" executionId="f11f3acd-2e73-4ae2-b23f-3131f94c2eec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0e7a5a1-6f00-a26d-3e8f-1e7e9cc57bfb" executionId="365ee306-f49e-4361-8454-52bc348013ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24de7347-f1f7-a965-44f6-f0079abee056" executionId="fe92a327-448b-44e2-bed7-f60d50e6d2a1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1fdf5966-f405-dc2d-9646-890febbda907" executionId="24ff7e04-cdc8-47b7-b245-4cf9dba512d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f27ab77-e9f7-2f12-c742-cb3a62cdb67b" executionId="ac520b73-658c-4b75-b89e-7d27fa742ac1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="034be58e-f3bf-81dd-3350-4fd2aad58d86" executionId="ace51005-dd11-4444-8996-8ba966315429" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll
+   NUnit3TestExecutor discovered 15 of 15 NUnit test cases using Current Discovery mode, Non-Explicit run
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/CreateEmployeeUser obsolete_field:RoleID - RoleID is deprecated and will be removed in 2.0.799: Use UserRoles instead for assigning roles.
+
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/CreateVisibilityGroup required_field:AllowCustomerStandardAccounts - Field AllowCustomerStandardAccounts is required and will be enforced as such in 2.0.708.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+NUnit Adapter 5.0.0.0: Test execution complete
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

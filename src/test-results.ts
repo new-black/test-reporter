@@ -73,6 +73,17 @@ export class TestRunResult {
       }
     }
   }
+
+  toJSON(): any {
+    return {
+      path: this.path,
+      suites: this.suites,
+      time: this.time,
+      passed: this.passed,
+      failed: this.failed,
+      skipped: this.skipped
+    }
+  }
 }
 
 export class TestSuiteResult {
