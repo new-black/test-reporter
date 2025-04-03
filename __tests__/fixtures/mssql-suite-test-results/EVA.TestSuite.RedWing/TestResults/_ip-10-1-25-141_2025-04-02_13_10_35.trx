@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="90336be1-b3d5-4454-9aca-186790bd480c" name="@ip-10-1-25-141 2025-04-02 13:10:35" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:10:35.0427691+00:00" queuing="2025-04-02T13:10:35.0427692+00:00" start="2025-04-02T13:10:20.6043208+00:00" finish="2025-04-02T13:10:35.0998114+00:00" />
+  <TestSettings name="default" id="8a5cd01a-c8d7-4eb9-95db-d3e1f45fe93e">
+    <Deployment runDeploymentRoot="_ip-10-1-25-141_2025-04-02_13_10_35" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="251eb4ef-b2fd-4956-8c62-34d235b358c1" testId="997aff48-37df-a01c-21b8-2179b9cb5b1d" testName="External_tax_amount_is_set_correctly" computerName="ip-10-1-25-141" duration="00:00:00.0002610" startTime="2025-04-02T13:10:35.0086795+00:00" endTime="2025-04-02T13:10:35.0089406+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="251eb4ef-b2fd-4956-8c62-34d235b358c1">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="51835fee-d65d-4bf5-af8f-71d52366f589" testId="7bf343df-9f0b-b0cb-0bf1-31142c48518a" testName="MultiplePayments_with_partial_payment" computerName="ip-10-1-25-141" duration="00:00:00.0000940" startTime="2025-04-02T13:10:34.9989207+00:00" endTime="2025-04-02T13:10:34.9990151+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51835fee-d65d-4bf5-af8f-71d52366f589">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="814d9489-85a5-475b-9c49-8f523d843bdf" testId="201c2ce4-30be-4c69-9a68-4e838f300844" testName="Scenario1_TaxedUpToSubsidy" computerName="ip-10-1-25-141" duration="00:00:00.0000670" startTime="2025-04-02T13:10:34.9991007+00:00" endTime="2025-04-02T13:10:34.9991674+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="814d9489-85a5-475b-9c49-8f523d843bdf">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c172d71b-cdd9-4c2e-83ae-345498f96851" testId="01f50ff3-77e8-0da6-f668-5362f5263bc5" testName="limitation_on_pricelist_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0006089" startTime="2025-04-02T13:10:35.0063356+00:00" endTime="2025-04-02T13:10:35.0069442+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c172d71b-cdd9-4c2e-83ae-345498f96851">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6ac78b01-7f1a-4008-a119-e1362e727603" testId="870e3ef6-daba-e1d4-7759-53f7dd95871b" testName="limitation_create_line_with_4_and_then_attach_and_then_add_1_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0000850" startTime="2025-04-02T13:10:35.0058273+00:00" endTime="2025-04-02T13:10:35.0059127+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ac78b01-7f1a-4008-a119-e1362e727603">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3f786527-4e21-480b-b9b2-43141a03c16e" testId="90e36759-436b-3828-4e59-4a5d02c078d7" testName="Scenario2_IAWithCustomerExemption" computerName="ip-10-1-25-141" duration="00:00:00.0001100" startTime="2025-04-02T13:10:34.9995298+00:00" endTime="2025-04-02T13:10:34.9996401+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f786527-4e21-480b-b9b2-43141a03c16e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f68164f5-f9dc-463b-b017-c035d22b8d55" testId="4e840141-30ec-46e9-d334-fb3031ac8878" testName="Scenario1_TaxedUpToSubsidy_with_full_return_pos_flow" computerName="ip-10-1-25-141" duration="00:00:00.0001730" startTime="2025-04-02T13:10:34.9993430+00:00" endTime="2025-04-02T13:10:34.9995162+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f68164f5-f9dc-463b-b017-c035d22b8d55">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="850a89db-c1ab-4f05-b35c-c3dd0cdb0565" testId="26f33b96-13a8-5e9e-9ca2-aa7685b7d8d6" testName="limitation_attach_first_and_add_4_at_once_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0001110" startTime="2025-04-02T13:10:35.0055794+00:00" endTime="2025-04-02T13:10:35.0056907+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="850a89db-c1ab-4f05-b35c-c3dd0cdb0565">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="58647e60-6f10-4931-ac9d-8a48c8806279" testId="08235652-4b95-7b38-3ebe-eb3fbcbc1132" testName="IATaxRules_Scenario2_SubsidyTaxedSTEX_Payroll" computerName="ip-10-1-25-141" duration="00:00:00.0009730" startTime="2025-04-02T13:10:34.9976263+00:00" endTime="2025-04-02T13:10:34.9985999+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="58647e60-6f10-4931-ac9d-8a48c8806279">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="91de10af-c984-4a1e-a3ea-1176f9feb83d" testId="ecac941f-a091-721f-3235-9290fe9d8f67" testName="InvalidProgramIDShouldBeCaught" computerName="ip-10-1-25-141" duration="00:00:00.0001490" startTime="2025-04-02T13:10:35.0083290+00:00" endTime="2025-04-02T13:10:35.0084780+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91de10af-c984-4a1e-a3ea-1176f9feb83d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="af7b4d24-fac5-48fe-a02d-d70273949b13" testId="3610e224-c68a-9f65-afd2-8f400b588c47" testName="ExcelFileCanBeUploadedAndIsStored" computerName="ip-10-1-25-141" duration="00:00:00.0001320" startTime="2025-04-02T13:10:35.0075132+00:00" endTime="2025-04-02T13:10:35.0076456+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af7b4d24-fac5-48fe-a02d-d70273949b13">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4f1e5025-b531-43c6-bb59-a440e4081597" testId="0b1edb8f-43a6-241f-2bf6-a06f95b9893c" testName="limitation_create_line_with_4_and_then_attach_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0000699" startTime="2025-04-02T13:10:35.0059187+00:00" endTime="2025-04-02T13:10:35.0059888+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f1e5025-b531-43c6-bb59-a440e4081597">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="14b12395-370b-4b26-99ff-5db8dcacbdf7" testId="337ede57-f84b-51ed-5d05-c5ec52370355" testName="Scenario4_2_TaxHoliday" computerName="ip-10-1-25-141" duration="00:00:00.0001270" startTime="2025-04-02T13:10:34.9997300+00:00" endTime="2025-04-02T13:10:34.9998566+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14b12395-370b-4b26-99ff-5db8dcacbdf7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a924f1d8-a798-472e-8e00-72cf269655be" testId="6afdcf98-7faf-c503-ec57-4b23b1f0f1cc" testName="OrderDataServiceWorks" computerName="ip-10-1-25-141" duration="00:00:00.0005050" startTime="2025-04-02T13:10:35.0042034+00:00" endTime="2025-04-02T13:10:35.0047080+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a924f1d8-a798-472e-8e00-72cf269655be">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b29c66fb-aa45-4268-aac7-211acd008e93" testId="c65d766a-09d9-31a2-568c-8d91ac56ed24" testName="SUPP_14399_AttachAfter" computerName="ip-10-1-25-141" duration="00:00:00.0001010" startTime="2025-04-02T13:10:35.0071727+00:00" endTime="2025-04-02T13:10:35.0072740+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b29c66fb-aa45-4268-aac7-211acd008e93">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a6ebc9bd-c97b-423e-be2a-7b158c605e4a" testId="75a1744e-6c21-9705-d2f3-b77a3dd59e6c" testName="NewRedWingUserParseBarcodeWorks" computerName="ip-10-1-25-141" duration="00:00:00.0000780" startTime="2025-04-02T13:10:35.0084883+00:00" endTime="2025-04-02T13:10:35.0085663+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6ebc9bd-c97b-423e-be2a-7b158c605e4a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0c152257-dc0b-46f5-a9eb-dfeacbcd4f40" testId="f4be7ef1-d527-17a0-4e40-04a762dcbb06" testName="Scenario4_TaxHoliday" computerName="ip-10-1-25-141" duration="00:00:00.0000790" startTime="2025-04-02T13:10:34.9998681+00:00" endTime="2025-04-02T13:10:34.9999472+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c152257-dc0b-46f5-a9eb-dfeacbcd4f40">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4550fc41-33b4-4fb5-ada4-7eca4d9821dd" testId="352817ca-a1e3-b00e-b785-9a6540a317e6" testName="InvalidBarcodeInExecutionShouldBeCaught" computerName="ip-10-1-25-141" duration="00:00:00.0003610" startTime="2025-04-02T13:10:35.0079449+00:00" endTime="2025-04-02T13:10:35.0083059+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4550fc41-33b4-4fb5-ada4-7eca4d9821dd">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="42d693da-d93b-4631-9972-b2d8cd8d0839" testId="d567bebc-92e8-0ea4-a6be-35453e1946f0" testName="Scenario1_TaxedUpToSubsidy_with_full_return" computerName="ip-10-1-25-141" duration="00:00:00.0001590" startTime="2025-04-02T13:10:34.9991727+00:00" endTime="2025-04-02T13:10:34.9993314+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42d693da-d93b-4631-9972-b2d8cd8d0839">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="645466f1-16ad-4c66-b3c0-51a999e62fb4" testId="f40b2df8-8047-74a8-f841-c6324eeab7c3" testName="order_product_limitation_should_work_on_max_use_on_order_starting_without_program_slow_buildup" computerName="ip-10-1-25-141" duration="00:00:00.0000660" startTime="2025-04-02T13:10:35.0060666+00:00" endTime="2025-04-02T13:10:35.0061324+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="645466f1-16ad-4c66-b3c0-51a999e62fb4">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="be13746f-0f97-4e52-b371-01422a3caade" testId="01fd31ea-8993-11ff-4375-c9a51b65ccdf" testName="limitation_attach_first_and_add_2_and_then_2_again_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0003640" startTime="2025-04-02T13:10:35.0051934+00:00" endTime="2025-04-02T13:10:35.0055567+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be13746f-0f97-4e52-b371-01422a3caade">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="445e65a3-cc01-4d67-935d-8ca9a7519c48" testId="d73c5dec-7469-8e19-2801-681327e3db42" testName="MultiplePayments" computerName="ip-10-1-25-141" duration="00:00:00.0002599" startTime="2025-04-02T13:10:34.9986472+00:00" endTime="2025-04-02T13:10:34.9989078+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="445e65a3-cc01-4d67-935d-8ca9a7519c48">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9d25ba5a-632c-46c1-804e-29b9453e345d" testId="941232dc-6301-c344-80cb-ed5669acfd5e" testName="ExistingRedWingUserParseBarcodeWorks" computerName="ip-10-1-25-141" duration="00:00:00.0002130" startTime="2025-04-02T13:10:35.0077210+00:00" endTime="2025-04-02T13:10:35.0079337+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d25ba5a-632c-46c1-804e-29b9453e345d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="73040aa8-25be-4db8-a85b-7cfb7604ee28" testId="789f1634-de60-7bfc-2287-bf133dd36f65" testName="SUPPORT_14362" computerName="ip-10-1-25-141" duration="00:00:00.0002980" startTime="2025-04-02T13:10:35.0003735+00:00" endTime="2025-04-02T13:10:35.0006717+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73040aa8-25be-4db8-a85b-7cfb7604ee28">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="67769e1a-66bf-4fc6-a743-40e7bce0fd7c" testId="39a86eb6-1d91-0aa1-c895-cecb74ef202a" testName="limitation_on_pricelist_with_attach_after_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0001979" startTime="2025-04-02T13:10:35.0069645+00:00" endTime="2025-04-02T13:10:35.0071620+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67769e1a-66bf-4fc6-a743-40e7bce0fd7c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a8e691f1-090f-4e79-afe1-433feae9bb55" testId="4fa33cfd-02f6-ca4d-1ad2-9cfd32f9592b" testName="limitation_create_line_with_1_and_then_attach_and_then_add_3_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0001210" startTime="2025-04-02T13:10:35.0056971+00:00" endTime="2025-04-02T13:10:35.0058180+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8e691f1-090f-4e79-afe1-433feae9bb55">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="68e244ba-c9bc-4228-8cb7-4174fa4b9039" testId="941c6c47-b36b-fb4e-76a9-0504019aed48" testName="SUPPORT15756" computerName="ip-10-1-25-141" duration="00:00:00.0001200" startTime="2025-04-02T13:10:35.0008920+00:00" endTime="2025-04-02T13:10:35.0010121+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68e244ba-c9bc-4228-8cb7-4174fa4b9039">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="78a820f9-dfe6-46fa-8049-b716b31fe66a" testId="74e93721-daab-8dd0-20d4-908db911bfd1" testName="OPTR32407" computerName="ip-10-1-25-141" duration="00:00:00.0000740" startTime="2025-04-02T13:10:34.9990208+00:00" endTime="2025-04-02T13:10:34.9990948+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78a820f9-dfe6-46fa-8049-b716b31fe66a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6bb84257-6a9a-4ba7-b9e4-ca9cb63c7e17" testId="2beb918a-0c75-9266-f8dd-64513dafeb21" testName="attaching_and_detaching_with_line_modification_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0000830" startTime="2025-04-02T13:10:35.0062452+00:00" endTime="2025-04-02T13:10:35.0063284+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6bb84257-6a9a-4ba7-b9e4-ca9cb63c7e17">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="80d0d2bb-528f-4694-8f46-625909ddeb24" testId="b2b55f07-6d0e-4cfe-1dc2-14ea8a9977ce" testName="limitation_attach_first_and_add_1_add_a_time_should_work" computerName="ip-10-1-25-141" duration="00:00:00.0001840" startTime="2025-04-02T13:10:35.0050012+00:00" endTime="2025-04-02T13:10:35.0051848+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80d0d2bb-528f-4694-8f46-625909ddeb24">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bd508343-6109-4eb1-aa26-a0dbb51834ef" testId="e3e620d3-f2f0-dde6-4f4d-ce966d8bed54" testName="Zero_cost_shipping_lines" computerName="ip-10-1-25-141" duration="00:00:00.0000710" startTime="2025-04-02T13:10:35.0010182+00:00" endTime="2025-04-02T13:10:35.0010887+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd508343-6109-4eb1-aa26-a0dbb51834ef">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa4b26d5-ed3b-4db9-91a5-5440348b7221" testId="6357ab1a-32ab-f5f6-704c-bbd89db6ffe7" testName="SUPPORT14571" computerName="ip-10-1-25-141" duration="00:00:00.0001950" startTime="2025-04-02T13:10:35.0006860+00:00" endTime="2025-04-02T13:10:35.0008811+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa4b26d5-ed3b-4db9-91a5-5440348b7221">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7292b44e-aff5-4c48-8865-a384df0ea823" testId="76b8fc25-b1d7-620b-f783-c39948c68ea3" testName="SUPP_14399_AttachBefore" computerName="ip-10-1-25-141" duration="00:00:00.0000840" startTime="2025-04-02T13:10:35.0072798+00:00" endTime="2025-04-02T13:10:35.0073634+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7292b44e-aff5-4c48-8865-a384df0ea823">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9d1a04a0-7649-4f91-b253-9cad57c78935" testId="8278f730-baf8-da37-df14-247e0a522dc4" testName="IATaxRules_Scenario2_SubsidyTaxedSTEX" computerName="ip-10-1-25-141" duration="00:00:00.0195730" startTime="2025-04-02T13:10:34.9760033+00:00" endTime="2025-04-02T13:10:34.9955276+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9d1a04a0-7649-4f91-b253-9cad57c78935">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="111b89aa-19d2-4115-aa05-c6e4ceb61a0e" testId="73481ccf-b4a7-5ca9-6759-1262e1b034ab" testName="Scenario5_TaxHoliday" computerName="ip-10-1-25-141" duration="00:00:00.0003959" startTime="2025-04-02T13:10:34.9999523+00:00" endTime="2025-04-02T13:10:35.0003480+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="111b89aa-19d2-4115-aa05-c6e4ceb61a0e">
+      <Output>
+        <StdOut>No longer a tax holiday, longer than 1 year ago?</StdOut>
+        <ErrorInfo>
+          <Message>No longer a tax holiday, longer than 1 year ago?</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="75b4457c-074c-4658-ba27-e86380e6a849" testId="075df950-d287-2bab-6ac9-4d06cba50da0" testName="Scenario3_SubsidyTaxed" computerName="ip-10-1-25-141" duration="00:00:00.0000770" startTime="2025-04-02T13:10:34.9996466+00:00" endTime="2025-04-02T13:10:34.9997233+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75b4457c-074c-4658-ba27-e86380e6a849">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="14483b53-eae3-4521-ab9e-c23be00deaf3" testId="cb89989b-1a95-16ec-085f-ac45aefb60ea" testName="order_product_limitation_should_work_on_max_use_on_order_starting_with_program_slow_buildup" computerName="ip-10-1-25-141" duration="00:00:00.0000649" startTime="2025-04-02T13:10:35.0059973+00:00" endTime="2025-04-02T13:10:35.0060628+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14483b53-eae3-4521-ab9e-c23be00deaf3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="order_product_limitation_should_work_on_max_use_on_order_starting_with_program_slow_buildup" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="cb89989b-1a95-16ec-085f-ac45aefb60ea">
+      <Execution id="14483b53-eae3-4521-ab9e-c23be00deaf3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="order_product_limitation_should_work_on_max_use_on_order_starting_with_program_slow_buildup" />
+    </UnitTest>
+    <UnitTest name="limitation_create_line_with_4_and_then_attach_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="0b1edb8f-43a6-241f-2bf6-a06f95b9893c">
+      <Execution id="4f1e5025-b531-43c6-bb59-a440e4081597" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="limitation_create_line_with_4_and_then_attach_should_work" />
+    </UnitTest>
+    <UnitTest name="Scenario2_IAWithCustomerExemption" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="90e36759-436b-3828-4e59-4a5d02c078d7">
+      <Execution id="3f786527-4e21-480b-b9b2-43141a03c16e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario2_IAWithCustomerExemption" />
+    </UnitTest>
+    <UnitTest name="limitation_on_pricelist_with_attach_after_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="39a86eb6-1d91-0aa1-c895-cecb74ef202a">
+      <Execution id="67769e1a-66bf-4fc6-a743-40e7bce0fd7c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.Reproductions" name="limitation_on_pricelist_with_attach_after_should_work" />
+    </UnitTest>
+    <UnitTest name="Scenario4_2_TaxHoliday" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="337ede57-f84b-51ed-5d05-c5ec52370355">
+      <Execution id="14b12395-370b-4b26-99ff-5db8dcacbdf7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario4_2_TaxHoliday" />
+    </UnitTest>
+    <UnitTest name="SUPPORT_14362" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="789f1634-de60-7bfc-2287-bf133dd36f65">
+      <Execution id="73040aa8-25be-4db8-a85b-7cfb7604ee28" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="SUPPORT_14362" />
+    </UnitTest>
+    <UnitTest name="Scenario3_SubsidyTaxed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="075df950-d287-2bab-6ac9-4d06cba50da0">
+      <Execution id="75b4457c-074c-4658-ba27-e86380e6a849" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario3_SubsidyTaxed" />
+    </UnitTest>
+    <UnitTest name="SUPP_14399_AttachBefore" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="76b8fc25-b1d7-620b-f783-c39948c68ea3">
+      <Execution id="7292b44e-aff5-4c48-8865-a384df0ea823" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.Reproductions" name="SUPP_14399_AttachBefore" />
+    </UnitTest>
+    <UnitTest name="IATaxRules_Scenario2_SubsidyTaxedSTEX" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="8278f730-baf8-da37-df14-247e0a522dc4">
+      <Execution id="9d1a04a0-7649-4f91-b253-9cad57c78935" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="IATaxRules_Scenario2_SubsidyTaxedSTEX" />
+    </UnitTest>
+    <UnitTest name="External_tax_amount_is_set_correctly" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="997aff48-37df-a01c-21b8-2179b9cb5b1d">
+      <Execution id="251eb4ef-b2fd-4956-8c62-34d235b358c1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.TraviPay.ValidatePaymentAmountsTest" name="External_tax_amount_is_set_correctly" />
+    </UnitTest>
+    <UnitTest name="SUPPORT15756" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="941c6c47-b36b-fb4e-76a9-0504019aed48">
+      <Execution id="68e244ba-c9bc-4228-8cb7-4174fa4b9039" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="SUPPORT15756" />
+    </UnitTest>
+    <UnitTest name="Scenario1_TaxedUpToSubsidy_with_full_return" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="d567bebc-92e8-0ea4-a6be-35453e1946f0">
+      <Execution id="42d693da-d93b-4631-9972-b2d8cd8d0839" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario1_TaxedUpToSubsidy_with_full_return" />
+    </UnitTest>
+    <UnitTest name="ExistingRedWingUserParseBarcodeWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="941232dc-6301-c344-80cb-ed5669acfd5e">
+      <Execution id="9d25ba5a-632c-46c1-804e-29b9453e345d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.TraviPay.UserParseBarcodeHandlerTest" name="ExistingRedWingUserParseBarcodeWorks" />
+    </UnitTest>
+    <UnitTest name="NewRedWingUserParseBarcodeWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="75a1744e-6c21-9705-d2f3-b77a3dd59e6c">
+      <Execution id="a6ebc9bd-c97b-423e-be2a-7b158c605e4a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.TraviPay.UserParseBarcodeHandlerTest" name="NewRedWingUserParseBarcodeWorks" />
+    </UnitTest>
+    <UnitTest name="InvalidBarcodeInExecutionShouldBeCaught" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="352817ca-a1e3-b00e-b785-9a6540a317e6">
+      <Execution id="4550fc41-33b4-4fb5-ada4-7eca4d9821dd" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.TraviPay.UserParseBarcodeHandlerTest" name="InvalidBarcodeInExecutionShouldBeCaught" />
+    </UnitTest>
+    <UnitTest name="Zero_cost_shipping_lines" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="e3e620d3-f2f0-dde6-4f4d-ce966d8bed54">
+      <Execution id="bd508343-6109-4eb1-aa26-a0dbb51834ef" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Zero_cost_shipping_lines" />
+    </UnitTest>
+    <UnitTest name="limitation_on_pricelist_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="01f50ff3-77e8-0da6-f668-5362f5263bc5">
+      <Execution id="c172d71b-cdd9-4c2e-83ae-345498f96851" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.Reproductions" name="limitation_on_pricelist_should_work" />
+    </UnitTest>
+    <UnitTest name="Scenario1_TaxedUpToSubsidy" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="201c2ce4-30be-4c69-9a68-4e838f300844">
+      <Execution id="814d9489-85a5-475b-9c49-8f523d843bdf" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario1_TaxedUpToSubsidy" />
+    </UnitTest>
+    <UnitTest name="IATaxRules_Scenario2_SubsidyTaxedSTEX_Payroll" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="08235652-4b95-7b38-3ebe-eb3fbcbc1132">
+      <Execution id="58647e60-6f10-4931-ac9d-8a48c8806279" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="IATaxRules_Scenario2_SubsidyTaxedSTEX_Payroll" />
+    </UnitTest>
+    <UnitTest name="Scenario5_TaxHoliday" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="73481ccf-b4a7-5ca9-6759-1262e1b034ab">
+      <Execution id="111b89aa-19d2-4115-aa05-c6e4ceb61a0e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario5_TaxHoliday" />
+    </UnitTest>
+    <UnitTest name="SUPP_14399_AttachAfter" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="c65d766a-09d9-31a2-568c-8d91ac56ed24">
+      <Execution id="b29c66fb-aa45-4268-aac7-211acd008e93" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.Reproductions" name="SUPP_14399_AttachAfter" />
+    </UnitTest>
+    <UnitTest name="OPTR32407" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="74e93721-daab-8dd0-20d4-908db911bfd1">
+      <Execution id="78a820f9-dfe6-46fa-8049-b716b31fe66a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="OPTR32407" />
+    </UnitTest>
+    <UnitTest name="Scenario1_TaxedUpToSubsidy_with_full_return_pos_flow" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="4e840141-30ec-46e9-d334-fb3031ac8878">
+      <Execution id="f68164f5-f9dc-463b-b017-c035d22b8d55" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario1_TaxedUpToSubsidy_with_full_return_pos_flow" />
+    </UnitTest>
+    <UnitTest name="OrderDataServiceWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="6afdcf98-7faf-c503-ec57-4b23b1f0f1cc">
+      <Execution id="a924f1d8-a798-472e-8e00-72cf269655be" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderDataTests" name="OrderDataServiceWorks" />
+    </UnitTest>
+    <UnitTest name="MultiplePayments_with_partial_payment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="7bf343df-9f0b-b0cb-0bf1-31142c48518a">
+      <Execution id="51835fee-d65d-4bf5-af8f-71d52366f589" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="MultiplePayments_with_partial_payment" />
+    </UnitTest>
+    <UnitTest name="SUPPORT14571" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="6357ab1a-32ab-f5f6-704c-bbd89db6ffe7">
+      <Execution id="aa4b26d5-ed3b-4db9-91a5-5440348b7221" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="SUPPORT14571" />
+    </UnitTest>
+    <UnitTest name="InvalidProgramIDShouldBeCaught" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="ecac941f-a091-721f-3235-9290fe9d8f67">
+      <Execution id="91de10af-c984-4a1e-a3ea-1176f9feb83d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.TraviPay.UserParseBarcodeHandlerTest" name="InvalidProgramIDShouldBeCaught" />
+    </UnitTest>
+    <UnitTest name="limitation_attach_first_and_add_4_at_once_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="26f33b96-13a8-5e9e-9ca2-aa7685b7d8d6">
+      <Execution id="850a89db-c1ab-4f05-b35c-c3dd0cdb0565" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="limitation_attach_first_and_add_4_at_once_should_work" />
+    </UnitTest>
+    <UnitTest name="MultiplePayments" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="d73c5dec-7469-8e19-2801-681327e3db42">
+      <Execution id="445e65a3-cc01-4d67-935d-8ca9a7519c48" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="MultiplePayments" />
+    </UnitTest>
+    <UnitTest name="ExcelFileCanBeUploadedAndIsStored" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="3610e224-c68a-9f65-afd2-8f400b588c47">
+      <Execution id="af7b4d24-fac5-48fe-a02d-d70273949b13" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.TaxExemptionTests" name="ExcelFileCanBeUploadedAndIsStored" />
+    </UnitTest>
+    <UnitTest name="attaching_and_detaching_with_line_modification_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="2beb918a-0c75-9266-f8dd-64513dafeb21">
+      <Execution id="6bb84257-6a9a-4ba7-b9e4-ca9cb63c7e17" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.Reproductions" name="attaching_and_detaching_with_line_modification_should_work" />
+    </UnitTest>
+    <UnitTest name="Scenario4_TaxHoliday" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="f4be7ef1-d527-17a0-4e40-04a762dcbb06">
+      <Execution id="0c152257-dc0b-46f5-a9eb-dfeacbcd4f40" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.IndustrialAccountsTests" name="Scenario4_TaxHoliday" />
+    </UnitTest>
+    <UnitTest name="limitation_create_line_with_4_and_then_attach_and_then_add_1_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="870e3ef6-daba-e1d4-7759-53f7dd95871b">
+      <Execution id="6ac78b01-7f1a-4008-a119-e1362e727603" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="limitation_create_line_with_4_and_then_attach_and_then_add_1_should_work" />
+    </UnitTest>
+    <UnitTest name="limitation_attach_first_and_add_2_and_then_2_again_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="01fd31ea-8993-11ff-4375-c9a51b65ccdf">
+      <Execution id="be13746f-0f97-4e52-b371-01422a3caade" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="limitation_attach_first_and_add_2_and_then_2_again_should_work" />
+    </UnitTest>
+    <UnitTest name="order_product_limitation_should_work_on_max_use_on_order_starting_without_program_slow_buildup" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="f40b2df8-8047-74a8-f841-c6324eeab7c3">
+      <Execution id="645466f1-16ad-4c66-b3c0-51a999e62fb4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="order_product_limitation_should_work_on_max_use_on_order_starting_without_program_slow_buildup" />
+    </UnitTest>
+    <UnitTest name="limitation_attach_first_and_add_1_add_a_time_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="b2b55f07-6d0e-4cfe-1dc2-14ea8a9977ce">
+      <Execution id="80d0d2bb-528f-4694-8f46-625909ddeb24" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="limitation_attach_first_and_add_1_add_a_time_should_work" />
+    </UnitTest>
+    <UnitTest name="limitation_create_line_with_1_and_then_attach_and_then_add_3_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.redwing/bin/release/eva.testsuite.redwing.dll" id="4fa33cfd-02f6-ca4d-1ad2-9cfd32f9592b">
+      <Execution id="a8e691f1-090f-4e79-afe1-433feae9bb55" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.RedWing.IndustrialAccounts.OrderLineStackTests" name="limitation_create_line_with_1_and_then_attach_and_then_add_3_should_work" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="997aff48-37df-a01c-21b8-2179b9cb5b1d" executionId="251eb4ef-b2fd-4956-8c62-34d235b358c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bf343df-9f0b-b0cb-0bf1-31142c48518a" executionId="51835fee-d65d-4bf5-af8f-71d52366f589" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="201c2ce4-30be-4c69-9a68-4e838f300844" executionId="814d9489-85a5-475b-9c49-8f523d843bdf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01f50ff3-77e8-0da6-f668-5362f5263bc5" executionId="c172d71b-cdd9-4c2e-83ae-345498f96851" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="870e3ef6-daba-e1d4-7759-53f7dd95871b" executionId="6ac78b01-7f1a-4008-a119-e1362e727603" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90e36759-436b-3828-4e59-4a5d02c078d7" executionId="3f786527-4e21-480b-b9b2-43141a03c16e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e840141-30ec-46e9-d334-fb3031ac8878" executionId="f68164f5-f9dc-463b-b017-c035d22b8d55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26f33b96-13a8-5e9e-9ca2-aa7685b7d8d6" executionId="850a89db-c1ab-4f05-b35c-c3dd0cdb0565" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08235652-4b95-7b38-3ebe-eb3fbcbc1132" executionId="58647e60-6f10-4931-ac9d-8a48c8806279" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecac941f-a091-721f-3235-9290fe9d8f67" executionId="91de10af-c984-4a1e-a3ea-1176f9feb83d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3610e224-c68a-9f65-afd2-8f400b588c47" executionId="af7b4d24-fac5-48fe-a02d-d70273949b13" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b1edb8f-43a6-241f-2bf6-a06f95b9893c" executionId="4f1e5025-b531-43c6-bb59-a440e4081597" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="337ede57-f84b-51ed-5d05-c5ec52370355" executionId="14b12395-370b-4b26-99ff-5db8dcacbdf7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6afdcf98-7faf-c503-ec57-4b23b1f0f1cc" executionId="a924f1d8-a798-472e-8e00-72cf269655be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c65d766a-09d9-31a2-568c-8d91ac56ed24" executionId="b29c66fb-aa45-4268-aac7-211acd008e93" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75a1744e-6c21-9705-d2f3-b77a3dd59e6c" executionId="a6ebc9bd-c97b-423e-be2a-7b158c605e4a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4be7ef1-d527-17a0-4e40-04a762dcbb06" executionId="0c152257-dc0b-46f5-a9eb-dfeacbcd4f40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="352817ca-a1e3-b00e-b785-9a6540a317e6" executionId="4550fc41-33b4-4fb5-ada4-7eca4d9821dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d567bebc-92e8-0ea4-a6be-35453e1946f0" executionId="42d693da-d93b-4631-9972-b2d8cd8d0839" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f40b2df8-8047-74a8-f841-c6324eeab7c3" executionId="645466f1-16ad-4c66-b3c0-51a999e62fb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01fd31ea-8993-11ff-4375-c9a51b65ccdf" executionId="be13746f-0f97-4e52-b371-01422a3caade" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d73c5dec-7469-8e19-2801-681327e3db42" executionId="445e65a3-cc01-4d67-935d-8ca9a7519c48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="941232dc-6301-c344-80cb-ed5669acfd5e" executionId="9d25ba5a-632c-46c1-804e-29b9453e345d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="789f1634-de60-7bfc-2287-bf133dd36f65" executionId="73040aa8-25be-4db8-a85b-7cfb7604ee28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39a86eb6-1d91-0aa1-c895-cecb74ef202a" executionId="67769e1a-66bf-4fc6-a743-40e7bce0fd7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4fa33cfd-02f6-ca4d-1ad2-9cfd32f9592b" executionId="a8e691f1-090f-4e79-afe1-433feae9bb55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="941c6c47-b36b-fb4e-76a9-0504019aed48" executionId="68e244ba-c9bc-4228-8cb7-4174fa4b9039" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74e93721-daab-8dd0-20d4-908db911bfd1" executionId="78a820f9-dfe6-46fa-8049-b716b31fe66a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2beb918a-0c75-9266-f8dd-64513dafeb21" executionId="6bb84257-6a9a-4ba7-b9e4-ca9cb63c7e17" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2b55f07-6d0e-4cfe-1dc2-14ea8a9977ce" executionId="80d0d2bb-528f-4694-8f46-625909ddeb24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e3e620d3-f2f0-dde6-4f4d-ce966d8bed54" executionId="bd508343-6109-4eb1-aa26-a0dbb51834ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6357ab1a-32ab-f5f6-704c-bbd89db6ffe7" executionId="aa4b26d5-ed3b-4db9-91a5-5440348b7221" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="76b8fc25-b1d7-620b-f783-c39948c68ea3" executionId="7292b44e-aff5-4c48-8865-a384df0ea823" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8278f730-baf8-da37-df14-247e0a522dc4" executionId="9d1a04a0-7649-4f91-b253-9cad57c78935" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73481ccf-b4a7-5ca9-6759-1262e1b034ab" executionId="111b89aa-19d2-4115-aa05-c6e4ceb61a0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="075df950-d287-2bab-6ac9-4d06cba50da0" executionId="75b4457c-074c-4658-ba27-e86380e6a849" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb89989b-1a95-16ec-085f-ac45aefb60ea" executionId="14483b53-eae3-4521-ab9e-c23be00deaf3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="37" executed="0" passed="0" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.RedWing/bin/Release/EVA.TestSuite.RedWing.dll
+   NUnit3TestExecutor discovered 37 of 37 NUnit test cases using Current Discovery mode, Non-Explicit run
+IATaxRules_Scenario2_SubsidyTaxedSTEX: Skipping test: it does not belong to this partition.
+IATaxRules_Scenario2_SubsidyTaxedSTEX_Payroll: Skipping test: it does not belong to this partition.
+MultiplePayments: Skipping test: it does not belong to this partition.
+MultiplePayments_with_partial_payment: Skipping test: it does not belong to this partition.
+OPTR32407: Skipping test: it does not belong to this partition.
+Scenario1_TaxedUpToSubsidy: Skipping test: it does not belong to this partition.
+Scenario1_TaxedUpToSubsidy_with_full_return: Skipping test: it does not belong to this partition.
+Scenario1_TaxedUpToSubsidy_with_full_return_pos_flow: Skipping test: it does not belong to this partition.
+Scenario2_IAWithCustomerExemption: Skipping test: it does not belong to this partition.
+Test 'IATaxRules_Scenario2_SubsidyTaxedSTEX' was skipped in the test run.
+Test 'IATaxRules_Scenario2_SubsidyTaxedSTEX_Payroll' was skipped in the test run.
+Test 'MultiplePayments' was skipped in the test run.
+Test 'MultiplePayments_with_partial_payment' was skipped in the test run.
+Test 'OPTR32407' was skipped in the test run.
+Test 'Scenario1_TaxedUpToSubsidy' was skipped in the test run.
+Test 'Scenario1_TaxedUpToSubsidy_with_full_return' was skipped in the test run.
+Test 'Scenario1_TaxedUpToSubsidy_with_full_return_pos_flow' was skipped in the test run.
+Test 'Scenario2_IAWithCustomerExemption' was skipped in the test run.
+Scenario3_SubsidyTaxed: Skipping test: it does not belong to this partition.
+Scenario4_2_TaxHoliday: Skipping test: it does not belong to this partition.
+Scenario4_TaxHoliday: Skipping test: it does not belong to this partition.
+Scenario5_TaxHoliday: No longer a tax holiday, longer than 1 year ago?
+SUPPORT_14362: Skipping test: it does not belong to this partition.
+SUPPORT14571: Skipping test: it does not belong to this partition.
+SUPPORT15756: Skipping test: it does not belong to this partition.
+Zero_cost_shipping_lines: Skipping test: it does not belong to this partition.
+OrderDataServiceWorks: Skipping test: it does not belong to this partition.
+Test 'Scenario3_SubsidyTaxed' was skipped in the test run.
+Test 'Scenario4_2_TaxHoliday' was skipped in the test run.
+Test 'Scenario4_TaxHoliday' was skipped in the test run.
+Test 'Scenario5_TaxHoliday' was skipped in the test run.
+Test 'SUPPORT_14362' was skipped in the test run.
+Test 'SUPPORT14571' was skipped in the test run.
+Test 'SUPPORT15756' was skipped in the test run.
+Test 'Zero_cost_shipping_lines' was skipped in the test run.
+Test 'OrderDataServiceWorks' was skipped in the test run.
+limitation_attach_first_and_add_1_add_a_time_should_work: Skipping test: it does not belong to this partition.
+limitation_attach_first_and_add_2_and_then_2_again_should_work: Skipping test: it does not belong to this partition.
+limitation_attach_first_and_add_4_at_once_should_work: Skipping test: it does not belong to this partition.
+limitation_create_line_with_1_and_then_attach_and_then_add_3_should_work: Skipping test: it does not belong to this partition.
+limitation_create_line_with_4_and_then_attach_and_then_add_1_should_work: Skipping test: it does not belong to this partition.
+limitation_create_line_with_4_and_then_attach_should_work: Skipping test: it does not belong to this partition.
+order_product_limitation_should_work_on_max_use_on_order_starting_with_program_slow_buildup: Skipping test: it does not belong to this partition.
+order_product_limitation_should_work_on_max_use_on_order_starting_without_program_slow_buildup: Skipping test: it does not belong to this partition.
+attaching_and_detaching_with_line_modification_should_work: Skipping test: it does not belong to this partition.
+Test 'limitation_attach_first_and_add_1_add_a_time_should_work' was skipped in the test run.
+Test 'limitation_attach_first_and_add_2_and_then_2_again_should_work' was skipped in the test run.
+Test 'limitation_attach_first_and_add_4_at_once_should_work' was skipped in the test run.
+Test 'limitation_create_line_with_1_and_then_attach_and_then_add_3_should_work' was skipped in the test run.
+Test 'limitation_create_line_with_4_and_then_attach_and_then_add_1_should_work' was skipped in the test run.
+Test 'limitation_create_line_with_4_and_then_attach_should_work' was skipped in the test run.
+Test 'order_product_limitation_should_work_on_max_use_on_order_starting_with_program_slow_buildup' was skipped in the test run.
+Test 'order_product_limitation_should_work_on_max_use_on_order_starting_without_program_slow_buildup' was skipped in the test run.
+Test 'attaching_and_detaching_with_line_modification_should_work' was skipped in the test run.
+limitation_on_pricelist_should_work: Skipping test: it does not belong to this partition.
+limitation_on_pricelist_with_attach_after_should_work: Skipping test: it does not belong to this partition.
+SUPP_14399_AttachAfter: Skipping test: it does not belong to this partition.
+SUPP_14399_AttachBefore: Skipping test: it does not belong to this partition.
+ExcelFileCanBeUploadedAndIsStored: Skipping test: it does not belong to this partition.
+ExistingRedWingUserParseBarcodeWorks: Skipping test: it does not belong to this partition.
+InvalidBarcodeInExecutionShouldBeCaught: Skipping test: it does not belong to this partition.
+InvalidProgramIDShouldBeCaught: Skipping test: it does not belong to this partition.
+NewRedWingUserParseBarcodeWorks: Skipping test: it does not belong to this partition.
+Test 'limitation_on_pricelist_should_work' was skipped in the test run.
+Test 'limitation_on_pricelist_with_attach_after_should_work' was skipped in the test run.
+Test 'SUPP_14399_AttachAfter' was skipped in the test run.
+Test 'SUPP_14399_AttachBefore' was skipped in the test run.
+Test 'ExcelFileCanBeUploadedAndIsStored' was skipped in the test run.
+Test 'ExistingRedWingUserParseBarcodeWorks' was skipped in the test run.
+Test 'InvalidBarcodeInExecutionShouldBeCaught' was skipped in the test run.
+Test 'InvalidProgramIDShouldBeCaught' was skipped in the test run.
+Test 'NewRedWingUserParseBarcodeWorks' was skipped in the test run.
+External_tax_amount_is_set_correctly: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'External_tax_amount_is_set_correctly' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

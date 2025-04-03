@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="33eab5a5-db0f-4c91-8fcd-2aa1adbd184e" name="@ip-10-1-13-52 2025-04-02 13:21:29" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:21:29.8536024+00:00" queuing="2025-04-02T13:21:29.8536025+00:00" start="2025-04-02T13:21:26.1642166+00:00" finish="2025-04-02T13:21:31.9615035+00:00" />
+  <TestSettings name="default" id="a249d71f-93f9-43f1-8865-6db39d82ecc8">
+    <Deployment runDeploymentRoot="_ip-10-1-13-52_2025-04-02_13_21_29" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="a5448ae2-21fc-42d9-b626-9248e4eef8a2" testId="89b6f1dd-284f-bf99-82ac-4b75e321a39b" testName="PaymentData_works" computerName="ip-10-1-13-52" duration="00:00:00.0002330" startTime="2025-04-02T13:21:31.8702628+00:00" endTime="2025-04-02T13:21:31.8704955+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5448ae2-21fc-42d9-b626-9248e4eef8a2">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6b0a1566-362d-43ce-9738-3bc17ab9b764" testId="71cfae47-cbb6-5fb6-8d99-46bfca99e0d7" testName="ExistingClientID" computerName="ip-10-1-13-52" duration="00:00:02.4934170" startTime="2025-04-02T13:21:27.3014829+00:00" endTime="2025-04-02T13:21:29.7948578+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b0a1566-362d-43ce-9738-3bc17ab9b764" />
+    <UnitTestResult executionId="c2a8777e-2163-453c-8aea-2caaac9c5dab" testId="a7b087c8-4a51-b2e6-1ed8-3a69fe60fa05" testName="Remark_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0001150" startTime="2025-04-02T13:21:31.8678342+00:00" endTime="2025-04-02T13:21:31.8679494+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2a8777e-2163-453c-8aea-2caaac9c5dab">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3ed07a2a-364d-4af0-9aed-03e66127e03f" testId="83e8531a-9c7a-ff0d-72df-84349ddecbfd" testName="Serial_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0000649" startTime="2025-04-02T13:21:31.8710423+00:00" endTime="2025-04-02T13:21:31.8711070+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ed07a2a-364d-4af0-9aed-03e66127e03f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="603019ba-dc82-430b-95f8-ac345ede2bd1" testId="822c2187-0858-4a90-efe7-f3d07dcfa6fa" testName="Product_identifiers_work" computerName="ip-10-1-13-52" duration="00:00:00.0002140" startTime="2025-04-02T13:21:31.8705091+00:00" endTime="2025-04-02T13:21:31.8707233+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="603019ba-dc82-430b-95f8-ac345ede2bd1">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3b397186-5ba3-4c93-845b-2bbd2433bdd6" testId="c3a19f2c-06e0-6b21-02b1-8fb4d6b0d253" testName="Gift_Card_Can_Be_Pushed_Even_When_Broken" computerName="ip-10-1-13-52" duration="00:00:00.0000810" startTime="2025-04-02T13:21:31.8700051+00:00" endTime="2025-04-02T13:21:31.8700857+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b397186-5ba3-4c93-845b-2bbd2433bdd6">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a124bab8-0b6f-4029-9de5-5058743a373c" testId="6f6993e5-9227-f444-dd58-df39bece020a" testName="CaptureMomentIsIgnored" computerName="ip-10-1-13-52" duration="00:00:00.0000870" startTime="2025-04-02T13:21:31.8695764+00:00" endTime="2025-04-02T13:21:31.8696620+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a124bab8-0b6f-4029-9de5-5058743a373c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e369cf69-562f-4e7d-a28d-fa9043d4728f" testId="ced67d0a-9a5c-b9e6-0e84-56070b4a61ae" testName="Cash_works" computerName="ip-10-1-13-52" duration="00:00:00.0001560" startTime="2025-04-02T13:21:31.8219478+00:00" endTime="2025-04-02T13:21:31.8221035+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e369cf69-562f-4e7d-a28d-fa9043d4728f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="be5fe7c9-4400-43e5-88cd-b6e25a2b515b" testId="2d22017c-9eeb-dda3-b347-ac0de4f3e572" testName="Force_local_mode_works" computerName="ip-10-1-13-52" duration="00:00:00.0146400" startTime="2025-04-02T13:21:31.8047326+00:00" endTime="2025-04-02T13:21:31.8193719+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be5fe7c9-4400-43e5-88cd-b6e25a2b515b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6f6156ca-0762-4586-8ec7-370744408e12" testId="99d4e849-cc1c-5bb1-33a4-9c2cedc98d75" testName="TaxRateCategory_Is_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0000699" startTime="2025-04-02T13:21:31.8684138+00:00" endTime="2025-04-02T13:21:31.8684833+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f6156ca-0762-4586-8ec7-370744408e12">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3e1086bd-9e02-4fb7-8875-653a94689bff" testId="f2f7e103-5032-2d45-8687-67070153aa61" testName="StubOrderPaid" computerName="ip-10-1-13-52" duration="00:00:00.0000640" startTime="2025-04-02T13:21:31.8711111+00:00" endTime="2025-04-02T13:21:31.8711752+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e1086bd-9e02-4fb7-8875-653a94689bff">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="45f82296-fa0b-4fc9-a792-2ba4c08b5878" testId="df126b41-ed8d-86ea-0522-52d2482a1fda" testName="CustomerIdentifiers_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0001399" startTime="2025-04-02T13:21:31.8221115+00:00" endTime="2025-04-02T13:21:31.8222510+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45f82296-fa0b-4fc9-a792-2ba4c08b5878">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7bdceee7-3377-446e-8ee0-4741dba74da0" testId="079a5dd6-ec53-fe47-f34b-d682cedd8bc9" testName="Pushed_Order_Are_CreatedByEmployee" computerName="ip-10-1-13-52" duration="00:00:00.0001430" startTime="2025-04-02T13:21:31.8707373+00:00" endTime="2025-04-02T13:21:31.8708800+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7bdceee7-3377-446e-8ee0-4741dba74da0">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4a59a6c4-b640-4ab0-86b3-80c106248be7" testId="d762947d-6fdb-3c29-244e-01f7cf59d9d5" testName="CustomerIdentifiers_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0001120" startTime="2025-04-02T13:21:31.8697909+00:00" endTime="2025-04-02T13:21:31.8699028+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a59a6c4-b640-4ab0-86b3-80c106248be7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9506b56e-0f31-4583-bc5c-4cd5928495ce" testId="e61fa074-c836-079b-d85a-f2a5c9b90339" testName="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" computerName="ip-10-1-13-52" duration="00:00:00.0000970" startTime="2025-04-02T13:21:31.8694561+00:00" endTime="2025-04-02T13:21:31.8695531+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9506b56e-0f31-4583-bc5c-4cd5928495ce">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6ae5e20d-dbc8-4a54-8ab6-877f9cff1ee3" testId="22409722-e0d3-6529-19f1-abf44b00dd0c" testName="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" computerName="ip-10-1-13-52" duration="00:00:00.0002770" startTime="2025-04-02T13:21:31.8691627+00:00" endTime="2025-04-02T13:21:31.8694398+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ae5e20d-dbc8-4a54-8ab6-877f9cff1ee3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1384e7a3-de46-4aa6-ba20-9ab816c595d8" testId="5c649826-42bb-22af-ac9c-3f3b0931670a" testName="Product_identifiers_work" computerName="ip-10-1-13-52" duration="00:00:00.0000780" startTime="2025-04-02T13:21:31.8675938+00:00" endTime="2025-04-02T13:21:31.8676722+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1384e7a3-de46-4aa6-ba20-9ab816c595d8">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6aea33da-7417-43c7-82aa-57600936ac74" testId="a3f0a28d-8374-d73b-d769-811f3be132c6" testName="Pushed_Order_Are_CreatedByEmployee" computerName="ip-10-1-13-52" duration="00:00:00.0001420" startTime="2025-04-02T13:21:31.8676811+00:00" endTime="2025-04-02T13:21:31.8678232+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6aea33da-7417-43c7-82aa-57600936ac74">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cfc1cc33-701b-4e86-9884-0b358cabd31a" testId="4ba03f84-fe31-8bf3-1274-b11b2338b28c" testName="Invoice_Can_Be_Pushed_With_DiscountIDs" computerName="ip-10-1-13-52" duration="00:00:00.0000960" startTime="2025-04-02T13:21:31.8701625+00:00" endTime="2025-04-02T13:21:31.8702586+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfc1cc33-701b-4e86-9884-0b358cabd31a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ef6686c-3dbd-4859-9323-121caf25941b" testId="3ff7319d-a9d9-c5fc-6bc7-0520d479d365" testName="Invoice_Can_Be_Pushed_With_DiscountIDs" computerName="ip-10-1-13-52" duration="00:00:00.0000950" startTime="2025-04-02T13:21:31.8673988+00:00" endTime="2025-04-02T13:21:31.8674942+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ef6686c-3dbd-4859-9323-121caf25941b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cd952c08-44b0-451d-ba34-da466373703b" testId="64f38330-a125-bf35-8fb8-1be6ba05bb8f" testName="TaxRateCategory_Is_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0001970" startTime="2025-04-02T13:21:31.8711789+00:00" endTime="2025-04-02T13:21:31.8713758+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd952c08-44b0-451d-ba34-da466373703b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ffedb965-d4d2-461f-924f-9bc1a22ef69e" testId="05b6226c-4b4c-40ef-7294-315e6b4f83ca" testName="Return_Order_works" computerName="ip-10-1-13-52" duration="00:00:00.0000690" startTime="2025-04-02T13:21:31.8709691+00:00" endTime="2025-04-02T13:21:31.8710381+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffedb965-d4d2-461f-924f-9bc1a22ef69e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="168ced8a-1499-4610-a052-f5973162ffa8" testId="01c5e80e-7983-6634-526c-0b781bd8c09c" testName="Cash_works" computerName="ip-10-1-13-52" duration="00:00:00.0001050" startTime="2025-04-02T13:21:31.8696758+00:00" endTime="2025-04-02T13:21:31.8697807+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="168ced8a-1499-4610-a052-f5973162ffa8">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="590cba67-e6e8-4abb-8ec9-2ed0d4c8c8fb" testId="c3133a0e-0660-0395-a4be-8c1fd497d0aa" testName="Invoice_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0001210" startTime="2025-04-02T13:21:31.8672719+00:00" endTime="2025-04-02T13:21:31.8673932+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="590cba67-e6e8-4abb-8ec9-2ed0d4c8c8fb">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9b8d3314-4a62-484e-a1a5-54f28bdb8c8d" testId="c371a9f6-fc36-abc6-1ab5-5b8d8d3d0355" testName="PlatformStatus_Triggers_SignalR" computerName="ip-10-1-13-52" duration="00:00:00.0004300" startTime="2025-04-02T13:21:31.8197620+00:00" endTime="2025-04-02T13:21:31.8201920+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b8d3314-4a62-484e-a1a5-54f28bdb8c8d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="372f263f-99a5-4486-9e8e-fdfa354a71e6" testId="ebdc9a0e-bca8-1251-2a8a-9e0a80b12b68" testName="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" computerName="ip-10-1-13-52" duration="00:00:00.0003890" startTime="2025-04-02T13:21:31.8213475+00:00" endTime="2025-04-02T13:21:31.8217367+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="372f263f-99a5-4486-9e8e-fdfa354a71e6">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="95827d71-1ca3-418e-a950-cc91cdf0ab2a" testId="3c4e9d36-71a4-0b1d-83c4-3d956df7579c" testName="StubOrderPaid" computerName="ip-10-1-13-52" duration="00:00:01.0703500" startTime="2025-04-02T13:21:30.7319800+00:00" endTime="2025-04-02T13:21:31.8023284+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="95827d71-1ca3-418e-a950-cc91cdf0ab2a" />
+    <UnitTestResult executionId="5c7571ea-1d2d-4820-bc43-a49d96aab829" testId="6e400daf-20dd-c6c8-9fcf-93cc5688c780" testName="CanListDevices" computerName="ip-10-1-13-52" duration="00:00:00.0013990" startTime="2025-04-02T13:21:31.8715510+00:00" endTime="2025-04-02T13:21:31.8729495+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c7571ea-1d2d-4820-bc43-a49d96aab829">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="87f2ba66-0959-4432-8c49-6b59b91421fb" testId="186460fa-e6a4-e684-3a5b-2765bcfca5e8" testName="StubOrder" computerName="ip-10-1-13-52" duration="00:00:00.9357450" startTime="2025-04-02T13:21:29.7961559+00:00" endTime="2025-04-02T13:21:30.7319006+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87f2ba66-0959-4432-8c49-6b59b91421fb" />
+    <UnitTestResult executionId="231d03d5-18e3-4e4c-82f3-2ecb3f676241" testId="962b8525-b0aa-ac70-fc48-ef97ee071312" testName="CaptureMomentIsIgnored" computerName="ip-10-1-13-52" duration="00:00:00.0001689" startTime="2025-04-02T13:21:31.8217715+00:00" endTime="2025-04-02T13:21:31.8219400+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="231d03d5-18e3-4e4c-82f3-2ecb3f676241">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e4f6cb24-67c4-4c3b-af4f-259d5a53f7d5" testId="51e4e4f2-5171-8577-183b-5eed43faebcc" testName="PaymentData_works" computerName="ip-10-1-13-52" duration="00:00:00.0000880" startTime="2025-04-02T13:21:31.8675005+00:00" endTime="2025-04-02T13:21:31.8675882+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4f6cb24-67c4-4c3b-af4f-259d5a53f7d5">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d9a3a42a-d66a-4ffd-b0ef-84591a42c28c" testId="6179ae38-43b3-3680-ee82-925bfffe2916" testName="CustomerIdentifiers_Can_Be_Set" computerName="ip-10-1-13-52" duration="00:00:00.0000810" startTime="2025-04-02T13:21:31.8699111+00:00" endTime="2025-04-02T13:21:31.8699918+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9a3a42a-d66a-4ffd-b0ef-84591a42c28c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cc77de07-a928-4c3a-91d8-de50b85fd256" testId="0ec93676-01e1-e119-0956-42f59ffe863f" testName="Serial_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0001010" startTime="2025-04-02T13:21:31.8682298+00:00" endTime="2025-04-02T13:21:31.8683308+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc77de07-a928-4c3a-91d8-de50b85fd256">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bceedc8a-b82b-4f60-bcea-95a775c32b15" testId="5f4f7b27-116a-b2e8-3c33-560b73ace9a7" testName="CustomerIdentifiers_Can_Be_Set" computerName="ip-10-1-13-52" duration="00:00:00.0446859" startTime="2025-04-02T13:21:31.8222617+00:00" endTime="2025-04-02T13:21:31.8669469+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bceedc8a-b82b-4f60-bcea-95a775c32b15">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d7cb7fa9-e3bf-4e6a-a759-27406f0c55ae" testId="3f71ca73-f2c1-d7fb-7e7e-94cea1a925ff" testName="StubOrderPaid" computerName="ip-10-1-13-52" duration="00:00:00.0000720" startTime="2025-04-02T13:21:31.8683364+00:00" endTime="2025-04-02T13:21:31.8684087+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7cb7fa9-e3bf-4e6a-a759-27406f0c55ae">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a55eb893-f648-4213-a5ec-f60bae671f31" testId="711840ea-5507-933d-5ac8-8c20c551d26c" testName="Return_Order_works" computerName="ip-10-1-13-52" duration="00:00:00.0002590" startTime="2025-04-02T13:21:31.8679571+00:00" endTime="2025-04-02T13:21:31.8682155+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a55eb893-f648-4213-a5ec-f60bae671f31">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1e2b70f6-8af1-4bab-82ba-871faab2671e" testId="9e83957f-ed62-247e-bef3-e6912aa7a045" testName="Remark_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0000760" startTime="2025-04-02T13:21:31.8708883+00:00" endTime="2025-04-02T13:21:31.8709645+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e2b70f6-8af1-4bab-82ba-871faab2671e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aaf56e9b-d417-447b-a819-dae20d41b426" testId="5cd100e3-921f-b1f4-147d-33df85d31d1d" testName="Gift_Card_Can_Be_Pushed_Even_When_Broken" computerName="ip-10-1-13-52" duration="00:00:00.0002660" startTime="2025-04-02T13:21:31.8669983+00:00" endTime="2025-04-02T13:21:31.8672649+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aaf56e9b-d417-447b-a819-dae20d41b426">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6c52d674-9d4d-4a56-828d-651094b69496" testId="237b1d30-1f22-17a3-4c40-dd26d9134b81" testName="Invoice_Can_Be_Pushed" computerName="ip-10-1-13-52" duration="00:00:00.0000690" startTime="2025-04-02T13:21:31.8700899+00:00" endTime="2025-04-02T13:21:31.8701587+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c52d674-9d4d-4a56-828d-651094b69496">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="285df7a2-be0d-4038-872b-9c9bf63a7432" testId="3d3cc186-b64f-64af-dad6-3ba0abc4e497" testName="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" computerName="ip-10-1-13-52" duration="00:00:00.0005019" startTime="2025-04-02T13:21:31.8208278+00:00" endTime="2025-04-02T13:21:31.8213295+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="285df7a2-be0d-4038-872b-9c9bf63a7432">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="22409722-e0d3-6529-19f1-abf44b00dd0c">
+      <Execution id="6ae5e20d-dbc8-4a54-8ab6-877f9cff1ee3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" />
+    </UnitTest>
+    <UnitTest name="Return_Order_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="711840ea-5507-933d-5ac8-8c20c551d26c">
+      <Execution id="a55eb893-f648-4213-a5ec-f60bae671f31" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Return_Order_works" />
+    </UnitTest>
+    <UnitTest name="StubOrderPaid" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3c4e9d36-71a4-0b1d-83c4-3d956df7579c">
+      <Execution id="95827d71-1ca3-418e-a950-cc91cdf0ab2a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.EVAPayTests" name="StubOrderPaid" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="237b1d30-1f22-17a3-4c40-dd26d9134b81">
+      <Execution id="6c52d674-9d4d-4a56-828d-651094b69496" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Invoice_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed_With_DiscountIDs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3ff7319d-a9d9-c5fc-6bc7-0520d479d365">
+      <Execution id="2ef6686c-3dbd-4859-9323-121caf25941b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Invoice_Can_Be_Pushed_With_DiscountIDs" />
+    </UnitTest>
+    <UnitTest name="Force_local_mode_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="2d22017c-9eeb-dda3-b347-ac0de4f3e572">
+      <Execution id="be5fe7c9-4400-43e5-88cd-b6e25a2b515b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.ForceLocalModeTests" name="Force_local_mode_works" />
+    </UnitTest>
+    <UnitTest name="TaxRateCategory_Is_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="99d4e849-cc1c-5bb1-33a4-9c2cedc98d75">
+      <Execution id="6f6156ca-0762-4586-8ec7-370744408e12" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="TaxRateCategory_Is_Pushed" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="0ec93676-01e1-e119-0956-42f59ffe863f">
+      <Execution id="cc77de07-a928-4c3a-91d8-de50b85fd256" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Serial_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Pushed_Order_Are_CreatedByEmployee" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="079a5dd6-ec53-fe47-f34b-d682cedd8bc9">
+      <Execution id="7bdceee7-3377-446e-8ee0-4741dba74da0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Pushed_Order_Are_CreatedByEmployee" />
+    </UnitTest>
+    <UnitTest name="Remark_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="a7b087c8-4a51-b2e6-1ed8-3a69fe60fa05">
+      <Execution id="c2a8777e-2163-453c-8aea-2caaac9c5dab" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Remark_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Pushed_Order_Are_CreatedByEmployee" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="a3f0a28d-8374-d73b-d769-811f3be132c6">
+      <Execution id="6aea33da-7417-43c7-82aa-57600936ac74" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Pushed_Order_Are_CreatedByEmployee" />
+    </UnitTest>
+    <UnitTest name="Remark_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="9e83957f-ed62-247e-bef3-e6912aa7a045">
+      <Execution id="1e2b70f6-8af1-4bab-82ba-871faab2671e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Remark_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Set" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="5f4f7b27-116a-b2e8-3c33-560b73ace9a7">
+      <Execution id="bceedc8a-b82b-4f60-bcea-95a775c32b15" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="CustomerIdentifiers_Can_Be_Set" />
+    </UnitTest>
+    <UnitTest name="CaptureMomentIsIgnored" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="962b8525-b0aa-ac70-fc48-ef97ee071312">
+      <Execution id="231d03d5-18e3-4e4c-82f3-2ecb3f676241" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="CaptureMomentIsIgnored" />
+    </UnitTest>
+    <UnitTest name="Product_identifiers_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="5c649826-42bb-22af-ac9c-3f3b0931670a">
+      <Execution id="1384e7a3-de46-4aa6-ba20-9ab816c595d8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Product_identifiers_work" />
+    </UnitTest>
+    <UnitTest name="CanListDevices" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="6e400daf-20dd-c6c8-9fcf-93cc5688c780">
+      <Execution id="5c7571ea-1d2d-4820-bc43-a49d96aab829" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.WatchtowerDeviceTests" name="CanListDevices" />
+    </UnitTest>
+    <UnitTest name="Cash_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="ced67d0a-9a5c-b9e6-0e84-56070b4a61ae">
+      <Execution id="e369cf69-562f-4e7d-a28d-fa9043d4728f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Cash_works" />
+    </UnitTest>
+    <UnitTest name="Cash_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="01c5e80e-7983-6634-526c-0b781bd8c09c">
+      <Execution id="168ced8a-1499-4610-a052-f5973162ffa8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Cash_works" />
+    </UnitTest>
+    <UnitTest name="TaxRateCategory_Is_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="64f38330-a125-bf35-8fb8-1be6ba05bb8f">
+      <Execution id="cd952c08-44b0-451d-ba34-da466373703b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="TaxRateCategory_Is_Pushed" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="c3133a0e-0660-0395-a4be-8c1fd497d0aa">
+      <Execution id="590cba67-e6e8-4abb-8ec9-2ed0d4c8c8fb" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Invoice_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="83e8531a-9c7a-ff0d-72df-84349ddecbfd">
+      <Execution id="3ed07a2a-364d-4af0-9aed-03e66127e03f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Serial_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="e61fa074-c836-079b-d85a-f2a5c9b90339">
+      <Execution id="9506b56e-0f31-4583-bc5c-4cd5928495ce" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" />
+    </UnitTest>
+    <UnitTest name="Gift_Card_Can_Be_Pushed_Even_When_Broken" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="c3a19f2c-06e0-6b21-02b1-8fb4d6b0d253">
+      <Execution id="3b397186-5ba3-4c93-845b-2bbd2433bdd6" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Gift_Card_Can_Be_Pushed_Even_When_Broken" />
+    </UnitTest>
+    <UnitTest name="PlatformStatus_Triggers_SignalR" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="c371a9f6-fc36-abc6-1ab5-5b8d8d3d0355">
+      <Execution id="9b8d3314-4a62-484e-a1a5-54f28bdb8c8d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PlatformStatusTests" name="PlatformStatus_Triggers_SignalR" />
+    </UnitTest>
+    <UnitTest name="Return_Order_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="05b6226c-4b4c-40ef-7294-315e6b4f83ca">
+      <Execution id="ffedb965-d4d2-461f-924f-9bc1a22ef69e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Return_Order_works" />
+    </UnitTest>
+    <UnitTest name="StubOrderPaid" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="f2f7e103-5032-2d45-8687-67070153aa61">
+      <Execution id="3e1086bd-9e02-4fb7-8875-653a94689bff" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="StubOrderPaid" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="d762947d-6fdb-3c29-244e-01f7cf59d9d5">
+      <Execution id="4a59a6c4-b640-4ab0-86b3-80c106248be7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="CustomerIdentifiers_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="PaymentData_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="89b6f1dd-284f-bf99-82ac-4b75e321a39b">
+      <Execution id="a5448ae2-21fc-42d9-b626-9248e4eef8a2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="PaymentData_works" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="df126b41-ed8d-86ea-0522-52d2482a1fda">
+      <Execution id="45f82296-fa0b-4fc9-a792-2ba4c08b5878" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="CustomerIdentifiers_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="StubOrderPaid" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3f71ca73-f2c1-d7fb-7e7e-94cea1a925ff">
+      <Execution id="d7cb7fa9-e3bf-4e6a-a759-27406f0c55ae" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="StubOrderPaid" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="ebdc9a0e-bca8-1251-2a8a-9e0a80b12b68">
+      <Execution id="372f263f-99a5-4486-9e8e-fdfa354a71e6" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" />
+    </UnitTest>
+    <UnitTest name="Product_identifiers_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="822c2187-0858-4a90-efe7-f3d07dcfa6fa">
+      <Execution id="603019ba-dc82-430b-95f8-ac345ede2bd1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Product_identifiers_work" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Set" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="6179ae38-43b3-3680-ee82-925bfffe2916">
+      <Execution id="d9a3a42a-d66a-4ffd-b0ef-84591a42c28c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="CustomerIdentifiers_Can_Be_Set" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed_With_DiscountIDs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="4ba03f84-fe31-8bf3-1274-b11b2338b28c">
+      <Execution id="cfc1cc33-701b-4e86-9884-0b358cabd31a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Invoice_Can_Be_Pushed_With_DiscountIDs" />
+    </UnitTest>
+    <UnitTest name="StubOrder" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="186460fa-e6a4-e684-3a5b-2765bcfca5e8">
+      <Execution id="87f2ba66-0959-4432-8c49-6b59b91421fb" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.EVAPayTests" name="StubOrder" />
+    </UnitTest>
+    <UnitTest name="PaymentData_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="51e4e4f2-5171-8577-183b-5eed43faebcc">
+      <Execution id="e4f6cb24-67c4-4c3b-af4f-259d5a53f7d5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="PaymentData_works" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3d3cc186-b64f-64af-dad6-3ba0abc4e497">
+      <Execution id="285df7a2-be0d-4038-872b-9c9bf63a7432" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" />
+    </UnitTest>
+    <UnitTest name="Gift_Card_Can_Be_Pushed_Even_When_Broken" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="5cd100e3-921f-b1f4-147d-33df85d31d1d">
+      <Execution id="aaf56e9b-d417-447b-a819-dae20d41b426" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Gift_Card_Can_Be_Pushed_Even_When_Broken" />
+    </UnitTest>
+    <UnitTest name="ExistingClientID" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="71cfae47-cbb6-5fb6-8d99-46bfca99e0d7">
+      <Execution id="6b0a1566-362d-43ce-9738-3bc17ab9b764" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.EVAPayTests" name="ExistingClientID" />
+    </UnitTest>
+    <UnitTest name="CaptureMomentIsIgnored" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="6f6993e5-9227-f444-dd58-df39bece020a">
+      <Execution id="a124bab8-0b6f-4029-9de5-5058743a373c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="CaptureMomentIsIgnored" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="89b6f1dd-284f-bf99-82ac-4b75e321a39b" executionId="a5448ae2-21fc-42d9-b626-9248e4eef8a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71cfae47-cbb6-5fb6-8d99-46bfca99e0d7" executionId="6b0a1566-362d-43ce-9738-3bc17ab9b764" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7b087c8-4a51-b2e6-1ed8-3a69fe60fa05" executionId="c2a8777e-2163-453c-8aea-2caaac9c5dab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83e8531a-9c7a-ff0d-72df-84349ddecbfd" executionId="3ed07a2a-364d-4af0-9aed-03e66127e03f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="822c2187-0858-4a90-efe7-f3d07dcfa6fa" executionId="603019ba-dc82-430b-95f8-ac345ede2bd1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3a19f2c-06e0-6b21-02b1-8fb4d6b0d253" executionId="3b397186-5ba3-4c93-845b-2bbd2433bdd6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f6993e5-9227-f444-dd58-df39bece020a" executionId="a124bab8-0b6f-4029-9de5-5058743a373c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ced67d0a-9a5c-b9e6-0e84-56070b4a61ae" executionId="e369cf69-562f-4e7d-a28d-fa9043d4728f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d22017c-9eeb-dda3-b347-ac0de4f3e572" executionId="be5fe7c9-4400-43e5-88cd-b6e25a2b515b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99d4e849-cc1c-5bb1-33a4-9c2cedc98d75" executionId="6f6156ca-0762-4586-8ec7-370744408e12" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f2f7e103-5032-2d45-8687-67070153aa61" executionId="3e1086bd-9e02-4fb7-8875-653a94689bff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df126b41-ed8d-86ea-0522-52d2482a1fda" executionId="45f82296-fa0b-4fc9-a792-2ba4c08b5878" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="079a5dd6-ec53-fe47-f34b-d682cedd8bc9" executionId="7bdceee7-3377-446e-8ee0-4741dba74da0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d762947d-6fdb-3c29-244e-01f7cf59d9d5" executionId="4a59a6c4-b640-4ab0-86b3-80c106248be7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e61fa074-c836-079b-d85a-f2a5c9b90339" executionId="9506b56e-0f31-4583-bc5c-4cd5928495ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22409722-e0d3-6529-19f1-abf44b00dd0c" executionId="6ae5e20d-dbc8-4a54-8ab6-877f9cff1ee3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c649826-42bb-22af-ac9c-3f3b0931670a" executionId="1384e7a3-de46-4aa6-ba20-9ab816c595d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3f0a28d-8374-d73b-d769-811f3be132c6" executionId="6aea33da-7417-43c7-82aa-57600936ac74" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ba03f84-fe31-8bf3-1274-b11b2338b28c" executionId="cfc1cc33-701b-4e86-9884-0b358cabd31a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ff7319d-a9d9-c5fc-6bc7-0520d479d365" executionId="2ef6686c-3dbd-4859-9323-121caf25941b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64f38330-a125-bf35-8fb8-1be6ba05bb8f" executionId="cd952c08-44b0-451d-ba34-da466373703b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05b6226c-4b4c-40ef-7294-315e6b4f83ca" executionId="ffedb965-d4d2-461f-924f-9bc1a22ef69e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01c5e80e-7983-6634-526c-0b781bd8c09c" executionId="168ced8a-1499-4610-a052-f5973162ffa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3133a0e-0660-0395-a4be-8c1fd497d0aa" executionId="590cba67-e6e8-4abb-8ec9-2ed0d4c8c8fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c371a9f6-fc36-abc6-1ab5-5b8d8d3d0355" executionId="9b8d3314-4a62-484e-a1a5-54f28bdb8c8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebdc9a0e-bca8-1251-2a8a-9e0a80b12b68" executionId="372f263f-99a5-4486-9e8e-fdfa354a71e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c4e9d36-71a4-0b1d-83c4-3d956df7579c" executionId="95827d71-1ca3-418e-a950-cc91cdf0ab2a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e400daf-20dd-c6c8-9fcf-93cc5688c780" executionId="5c7571ea-1d2d-4820-bc43-a49d96aab829" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="186460fa-e6a4-e684-3a5b-2765bcfca5e8" executionId="87f2ba66-0959-4432-8c49-6b59b91421fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="962b8525-b0aa-ac70-fc48-ef97ee071312" executionId="231d03d5-18e3-4e4c-82f3-2ecb3f676241" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51e4e4f2-5171-8577-183b-5eed43faebcc" executionId="e4f6cb24-67c4-4c3b-af4f-259d5a53f7d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6179ae38-43b3-3680-ee82-925bfffe2916" executionId="d9a3a42a-d66a-4ffd-b0ef-84591a42c28c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ec93676-01e1-e119-0956-42f59ffe863f" executionId="cc77de07-a928-4c3a-91d8-de50b85fd256" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f4f7b27-116a-b2e8-3c33-560b73ace9a7" executionId="bceedc8a-b82b-4f60-bcea-95a775c32b15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f71ca73-f2c1-d7fb-7e7e-94cea1a925ff" executionId="d7cb7fa9-e3bf-4e6a-a759-27406f0c55ae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="711840ea-5507-933d-5ac8-8c20c551d26c" executionId="a55eb893-f648-4213-a5ec-f60bae671f31" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e83957f-ed62-247e-bef3-e6912aa7a045" executionId="1e2b70f6-8af1-4bab-82ba-871faab2671e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cd100e3-921f-b1f4-147d-33df85d31d1d" executionId="aaf56e9b-d417-447b-a819-dae20d41b426" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="237b1d30-1f22-17a3-4c40-dd26d9134b81" executionId="6c52d674-9d4d-4a56-828d-651094b69496" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d3cc186-b64f-64af-dad6-3ba0abc4e497" executionId="285df7a2-be0d-4038-872b-9c9bf63a7432" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="40" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll
+   NUnit3TestExecutor discovered 40 of 40 NUnit test cases using Current Discovery mode, Non-Explicit run
+Force_local_mode_works: Skipping test: it does not belong to this partition.
+PlatformStatus_Triggers_SignalR: Skipping test: it does not belong to this partition.
+Serial_Can_Be_Pushed_Even_When_Broken(Sales): Skipping test: it does not belong to this partition.
+Serial_Can_Be_Pushed_Even_When_Broken(StockMovements): Skipping test: it does not belong to this partition.
+CaptureMomentIsIgnored: Skipping test: it does not belong to this partition.
+Cash_works: Skipping test: it does not belong to this partition.
+CustomerIdentifiers_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+CustomerIdentifiers_Can_Be_Set: Skipping test: it does not belong to this partition.
+Test 'Force_local_mode_works' was skipped in the test run.
+Test 'PlatformStatus_Triggers_SignalR' was skipped in the test run.
+Test 'Serial_Can_Be_Pushed_Even_When_Broken(Sales)' was skipped in the test run.
+Test 'Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)' was skipped in the test run.
+Test 'CaptureMomentIsIgnored' was skipped in the test run.
+Test 'Cash_works' was skipped in the test run.
+Test 'CustomerIdentifiers_Can_Be_Pushed' was skipped in the test run.
+Test 'CustomerIdentifiers_Can_Be_Set' was skipped in the test run.
+Gift_Card_Can_Be_Pushed_Even_When_Broken: Skipping test: it does not belong to this partition.
+Invoice_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+Invoice_Can_Be_Pushed_With_DiscountIDs: Skipping test: it does not belong to this partition.
+PaymentData_works: Skipping test: it does not belong to this partition.
+Product_identifiers_work: Skipping test: it does not belong to this partition.
+Pushed_Order_Are_CreatedByEmployee: Skipping test: it does not belong to this partition.
+Remark_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+Return_Order_works: Skipping test: it does not belong to this partition.
+Serial_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+Test 'Gift_Card_Can_Be_Pushed_Even_When_Broken' was skipped in the test run.
+Test 'Invoice_Can_Be_Pushed' was skipped in the test run.
+Test 'Invoice_Can_Be_Pushed_With_DiscountIDs' was skipped in the test run.
+Test 'PaymentData_works' was skipped in the test run.
+Test 'Product_identifiers_work' was skipped in the test run.
+Test 'Pushed_Order_Are_CreatedByEmployee' was skipped in the test run.
+Test 'Remark_Can_Be_Pushed' was skipped in the test run.
+Test 'Return_Order_works' was skipped in the test run.
+Test 'Serial_Can_Be_Pushed' was skipped in the test run.
+StubOrderPaid: Skipping test: it does not belong to this partition.
+TaxRateCategory_Is_Pushed: Skipping test: it does not belong to this partition.
+Serial_Can_Be_Pushed_Even_When_Broken(Sales): Skipping test: it does not belong to this partition.
+Serial_Can_Be_Pushed_Even_When_Broken(StockMovements): Skipping test: it does not belong to this partition.
+CaptureMomentIsIgnored: Skipping test: it does not belong to this partition.
+Cash_works: Skipping test: it does not belong to this partition.
+CustomerIdentifiers_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+CustomerIdentifiers_Can_Be_Set: Skipping test: it does not belong to this partition.
+Gift_Card_Can_Be_Pushed_Even_When_Broken: Skipping test: it does not belong to this partition.
+Test 'StubOrderPaid' was skipped in the test run.
+Test 'TaxRateCategory_Is_Pushed' was skipped in the test run.
+Test 'Serial_Can_Be_Pushed_Even_When_Broken(Sales)' was skipped in the test run.
+Test 'Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)' was skipped in the test run.
+Test 'CaptureMomentIsIgnored' was skipped in the test run.
+Test 'Cash_works' was skipped in the test run.
+Test 'CustomerIdentifiers_Can_Be_Pushed' was skipped in the test run.
+Test 'CustomerIdentifiers_Can_Be_Set' was skipped in the test run.
+Test 'Gift_Card_Can_Be_Pushed_Even_When_Broken' was skipped in the test run.
+Invoice_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+Invoice_Can_Be_Pushed_With_DiscountIDs: Skipping test: it does not belong to this partition.
+PaymentData_works: Skipping test: it does not belong to this partition.
+Product_identifiers_work: Skipping test: it does not belong to this partition.
+Pushed_Order_Are_CreatedByEmployee: Skipping test: it does not belong to this partition.
+Remark_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+Return_Order_works: Skipping test: it does not belong to this partition.
+Serial_Can_Be_Pushed: Skipping test: it does not belong to this partition.
+StubOrderPaid: Skipping test: it does not belong to this partition.
+Test 'Invoice_Can_Be_Pushed' was skipped in the test run.
+Test 'Invoice_Can_Be_Pushed_With_DiscountIDs' was skipped in the test run.
+Test 'PaymentData_works' was skipped in the test run.
+Test 'Product_identifiers_work' was skipped in the test run.
+Test 'Pushed_Order_Are_CreatedByEmployee' was skipped in the test run.
+Test 'Remark_Can_Be_Pushed' was skipped in the test run.
+Test 'Return_Order_works' was skipped in the test run.
+Test 'Serial_Can_Be_Pushed' was skipped in the test run.
+Test 'StubOrderPaid' was skipped in the test run.
+TaxRateCategory_Is_Pushed: Skipping test: it does not belong to this partition.
+CanListDevices: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'TaxRateCategory_Is_Pushed' was skipped in the test run.
+Test 'CanListDevices' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

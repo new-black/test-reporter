@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b9ee947c-d1f0-429d-b5ef-e02cce5c8c72" name="@ip-10-1-13-52 2025-04-02 13:11:19" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:11:19.4572535+00:00" queuing="2025-04-02T13:11:19.4572536+00:00" start="2025-04-02T13:11:18.3671816+00:00" finish="2025-04-02T13:11:20.6172360+00:00" />
+  <TestSettings name="default" id="9ee58714-5df2-4667-831e-94aa408526aa">
+    <Deployment runDeploymentRoot="_ip-10-1-13-52_2025-04-02_13_11_19" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="4cb66de9-0d0a-49f3-9040-22d24d400f79" testId="5ee1cf53-489b-e628-de1a-d83a838dac4e" testName="Should_use_current_organization_unit_country_code" computerName="ip-10-1-13-52" duration="00:00:00.3064150" startTime="2025-04-02T13:11:19.8375490+00:00" endTime="2025-04-02T13:11:20.1439627+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4cb66de9-0d0a-49f3-9040-22d24d400f79">
+      <Output>
+        <StdOut>Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6d63165c-e622-4fd2-bc2a-2f4660bb779b" testId="898e60df-eae7-e70c-2eca-80d151ea1565" testName="Should_validate_fiscalID(&quot;ES&quot;,&quot;40911074P&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0406880" startTime="2025-04-02T13:11:20.4342437+00:00" endTime="2025-04-02T13:11:20.4749313+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d63165c-e622-4fd2-bc2a-2f4660bb779b" />
+    <UnitTestResult executionId="9ef3ea74-39a2-438e-bb02-0c18e3248027" testId="e978cf31-f774-abc0-45aa-c4a257d0a816" testName="Tax_code_exemption_for_insurance_on_portugal_does_not_apply_on_other_coutries" computerName="ip-10-1-13-52" duration="00:00:00.0000760" startTime="2025-04-02T13:11:19.3572113+00:00" endTime="2025-04-02T13:11:19.3572869+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9ef3ea74-39a2-438e-bb02-0c18e3248027">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="38598a90-e97a-4093-b1a0-ae88dc2fc3ce" testId="3ef77010-1e30-7bf7-5094-beea7edab1a1" testName="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;84025957Z&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0592910" startTime="2025-04-02T13:11:19.6956789+00:00" endTime="2025-04-02T13:11:19.7549692+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38598a90-e97a-4093-b1a0-ae88dc2fc3ce" />
+    <UnitTestResult executionId="521b9b9a-e880-431a-aa57-6e3d250e3653" testId="8b1e1385-e4d0-42e8-3cfb-76d8d168456a" testName="Should_validate_fiscalID(&quot;IT&quot;,&quot;RDLNDR72D13A038F&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0430559" startTime="2025-04-02T13:11:20.2817334+00:00" endTime="2025-04-02T13:11:20.3247888+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="521b9b9a-e880-431a-aa57-6e3d250e3653" />
+    <UnitTestResult executionId="5ce39cb7-8217-4f4f-93a1-17c725878e25" testId="27a1d5f2-de57-7733-6ce7-49a8fc3b761c" testName="Should_validate_fiscalID(&quot;PT&quot;,&quot;787274593&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0846490" startTime="2025-04-02T13:11:20.1440670+00:00" endTime="2025-04-02T13:11:20.2287156+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ce39cb7-8217-4f4f-93a1-17c725878e25" />
+    <UnitTestResult executionId="493de58f-be19-4882-bee5-a2811bff552e" testId="38d318ef-05d3-4245-182b-4962334e1b1d" testName="Tax_code_exemption_for_insurance_on_portugal" computerName="ip-10-1-13-52" duration="00:00:00.0001020" startTime="2025-04-02T13:11:19.3571026+00:00" endTime="2025-04-02T13:11:19.3572049+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="493de58f-be19-4882-bee5-a2811bff552e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6471ed46-21b2-45af-a0db-5b9ff35d7dc7" testId="fe86f40a-8c80-3d92-8cdf-cf7624483f02" testName="Should_validate_fiscalID(&quot;ES&quot;,&quot;V49112899&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0350240" startTime="2025-04-02T13:11:20.5120387+00:00" endTime="2025-04-02T13:11:20.5470613+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6471ed46-21b2-45af-a0db-5b9ff35d7dc7" />
+    <UnitTestResult executionId="e29a66fd-8988-40ff-aa52-5672d642185c" testId="85790886-e923-7c88-c0d9-8cbd64508b85" testName="Get_Set_Audit_Configuration_Settings_Norway" computerName="ip-10-1-13-52" duration="00:00:00.0003020" startTime="2025-04-02T13:11:19.3552575+00:00" endTime="2025-04-02T13:11:19.3555595+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e29a66fd-8988-40ff-aa52-5672d642185c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a86a2e9d-fae4-4a54-a873-06a9837f8586" testId="5bc57a19-04f7-63f6-1c91-3b6ffdfa466c" testName="CRUD_tests" computerName="ip-10-1-13-52" duration="00:00:00.0136040" startTime="2025-04-02T13:11:19.3382620+00:00" endTime="2025-04-02T13:11:19.3518318+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a86a2e9d-fae4-4a54-a873-06a9837f8586">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="16022eef-7283-4015-a7d5-b23defe126a8" testId="2426d048-9f8f-962d-81e9-7236b27fb457" testName="Should_invalidate_fiscalID(&quot;PT&quot;,&quot;590067282&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.1147020" startTime="2025-04-02T13:11:19.3573947+00:00" endTime="2025-04-02T13:11:19.4720965+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16022eef-7283-4015-a7d5-b23defe126a8" />
+    <UnitTestResult executionId="75391880-ec98-4614-847b-b0be20683279" testId="27ab6b7a-9fab-d7e6-b4f6-0ab5a0ddac41" testName="Should_return_valid_url" computerName="ip-10-1-13-52" duration="00:00:00.0001460" startTime="2025-04-02T13:11:19.3558664+00:00" endTime="2025-04-02T13:11:19.3560122+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75391880-ec98-4614-847b-b0be20683279">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e7521e31-5569-4ba9-a0ee-e6b18f227039" testId="6053c3e3-6048-682a-0169-9f79af6dc27b" testName="Static_folder_directory_traversal_check" computerName="ip-10-1-13-52" duration="00:00:00.0002330" startTime="2025-04-02T13:11:19.3560187+00:00" endTime="2025-04-02T13:11:19.3562514+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7521e31-5569-4ba9-a0ee-e6b18f227039">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0f77a900-cea4-40bc-b27c-a698222819e0" testId="45dfd1d1-f41a-5b32-db6a-3ac0ad75b43c" testName="Using_an_audit_chain_configuration_works" computerName="ip-10-1-13-52" duration="00:00:00.0006070" startTime="2025-04-02T13:11:19.3526161+00:00" endTime="2025-04-02T13:11:19.3532227+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f77a900-cea4-40bc-b27c-a698222819e0">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="562e18a3-c93b-489f-81f7-c3875084a865" testId="4f467214-5f33-cba8-5e5f-337df582ea9a" testName="Should_validate_fiscalID(&quot;PT&quot;,&quot;254475728&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0528770" startTime="2025-04-02T13:11:20.2287773+00:00" endTime="2025-04-02T13:11:20.2816534+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="562e18a3-c93b-489f-81f7-c3875084a865" />
+    <UnitTestResult executionId="2019e120-9f4f-46df-b898-c0d7ebd6156c" testId="d50deb4b-5fbe-5fd5-d78c-09fb4d1780ba" testName="Get_Set_Audit_Configuration_Settings_Portugal" computerName="ip-10-1-13-52" duration="00:00:00.0001010" startTime="2025-04-02T13:11:19.3555736+00:00" endTime="2025-04-02T13:11:19.3556748+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2019e120-9f4f-46df-b898-c0d7ebd6156c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="02290dc4-6423-46e9-acb1-fa9f7badaca0" testId="5c825f1b-8add-3908-39d1-5cfefef77200" testName="Should_validate_fiscalID(&quot;ES&quot;,&quot;Y6333612R&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0369980" startTime="2025-04-02T13:11:20.4749916+00:00" endTime="2025-04-02T13:11:20.5119882+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02290dc4-6423-46e9-acb1-fa9f7badaca0" />
+    <UnitTestResult executionId="3ebd43b2-b391-41cd-8f52-f93fde5ff5b4" testId="c676a9f0-d185-bcd9-f152-cb6c6168ea83" testName="Tax_code_exemption_for_giftcard_on_portugal" computerName="ip-10-1-13-52" duration="00:00:00.0001770" startTime="2025-04-02T13:11:19.3567967+00:00" endTime="2025-04-02T13:11:19.3569741+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ebd43b2-b391-41cd-8f52-f93fde5ff5b4">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1d497718-eb02-4cf0-8ff6-03271efd57d0" testId="16012a69-98f2-6c19-5383-1d2b805095c5" testName="Should_validate_fiscalID(&quot;BR&quot;,&quot;822.313.695-32&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0385570" startTime="2025-04-02T13:11:20.3956196+00:00" endTime="2025-04-02T13:11:20.4341753+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d497718-eb02-4cf0-8ff6-03271efd57d0" />
+    <UnitTestResult executionId="e8285393-7921-48e6-beee-829577db55a8" testId="d0a56efa-ff7a-582f-8c6b-2ee0df2c2632" testName="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;A56388963&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0422980" startTime="2025-04-02T13:11:19.7951601+00:00" endTime="2025-04-02T13:11:19.8374571+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8285393-7921-48e6-beee-829577db55a8" />
+    <UnitTestResult executionId="78fd0887-50e1-45fb-9ec2-01c2ae4df6dc" testId="d32a09b8-a7b9-7fac-d4fd-715f0425f5b1" testName="Should_invalidate_fiscalID(&quot;IT&quot;,&quot;GSTFRN99M47A082W&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0477529" startTime="2025-04-02T13:11:19.4721470+00:00" endTime="2025-04-02T13:11:19.5198993+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78fd0887-50e1-45fb-9ec2-01c2ae4df6dc" />
+    <UnitTestResult executionId="9fab533d-3d1c-4fc3-81ae-d88cf6afce07" testId="aac552e2-0c9a-abfa-c716-9fa9df3c16b2" testName="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;68463612070172&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0360040" startTime="2025-04-02T13:11:19.6120190+00:00" endTime="2025-04-02T13:11:19.6480228+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9fab533d-3d1c-4fc3-81ae-d88cf6afce07" />
+    <UnitTestResult executionId="8f926908-fa20-406c-870b-becf16cafd6a" testId="39f82df0-355f-d062-fd24-a1ea3e6966e8" testName="Get_Set_Audit_Configuration_Settings_NF525" computerName="ip-10-1-13-52" duration="00:00:00.0002160" startTime="2025-04-02T13:11:19.3550337+00:00" endTime="2025-04-02T13:11:19.3552491+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f926908-fa20-406c-870b-becf16cafd6a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0bac3a18-be9d-4f49-a779-06b727318849" testId="743d9466-7baf-bffd-76f5-d5c9a43a1a8a" testName="Should_validate_vat_number(&quot;AR&quot;,&quot;34-22916953-1&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0005740" startTime="2025-04-02T13:11:20.5481399+00:00" endTime="2025-04-02T13:11:20.5487141+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0bac3a18-be9d-4f49-a779-06b727318849">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e9e8f5b0-7a25-4e41-b6a6-5b4d23403e50" testId="cb665c3e-3386-1db7-93c6-cf162c65ff3f" testName="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;155.048.104-92&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0501010" startTime="2025-04-02T13:11:19.5618745+00:00" endTime="2025-04-02T13:11:19.6119746+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9e8f5b0-7a25-4e41-b6a6-5b4d23403e50" />
+    <UnitTestResult executionId="396dffdd-48ff-4ecc-b3ec-ee149c2174c5" testId="6c06a76a-2eac-3283-af7e-665a646feb7e" testName="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;87887322043&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0418580" startTime="2025-04-02T13:11:19.5199485+00:00" endTime="2025-04-02T13:11:19.5618060+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="396dffdd-48ff-4ecc-b3ec-ee149c2174c5" />
+    <UnitTestResult executionId="2a0cbbdd-2367-4876-9314-215db899e6fc" testId="282ef69a-f4da-f914-ed9f-679aadef3dd0" testName="Unprocessed_financial_period_on_closed_shop_email" computerName="ip-10-1-13-52" duration="00:00:00.0002160" startTime="2025-04-02T13:11:20.5489226+00:00" endTime="2025-04-02T13:11:20.5491384+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a0cbbdd-2367-4876-9314-215db899e6fc">
+      <Output>
+        <StdOut>This test can only be run manually. It creates the environment that should trigger a e-mail notification that a financial period is in the wrong state when a store is closed.A check must be done that the expected E-Mails are stored in the EVA_MESSAGING_PICKUPDIRECTORY properly.</StdOut>
+        <ErrorInfo>
+          <Message>This test can only be run manually. It creates the environment that should trigger a e-mail notification that a financial period is in the wrong state when a store is closed.A check must be done that the expected E-Mails are stored in the EVA_MESSAGING_PICKUPDIRECTORY properly.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="08cd83a3-32ce-42b7-9f3e-0c6c0ae25f1a" testId="c725da7d-1752-64db-b02d-d3e48e539084" testName="Generate_company_based_invoice_sequence_number" computerName="ip-10-1-13-52" duration="00:00:00.0000890" startTime="2025-04-02T13:11:19.3565243+00:00" endTime="2025-04-02T13:11:19.3566130+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="08cd83a3-32ce-42b7-9f3e-0c6c0ae25f1a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="35e3f346-198b-4bcb-a2df-ae5faa20fa18" testId="00900c0d-d26c-ddf2-6491-b18cde2ffbbb" testName="Should_validate_vat_number(&quot;BR&quot;,&quot;61553075000194&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0005280" startTime="2025-04-02T13:11:20.5475628+00:00" endTime="2025-04-02T13:11:20.5480904+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35e3f346-198b-4bcb-a2df-ae5faa20fa18">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0022d223-ac97-4cb7-af0f-a038a2067688" testId="66104109-3e6e-f817-69a6-5085dace8d6d" testName="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;71.714.227/0701-30&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0475800" startTime="2025-04-02T13:11:19.6480594+00:00" endTime="2025-04-02T13:11:19.6956394+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0022d223-ac97-4cb7-af0f-a038a2067688" />
+    <UnitTestResult executionId="e259f008-2515-4657-acc6-8fa84703e45f" testId="886a477f-dd60-9a58-995b-147a684c125d" testName="Should_be_able_to_complete_order_with_integer_overflow" computerName="ip-10-1-13-52" duration="00:00:00.0001150" startTime="2025-04-02T13:11:19.3563499+00:00" endTime="2025-04-02T13:11:19.3564653+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e259f008-2515-4657-acc6-8fa84703e45f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="366ba075-fa28-48d4-be73-d3217d1f73f5" testId="5ff9800d-8fe2-dfc1-b527-9efeb13848fe" testName="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;Z4856078B&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0400660" startTime="2025-04-02T13:11:19.7550301+00:00" endTime="2025-04-02T13:11:19.7950952+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="366ba075-fa28-48d4-be73-d3217d1f73f5" />
+    <UnitTestResult executionId="0d6474e1-4978-4c16-bfb3-ff485950a197" testId="cee31b52-f8f8-2429-1574-d47ff97a4d12" testName="Should_validate_fiscalID(&quot;BR&quot;,&quot;86831562302&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0366680" startTime="2025-04-02T13:11:20.3588609+00:00" endTime="2025-04-02T13:11:20.3955281+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d6474e1-4978-4c16-bfb3-ff485950a197" />
+    <UnitTestResult executionId="0ff3ba86-6f07-42ad-b7d0-4c3a779f03e9" testId="811f4638-18ce-43a3-2d3c-6e92e2785d15" testName="Manually_setting_tax_exemption_should_set_correct_code" computerName="ip-10-1-13-52" duration="00:00:00.0001310" startTime="2025-04-02T13:11:19.3566588+00:00" endTime="2025-04-02T13:11:19.3567895+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ff3ba86-6f07-42ad-b7d0-4c3a779f03e9">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5201bab3-b4f9-4ebd-9e0d-da074b46fd80" testId="7c5c252b-abd4-97d5-fb37-d47a25ad8459" testName="Tax_code_exemption_for_giftcard_on_portugal_does_not_apply_on_other_coutries" computerName="ip-10-1-13-52" duration="00:00:00.0000880" startTime="2025-04-02T13:11:19.3569833+00:00" endTime="2025-04-02T13:11:19.3570715+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5201bab3-b4f9-4ebd-9e0d-da074b46fd80">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dbbc6252-3eac-49e2-bae6-72b052bc21f8" testId="51219948-95b6-e8b6-a425-27838f579b2f" testName="Should_validate_fiscalID(&quot;IT&quot;,&quot;GSTFRN99M47A080W&quot;)" computerName="ip-10-1-13-52" duration="00:00:00.0339520" startTime="2025-04-02T13:11:20.3248572+00:00" endTime="2025-04-02T13:11:20.3588088+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dbbc6252-3eac-49e2-bae6-72b052bc21f8" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;68463612070172&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="aac552e2-0c9a-abfa-c716-9fa9df3c16b2">
+      <Execution id="9fab533d-3d1c-4fc3-81ae-d88cf6afce07" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;68463612070172&quot;)" />
+    </UnitTest>
+    <UnitTest name="Tax_code_exemption_for_insurance_on_portugal" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="38d318ef-05d3-4245-182b-4962334e1b1d">
+      <Execution id="493de58f-be19-4882-bee5-a2811bff552e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.TaxExemptionCasesForPortugalTests" name="Tax_code_exemption_for_insurance_on_portugal" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;PT&quot;,&quot;590067282&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="2426d048-9f8f-962d-81e9-7236b27fb457">
+      <Execution id="16022eef-7283-4015-a7d5-b23defe126a8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;PT&quot;,&quot;590067282&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;ES&quot;,&quot;V49112899&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="fe86f40a-8c80-3d92-8cdf-cf7624483f02">
+      <Execution id="6471ed46-21b2-45af-a0db-5b9ff35d7dc7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;ES&quot;,&quot;V49112899&quot;)" />
+    </UnitTest>
+    <UnitTest name="CRUD_tests" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="5bc57a19-04f7-63f6-1c91-3b6ffdfa466c">
+      <Execution id="a86a2e9d-fae4-4a54-a873-06a9837f8586" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.AuditChainConfigurationTests" name="CRUD_tests" />
+    </UnitTest>
+    <UnitTest name="Unprocessed_financial_period_on_closed_shop_email" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="282ef69a-f4da-f914-ed9f-679aadef3dd0">
+      <Execution id="2a0cbbdd-2367-4876-9314-215db899e6fc" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Shared.Reports.UnprocessedFinancialPeriodMailTests" name="Unprocessed_financial_period_on_closed_shop_email" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;PT&quot;,&quot;787274593&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="27a1d5f2-de57-7733-6ce7-49a8fc3b761c">
+      <Execution id="5ce39cb7-8217-4f4f-93a1-17c725878e25" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;PT&quot;,&quot;787274593&quot;)" />
+    </UnitTest>
+    <UnitTest name="Get_Set_Audit_Configuration_Settings_Portugal" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="d50deb4b-5fbe-5fd5-d78c-09fb4d1780ba">
+      <Execution id="2019e120-9f4f-46df-b898-c0d7ebd6156c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.AuditConfigurationSettingsTests" name="Get_Set_Audit_Configuration_Settings_Portugal" />
+    </UnitTest>
+    <UnitTest name="Using_an_audit_chain_configuration_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="45dfd1d1-f41a-5b32-db6a-3ac0ad75b43c">
+      <Execution id="0f77a900-cea4-40bc-b27c-a698222819e0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.AuditChainConfigurationTests" name="Using_an_audit_chain_configuration_works" />
+    </UnitTest>
+    <UnitTest name="Tax_code_exemption_for_giftcard_on_portugal_does_not_apply_on_other_coutries" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="7c5c252b-abd4-97d5-fb37-d47a25ad8459">
+      <Execution id="5201bab3-b4f9-4ebd-9e0d-da074b46fd80" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.TaxExemptionCasesForPortugalTests" name="Tax_code_exemption_for_giftcard_on_portugal_does_not_apply_on_other_coutries" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;84025957Z&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="3ef77010-1e30-7bf7-5094-beea7edab1a1">
+      <Execution id="38598a90-e97a-4093-b1a0-ae88dc2fc3ce" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;84025957Z&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;PT&quot;,&quot;254475728&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="4f467214-5f33-cba8-5e5f-337df582ea9a">
+      <Execution id="562e18a3-c93b-489f-81f7-c3875084a865" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;PT&quot;,&quot;254475728&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;A56388963&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="d0a56efa-ff7a-582f-8c6b-2ee0df2c2632">
+      <Execution id="e8285393-7921-48e6-beee-829577db55a8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;A56388963&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_vat_number(&quot;AR&quot;,&quot;34-22916953-1&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="743d9466-7baf-bffd-76f5-d5c9a43a1a8a">
+      <Execution id="0bac3a18-be9d-4f49-a779-06b727318849" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateVatNumbersServiceTests" name="Should_validate_vat_number(&quot;AR&quot;,&quot;34-22916953-1&quot;)" />
+    </UnitTest>
+    <UnitTest name="Generate_company_based_invoice_sequence_number" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="c725da7d-1752-64db-b02d-d3e48e539084">
+      <Execution id="08cd83a3-32ce-42b7-9f3e-0c6c0ae25f1a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.SettingInvoiceSequenceGeneratorTests" name="Generate_company_based_invoice_sequence_number" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;ES&quot;,&quot;Y6333612R&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="5c825f1b-8add-3908-39d1-5cfefef77200">
+      <Execution id="02290dc4-6423-46e9-acb1-fa9f7badaca0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;ES&quot;,&quot;Y6333612R&quot;)" />
+    </UnitTest>
+    <UnitTest name="Tax_code_exemption_for_insurance_on_portugal_does_not_apply_on_other_coutries" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="e978cf31-f774-abc0-45aa-c4a257d0a816">
+      <Execution id="9ef3ea74-39a2-438e-bb02-0c18e3248027" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.TaxExemptionCasesForPortugalTests" name="Tax_code_exemption_for_insurance_on_portugal_does_not_apply_on_other_coutries" />
+    </UnitTest>
+    <UnitTest name="Should_return_valid_url" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="27ab6b7a-9fab-d7e6-b4f6-0ab5a0ddac41">
+      <Execution id="75391880-ec98-4614-847b-b0be20683279" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.GetAuditingSummaryServiceTests" name="Should_return_valid_url" />
+    </UnitTest>
+    <UnitTest name="Should_validate_vat_number(&quot;BR&quot;,&quot;61553075000194&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="00900c0d-d26c-ddf2-6491-b18cde2ffbbb">
+      <Execution id="35e3f346-198b-4bcb-a2df-ae5faa20fa18" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateVatNumbersServiceTests" name="Should_validate_vat_number(&quot;BR&quot;,&quot;61553075000194&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;IT&quot;,&quot;RDLNDR72D13A038F&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="8b1e1385-e4d0-42e8-3cfb-76d8d168456a">
+      <Execution id="521b9b9a-e880-431a-aa57-6e3d250e3653" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;IT&quot;,&quot;RDLNDR72D13A038F&quot;)" />
+    </UnitTest>
+    <UnitTest name="Static_folder_directory_traversal_check" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="6053c3e3-6048-682a-0169-9f79af6dc27b">
+      <Execution id="e7521e31-5569-4ba9-a0ee-e6b18f227039" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.GetAuditingSummaryServiceTests" name="Static_folder_directory_traversal_check" />
+    </UnitTest>
+    <UnitTest name="Tax_code_exemption_for_giftcard_on_portugal" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="c676a9f0-d185-bcd9-f152-cb6c6168ea83">
+      <Execution id="3ebd43b2-b391-41cd-8f52-f93fde5ff5b4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.TaxExemptionCasesForPortugalTests" name="Tax_code_exemption_for_giftcard_on_portugal" />
+    </UnitTest>
+    <UnitTest name="Should_be_able_to_complete_order_with_integer_overflow" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="886a477f-dd60-9a58-995b-147a684c125d">
+      <Execution id="e259f008-2515-4657-acc6-8fa84703e45f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.IntegerOverflowTests" name="Should_be_able_to_complete_order_with_integer_overflow" />
+    </UnitTest>
+    <UnitTest name="Get_Set_Audit_Configuration_Settings_NF525" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="39f82df0-355f-d062-fd24-a1ea3e6966e8">
+      <Execution id="8f926908-fa20-406c-870b-becf16cafd6a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.AuditConfigurationSettingsTests" name="Get_Set_Audit_Configuration_Settings_NF525" />
+    </UnitTest>
+    <UnitTest name="Manually_setting_tax_exemption_should_set_correct_code" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="811f4638-18ce-43a3-2d3c-6e92e2785d15">
+      <Execution id="0ff3ba86-6f07-42ad-b7d0-4c3a779f03e9" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.TaxExemptionCasesForPortugalTests" name="Manually_setting_tax_exemption_should_set_correct_code" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;Z4856078B&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="5ff9800d-8fe2-dfc1-b527-9efeb13848fe">
+      <Execution id="366ba075-fa28-48d4-be73-d3217d1f73f5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;ES&quot;,&quot;Z4856078B&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;BR&quot;,&quot;822.313.695-32&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="16012a69-98f2-6c19-5383-1d2b805095c5">
+      <Execution id="1d497718-eb02-4cf0-8ff6-03271efd57d0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;BR&quot;,&quot;822.313.695-32&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;155.048.104-92&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="cb665c3e-3386-1db7-93c6-cf162c65ff3f">
+      <Execution id="e9e8f5b0-7a25-4e41-b6a6-5b4d23403e50" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;155.048.104-92&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;IT&quot;,&quot;GSTFRN99M47A080W&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="51219948-95b6-e8b6-a425-27838f579b2f">
+      <Execution id="dbbc6252-3eac-49e2-bae6-72b052bc21f8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;IT&quot;,&quot;GSTFRN99M47A080W&quot;)" />
+    </UnitTest>
+    <UnitTest name="Get_Set_Audit_Configuration_Settings_Norway" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="85790886-e923-7c88-c0d9-8cbd64508b85">
+      <Execution id="e29a66fd-8988-40ff-aa52-5672d642185c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.AuditConfigurationSettingsTests" name="Get_Set_Audit_Configuration_Settings_Norway" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;ES&quot;,&quot;40911074P&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="898e60df-eae7-e70c-2eca-80d151ea1565">
+      <Execution id="6d63165c-e622-4fd2-bc2a-2f4660bb779b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;ES&quot;,&quot;40911074P&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_validate_fiscalID(&quot;BR&quot;,&quot;86831562302&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="cee31b52-f8f8-2429-1574-d47ff97a4d12">
+      <Execution id="0d6474e1-4978-4c16-bfb3-ff485950a197" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_validate_fiscalID(&quot;BR&quot;,&quot;86831562302&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_use_current_organization_unit_country_code" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="5ee1cf53-489b-e628-de1a-d83a838dac4e">
+      <Execution id="4cb66de9-0d0a-49f3-9040-22d24d400f79" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_use_current_organization_unit_country_code" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;IT&quot;,&quot;GSTFRN99M47A082W&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="d32a09b8-a7b9-7fac-d4fd-715f0425f5b1">
+      <Execution id="78fd0887-50e1-45fb-9ec2-01c2ae4df6dc" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;IT&quot;,&quot;GSTFRN99M47A082W&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;71.714.227/0701-30&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="66104109-3e6e-f817-69a6-5085dace8d6d">
+      <Execution id="0022d223-ac97-4cb7-af0f-a038a2067688" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;71.714.227/0701-30&quot;)" />
+    </UnitTest>
+    <UnitTest name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;87887322043&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.auditing/bin/release/eva.testsuite.auditing.dll" id="6c06a76a-2eac-3283-af7e-665a646feb7e">
+      <Execution id="396dffdd-48ff-4ecc-b3ec-ee149c2174c5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Auditing.Core.ValidateFiscalIDServiceTests" name="Should_invalidate_fiscalID(&quot;BR&quot;,&quot;87887322043&quot;)" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="5ee1cf53-489b-e628-de1a-d83a838dac4e" executionId="4cb66de9-0d0a-49f3-9040-22d24d400f79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="898e60df-eae7-e70c-2eca-80d151ea1565" executionId="6d63165c-e622-4fd2-bc2a-2f4660bb779b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e978cf31-f774-abc0-45aa-c4a257d0a816" executionId="9ef3ea74-39a2-438e-bb02-0c18e3248027" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ef77010-1e30-7bf7-5094-beea7edab1a1" executionId="38598a90-e97a-4093-b1a0-ae88dc2fc3ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b1e1385-e4d0-42e8-3cfb-76d8d168456a" executionId="521b9b9a-e880-431a-aa57-6e3d250e3653" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27a1d5f2-de57-7733-6ce7-49a8fc3b761c" executionId="5ce39cb7-8217-4f4f-93a1-17c725878e25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38d318ef-05d3-4245-182b-4962334e1b1d" executionId="493de58f-be19-4882-bee5-a2811bff552e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe86f40a-8c80-3d92-8cdf-cf7624483f02" executionId="6471ed46-21b2-45af-a0db-5b9ff35d7dc7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85790886-e923-7c88-c0d9-8cbd64508b85" executionId="e29a66fd-8988-40ff-aa52-5672d642185c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5bc57a19-04f7-63f6-1c91-3b6ffdfa466c" executionId="a86a2e9d-fae4-4a54-a873-06a9837f8586" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2426d048-9f8f-962d-81e9-7236b27fb457" executionId="16022eef-7283-4015-a7d5-b23defe126a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27ab6b7a-9fab-d7e6-b4f6-0ab5a0ddac41" executionId="75391880-ec98-4614-847b-b0be20683279" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6053c3e3-6048-682a-0169-9f79af6dc27b" executionId="e7521e31-5569-4ba9-a0ee-e6b18f227039" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45dfd1d1-f41a-5b32-db6a-3ac0ad75b43c" executionId="0f77a900-cea4-40bc-b27c-a698222819e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f467214-5f33-cba8-5e5f-337df582ea9a" executionId="562e18a3-c93b-489f-81f7-c3875084a865" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d50deb4b-5fbe-5fd5-d78c-09fb4d1780ba" executionId="2019e120-9f4f-46df-b898-c0d7ebd6156c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c825f1b-8add-3908-39d1-5cfefef77200" executionId="02290dc4-6423-46e9-acb1-fa9f7badaca0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c676a9f0-d185-bcd9-f152-cb6c6168ea83" executionId="3ebd43b2-b391-41cd-8f52-f93fde5ff5b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16012a69-98f2-6c19-5383-1d2b805095c5" executionId="1d497718-eb02-4cf0-8ff6-03271efd57d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0a56efa-ff7a-582f-8c6b-2ee0df2c2632" executionId="e8285393-7921-48e6-beee-829577db55a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d32a09b8-a7b9-7fac-d4fd-715f0425f5b1" executionId="78fd0887-50e1-45fb-9ec2-01c2ae4df6dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aac552e2-0c9a-abfa-c716-9fa9df3c16b2" executionId="9fab533d-3d1c-4fc3-81ae-d88cf6afce07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39f82df0-355f-d062-fd24-a1ea3e6966e8" executionId="8f926908-fa20-406c-870b-becf16cafd6a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="743d9466-7baf-bffd-76f5-d5c9a43a1a8a" executionId="0bac3a18-be9d-4f49-a779-06b727318849" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb665c3e-3386-1db7-93c6-cf162c65ff3f" executionId="e9e8f5b0-7a25-4e41-b6a6-5b4d23403e50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c06a76a-2eac-3283-af7e-665a646feb7e" executionId="396dffdd-48ff-4ecc-b3ec-ee149c2174c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="282ef69a-f4da-f914-ed9f-679aadef3dd0" executionId="2a0cbbdd-2367-4876-9314-215db899e6fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c725da7d-1752-64db-b02d-d3e48e539084" executionId="08cd83a3-32ce-42b7-9f3e-0c6c0ae25f1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="00900c0d-d26c-ddf2-6491-b18cde2ffbbb" executionId="35e3f346-198b-4bcb-a2df-ae5faa20fa18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66104109-3e6e-f817-69a6-5085dace8d6d" executionId="0022d223-ac97-4cb7-af0f-a038a2067688" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="886a477f-dd60-9a58-995b-147a684c125d" executionId="e259f008-2515-4657-acc6-8fa84703e45f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ff9800d-8fe2-dfc1-b527-9efeb13848fe" executionId="366ba075-fa28-48d4-be73-d3217d1f73f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cee31b52-f8f8-2429-1574-d47ff97a4d12" executionId="0d6474e1-4978-4c16-bfb3-ff485950a197" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="811f4638-18ce-43a3-2d3c-6e92e2785d15" executionId="0ff3ba86-6f07-42ad-b7d0-4c3a779f03e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c5c252b-abd4-97d5-fb37-d47a25ad8459" executionId="5201bab3-b4f9-4ebd-9e0d-da074b46fd80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51219948-95b6-e8b6-a425-27838f579b2f" executionId="dbbc6252-3eac-49e2-bae6-72b052bc21f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="36" executed="19" passed="19" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Auditing/bin/Release/EVA.TestSuite.Auditing.dll
+   NUnit3TestExecutor discovered 36 of 36 NUnit test cases using Current Discovery mode, Non-Explicit run
+CRUD_tests: Skipping test: it does not belong to this partition.
+Using_an_audit_chain_configuration_works: Skipping test: it does not belong to this partition.
+Get_Set_Audit_Configuration_Settings_NF525: Skipping test: it does not belong to this partition.
+Get_Set_Audit_Configuration_Settings_Norway: Skipping test: it does not belong to this partition.
+Get_Set_Audit_Configuration_Settings_Portugal: Skipping test: it does not belong to this partition.
+Should_return_valid_url: Skipping test: it does not belong to this partition.
+Static_folder_directory_traversal_check: Skipping test: it does not belong to this partition.
+Should_be_able_to_complete_order_with_integer_overflow: Skipping test: it does not belong to this partition.
+Generate_company_based_invoice_sequence_number: Skipping test: it does not belong to this partition.
+Test 'CRUD_tests' was skipped in the test run.
+Test 'Using_an_audit_chain_configuration_works' was skipped in the test run.
+Test 'Get_Set_Audit_Configuration_Settings_NF525' was skipped in the test run.
+Test 'Get_Set_Audit_Configuration_Settings_Norway' was skipped in the test run.
+Test 'Get_Set_Audit_Configuration_Settings_Portugal' was skipped in the test run.
+Test 'Should_return_valid_url' was skipped in the test run.
+Test 'Static_folder_directory_traversal_check' was skipped in the test run.
+Test 'Should_be_able_to_complete_order_with_integer_overflow' was skipped in the test run.
+Test 'Generate_company_based_invoice_sequence_number' was skipped in the test run.
+Manually_setting_tax_exemption_should_set_correct_code: Skipping test: it does not belong to this partition.
+Tax_code_exemption_for_giftcard_on_portugal: Skipping test: it does not belong to this partition.
+Tax_code_exemption_for_giftcard_on_portugal_does_not_apply_on_other_coutries: Skipping test: it does not belong to this partition.
+Tax_code_exemption_for_insurance_on_portugal: Skipping test: it does not belong to this partition.
+Tax_code_exemption_for_insurance_on_portugal_does_not_apply_on_other_coutries: Skipping test: it does not belong to this partition.
+Test 'Manually_setting_tax_exemption_should_set_correct_code' was skipped in the test run.
+Test 'Tax_code_exemption_for_giftcard_on_portugal' was skipped in the test run.
+Test 'Tax_code_exemption_for_giftcard_on_portugal_does_not_apply_on_other_coutries' was skipped in the test run.
+Test 'Tax_code_exemption_for_insurance_on_portugal' was skipped in the test run.
+Test 'Tax_code_exemption_for_insurance_on_portugal_does_not_apply_on_other_coutries' was skipped in the test run.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+
+Should_validate_vat_number("BR","61553075000194"): Skipping test: it does not belong to this partition.
+Should_validate_vat_number("AR","34-22916953-1"): Skipping test: it does not belong to this partition.
+Unprocessed_financial_period_on_closed_shop_email: This test can only be run manually. It creates the environment that should trigger a e-mail notification that a financial period is in the wrong state when a store is closed.A check must be done that the expected E-Mails are stored in the EVA_MESSAGING_PICKUPDIRECTORY properly.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'Should_validate_vat_number("BR","61553075000194")' was skipped in the test run.
+Test 'Should_validate_vat_number("AR","34-22916953-1")' was skipped in the test run.
+Test 'Unprocessed_financial_period_on_closed_shop_email' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

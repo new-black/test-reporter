@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="104f94d7-7516-44c1-bc2e-153f24b2a4e0" name="@ip-10-1-25-141 2025-04-02 13:24:40" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:24:40.4738299+00:00" queuing="2025-04-02T13:24:40.4738300+00:00" start="2025-04-02T13:24:35.8575018+00:00" finish="2025-04-02T13:24:40.9733504+00:00" />
+  <TestSettings name="default" id="5a3ab79c-4438-4096-ae0b-1c00a026ed2d">
+    <Deployment runDeploymentRoot="_ip-10-1-25-141_2025-04-02_13_24_40" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="47a12bdb-a793-43c1-a210-ba3fe7448d43" testId="59432a19-3f2b-dc96-daa3-306d1bdd2a55" testName="ax_financial_should_work_with_different_currencies_and_different_countries(&quot;DB&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0130590" startTime="2025-04-02T13:24:40.3916025+00:00" endTime="2025-04-02T13:24:40.4046611+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47a12bdb-a793-43c1-a210-ba3fe7448d43">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="13bcc551-7489-43c0-84ba-efb3a37c2fa3" testId="5a16b552-45bd-aa69-7700-01aefc09e56f" testName="Create_order(&quot;AfterFullyPaid&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0003520" startTime="2025-04-02T13:24:40.4075722+00:00" endTime="2025-04-02T13:24:40.4079237+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13bcc551-7489-43c0-84ba-efb3a37c2fa3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eda1f359-ce17-4b30-a786-a43cb047e71c" testId="0c85b1b9-5d62-b635-ffc0-4458d685185b" testName="AX_Financial_period_export_works(&quot;DB&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0023060" startTime="2025-04-02T13:24:40.3883493+00:00" endTime="2025-04-02T13:24:40.3906549+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eda1f359-ce17-4b30-a786-a43cb047e71c">
+      <Output>
+        <StdOut>OneTimeSetUp: STRING-ID-SKIP-Parsing a JSON document instead of an XML document, not sure why</StdOut>
+        <ErrorInfo>
+          <Message>OneTimeSetUp: STRING-ID-SKIP-Parsing a JSON document instead of an XML document, not sure why</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9a67dc27-e90a-4f0f-813c-c52adb69dbbc" testId="a9aafeb5-6ce0-dbb7-4d2e-acd7188443e8" testName="Shops_with_insufficient_stock_and_insufficient_replacing_stock_arent_returned" computerName="ip-10-1-25-141" duration="00:00:00.1743170" startTime="2025-04-02T13:24:40.6249936+00:00" endTime="2025-04-02T13:24:40.7993093+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a67dc27-e90a-4f0f-813c-c52adb69dbbc" />
+    <UnitTestResult executionId="ea830842-af68-4b00-8254-9c1df878ee23" testId="5f768bdb-36bf-25ec-b7c6-c425251d97a3" testName="Shops_with_stock_replacing_stock_are_returned" computerName="ip-10-1-25-141" duration="00:00:00.1049730" startTime="2025-04-02T13:24:40.7993639+00:00" endTime="2025-04-02T13:24:40.9043367+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea830842-af68-4b00-8254-9c1df878ee23" />
+    <UnitTestResult executionId="94c48ee1-dd4d-42a4-af8f-88395ee5a8b7" testId="1cef0b37-7e46-172f-1e7f-4b1ba95682ce" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,False,60)" computerName="ip-10-1-25-141" duration="00:00:00.0001450" startTime="2025-04-02T13:24:40.9056198+00:00" endTime="2025-04-02T13:24:40.9057648+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94c48ee1-dd4d-42a4-af8f-88395ee5a8b7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="412ddbca-5460-4db8-880f-5f3ace3b16fa" testId="acc12a68-24da-bb13-d403-4a26118fdb0f" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,True,60)" computerName="ip-10-1-25-141" duration="00:00:00.0000780" startTime="2025-04-02T13:24:40.9058601+00:00" endTime="2025-04-02T13:24:40.9059378+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="412ddbca-5460-4db8-880f-5f3ace3b16fa">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="966f31f5-aece-47d5-b900-096edd6e46be" testId="8356c197-5957-d21c-b1ed-62d2b7a71a59" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,False,True,True,28)" computerName="ip-10-1-25-141" duration="00:00:00.0001120" startTime="2025-04-02T13:24:40.9061099+00:00" endTime="2025-04-02T13:24:40.9062215+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="966f31f5-aece-47d5-b900-096edd6e46be">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0debfe0f-62c8-4e25-a026-71c03bf32645" testId="5ea958f1-051d-6958-9bb2-41cf1431493f" testName="Create_order_with_price_adjustment" computerName="ip-10-1-25-141" duration="00:00:00.0001420" startTime="2025-04-02T13:24:40.4083293+00:00" endTime="2025-04-02T13:24:40.4084712+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0debfe0f-62c8-4e25-a026-71c03bf32645">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9c2c635c-945e-4602-8481-59bc0b6e4578" testId="2a48a337-97a4-122f-7835-a0a2b126a109" testName="Create_order(&quot;EveryShipment&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0003490" startTime="2025-04-02T13:24:40.4072086+00:00" endTime="2025-04-02T13:24:40.4075578+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c2c635c-945e-4602-8481-59bc0b6e4578">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e739659a-345a-4cb1-8801-105b335f226d" testId="b789dcee-e6a0-d7cf-9561-56c06806eeff" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(0,0,False,True,True,0)" computerName="ip-10-1-25-141" duration="00:00:00.0001230" startTime="2025-04-02T13:24:40.9062313+00:00" endTime="2025-04-02T13:24:40.9063551+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e739659a-345a-4cb1-8801-105b335f226d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e6212c71-6fd3-44e9-abc4-069a0700153e" testId="9aa45023-5be8-bc53-7378-2bc8203b01dc" testName="Only_shops_with_stock_are_returned_by_default" computerName="ip-10-1-25-141" duration="00:00:00.2161200" startTime="2025-04-02T13:24:40.4088187+00:00" endTime="2025-04-02T13:24:40.6249369+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6212c71-6fd3-44e9-abc4-069a0700153e" />
+    <UnitTestResult executionId="f96d1ccc-ca29-4c71-8a64-fc3a21f0804a" testId="877125a5-e9bc-b789-c8e1-8a30e98da59f" testName="Test_import_update" computerName="ip-10-1-25-141" duration="00:00:00.0001689" startTime="2025-04-02T13:24:40.9065575+00:00" endTime="2025-04-02T13:24:40.9067264+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f96d1ccc-ca29-4c71-8a64-fc3a21f0804a">
+      <Output>
+        <StdOut>Use to validate the Fields are updated if step.xml changes.</StdOut>
+        <ErrorInfo>
+          <Message>Use to validate the Fields are updated if step.xml changes.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a0e77ac6-e512-48bd-b5cd-8e42fcfca6ee" testId="2d6012c8-8b2c-c1b6-5e8d-c04d7bcdef83" testName="Create_order_and_return(&quot;EveryShipment&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0001250" startTime="2025-04-02T13:24:40.4079660+00:00" endTime="2025-04-02T13:24:40.4080911+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0e77ac6-e512-48bd-b5cd-8e42fcfca6ee">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b9bac92d-bf93-487f-80a0-dccc85054e5d" testId="7d6439b2-1482-5340-68ee-76376a159a7a" testName="Happy_flow_send_immediately" computerName="ip-10-1-25-141" duration="00:00:00.0001350" startTime="2025-04-02T13:24:40.4086061+00:00" endTime="2025-04-02T13:24:40.4087407+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9bac92d-bf93-487f-80a0-dccc85054e5d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7a5335bb-e2be-4177-b832-77ff1b54fffb" testId="64815d72-15a9-0c89-7f6d-0212cbec3228" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,False,12)" computerName="ip-10-1-25-141" duration="00:00:00.0004670" startTime="2025-04-02T13:24:40.9051237+00:00" endTime="2025-04-02T13:24:40.9055902+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a5335bb-e2be-4177-b832-77ff1b54fffb">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bda37d36-fc94-428b-8477-f083ad6770a8" testId="33ffe284-21bc-2d1c-7411-69d8ba831ebf" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,True,False,True,8)" computerName="ip-10-1-25-141" duration="00:00:00.0001510" startTime="2025-04-02T13:24:40.9059420+00:00" endTime="2025-04-02T13:24:40.9060928+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bda37d36-fc94-428b-8477-f083ad6770a8">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="45733c5e-394a-46d5-9e60-930fa49e0690" testId="54066b23-d779-ac76-7f4a-53898ec46ca0" testName="Create_order_with_edg_caseprice_adjustment" computerName="ip-10-1-25-141" duration="00:00:00.0001130" startTime="2025-04-02T13:24:40.4082092+00:00" endTime="2025-04-02T13:24:40.4083218+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45733c5e-394a-46d5-9e60-930fa49e0690">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e4f8d8cf-1245-4ff5-80ac-89d2fecf77e3" testId="14004b92-c5a4-37d8-d4de-88b883aaf94e" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,False,False,0)" computerName="ip-10-1-25-141" duration="00:00:00.0004000" startTime="2025-04-02T13:24:40.9046972+00:00" endTime="2025-04-02T13:24:40.9050969+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4f8d8cf-1245-4ff5-80ac-89d2fecf77e3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d59d4bb9-2af1-4977-9f23-872020917f94" testId="69579782-5d77-e2cf-8559-70a2b9cd71ae" testName="AX_Financial_period_export_works(&quot;DEFAULT&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0017700" startTime="2025-04-02T13:24:40.3883493+00:00" endTime="2025-04-02T13:24:40.3900798+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d59d4bb9-2af1-4977-9f23-872020917f94">
+      <Output>
+        <StdOut>OneTimeSetUp: STRING-ID-SKIP-Parsing a JSON document instead of an XML document, not sure why</StdOut>
+        <ErrorInfo>
+          <Message>OneTimeSetUp: STRING-ID-SKIP-Parsing a JSON document instead of an XML document, not sure why</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d7bdabf0-d812-4f6a-bba4-59a1910483c6" testId="3941f25c-b364-ea5f-36f1-4ece6d958068" testName="Tests_step_by_step_skipping_phases_on_import_products" computerName="ip-10-1-25-141" duration="00:00:00.0000040" startTime="2025-04-02T13:24:40.9067375+00:00" endTime="2025-04-02T13:24:40.9067412+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7bdabf0-d812-4f6a-bba4-59a1910483c6">
+      <Output>
+        <StdOut>This can only be used to test the Step by Step phasing out on the Step Import Products if you have a valid step.xml file locally.</StdOut>
+        <ErrorInfo>
+          <Message>This can only be used to test the Step by Step phasing out on the Step Import Products if you have a valid step.xml file locally.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c6170981-7b56-46ca-a738-c5568779b8c5" testId="33468145-8e6f-69ab-1336-583b8b82fb16" testName="AXFinancialPeriodGeneralLedgersExportWorks" computerName="ip-10-1-25-141" duration="00:00:00.0006160" startTime="2025-04-02T13:24:40.4054948+00:00" endTime="2025-04-02T13:24:40.4061107+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6170981-7b56-46ca-a738-c5568779b8c5">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae894bdb-4ba5-454a-b93d-554e8b660f18" testId="0328aad7-0a8e-e5c8-a402-0c7540310f24" testName="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,True,12)" computerName="ip-10-1-25-141" duration="00:00:00.0000850" startTime="2025-04-02T13:24:40.9057710+00:00" endTime="2025-04-02T13:24:40.9058555+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae894bdb-4ba5-454a-b93d-554e8b660f18">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d16669c7-76da-48d0-8543-914678135bb2" testId="2887152a-18a4-150d-f6b1-77104e9d9728" testName="Create_order_and_return(&quot;AfterFullyPaid&quot;)" computerName="ip-10-1-25-141" duration="00:00:00.0001000" startTime="2025-04-02T13:24:40.4080979+00:00" endTime="2025-04-02T13:24:40.4081981+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d16669c7-76da-48d0-8543-914678135bb2">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="AX_Financial_period_export_works(&quot;DB&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="0c85b1b9-5d62-b635-ffc0-4458d685185b">
+      <Execution id="eda1f359-ce17-4b30-a786-a43cb047e71c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.AXFinancialPeriodExportTests" name="AX_Financial_period_export_works(&quot;DB&quot;)" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,False,True,True,28)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="8356c197-5957-d21c-b1ed-62d2b7a71a59">
+      <Execution id="966f31f5-aece-47d5-b900-096edd6e46be" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,False,True,True,28)" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,False,60)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="1cef0b37-7e46-172f-1e7f-4b1ba95682ce">
+      <Execution id="94c48ee1-dd4d-42a4-af8f-88395ee5a8b7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,False,60)" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(0,0,False,True,True,0)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="b789dcee-e6a0-d7cf-9561-56c06806eeff">
+      <Execution id="e739659a-345a-4cb1-8801-105b335f226d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(0,0,False,True,True,0)" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,True,60)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="acc12a68-24da-bb13-d403-4a26118fdb0f">
+      <Execution id="412ddbca-5460-4db8-880f-5f3ace3b16fa" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,True,60)" />
+    </UnitTest>
+    <UnitTest name="Create_order_with_price_adjustment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="5ea958f1-051d-6958-9bb2-41cf1431493f">
+      <Execution id="0debfe0f-62c8-4e25-a026-71c03bf32645" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.CreateDemandwareOrderSharedTests" name="Create_order_with_price_adjustment" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,False,12)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="64815d72-15a9-0c89-7f6d-0212cbec3228">
+      <Execution id="7a5335bb-e2be-4177-b832-77ff1b54fffb" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,False,12)" />
+    </UnitTest>
+    <UnitTest name="AXFinancialPeriodGeneralLedgersExportWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="33468145-8e6f-69ab-1336-583b8b82fb16">
+      <Execution id="c6170981-7b56-46ca-a738-c5568779b8c5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.AXFinancialPeriodExportTests" name="AXFinancialPeriodGeneralLedgersExportWorks" />
+    </UnitTest>
+    <UnitTest name="Create_order(&quot;AfterFullyPaid&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="5a16b552-45bd-aa69-7700-01aefc09e56f">
+      <Execution id="13bcc551-7489-43c0-84ba-efb3a37c2fa3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.CreateDemandwareOrderSharedTests" name="Create_order(&quot;AfterFullyPaid&quot;)" />
+    </UnitTest>
+    <UnitTest name="Test_import_update" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="877125a5-e9bc-b789-c8e1-8a30e98da59f">
+      <Execution id="f96d1ccc-ca29-4c71-8a64-fc3a21f0804a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.StepMockTests" name="Test_import_update" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,True,False,True,8)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="33ffe284-21bc-2d1c-7411-69d8ba831ebf">
+      <Execution id="bda37d36-fc94-428b-8477-f083ad6770a8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,True,False,True,8)" />
+    </UnitTest>
+    <UnitTest name="Create_order_and_return(&quot;EveryShipment&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="2d6012c8-8b2c-c1b6-5e8d-c04d7bcdef83">
+      <Execution id="a0e77ac6-e512-48bd-b5cd-8e42fcfca6ee" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.CreateDemandwareOrderSharedTests" name="Create_order_and_return(&quot;EveryShipment&quot;)" />
+    </UnitTest>
+    <UnitTest name="ax_financial_should_work_with_different_currencies_and_different_countries(&quot;DB&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="59432a19-3f2b-dc96-daa3-306d1bdd2a55">
+      <Execution id="47a12bdb-a793-43c1-a210-ba3fe7448d43" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.AXFinancialPeriodExportTests" name="ax_financial_should_work_with_different_currencies_and_different_countries(&quot;DB&quot;)" />
+    </UnitTest>
+    <UnitTest name="Create_order(&quot;EveryShipment&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="2a48a337-97a4-122f-7835-a0a2b126a109">
+      <Execution id="9c2c635c-945e-4602-8481-59bc0b6e4578" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.CreateDemandwareOrderSharedTests" name="Create_order(&quot;EveryShipment&quot;)" />
+    </UnitTest>
+    <UnitTest name="Happy_flow_send_immediately" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="7d6439b2-1482-5340-68ee-76376a159a7a">
+      <Execution id="b9bac92d-bf93-487f-80a0-dccc85054e5d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.GiftcardTests" name="Happy_flow_send_immediately" />
+    </UnitTest>
+    <UnitTest name="Only_shops_with_stock_are_returned_by_default" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="9aa45023-5be8-bc53-7378-2bc8203b01dc">
+      <Execution id="e6212c71-6fd3-44e9-abc4-069a0700153e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.ListPickupStoresSharedTests" name="Only_shops_with_stock_are_returned_by_default" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,False,False,0)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="14004b92-c5a4-37d8-d4de-88b883aaf94e">
+      <Execution id="e4f8d8cf-1245-4ff5-80ac-89d2fecf77e3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,False,False,0)" />
+    </UnitTest>
+    <UnitTest name="Create_order_with_edg_caseprice_adjustment" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="54066b23-d779-ac76-7f4a-53898ec46ca0">
+      <Execution id="45733c5e-394a-46d5-9e60-930fa49e0690" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.CreateDemandwareOrderSharedTests" name="Create_order_with_edg_caseprice_adjustment" />
+    </UnitTest>
+    <UnitTest name="Shops_with_insufficient_stock_and_insufficient_replacing_stock_arent_returned" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="a9aafeb5-6ce0-dbb7-4d2e-acd7188443e8">
+      <Execution id="9a67dc27-e90a-4f0f-813c-c52adb69dbbc" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.ListPickupStoresSharedTests" name="Shops_with_insufficient_stock_and_insufficient_replacing_stock_arent_returned" />
+    </UnitTest>
+    <UnitTest name="Tests_step_by_step_skipping_phases_on_import_products" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="3941f25c-b364-ea5f-36f1-4ece6d958068">
+      <Execution id="d7bdabf0-d812-4f6a-bba4-59a1910483c6" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.StepMockTests" name="Tests_step_by_step_skipping_phases_on_import_products" />
+    </UnitTest>
+    <UnitTest name="AX_Financial_period_export_works(&quot;DEFAULT&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="69579782-5d77-e2cf-8559-70a2b9cd71ae">
+      <Execution id="d59d4bb9-2af1-4977-9f23-872020917f94" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.AXFinancialPeriodExportTests" name="AX_Financial_period_export_works(&quot;DEFAULT&quot;)" />
+    </UnitTest>
+    <UnitTest name="Shops_with_stock_replacing_stock_are_returned" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="5f768bdb-36bf-25ec-b7c6-c425251d97a3">
+      <Execution id="ea830842-af68-4b00-8254-9c1df878ee23" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.ListPickupStoresSharedTests" name="Shops_with_stock_replacing_stock_are_returned" />
+    </UnitTest>
+    <UnitTest name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,True,12)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="0328aad7-0a8e-e5c8-a402-0c7540310f24">
+      <Execution id="ae894bdb-4ba5-454a-b93d-554e8b660f18" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.RitualsGiftWrappingCostsCalculatorTests" name="Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,True,12)" />
+    </UnitTest>
+    <UnitTest name="Create_order_and_return(&quot;AfterFullyPaid&quot;)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.rituals/bin/release/eva.testsuite.rituals.dll" id="2887152a-18a4-150d-f6b1-77104e9d9728">
+      <Execution id="d16669c7-76da-48d0-8543-914678135bb2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Rituals.CreateDemandwareOrderSharedTests" name="Create_order_and_return(&quot;AfterFullyPaid&quot;)" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="59432a19-3f2b-dc96-daa3-306d1bdd2a55" executionId="47a12bdb-a793-43c1-a210-ba3fe7448d43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a16b552-45bd-aa69-7700-01aefc09e56f" executionId="13bcc551-7489-43c0-84ba-efb3a37c2fa3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c85b1b9-5d62-b635-ffc0-4458d685185b" executionId="eda1f359-ce17-4b30-a786-a43cb047e71c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9aafeb5-6ce0-dbb7-4d2e-acd7188443e8" executionId="9a67dc27-e90a-4f0f-813c-c52adb69dbbc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f768bdb-36bf-25ec-b7c6-c425251d97a3" executionId="ea830842-af68-4b00-8254-9c1df878ee23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1cef0b37-7e46-172f-1e7f-4b1ba95682ce" executionId="94c48ee1-dd4d-42a4-af8f-88395ee5a8b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acc12a68-24da-bb13-d403-4a26118fdb0f" executionId="412ddbca-5460-4db8-880f-5f3ace3b16fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8356c197-5957-d21c-b1ed-62d2b7a71a59" executionId="966f31f5-aece-47d5-b900-096edd6e46be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ea958f1-051d-6958-9bb2-41cf1431493f" executionId="0debfe0f-62c8-4e25-a026-71c03bf32645" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a48a337-97a4-122f-7835-a0a2b126a109" executionId="9c2c635c-945e-4602-8481-59bc0b6e4578" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b789dcee-e6a0-d7cf-9561-56c06806eeff" executionId="e739659a-345a-4cb1-8801-105b335f226d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9aa45023-5be8-bc53-7378-2bc8203b01dc" executionId="e6212c71-6fd3-44e9-abc4-069a0700153e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="877125a5-e9bc-b789-c8e1-8a30e98da59f" executionId="f96d1ccc-ca29-4c71-8a64-fc3a21f0804a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d6012c8-8b2c-c1b6-5e8d-c04d7bcdef83" executionId="a0e77ac6-e512-48bd-b5cd-8e42fcfca6ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d6439b2-1482-5340-68ee-76376a159a7a" executionId="b9bac92d-bf93-487f-80a0-dccc85054e5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64815d72-15a9-0c89-7f6d-0212cbec3228" executionId="7a5335bb-e2be-4177-b832-77ff1b54fffb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33ffe284-21bc-2d1c-7411-69d8ba831ebf" executionId="bda37d36-fc94-428b-8477-f083ad6770a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54066b23-d779-ac76-7f4a-53898ec46ca0" executionId="45733c5e-394a-46d5-9e60-930fa49e0690" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="14004b92-c5a4-37d8-d4de-88b883aaf94e" executionId="e4f8d8cf-1245-4ff5-80ac-89d2fecf77e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69579782-5d77-e2cf-8559-70a2b9cd71ae" executionId="d59d4bb9-2af1-4977-9f23-872020917f94" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3941f25c-b364-ea5f-36f1-4ece6d958068" executionId="d7bdabf0-d812-4f6a-bba4-59a1910483c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33468145-8e6f-69ab-1336-583b8b82fb16" executionId="c6170981-7b56-46ca-a738-c5568779b8c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0328aad7-0a8e-e5c8-a402-0c7540310f24" executionId="ae894bdb-4ba5-454a-b93d-554e8b660f18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2887152a-18a4-150d-f6b1-77104e9d9728" executionId="d16669c7-76da-48d0-8543-914678135bb2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="24" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Rituals/bin/Release/EVA.TestSuite.Rituals.dll
+   NUnit3TestExecutor discovered 24 of 24 NUnit test cases using Current Discovery mode, Non-Explicit run
+AX_Financial_period_export_works("DEFAULT"): OneTimeSetUp: STRING-ID-SKIP-Parsing a JSON document instead of an XML document, not sure why
+AX_Financial_period_export_works("DB"): OneTimeSetUp: STRING-ID-SKIP-Parsing a JSON document instead of an XML document, not sure why
+Test 'AX_Financial_period_export_works("DEFAULT")' was skipped in the test run.
+Test 'AX_Financial_period_export_works("DB")' was skipped in the test run.
+ax_financial_should_work_with_different_currencies_and_different_countries("DB"): Skipping test: it does not belong to this partition.
+AXFinancialPeriodGeneralLedgersExportWorks: Skipping test: it does not belong to this partition.
+Create_order("EveryShipment"): Skipping test: it does not belong to this partition.
+Create_order("AfterFullyPaid"): Skipping test: it does not belong to this partition.
+Create_order_and_return("EveryShipment"): Skipping test: it does not belong to this partition.
+Create_order_and_return("AfterFullyPaid"): Skipping test: it does not belong to this partition.
+Create_order_with_edg_caseprice_adjustment: Skipping test: it does not belong to this partition.
+Create_order_with_price_adjustment: Skipping test: it does not belong to this partition.
+Happy_flow_send_immediately: Skipping test: it does not belong to this partition.
+Test 'ax_financial_should_work_with_different_currencies_and_different_countries("DB")' was skipped in the test run.
+Test 'AXFinancialPeriodGeneralLedgersExportWorks' was skipped in the test run.
+Test 'Create_order("EveryShipment")' was skipped in the test run.
+Test 'Create_order("AfterFullyPaid")' was skipped in the test run.
+Test 'Create_order_and_return("EveryShipment")' was skipped in the test run.
+Test 'Create_order_and_return("AfterFullyPaid")' was skipped in the test run.
+Test 'Create_order_with_edg_caseprice_adjustment' was skipped in the test run.
+Test 'Create_order_with_price_adjustment' was skipped in the test run.
+Test 'Happy_flow_send_immediately' was skipped in the test run.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,False,False,0): Skipping test: it does not belong to this partition.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,False,12): Skipping test: it does not belong to this partition.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,False,60): Skipping test: it does not belong to this partition.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,True,12): Skipping test: it does not belong to this partition.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,True,60): Skipping test: it does not belong to this partition.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,True,False,True,8): Skipping test: it does not belong to this partition.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,False,False,0)' was skipped in the test run.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,False,12)' was skipped in the test run.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,False,60)' was skipped in the test run.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,True,False,True,12)' was skipped in the test run.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(null,null,False,True,True,60)' was skipped in the test run.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,True,False,True,8)' was skipped in the test run.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,False,True,True,28): Skipping test: it does not belong to this partition.
+Gift_wrapping_and_greeting_card_costs_are_properly_calculated(0,0,False,True,True,0): Skipping test: it does not belong to this partition.
+Test_import_update: Use to validate the Fields are updated if step.xml changes.
+Tests_step_by_step_skipping_phases_on_import_products: This can only be used to test the Step by Step phasing out on the Step Import Products if you have a valid step.xml file locally.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(5,3,False,True,True,28)' was skipped in the test run.
+Test 'Gift_wrapping_and_greeting_card_costs_are_properly_calculated(0,0,False,True,True,0)' was skipped in the test run.
+Test 'Test_import_update' was skipped in the test run.
+Test 'Tests_step_by_step_skipping_phases_on_import_products' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

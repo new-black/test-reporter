@@ -1,10 +1,11 @@
-import {parseStringPromise} from 'xml2js'
+import { parseStringPromise } from 'xml2js'
 
-import {ErrorInfo, Outcome, TrxReport, UnitTest, UnitTestResult} from './dotnet-trx-types'
-import {ParseOptions, TestParser} from '../../test-parser'
+import { ErrorInfo, Outcome, TrxReport, UnitTest, UnitTestResult } from './dotnet-trx-types'
+import { ParseOptions, TestParser } from '../../test-parser'
 
-import {getBasePath, normalizeFilePath} from '../../utils/path-utils'
-import {parseIsoDate, parseNetDuration} from '../../utils/parse-utils'
+import { getBasePath, normalizeFilePath } from '../../utils/path-utils'
+import { parseIsoDate, parseNetDuration } from '../../utils/parse-utils'
+import fs from 'fs'
 
 import {
   TestExecutionResult,
@@ -16,19 +17,20 @@ import {
 } from '../../test-results'
 
 class TestClass {
-  constructor(readonly name: string) {}
+  constructor(readonly name: string) { }
   readonly tests: Test[] = []
 }
 
 class Test {
   constructor(
+    readonly id: string,
     readonly name: string,
     readonly outcome: Outcome,
     readonly duration: number,
     readonly error?: ErrorInfo
-  ) {}
+  ) { }
 
-  get result(): TestExecutionResult | undefined {
+  get result(): TestExecutionResult {
     switch (this.outcome) {
       case 'Passed':
         return 'success'
@@ -43,7 +45,7 @@ class Test {
 export class DotnetTrxParser implements TestParser {
   assumedWorkDir: string | undefined
 
-  constructor(readonly options: ParseOptions) {}
+  constructor(readonly options: ParseOptions) { }
 
   async parse(path: string, content: string): Promise<TestRunResult> {
     const trx = await this.getTrxReport(path, content)
@@ -66,7 +68,7 @@ export class DotnetTrxParser implements TestParser {
       return []
     }
 
-    const unitTests: {[id: string]: UnitTest} = {}
+    const unitTests: { [id: string]: UnitTest } = {}
     for (const td of trx.TestRun.TestDefinitions) {
       for (const ut of td.UnitTest) {
         unitTests[ut.$.id] = ut
@@ -78,7 +80,7 @@ export class DotnetTrxParser implements TestParser {
       test: unitTests[result.$.testId]
     }))
 
-    const testClasses: {[name: string]: TestClass} = {}
+    const testClasses: { [name: string]: TestClass } = {}
     for (const r of unitTestsResults) {
       const className = r.test.TestMethod[0].$.className
       let tc = testClasses[className]
@@ -86,6 +88,17 @@ export class DotnetTrxParser implements TestParser {
         tc = new TestClass(className)
         testClasses[tc.name] = tc
       }
+
+      if (r.result.$.outcome === 'NotExecuted') {
+        if (r.result.Output?.length > 0) {
+          if (r.result.Output[0].ErrorInfo?.length > 0) {
+            if (r.result.Output[0].ErrorInfo[0].Message[0].trim().match(/it does not belong to this partition/)) {
+              continue
+            }
+          }
+        }
+      }
+
       const error = this.getErrorInfo(r.result)
       const durationAttr = r.result.$.duration
       const duration = durationAttr ? parseNetDuration(durationAttr) : 0
@@ -96,7 +109,7 @@ export class DotnetTrxParser implements TestParser {
           ? resultTestName.substr(className.length + 1)
           : resultTestName
 
-      const test = new Test(testName, r.result.$.outcome, duration, error)
+      const test = new Test(r.test.$.id, testName, r.result.$.outcome, duration, error)
       tc.tests.push(test)
     }
 
@@ -109,10 +122,17 @@ export class DotnetTrxParser implements TestParser {
     const totalTime = parseIsoDate(times.finish).getTime() - parseIsoDate(times.start).getTime()
 
     const suites = testClasses.map(testClass => {
-      const tests = testClass.tests.map(test => {
-        const error = this.getError(test)
-        return new TestCaseResult(test.name, test.result, test.duration, error)
-      })
+      const tests = testClass.tests
+        .map(test => {
+          const error = this.getError(test)
+
+          if (error?.message?.trim().match(/it does not belong to this partition/)) {
+            return null
+          }
+
+          return new TestCaseResult(test.id, test.name, test.result, test.duration, error)
+        })
+        .filter(t => t != null)
       const group = new TestGroupResult(null, tests)
       return new TestSuiteResult(testClass.name, [group])
     })
@@ -164,10 +184,10 @@ export class DotnetTrxParser implements TestParser {
     }
   }
 
-  private exceptionThrowSource(stackTrace: string): {path: string; line: number} | undefined {
+  private exceptionThrowSource(stackTrace: string): { path: string; line: number } | undefined {
     const lines = stackTrace.split(/\r*\n/)
     const re = / in (.+):line (\d+)$/
-    const {trackedFiles} = this.options
+    const { trackedFiles } = this.options
 
     for (const str of lines) {
       const match = str.match(re)
@@ -179,7 +199,7 @@ export class DotnetTrxParser implements TestParser {
           const file = filePath.substr(workDir.length)
           if (trackedFiles.includes(file)) {
             const line = parseInt(lineStr)
-            return {path: file, line}
+            return { path: file, line }
           }
         }
       }

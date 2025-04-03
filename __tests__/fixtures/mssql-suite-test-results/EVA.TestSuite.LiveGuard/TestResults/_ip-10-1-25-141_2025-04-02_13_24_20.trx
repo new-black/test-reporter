@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="412102f0-22c6-4224-b94b-4b9851548d3c" name="@ip-10-1-25-141 2025-04-02 13:24:20" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:24:20.7555391+00:00" queuing="2025-04-02T13:24:20.7555392+00:00" start="2025-04-02T13:24:18.8474408+00:00" finish="2025-04-02T13:24:35.2364387+00:00" />
+  <TestSettings name="default" id="c9100508-be05-4ebb-8a80-1e8fdd0ecce4">
+    <Deployment runDeploymentRoot="_ip-10-1-25-141_2025-04-02_13_24_20" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="520d9ea9-bc93-42b6-a1f5-42a473e4f18b" testId="83e8531a-9c7a-ff0d-72df-84349ddecbfd" testName="Serial_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.3187040" startTime="2025-04-02T13:24:33.8311917+00:00" endTime="2025-04-02T13:24:34.1498952+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="520d9ea9-bc93-42b6-a1f5-42a473e4f18b">
+      <Output>
+        <StdOut>Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c6d23a1d-50d9-4e31-ab30-d0a8e9c36f6c" testId="5f4f7b27-116a-b2e8-3c33-560b73ace9a7" testName="CustomerIdentifiers_Can_Be_Set" computerName="ip-10-1-25-141" duration="00:00:00.2137030" startTime="2025-04-02T13:24:24.3473909+00:00" endTime="2025-04-02T13:24:24.5610927+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6d23a1d-50d9-4e31-ab30-d0a8e9c36f6c" />
+    <UnitTestResult executionId="2839baec-8b67-4b80-9e1a-05f14570bb4f" testId="05b6226c-4b4c-40ef-7294-315e6b4f83ca" testName="Return_Order_works" computerName="ip-10-1-25-141" duration="00:00:00.2034810" startTime="2025-04-02T13:24:33.6276620+00:00" endTime="2025-04-02T13:24:33.8311424+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2839baec-8b67-4b80-9e1a-05f14570bb4f" />
+    <UnitTestResult executionId="a13f61fa-3c12-45ac-8522-fc8e41a8f7be" testId="71cfae47-cbb6-5fb6-8d99-46bfca99e0d7" testName="ExistingClientID" computerName="ip-10-1-25-141" duration="00:00:00.0138220" startTime="2025-04-02T13:24:19.9889174+00:00" endTime="2025-04-02T13:24:20.0027055+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a13f61fa-3c12-45ac-8522-fc8e41a8f7be">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="845479c9-a073-47e3-a276-f49f5d293e04" testId="6e400daf-20dd-c6c8-9fcf-93cc5688c780" testName="CanListDevices" computerName="ip-10-1-25-141" duration="00:00:00.0005320" startTime="2025-04-02T13:24:35.1760025+00:00" endTime="2025-04-02T13:24:35.1765339+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="845479c9-a073-47e3-a276-f49f5d293e04">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0f15bed1-aae2-430e-9f79-ab54ef327c09" testId="3f71ca73-f2c1-d7fb-7e7e-94cea1a925ff" testName="StubOrderPaid" computerName="ip-10-1-25-141" duration="00:00:01.3607020" startTime="2025-04-02T13:24:27.5346732+00:00" endTime="2025-04-02T13:24:28.8953744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f15bed1-aae2-430e-9f79-ab54ef327c09" />
+    <UnitTestResult executionId="688f1d3f-b141-41fe-90ab-66d48c30f0ec" testId="0ec93676-01e1-e119-0956-42f59ffe863f" testName="Serial_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.3628950" startTime="2025-04-02T13:24:27.1717135+00:00" endTime="2025-04-02T13:24:27.5346065+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="688f1d3f-b141-41fe-90ab-66d48c30f0ec">
+      <Output>
+        <StdOut>Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a81fb2d2-9f17-468a-ae9e-5bf7ceab20d8" testId="64f38330-a125-bf35-8fb8-1be6ba05bb8f" testName="TaxRateCategory_Is_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.1926400" startTime="2025-04-02T13:24:34.9829390+00:00" endTime="2025-04-02T13:24:35.1755784+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a81fb2d2-9f17-468a-ae9e-5bf7ceab20d8" />
+    <UnitTestResult executionId="47e80dbd-f5e7-4e1d-8658-2f9d4eff2c15" testId="d762947d-6fdb-3c29-244e-01f7cf59d9d5" testName="CustomerIdentifiers_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.5304170" startTime="2025-04-02T13:24:31.1343081+00:00" endTime="2025-04-02T13:24:31.6647243+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47e80dbd-f5e7-4e1d-8658-2f9d4eff2c15">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnitSets limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2192f7db-ebe1-47ae-bbfe-7dea968a0676" testId="9e83957f-ed62-247e-bef3-e6912aa7a045" testName="Remark_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.2859400" startTime="2025-04-02T13:24:33.3416576+00:00" endTime="2025-04-02T13:24:33.6275971+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2192f7db-ebe1-47ae-bbfe-7dea968a0676" />
+    <UnitTestResult executionId="14058624-a372-4e09-8ff9-50dd0ebe563f" testId="e61fa074-c836-079b-d85a-f2a5c9b90339" testName="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" computerName="ip-10-1-25-141" duration="00:00:00.5931900" startTime="2025-04-02T13:24:29.7301310+00:00" endTime="2025-04-02T13:24:30.3233200+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14058624-a372-4e09-8ff9-50dd0ebe563f">
+      <Output>
+        <StdOut>Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d003693-8ee3-4e6a-a78b-4a128a53e993" testId="3d3cc186-b64f-64af-dad6-3ba0abc4e497" testName="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" computerName="ip-10-1-25-141" duration="00:00:01.0735720" startTime="2025-04-02T13:24:20.5989749+00:00" endTime="2025-04-02T13:24:21.6725459+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d003693-8ee3-4e6a-a78b-4a128a53e993">
+      <Output>
+        <StdOut>Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bd7ecb2b-728f-4efe-93ff-96c30456bfa8" testId="f2f7e103-5032-2d45-8687-67070153aa61" testName="StubOrderPaid" computerName="ip-10-1-25-141" duration="00:00:00.8329360" startTime="2025-04-02T13:24:34.1499494+00:00" endTime="2025-04-02T13:24:34.9828850+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd7ecb2b-728f-4efe-93ff-96c30456bfa8" />
+    <UnitTestResult executionId="29ee8907-2c12-4ac6-95dd-931250155aa3" testId="c371a9f6-fc36-abc6-1ab5-5b8d8d3d0355" testName="PlatformStatus_Triggers_SignalR" computerName="ip-10-1-25-141" duration="00:00:00.5919640" startTime="2025-04-02T13:24:20.0066647+00:00" endTime="2025-04-02T13:24:20.5986285+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29ee8907-2c12-4ac6-95dd-931250155aa3">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/CreateOrganizationUnit required_field:ToCreate.CurrencyID - Field ToCreate.CurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6b77586b-2486-428a-a51f-82b90b062a99" testId="186460fa-e6a4-e684-3a5b-2765bcfca5e8" testName="StubOrder" computerName="ip-10-1-25-141" duration="00:00:00.0006759" startTime="2025-04-02T13:24:20.0035511+00:00" endTime="2025-04-02T13:24:20.0042270+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b77586b-2486-428a-a51f-82b90b062a99">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3ca87c3f-7deb-47b0-ab72-38d088120e2f" testId="822c2187-0858-4a90-efe7-f3d07dcfa6fa" testName="Product_identifiers_work" computerName="ip-10-1-25-141" duration="00:00:00.2210090" startTime="2025-04-02T13:24:33.0252562+00:00" endTime="2025-04-02T13:24:33.2462646+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ca87c3f-7deb-47b0-ab72-38d088120e2f" />
+    <UnitTestResult executionId="d63daa1f-9340-4c0d-b10b-8bb2d9dbe251" testId="3ff7319d-a9d9-c5fc-6bc7-0520d479d365" testName="Invoice_Can_Be_Pushed_With_DiscountIDs" computerName="ip-10-1-25-141" duration="00:00:00.2780599" startTime="2025-04-02T13:24:25.6284773+00:00" endTime="2025-04-02T13:24:25.9065363+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d63daa1f-9340-4c0d-b10b-8bb2d9dbe251" />
+    <UnitTestResult executionId="b85f573b-32d6-45d5-9c45-09652ec812a5" testId="a3f0a28d-8374-d73b-d769-811f3be132c6" testName="Pushed_Order_Are_CreatedByEmployee" computerName="ip-10-1-25-141" duration="00:00:00.1125430" startTime="2025-04-02T13:24:26.4357104+00:00" endTime="2025-04-02T13:24:26.5482520+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b85f573b-32d6-45d5-9c45-09652ec812a5" />
+    <UnitTestResult executionId="f6160c49-2421-4913-996d-fe54b8153e7a" testId="a7b087c8-4a51-b2e6-1ed8-3a69fe60fa05" testName="Remark_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.3951900" startTime="2025-04-02T13:24:26.5483098+00:00" endTime="2025-04-02T13:24:26.9434990+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6160c49-2421-4913-996d-fe54b8153e7a" />
+    <UnitTestResult executionId="24c3a235-2c10-4885-9867-6f48dc0fff19" testId="01c5e80e-7983-6634-526c-0b781bd8c09c" testName="Cash_works" computerName="ip-10-1-25-141" duration="00:00:00.5233100" startTime="2025-04-02T13:24:30.6109286+00:00" endTime="2025-04-02T13:24:31.1342382+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24c3a235-2c10-4885-9867-6f48dc0fff19">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="283c2084-dc1c-4f9b-a545-74558e6e8653" testId="711840ea-5507-933d-5ac8-8c20c551d26c" testName="Return_Order_works" computerName="ip-10-1-25-141" duration="00:00:00.2281050" startTime="2025-04-02T13:24:26.9435536+00:00" endTime="2025-04-02T13:24:27.1716577+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="283c2084-dc1c-4f9b-a545-74558e6e8653" />
+    <UnitTestResult executionId="c39fb4ac-bdab-4b94-8ae6-833b1cda610d" testId="ced67d0a-9a5c-b9e6-0e84-56070b4a61ae" testName="Cash_works" computerName="ip-10-1-25-141" duration="00:00:00.7980640" startTime="2025-04-02T13:24:22.7670398+00:00" endTime="2025-04-02T13:24:23.5651027+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c39fb4ac-bdab-4b94-8ae6-833b1cda610d">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="421e0a67-d178-431e-8e90-f59cdc5bd643" testId="3c4e9d36-71a4-0b1d-83c4-3d956df7579c" testName="StubOrderPaid" computerName="ip-10-1-25-141" duration="00:00:00.0002280" startTime="2025-04-02T13:24:20.0042724+00:00" endTime="2025-04-02T13:24:20.0045006+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="421e0a67-d178-431e-8e90-f59cdc5bd643">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f32da6b-9f51-417a-86f7-949f70350af1" testId="962b8525-b0aa-ac70-fc48-ef97ee071312" testName="CaptureMomentIsIgnored" computerName="ip-10-1-25-141" duration="00:00:00.4102890" startTime="2025-04-02T13:24:22.3566985+00:00" endTime="2025-04-02T13:24:22.7669871+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f32da6b-9f51-417a-86f7-949f70350af1">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="820eec37-d001-47d7-9af4-458a7fff136e" testId="99d4e849-cc1c-5bb1-33a4-9c2cedc98d75" testName="TaxRateCategory_Is_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.1748420" startTime="2025-04-02T13:24:28.8954389+00:00" endTime="2025-04-02T13:24:29.0702797+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="820eec37-d001-47d7-9af4-458a7fff136e" />
+    <UnitTestResult executionId="c0bf96e0-08e0-48eb-b2e8-c31c14276aa9" testId="6f6993e5-9227-f444-dd58-df39bece020a" testName="CaptureMomentIsIgnored" computerName="ip-10-1-25-141" duration="00:00:00.2874330" startTime="2025-04-02T13:24:30.3234371+00:00" endTime="2025-04-02T13:24:30.6108695+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0bf96e0-08e0-48eb-b2e8-c31c14276aa9">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="04e63ce0-88c3-4c02-81ce-838f42363bf1" testId="4ba03f84-fe31-8bf3-1274-b11b2338b28c" testName="Invoice_Can_Be_Pushed_With_DiscountIDs" computerName="ip-10-1-25-141" duration="00:00:00.3241900" startTime="2025-04-02T13:24:32.4511790+00:00" endTime="2025-04-02T13:24:32.7753687+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04e63ce0-88c3-4c02-81ce-838f42363bf1" />
+    <UnitTestResult executionId="a9eb4d7a-c4bf-4524-b620-5c06fbd64166" testId="c3133a0e-0660-0395-a4be-8c1fd497d0aa" testName="Invoice_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.5044689" startTime="2025-04-02T13:24:25.1239276+00:00" endTime="2025-04-02T13:24:25.6283953+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9eb4d7a-c4bf-4524-b620-5c06fbd64166" />
+    <UnitTestResult executionId="a420911b-94c2-407b-98ae-09095ce327f7" testId="89b6f1dd-284f-bf99-82ac-4b75e321a39b" testName="PaymentData_works" computerName="ip-10-1-25-141" duration="00:00:00.2497490" startTime="2025-04-02T13:24:32.7754491+00:00" endTime="2025-04-02T13:24:33.0251973+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a420911b-94c2-407b-98ae-09095ce327f7">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d329dd09-b448-4315-91e2-d51367ffbde8" testId="c3a19f2c-06e0-6b21-02b1-8fb4d6b0d253" testName="Gift_Card_Can_Be_Pushed_Even_When_Broken" computerName="ip-10-1-25-141" duration="00:00:00.3827280" startTime="2025-04-02T13:24:31.8034986+00:00" endTime="2025-04-02T13:24:32.1862266+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d329dd09-b448-4315-91e2-d51367ffbde8" />
+    <UnitTestResult executionId="fedc0b74-1ac8-4cbf-9858-3e9264cf4102" testId="22409722-e0d3-6529-19f1-abf44b00dd0c" testName="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" computerName="ip-10-1-25-141" duration="00:00:00.6590790" startTime="2025-04-02T13:24:29.0709982+00:00" endTime="2025-04-02T13:24:29.7300764+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fedc0b74-1ac8-4cbf-9858-3e9264cf4102">
+      <Output>
+        <StdOut>Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8382b016-b9b4-4b84-83dc-ffebb2db1a38" testId="5c649826-42bb-22af-ac9c-3f3b0931670a" testName="Product_identifiers_work" computerName="ip-10-1-25-141" duration="00:00:00.2594280" startTime="2025-04-02T13:24:26.1762207+00:00" endTime="2025-04-02T13:24:26.4356482+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8382b016-b9b4-4b84-83dc-ffebb2db1a38" />
+    <UnitTestResult executionId="4be3bdcb-2ac7-4cbd-b6af-730d442425b7" testId="6179ae38-43b3-3680-ee82-925bfffe2916" testName="CustomerIdentifiers_Can_Be_Set" computerName="ip-10-1-25-141" duration="00:00:00.1386450" startTime="2025-04-02T13:24:31.6647830+00:00" endTime="2025-04-02T13:24:31.8034270+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4be3bdcb-2ac7-4cbd-b6af-730d442425b7" />
+    <UnitTestResult executionId="1e380de3-b69f-4c3b-80ab-e1a2f50229a7" testId="237b1d30-1f22-17a3-4c40-dd26d9134b81" testName="Invoice_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.2648260" startTime="2025-04-02T13:24:32.1862985+00:00" endTime="2025-04-02T13:24:32.4511245+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e380de3-b69f-4c3b-80ab-e1a2f50229a7" />
+    <UnitTestResult executionId="4cdaaea4-4071-4b91-8a86-fceb0f7c69ce" testId="ebdc9a0e-bca8-1251-2a8a-9e0a80b12b68" testName="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" computerName="ip-10-1-25-141" duration="00:00:00.6839970" startTime="2025-04-02T13:24:21.6726150+00:00" endTime="2025-04-02T13:24:22.3566110+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4cdaaea4-4071-4b91-8a86-fceb0f7c69ce">
+      <Output>
+        <StdOut>Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3c7e4304-f389-401f-885b-74d398f4428c" testId="079a5dd6-ec53-fe47-f34b-d682cedd8bc9" testName="Pushed_Order_Are_CreatedByEmployee" computerName="ip-10-1-25-141" duration="00:00:00.0952760" startTime="2025-04-02T13:24:33.2463243+00:00" endTime="2025-04-02T13:24:33.3416005+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c7e4304-f389-401f-885b-74d398f4428c" />
+    <UnitTestResult executionId="53a7e1db-26fc-48e9-8ae6-abaef55a1fac" testId="df126b41-ed8d-86ea-0522-52d2482a1fda" testName="CustomerIdentifiers_Can_Be_Pushed" computerName="ip-10-1-25-141" duration="00:00:00.7821380" startTime="2025-04-02T13:24:23.5651727+00:00" endTime="2025-04-02T13:24:24.3473096+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="53a7e1db-26fc-48e9-8ae6-abaef55a1fac">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnitSets limit_large - Limit parameter 1000 is high - consider adding paging.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03c92ca7-bd02-4767-b4ab-d1012b64624d" testId="5cd100e3-921f-b1f4-147d-33df85d31d1d" testName="Gift_Card_Can_Be_Pushed_Even_When_Broken" computerName="ip-10-1-25-141" duration="00:00:00.5627190" startTime="2025-04-02T13:24:24.5611567+00:00" endTime="2025-04-02T13:24:25.1238745+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03c92ca7-bd02-4767-b4ab-d1012b64624d" />
+    <UnitTestResult executionId="b3f0157d-6473-498d-856e-457c0c389c62" testId="2d22017c-9eeb-dda3-b347-ac0de4f3e572" testName="Force_local_mode_works" computerName="ip-10-1-25-141" duration="00:00:00.0002560" startTime="2025-04-02T13:24:20.0062386+00:00" endTime="2025-04-02T13:24:20.0064940+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3f0157d-6473-498d-856e-457c0c389c62">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="19c57a42-8bfb-49ff-9e8d-496770b859b0" testId="51e4e4f2-5171-8577-183b-5eed43faebcc" testName="PaymentData_works" computerName="ip-10-1-25-141" duration="00:00:00.2695510" startTime="2025-04-02T13:24:25.9066018+00:00" endTime="2025-04-02T13:24:26.1761523+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19c57a42-8bfb-49ff-9e8d-496770b859b0">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="22409722-e0d3-6529-19f1-abf44b00dd0c">
+      <Execution id="fedc0b74-1ac8-4cbf-9858-3e9264cf4102" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" />
+    </UnitTest>
+    <UnitTest name="Return_Order_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="711840ea-5507-933d-5ac8-8c20c551d26c">
+      <Execution id="283c2084-dc1c-4f9b-a545-74558e6e8653" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Return_Order_works" />
+    </UnitTest>
+    <UnitTest name="StubOrderPaid" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3c4e9d36-71a4-0b1d-83c4-3d956df7579c">
+      <Execution id="421e0a67-d178-431e-8e90-f59cdc5bd643" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.EVAPayTests" name="StubOrderPaid" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="237b1d30-1f22-17a3-4c40-dd26d9134b81">
+      <Execution id="1e380de3-b69f-4c3b-80ab-e1a2f50229a7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Invoice_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed_With_DiscountIDs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3ff7319d-a9d9-c5fc-6bc7-0520d479d365">
+      <Execution id="d63daa1f-9340-4c0d-b10b-8bb2d9dbe251" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Invoice_Can_Be_Pushed_With_DiscountIDs" />
+    </UnitTest>
+    <UnitTest name="Force_local_mode_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="2d22017c-9eeb-dda3-b347-ac0de4f3e572">
+      <Execution id="b3f0157d-6473-498d-856e-457c0c389c62" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.ForceLocalModeTests" name="Force_local_mode_works" />
+    </UnitTest>
+    <UnitTest name="TaxRateCategory_Is_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="99d4e849-cc1c-5bb1-33a4-9c2cedc98d75">
+      <Execution id="820eec37-d001-47d7-9af4-458a7fff136e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="TaxRateCategory_Is_Pushed" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="0ec93676-01e1-e119-0956-42f59ffe863f">
+      <Execution id="688f1d3f-b141-41fe-90ab-66d48c30f0ec" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Serial_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Pushed_Order_Are_CreatedByEmployee" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="079a5dd6-ec53-fe47-f34b-d682cedd8bc9">
+      <Execution id="3c7e4304-f389-401f-885b-74d398f4428c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Pushed_Order_Are_CreatedByEmployee" />
+    </UnitTest>
+    <UnitTest name="Remark_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="a7b087c8-4a51-b2e6-1ed8-3a69fe60fa05">
+      <Execution id="f6160c49-2421-4913-996d-fe54b8153e7a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Remark_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Pushed_Order_Are_CreatedByEmployee" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="a3f0a28d-8374-d73b-d769-811f3be132c6">
+      <Execution id="b85f573b-32d6-45d5-9c45-09652ec812a5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Pushed_Order_Are_CreatedByEmployee" />
+    </UnitTest>
+    <UnitTest name="Remark_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="9e83957f-ed62-247e-bef3-e6912aa7a045">
+      <Execution id="2192f7db-ebe1-47ae-bbfe-7dea968a0676" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Remark_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Set" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="5f4f7b27-116a-b2e8-3c33-560b73ace9a7">
+      <Execution id="c6d23a1d-50d9-4e31-ab30-d0a8e9c36f6c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="CustomerIdentifiers_Can_Be_Set" />
+    </UnitTest>
+    <UnitTest name="CaptureMomentIsIgnored" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="962b8525-b0aa-ac70-fc48-ef97ee071312">
+      <Execution id="9f32da6b-9f51-417a-86f7-949f70350af1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="CaptureMomentIsIgnored" />
+    </UnitTest>
+    <UnitTest name="Product_identifiers_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="5c649826-42bb-22af-ac9c-3f3b0931670a">
+      <Execution id="8382b016-b9b4-4b84-83dc-ffebb2db1a38" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Product_identifiers_work" />
+    </UnitTest>
+    <UnitTest name="CanListDevices" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="6e400daf-20dd-c6c8-9fcf-93cc5688c780">
+      <Execution id="845479c9-a073-47e3-a276-f49f5d293e04" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.WatchtowerDeviceTests" name="CanListDevices" />
+    </UnitTest>
+    <UnitTest name="Cash_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="ced67d0a-9a5c-b9e6-0e84-56070b4a61ae">
+      <Execution id="c39fb4ac-bdab-4b94-8ae6-833b1cda610d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Cash_works" />
+    </UnitTest>
+    <UnitTest name="Cash_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="01c5e80e-7983-6634-526c-0b781bd8c09c">
+      <Execution id="24c3a235-2c10-4885-9867-6f48dc0fff19" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Cash_works" />
+    </UnitTest>
+    <UnitTest name="TaxRateCategory_Is_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="64f38330-a125-bf35-8fb8-1be6ba05bb8f">
+      <Execution id="a81fb2d2-9f17-468a-ae9e-5bf7ceab20d8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="TaxRateCategory_Is_Pushed" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="c3133a0e-0660-0395-a4be-8c1fd497d0aa">
+      <Execution id="a9eb4d7a-c4bf-4524-b620-5c06fbd64166" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Invoice_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="83e8531a-9c7a-ff0d-72df-84349ddecbfd">
+      <Execution id="520d9ea9-bc93-42b6-a1f5-42a473e4f18b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Serial_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="e61fa074-c836-079b-d85a-f2a5c9b90339">
+      <Execution id="14058624-a372-4e09-8ff9-50dd0ebe563f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" />
+    </UnitTest>
+    <UnitTest name="Gift_Card_Can_Be_Pushed_Even_When_Broken" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="c3a19f2c-06e0-6b21-02b1-8fb4d6b0d253">
+      <Execution id="d329dd09-b448-4315-91e2-d51367ffbde8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Gift_Card_Can_Be_Pushed_Even_When_Broken" />
+    </UnitTest>
+    <UnitTest name="PlatformStatus_Triggers_SignalR" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="c371a9f6-fc36-abc6-1ab5-5b8d8d3d0355">
+      <Execution id="29ee8907-2c12-4ac6-95dd-931250155aa3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PlatformStatusTests" name="PlatformStatus_Triggers_SignalR" />
+    </UnitTest>
+    <UnitTest name="Return_Order_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="05b6226c-4b4c-40ef-7294-315e6b4f83ca">
+      <Execution id="2839baec-8b67-4b80-9e1a-05f14570bb4f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Return_Order_works" />
+    </UnitTest>
+    <UnitTest name="StubOrderPaid" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="f2f7e103-5032-2d45-8687-67070153aa61">
+      <Execution id="bd7ecb2b-728f-4efe-93ff-96c30456bfa8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="StubOrderPaid" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="d762947d-6fdb-3c29-244e-01f7cf59d9d5">
+      <Execution id="47e80dbd-f5e7-4e1d-8658-2f9d4eff2c15" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="CustomerIdentifiers_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="PaymentData_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="89b6f1dd-284f-bf99-82ac-4b75e321a39b">
+      <Execution id="a420911b-94c2-407b-98ae-09095ce327f7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="PaymentData_works" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Pushed" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="df126b41-ed8d-86ea-0522-52d2482a1fda">
+      <Execution id="53a7e1db-26fc-48e9-8ae6-abaef55a1fac" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="CustomerIdentifiers_Can_Be_Pushed" />
+    </UnitTest>
+    <UnitTest name="StubOrderPaid" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3f71ca73-f2c1-d7fb-7e7e-94cea1a925ff">
+      <Execution id="0f15bed1-aae2-430e-9f79-ab54ef327c09" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="StubOrderPaid" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="ebdc9a0e-bca8-1251-2a8a-9e0a80b12b68">
+      <Execution id="4cdaaea4-4071-4b91-8a86-fceb0f7c69ce" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Serial_Can_Be_Pushed_Even_When_Broken(StockMovements)" />
+    </UnitTest>
+    <UnitTest name="Product_identifiers_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="822c2187-0858-4a90-efe7-f3d07dcfa6fa">
+      <Execution id="3ca87c3f-7deb-47b0-ab72-38d088120e2f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Product_identifiers_work" />
+    </UnitTest>
+    <UnitTest name="CustomerIdentifiers_Can_Be_Set" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="6179ae38-43b3-3680-ee82-925bfffe2916">
+      <Execution id="4be3bdcb-2ac7-4cbd-b6af-730d442425b7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="CustomerIdentifiers_Can_Be_Set" />
+    </UnitTest>
+    <UnitTest name="Invoice_Can_Be_Pushed_With_DiscountIDs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="4ba03f84-fe31-8bf3-1274-b11b2338b28c">
+      <Execution id="04e63ce0-88c3-4c02-81ce-838f42363bf1" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="Invoice_Can_Be_Pushed_With_DiscountIDs" />
+    </UnitTest>
+    <UnitTest name="StubOrder" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="186460fa-e6a4-e684-3a5b-2765bcfca5e8">
+      <Execution id="6b77586b-2486-428a-a51f-82b90b062a99" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.EVAPayTests" name="StubOrder" />
+    </UnitTest>
+    <UnitTest name="PaymentData_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="51e4e4f2-5171-8577-183b-5eed43faebcc">
+      <Execution id="19c57a42-8bfb-49ff-9e8d-496770b859b0" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="PaymentData_works" />
+    </UnitTest>
+    <UnitTest name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="3d3cc186-b64f-64af-dad6-3ba0abc4e497">
+      <Execution id="0d003693-8ee3-4e6a-a78b-4a128a53e993" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Serial_Can_Be_Pushed_Even_When_Broken(Sales)" />
+    </UnitTest>
+    <UnitTest name="Gift_Card_Can_Be_Pushed_Even_When_Broken" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="5cd100e3-921f-b1f4-147d-33df85d31d1d">
+      <Execution id="03c92ca7-bd02-4767-b4ab-d1012b64624d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(False)" name="Gift_Card_Can_Be_Pushed_Even_When_Broken" />
+    </UnitTest>
+    <UnitTest name="ExistingClientID" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="71cfae47-cbb6-5fb6-8d99-46bfca99e0d7">
+      <Execution id="a13f61fa-3c12-45ac-8522-fc8e41a8f7be" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.EVAPayTests" name="ExistingClientID" />
+    </UnitTest>
+    <UnitTest name="CaptureMomentIsIgnored" storage="/home/runner/_work/eva/eva/test/eva.testsuite.liveguard/bin/release/eva.testsuite.liveguard.dll" id="6f6993e5-9227-f444-dd58-df39bece020a">
+      <Execution id="c0bf96e0-08e0-48eb-b2e8-c31c14276aa9" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.LiveGuard.PushOrderTests(True)" name="CaptureMomentIsIgnored" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="83e8531a-9c7a-ff0d-72df-84349ddecbfd" executionId="520d9ea9-bc93-42b6-a1f5-42a473e4f18b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f4f7b27-116a-b2e8-3c33-560b73ace9a7" executionId="c6d23a1d-50d9-4e31-ab30-d0a8e9c36f6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05b6226c-4b4c-40ef-7294-315e6b4f83ca" executionId="2839baec-8b67-4b80-9e1a-05f14570bb4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71cfae47-cbb6-5fb6-8d99-46bfca99e0d7" executionId="a13f61fa-3c12-45ac-8522-fc8e41a8f7be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e400daf-20dd-c6c8-9fcf-93cc5688c780" executionId="845479c9-a073-47e3-a276-f49f5d293e04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f71ca73-f2c1-d7fb-7e7e-94cea1a925ff" executionId="0f15bed1-aae2-430e-9f79-ab54ef327c09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ec93676-01e1-e119-0956-42f59ffe863f" executionId="688f1d3f-b141-41fe-90ab-66d48c30f0ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64f38330-a125-bf35-8fb8-1be6ba05bb8f" executionId="a81fb2d2-9f17-468a-ae9e-5bf7ceab20d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d762947d-6fdb-3c29-244e-01f7cf59d9d5" executionId="47e80dbd-f5e7-4e1d-8658-2f9d4eff2c15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e83957f-ed62-247e-bef3-e6912aa7a045" executionId="2192f7db-ebe1-47ae-bbfe-7dea968a0676" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e61fa074-c836-079b-d85a-f2a5c9b90339" executionId="14058624-a372-4e09-8ff9-50dd0ebe563f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d3cc186-b64f-64af-dad6-3ba0abc4e497" executionId="0d003693-8ee3-4e6a-a78b-4a128a53e993" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f2f7e103-5032-2d45-8687-67070153aa61" executionId="bd7ecb2b-728f-4efe-93ff-96c30456bfa8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c371a9f6-fc36-abc6-1ab5-5b8d8d3d0355" executionId="29ee8907-2c12-4ac6-95dd-931250155aa3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="186460fa-e6a4-e684-3a5b-2765bcfca5e8" executionId="6b77586b-2486-428a-a51f-82b90b062a99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="822c2187-0858-4a90-efe7-f3d07dcfa6fa" executionId="3ca87c3f-7deb-47b0-ab72-38d088120e2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ff7319d-a9d9-c5fc-6bc7-0520d479d365" executionId="d63daa1f-9340-4c0d-b10b-8bb2d9dbe251" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3f0a28d-8374-d73b-d769-811f3be132c6" executionId="b85f573b-32d6-45d5-9c45-09652ec812a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7b087c8-4a51-b2e6-1ed8-3a69fe60fa05" executionId="f6160c49-2421-4913-996d-fe54b8153e7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01c5e80e-7983-6634-526c-0b781bd8c09c" executionId="24c3a235-2c10-4885-9867-6f48dc0fff19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="711840ea-5507-933d-5ac8-8c20c551d26c" executionId="283c2084-dc1c-4f9b-a545-74558e6e8653" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ced67d0a-9a5c-b9e6-0e84-56070b4a61ae" executionId="c39fb4ac-bdab-4b94-8ae6-833b1cda610d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c4e9d36-71a4-0b1d-83c4-3d956df7579c" executionId="421e0a67-d178-431e-8e90-f59cdc5bd643" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="962b8525-b0aa-ac70-fc48-ef97ee071312" executionId="9f32da6b-9f51-417a-86f7-949f70350af1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99d4e849-cc1c-5bb1-33a4-9c2cedc98d75" executionId="820eec37-d001-47d7-9af4-458a7fff136e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f6993e5-9227-f444-dd58-df39bece020a" executionId="c0bf96e0-08e0-48eb-b2e8-c31c14276aa9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ba03f84-fe31-8bf3-1274-b11b2338b28c" executionId="04e63ce0-88c3-4c02-81ce-838f42363bf1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3133a0e-0660-0395-a4be-8c1fd497d0aa" executionId="a9eb4d7a-c4bf-4524-b620-5c06fbd64166" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89b6f1dd-284f-bf99-82ac-4b75e321a39b" executionId="a420911b-94c2-407b-98ae-09095ce327f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3a19f2c-06e0-6b21-02b1-8fb4d6b0d253" executionId="d329dd09-b448-4315-91e2-d51367ffbde8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22409722-e0d3-6529-19f1-abf44b00dd0c" executionId="fedc0b74-1ac8-4cbf-9858-3e9264cf4102" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c649826-42bb-22af-ac9c-3f3b0931670a" executionId="8382b016-b9b4-4b84-83dc-ffebb2db1a38" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6179ae38-43b3-3680-ee82-925bfffe2916" executionId="4be3bdcb-2ac7-4cbd-b6af-730d442425b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="237b1d30-1f22-17a3-4c40-dd26d9134b81" executionId="1e380de3-b69f-4c3b-80ab-e1a2f50229a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebdc9a0e-bca8-1251-2a8a-9e0a80b12b68" executionId="4cdaaea4-4071-4b91-8a86-fceb0f7c69ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="079a5dd6-ec53-fe47-f34b-d682cedd8bc9" executionId="3c7e4304-f389-401f-885b-74d398f4428c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df126b41-ed8d-86ea-0522-52d2482a1fda" executionId="53a7e1db-26fc-48e9-8ae6-abaef55a1fac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5cd100e3-921f-b1f4-147d-33df85d31d1d" executionId="03c92ca7-bd02-4767-b4ab-d1012b64624d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d22017c-9eeb-dda3-b347-ac0de4f3e572" executionId="b3f0157d-6473-498d-856e-457c0c389c62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51e4e4f2-5171-8577-183b-5eed43faebcc" executionId="19c57a42-8bfb-49ff-9e8d-496770b859b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="40" executed="35" passed="35" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.LiveGuard/bin/Release/EVA.TestSuite.LiveGuard.dll
+   NUnit3TestExecutor discovered 40 of 40 NUnit test cases using Current Discovery mode, Non-Explicit run
+ExistingClientID: Skipping test: it does not belong to this partition.
+StubOrder: Skipping test: it does not belong to this partition.
+StubOrderPaid: Skipping test: it does not belong to this partition.
+Force_local_mode_works: Skipping test: it does not belong to this partition.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/CreateOrganizationUnit required_field:ToCreate.CurrencyID - Field ToCreate.CurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Test 'ExistingClientID' was skipped in the test run.
+Test 'StubOrder' was skipped in the test run.
+Test 'StubOrderPaid' was skipped in the test run.
+Test 'Force_local_mode_works' was skipped in the test run.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrganizationUnitSets limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListDevices limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrganizationUnitSets limit_large - Limit parameter 1000 is high - consider adding paging.
+
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceLists limit_large - Limit parameter 1000 is high - consider adding paging.
+Warning message/ListPriceListAdjustments limit_too_large - Limit parameter 1000000 exceeded maximum of 10000.
+Warning message/ListPriceListAdjustments ranged_field:PageConfig.Limit - Field PageConfig.Limit is ranged (should be between 1 and 10000) and will be enforced as such in 2.0.702
+
+CanListDevices: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'CanListDevices' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

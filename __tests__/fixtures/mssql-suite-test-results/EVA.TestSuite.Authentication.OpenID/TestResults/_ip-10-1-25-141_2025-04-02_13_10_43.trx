@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b3585533-55dc-4c38-985f-b9dd36ecb1a5" name="@ip-10-1-25-141 2025-04-02 13:10:43" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:10:43.2660850+00:00" queuing="2025-04-02T13:10:43.2660851+00:00" start="2025-04-02T13:10:42.2144506+00:00" finish="2025-04-02T13:10:43.3064119+00:00" />
+  <TestSettings name="default" id="1045b790-fc17-4f64-8c0d-9a01ebb1f141">
+    <Deployment runDeploymentRoot="_ip-10-1-25-141_2025-04-02_13_10_43" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e63903d1-d48e-4230-8b0e-d4c94180d79c" testId="faacac3d-41aa-8cc4-00e4-99dc1a26fb4f" testName="OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles" computerName="ip-10-1-25-141" duration="00:00:00.0001920" startTime="2025-04-02T13:10:43.1716138+00:00" endTime="2025-04-02T13:10:43.1718052+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e63903d1-d48e-4230-8b0e-d4c94180d79c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a769aaa1-00de-4a29-b057-4c43636bb28e" testId="9f27ab77-e9f7-2f12-c742-cb3a62cdb67b" testName="OpenIDCanCreateNewUser" computerName="ip-10-1-25-141" duration="00:00:00.0000630" startTime="2025-04-02T13:10:43.1712719+00:00" endTime="2025-04-02T13:10:43.1713352+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a769aaa1-00de-4a29-b057-4c43636bb28e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b0dd7904-bcd4-4758-b9f5-1f78477aa853" testId="4760a766-083d-9cf9-4d70-e5db850ef3a9" testName="Crud_operations_on_Providers_work" computerName="ip-10-1-25-141" duration="00:00:00.0133980" startTime="2025-04-02T13:10:43.1559756+00:00" endTime="2025-04-02T13:10:43.1693319+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0dd7904-bcd4-4758-b9f5-1f78477aa853">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="417ef898-fc74-46ea-8743-a691e5f929b6" testId="034be58e-f3bf-81dd-3350-4fd2aad58d86" testName="OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets" computerName="ip-10-1-25-141" duration="00:00:00.0000649" startTime="2025-04-02T13:10:43.1711962+00:00" endTime="2025-04-02T13:10:43.1712612+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="417ef898-fc74-46ea-8743-a691e5f929b6">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="83e18a22-6b09-4958-b5cc-3413fb57c298" testId="aa865691-a716-2230-6a8e-e24bb2ee7936" testName="OpenIDCanAssignRoleWithScripting_V2" computerName="ip-10-1-25-141" duration="00:00:00.0000680" startTime="2025-04-02T13:10:43.1711254+00:00" endTime="2025-04-02T13:10:43.1711929+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83e18a22-6b09-4958-b5cc-3413fb57c298">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="73d3f332-83a7-4b94-b99f-378eeca842b7" testId="b0e7a5a1-6f00-a26d-3e8f-1e7e9cc57bfb" testName="OpenIDCanAssignRoleWithScripting" computerName="ip-10-1-25-141" duration="00:00:00.0000810" startTime="2025-04-02T13:10:43.1710407+00:00" endTime="2025-04-02T13:10:43.1711213+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73d3f332-83a7-4b94-b99f-378eeca842b7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f39cd9b-7975-4831-8279-34f143f97caa" testId="fdc4f543-1475-5609-1bba-39f685ac6efa" testName="OpenIDCanHandleVGsThatIncludeEachOther" computerName="ip-10-1-25-141" duration="00:00:00.0000699" startTime="2025-04-02T13:10:43.1715411+00:00" endTime="2025-04-02T13:10:43.1716106+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f39cd9b-7975-4831-8279-34f143f97caa">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4e162f96-ec90-41aa-a6fc-cba43a487202" testId="2f544945-ef64-1e6e-3dc5-f0a5efba2a51" testName="OpenIDCanUpdateEmailAddress" computerName="ip-10-1-25-141" duration="00:00:00.0000680" startTime="2025-04-02T13:10:43.1719015+00:00" endTime="2025-04-02T13:10:43.1719699+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e162f96-ec90-41aa-a6fc-cba43a487202">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b874af19-af67-406b-8795-a81e0c92e85a" testId="9ca5bb3a-c597-b6ea-4fb1-2015076032de" testName="OpenIDCanHandleVGsThatHaveACircularReference" computerName="ip-10-1-25-141" duration="00:00:00.0000870" startTime="2025-04-02T13:10:43.1714494+00:00" endTime="2025-04-02T13:10:43.1715368+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b874af19-af67-406b-8795-a81e0c92e85a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="073ceb3f-f8bd-4c44-98f0-5ec30760e82b" testId="0209170d-65f0-8eb7-27f2-dd04667145c1" testName="OpenIDCanUpdateUserThroughSCIM" computerName="ip-10-1-25-141" duration="00:00:00.0000690" startTime="2025-04-02T13:10:43.1719737+00:00" endTime="2025-04-02T13:10:43.1720421+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="073ceb3f-f8bd-4c44-98f0-5ec30760e82b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bd73977a-e758-4163-9578-6515e32d85bf" testId="24de7347-f1f7-a965-44f6-f0079abee056" testName="OpenID_Handles_Username_As_Expected" computerName="ip-10-1-25-141" duration="00:00:00.0000780" startTime="2025-04-02T13:10:43.1709589+00:00" endTime="2025-04-02T13:10:43.1710367+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd73977a-e758-4163-9578-6515e32d85bf">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e5c119a5-175c-4208-88b7-7af7b51c08f7" testId="99d2526f-8331-70fd-0257-1c0214a4a52e" testName="NonResponsiveEndpointFails" computerName="ip-10-1-25-141" duration="00:00:00.0001740" startTime="2025-04-02T13:10:43.1707776+00:00" endTime="2025-04-02T13:10:43.1709520+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5c119a5-175c-4208-88b7-7af7b51c08f7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c980f6a6-d4c6-4459-9d01-6a6754259ad4" testId="e77d5439-17b4-df4d-40a9-5e9a7ab5fc44" testName="OpenIDCanHandleVGs" computerName="ip-10-1-25-141" duration="00:00:00.0001040" startTime="2025-04-02T13:10:43.1713381+00:00" endTime="2025-04-02T13:10:43.1714421+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c980f6a6-d4c6-4459-9d01-6a6754259ad4">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="83e3fe6e-c105-45b1-a4ac-efebdb2a08d3" testId="1fdf5966-f405-dc2d-9646-890febbda907" testName="OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles" computerName="ip-10-1-25-141" duration="00:00:00.0000840" startTime="2025-04-02T13:10:43.1718131+00:00" endTime="2025-04-02T13:10:43.1718973+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83e3fe6e-c105-45b1-a4ac-efebdb2a08d3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e5084c32-9ca1-4af3-a93f-062ec6156ced" testId="fb156aed-8bc4-f357-dbc2-89c979483592" testName="LoginWithOpenIDWorks" computerName="ip-10-1-25-141" duration="00:00:00.0005540" startTime="2025-04-02T13:10:43.1701791+00:00" endTime="2025-04-02T13:10:43.1707334+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5084c32-9ca1-4af3-a93f-062ec6156ced">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="OpenIDCanCreateNewUser" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="9f27ab77-e9f7-2f12-c742-cb3a62cdb67b">
+      <Execution id="a769aaa1-00de-4a29-b057-4c43636bb28e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanCreateNewUser" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanHandleVGsThatIncludeEachOther" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="fdc4f543-1475-5609-1bba-39f685ac6efa">
+      <Execution id="9f39cd9b-7975-4831-8279-34f143f97caa" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanHandleVGsThatIncludeEachOther" />
+    </UnitTest>
+    <UnitTest name="LoginWithOpenIDWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="fb156aed-8bc4-f357-dbc2-89c979483592">
+      <Execution id="e5084c32-9ca1-4af3-a93f-062ec6156ced" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="LoginWithOpenIDWorks" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="faacac3d-41aa-8cc4-00e4-99dc1a26fb4f">
+      <Execution id="e63903d1-d48e-4230-8b0e-d4c94180d79c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanHandleVGsThatHaveACircularReference" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="9ca5bb3a-c597-b6ea-4fb1-2015076032de">
+      <Execution id="b874af19-af67-406b-8795-a81e0c92e85a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanHandleVGsThatHaveACircularReference" />
+    </UnitTest>
+    <UnitTest name="Crud_operations_on_Providers_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="4760a766-083d-9cf9-4d70-e5db850ef3a9">
+      <Execution id="b0dd7904-bcd4-4758-b9f5-1f78477aa853" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="Crud_operations_on_Providers_work" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanUpdateUserThroughSCIM" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="0209170d-65f0-8eb7-27f2-dd04667145c1">
+      <Execution id="073ceb3f-f8bd-4c44-98f0-5ec30760e82b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanUpdateUserThroughSCIM" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanAssignRoleWithScripting" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="b0e7a5a1-6f00-a26d-3e8f-1e7e9cc57bfb">
+      <Execution id="73d3f332-83a7-4b94-b99f-378eeca842b7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanAssignRoleWithScripting" />
+    </UnitTest>
+    <UnitTest name="OpenID_Handles_Username_As_Expected" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="24de7347-f1f7-a965-44f6-f0079abee056">
+      <Execution id="bd73977a-e758-4163-9578-6515e32d85bf" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenID_Handles_Username_As_Expected" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanUpdateEmailAddress" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="2f544945-ef64-1e6e-3dc5-f0a5efba2a51">
+      <Execution id="4e162f96-ec90-41aa-a6fc-cba43a487202" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanUpdateEmailAddress" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="1fdf5966-f405-dc2d-9646-890febbda907">
+      <Execution id="83e3fe6e-c105-45b1-a4ac-efebdb2a08d3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="034be58e-f3bf-81dd-3350-4fd2aad58d86">
+      <Execution id="417ef898-fc74-46ea-8743-a691e5f929b6" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanHandleVGs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="e77d5439-17b4-df4d-40a9-5e9a7ab5fc44">
+      <Execution id="c980f6a6-d4c6-4459-9d01-6a6754259ad4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanHandleVGs" />
+    </UnitTest>
+    <UnitTest name="NonResponsiveEndpointFails" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="99d2526f-8331-70fd-0257-1c0214a4a52e">
+      <Execution id="e5c119a5-175c-4208-88b7-7af7b51c08f7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="NonResponsiveEndpointFails" />
+    </UnitTest>
+    <UnitTest name="OpenIDCanAssignRoleWithScripting_V2" storage="/home/runner/_work/eva/eva/test/eva.testsuite.authentication.openid/bin/release/eva.testsuite.authentication.openid.dll" id="aa865691-a716-2230-6a8e-e24bb2ee7936">
+      <Execution id="83e18a22-6b09-4958-b5cc-3413fb57c298" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.Authentication.OpenID.OpenIDTests" name="OpenIDCanAssignRoleWithScripting_V2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="faacac3d-41aa-8cc4-00e4-99dc1a26fb4f" executionId="e63903d1-d48e-4230-8b0e-d4c94180d79c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f27ab77-e9f7-2f12-c742-cb3a62cdb67b" executionId="a769aaa1-00de-4a29-b057-4c43636bb28e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4760a766-083d-9cf9-4d70-e5db850ef3a9" executionId="b0dd7904-bcd4-4758-b9f5-1f78477aa853" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="034be58e-f3bf-81dd-3350-4fd2aad58d86" executionId="417ef898-fc74-46ea-8743-a691e5f929b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa865691-a716-2230-6a8e-e24bb2ee7936" executionId="83e18a22-6b09-4958-b5cc-3413fb57c298" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0e7a5a1-6f00-a26d-3e8f-1e7e9cc57bfb" executionId="73d3f332-83a7-4b94-b99f-378eeca842b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fdc4f543-1475-5609-1bba-39f685ac6efa" executionId="9f39cd9b-7975-4831-8279-34f143f97caa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f544945-ef64-1e6e-3dc5-f0a5efba2a51" executionId="4e162f96-ec90-41aa-a6fc-cba43a487202" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ca5bb3a-c597-b6ea-4fb1-2015076032de" executionId="b874af19-af67-406b-8795-a81e0c92e85a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0209170d-65f0-8eb7-27f2-dd04667145c1" executionId="073ceb3f-f8bd-4c44-98f0-5ec30760e82b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24de7347-f1f7-a965-44f6-f0079abee056" executionId="bd73977a-e758-4163-9578-6515e32d85bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99d2526f-8331-70fd-0257-1c0214a4a52e" executionId="e5c119a5-175c-4208-88b7-7af7b51c08f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e77d5439-17b4-df4d-40a9-5e9a7ab5fc44" executionId="c980f6a6-d4c6-4459-9d01-6a6754259ad4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1fdf5966-f405-dc2d-9646-890febbda907" executionId="83e3fe6e-c105-45b1-a4ac-efebdb2a08d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb156aed-8bc4-f357-dbc2-89c979483592" executionId="e5084c32-9ca1-4af3-a93f-062ec6156ced" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="0" passed="0" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.Authentication.OpenID/bin/Release/EVA.TestSuite.Authentication.OpenID.dll
+   NUnit3TestExecutor discovered 15 of 15 NUnit test cases using Current Discovery mode, Non-Explicit run
+Crud_operations_on_Providers_work: Skipping test: it does not belong to this partition.
+LoginWithOpenIDWorks: Skipping test: it does not belong to this partition.
+NonResponsiveEndpointFails: Skipping test: it does not belong to this partition.
+OpenID_Handles_Username_As_Expected: Skipping test: it does not belong to this partition.
+OpenIDCanAssignRoleWithScripting: Skipping test: it does not belong to this partition.
+OpenIDCanAssignRoleWithScripting_V2: Skipping test: it does not belong to this partition.
+OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets: Skipping test: it does not belong to this partition.
+OpenIDCanCreateNewUser: Skipping test: it does not belong to this partition.
+OpenIDCanHandleVGs: Skipping test: it does not belong to this partition.
+Test 'Crud_operations_on_Providers_work' was skipped in the test run.
+Test 'LoginWithOpenIDWorks' was skipped in the test run.
+Test 'NonResponsiveEndpointFails' was skipped in the test run.
+Test 'OpenID_Handles_Username_As_Expected' was skipped in the test run.
+Test 'OpenIDCanAssignRoleWithScripting' was skipped in the test run.
+Test 'OpenIDCanAssignRoleWithScripting_V2' was skipped in the test run.
+Test 'OpenIDCanAssignRoleWithScripting_V2_Should_Ignore_Deleted_Sets' was skipped in the test run.
+Test 'OpenIDCanCreateNewUser' was skipped in the test run.
+Test 'OpenIDCanHandleVGs' was skipped in the test run.
+OpenIDCanHandleVGsThatHaveACircularReference: Skipping test: it does not belong to this partition.
+OpenIDCanHandleVGsThatIncludeEachOther: Skipping test: it does not belong to this partition.
+OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles: Skipping test: it does not belong to this partition.
+OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles: Skipping test: it does not belong to this partition.
+OpenIDCanUpdateEmailAddress: Skipping test: it does not belong to this partition.
+OpenIDCanUpdateUserThroughSCIM: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'OpenIDCanHandleVGsThatHaveACircularReference' was skipped in the test run.
+Test 'OpenIDCanHandleVGsThatIncludeEachOther' was skipped in the test run.
+Test 'OpenIDCanLoginAnUserThatIsCoveredInTheScriptAndHasManualRoles' was skipped in the test run.
+Test 'OpenIDCanLoginAnUserThatIsNotCoveredInTheScriptButHasManualRoles' was skipped in the test run.
+Test 'OpenIDCanUpdateEmailAddress' was skipped in the test run.
+Test 'OpenIDCanUpdateUserThroughSCIM' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -73,6 +73,17 @@ export class TestRunResult {
       }
     }
   }
+
+  toJSON(): any {
+    return {
+      path: this.path,
+      suites: this.suites,
+      time: this.time,
+      passed: this.passed,
+      failed: this.failed,
+      skipped: this.skipped
+    }
+  }
 }
 
 export class TestSuiteResult {
@@ -80,7 +91,23 @@ export class TestSuiteResult {
     readonly name: string,
     readonly groups: TestGroupResult[],
     private totalTime?: number
-  ) {}
+  ) {
+    for (const grp of groups) {
+      var map = new Map<string, TestCaseResult[]>()
+      for (const tc of grp.tests) {
+        var key = tc.id
+        var existing = map.get(key) || []
+        existing.push(tc)
+        map.set(key, existing)
+      }
+
+      grp.tests.length = 0
+
+      for (const t of map.values()) {
+        grp.tests.push(t[0])
+      }
+    }
+  }
 
   link?: string
 
@@ -153,6 +180,7 @@ export class TestGroupResult {
 
 export class TestCaseResult {
   constructor(
+    readonly id: string,
     readonly name: string,
     readonly result: TestExecutionResult,
     readonly time: number,

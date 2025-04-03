@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="430e6de3-9c7f-4f53-8d4c-6cd9f82345cc" name="@ip-10-1-13-52 2025-04-02 13:21:46" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:21:46.7577213+00:00" queuing="2025-04-02T13:21:46.7577214+00:00" start="2025-04-02T13:21:45.4574299+00:00" finish="2025-04-02T13:21:46.7631438+00:00" />
+  <TestSettings name="default" id="e798628f-b768-4042-a197-566dbf3ddea4">
+    <Deployment runDeploymentRoot="_ip-10-1-13-52_2025-04-02_13_21_46" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="657ba897-ae96-41ef-87da-72c1fa6c6b1f" testId="b4d87602-8f7d-f9c4-71f2-ca45b71abd61" testName="RecalculationsTest" computerName="ip-10-1-13-52" duration="00:00:00.0165910" startTime="2025-04-02T13:21:46.5798220+00:00" endTime="2025-04-02T13:21:46.5963770+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="657ba897-ae96-41ef-87da-72c1fa6c6b1f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RecalculationsTest" storage="/home/runner/_work/eva/eva/test/eva.testsuite.kiko/bin/release/eva.testsuite.kiko.dll" id="b4d87602-8f7d-f9c4-71f2-ca45b71abd61">
+      <Execution id="657ba897-ae96-41ef-87da-72c1fa6c6b1f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.KIKO/bin/Release/EVA.TestSuite.KIKO.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.KIKO.RecalculationsTests" name="RecalculationsTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="b4d87602-8f7d-f9c4-71f2-ca45b71abd61" executionId="657ba897-ae96-41ef-87da-72c1fa6c6b1f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="0" passed="0" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.KIKO/bin/Release/EVA.TestSuite.KIKO.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+RecalculationsTest: Skipping test: it does not belong to this partition.
+NUnit Adapter 5.0.0.0: Test execution complete
+Test 'RecalculationsTest' was skipped in the test run.
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

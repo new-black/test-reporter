@@ -1,0 +1,904 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="43945677-b3e3-4285-820d-c41b5e81af8c" name="@ip-10-1-13-52 2025-04-02 13:20:35" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-02T13:20:35.9475840+00:00" queuing="2025-04-02T13:20:35.9475840+00:00" start="2025-04-02T13:20:34.0736865+00:00" finish="2025-04-02T13:20:39.2853303+00:00" />
+  <TestSettings name="default" id="8104e5fb-13a7-48fe-8658-6347fcb6ec92">
+    <Deployment runDeploymentRoot="_ip-10-1-13-52_2025-04-02_13_20_35" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="92be0f4c-0d2d-4e0c-a436-4fe6cdcbab71" testId="a899c7dc-010c-61d2-783a-1535428a7fd3" testName="New_AssortmentContentCulture_is_composed_after_creating_it" computerName="ip-10-1-13-52" duration="00:00:01.2751560" startTime="2025-04-02T13:20:35.9063323+00:00" endTime="2025-04-02T13:20:37.1814870+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92be0f4c-0d2d-4e0c-a436-4fe6cdcbab71">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/CreateOrganizationUnit required_field:ToCreate.CurrencyID - Field ToCreate.CurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/SearchProducts missing_includedfields - No IncludedFields specified for a SearchProducts request.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e96392d4-a0f7-4db8-8ddb-3d638ff625fd" testId="261f180b-c850-b236-905f-d9f028e19ab9" testName="filter_on_id_should_work" computerName="ip-10-1-13-52" duration="00:00:00.0002660" startTime="2025-04-02T13:20:37.2003949+00:00" endTime="2025-04-02T13:20:37.2006608+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e96392d4-a0f7-4db8-8ddb-3d638ff625fd">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="60f0c967-cf30-438d-a367-08512c50bc3c" testId="367d6c36-efd7-de8c-690f-1079351340e1" testName="Creating_Configurable_Properties_ImportProducts" computerName="ip-10-1-13-52" duration="00:00:00.0002599" startTime="2025-04-02T13:20:37.1966075+00:00" endTime="2025-04-02T13:20:37.1968675+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60f0c967-cf30-438d-a367-08512c50bc3c">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="353b75d0-3954-453b-b680-96cb0f7c23ad" testId="84d3056c-e2ee-d4d3-094c-140fd0c39258" testName="Valid_product_hierarchy_with_content_import" computerName="ip-10-1-13-52" duration="00:00:00.0001890" startTime="2025-04-02T13:20:37.1992254+00:00" endTime="2025-04-02T13:20:37.1994138+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="353b75d0-3954-453b-b680-96cb0f7c23ad">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d60760b8-edc1-4d67-af46-a8de9f7695d5" testId="587fdef2-0bf2-38bf-d34d-f8f48aa8f1cd" testName="ExportProductBaseExcelAsyncShouldWork" computerName="ip-10-1-13-52" duration="00:00:00.0004630" startTime="2025-04-02T13:20:37.2019858+00:00" endTime="2025-04-02T13:20:37.2024489+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d60760b8-edc1-4d67-af46-a8de9f7695d5">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0e44702a-30b4-4c99-9b50-9adb2d63157b" testId="bb8e55a0-1ee1-d5cf-e703-0aa0ec0bb37d" testName="Can_use_Aggregate_completion" computerName="ip-10-1-13-52" duration="00:00:00.0011070" startTime="2025-04-02T13:20:37.1820036+00:00" endTime="2025-04-02T13:20:37.1831106+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e44702a-30b4-4c99-9b50-9adb2d63157b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6b0e8bf2-0cf1-48db-95e6-0163b5739cfe" testId="bcb91360-94b2-5246-f551-a8bd76523258" testName="Leaving_query_null_does_not_cause_a_NullReference" computerName="ip-10-1-13-52" duration="00:00:00.1435250" startTime="2025-04-02T13:20:37.2056533+00:00" endTime="2025-04-02T13:20:37.3491772+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b0e8bf2-0cf1-48db-95e6-0163b5739cfe">
+      <Output>
+        <StdOut>Warning message/SearchProducts missing_includedfields - No IncludedFields specified for a SearchProducts request.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ac70ab29-9300-48f1-8142-b5b0ace7f1df" testId="8d5a4d5c-1a09-4375-6afb-3f8f2488eef6" testName="Bundle_products" computerName="ip-10-1-13-52" duration="00:00:00.0002820" startTime="2025-04-02T13:20:37.2042251+00:00" endTime="2025-04-02T13:20:37.2045073+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac70ab29-9300-48f1-8142-b5b0ace7f1df">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1ef2f4c9-7d72-4664-8e6d-91c396c26e6e" testId="6a99016a-f976-93cf-b799-699a78c03a5f" testName="Can_filter_on_availability" computerName="ip-10-1-13-52" duration="00:00:00.0004730" startTime="2025-04-02T13:20:37.2045248+00:00" endTime="2025-04-02T13:20:37.2049980+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ef2f4c9-7d72-4664-8e6d-91c396c26e6e">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7ab0e2a3-1ff6-4abd-a837-2a79760b69b7" testId="72a4de9b-34e0-4232-dd4c-f6d14a92a746" testName="ExportProductBaseExcelShouldWork" computerName="ip-10-1-13-52" duration="00:00:00.0002550" startTime="2025-04-02T13:20:37.2024700+00:00" endTime="2025-04-02T13:20:37.2027251+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ab0e2a3-1ff6-4abd-a837-2a79760b69b7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="771a4fbc-6257-40fe-a117-7001ee1c60d4" testId="5ed8290f-d806-7f98-8ed6-6b604eea1826" testName="Should_be_able_to_create_a_property_and_change_its_data_type_afterwards" computerName="ip-10-1-13-52" duration="00:00:00.0003020" startTime="2025-04-02T13:20:37.1868082+00:00" endTime="2025-04-02T13:20:37.1871101+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="771a4fbc-6257-40fe-a117-7001ee1c60d4">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8c09478e-27b5-4e01-a5c8-1de4e9ee51ad" testId="91cf6225-a01a-893f-3144-d6cf34afae09" testName="Multiple_content_objects_for_the_same_layer_are_merged" computerName="ip-10-1-13-52" duration="00:00:00.0002930" startTime="2025-04-02T13:20:37.1975129+00:00" endTime="2025-04-02T13:20:37.1978045+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c09478e-27b5-4e01-a5c8-1de4e9ee51ad">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="379d8fbc-9743-492e-9a04-b3a919cb7a35" testId="33125c07-9051-50b0-7e4f-863e1d83344d" testName="UploadProductExcelTest_create_product" computerName="ip-10-1-13-52" duration="00:00:00.0002400" startTime="2025-04-02T13:20:37.2027425+00:00" endTime="2025-04-02T13:20:37.2029824+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="379d8fbc-9743-492e-9a04-b3a919cb7a35">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5669cd69-9b18-4eb0-b0da-d1e3bfbfa6ed" testId="c74eae40-d6da-c954-8439-98ee7f73eecf" testName="Can_sort_and_score_by_stock" computerName="ip-10-1-13-52" duration="00:00:00.0002620" startTime="2025-04-02T13:20:37.2050219+00:00" endTime="2025-04-02T13:20:37.2052842+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5669cd69-9b18-4eb0-b0da-d1e3bfbfa6ed">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="20d67b3d-e598-4839-a1d0-a7368377c691" testId="bd04489f-1f5c-70a9-1c0f-fc8e3238670f" testName="ProductParents_test" computerName="ip-10-1-13-52" duration="00:00:00.0006340" startTime="2025-04-02T13:20:37.2034089+00:00" endTime="2025-04-02T13:20:37.2040430+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20d67b3d-e598-4839-a1d0-a7368377c691">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1f514c2a-20f4-4016-baa8-6d4b6f23bd71" testId="18a54880-e051-a84c-6c30-d3aa252df99d" testName="ProductChildren_test" computerName="ip-10-1-13-52" duration="00:00:00.0002400" startTime="2025-04-02T13:20:37.2031553+00:00" endTime="2025-04-02T13:20:37.2033952+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f514c2a-20f4-4016-baa8-6d4b6f23bd71">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3b97cac6-e663-47bc-b93c-14d8e61f4b48" testId="b4ca137f-11e7-074b-29c6-cd66b80210a9" testName="Can_create_new_AssortmentContentCulture_and_use_it_for_search" computerName="ip-10-1-13-52" duration="00:00:00.8796850" startTime="2025-04-02T13:20:35.0265623+00:00" endTime="2025-04-02T13:20:35.9062463+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b97cac6-e663-47bc-b93c-14d8e61f4b48">
+      <Output>
+        <StdOut>Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/CreateOrganizationUnit required_field:ToCreate.CurrencyID - Field ToCreate.CurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/SearchProducts missing_includedfields - No IncludedFields specified for a SearchProducts request.</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d5decb6f-5b91-4092-87e7-86ece6c12849" testId="66b49aa0-8bd6-3e93-e210-fad9eb969007" testName="Updating_Configurable_Properties_ImportProducts" computerName="ip-10-1-13-52" duration="00:00:00.0002410" startTime="2025-04-02T13:20:37.1985874+00:00" endTime="2025-04-02T13:20:37.1988279+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5decb6f-5b91-4092-87e7-86ece6c12849">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="38425da8-a44b-4509-af77-4bb0d5bc3bf3" testId="18559dd1-62d6-13ac-0ac1-c39c4d111e20" testName="searchtype_filter_can_be_fuzzy" computerName="ip-10-1-13-52" duration="00:00:00.0007630" startTime="2025-04-02T13:20:37.2006748+00:00" endTime="2025-04-02T13:20:37.2014373+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38425da8-a44b-4509-af77-4bb0d5bc3bf3">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ffbb9435-d549-4885-a14d-1ee4fe7837e5" testId="8d58560c-3b8d-0177-f15d-709e143bbac9" testName="Valid_product_hierarchy_import" computerName="ip-10-1-13-52" duration="00:00:00.0001590" startTime="2025-04-02T13:20:37.1990476+00:00" endTime="2025-04-02T13:20:37.1992062+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffbb9435-d549-4885-a14d-1ee4fe7837e5">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e14827f9-60b2-4d7c-ba81-9a0971f544d8" testId="47ebe5bc-45ff-ed18-2dc7-5dac4a8d4740" testName="Can_use_property_autocomplete" computerName="ip-10-1-13-52" duration="00:00:00.0007770" startTime="2025-04-02T13:20:37.1831409+00:00" endTime="2025-04-02T13:20:37.1839175+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e14827f9-60b2-4d7c-ba81-9a0971f544d8">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6406e6ad-d127-4c22-b93d-c6776f578e86" testId="dedadd88-9ca3-bf40-01ac-f6bab4a90c7f" testName="Test" computerName="ip-10-1-13-52" duration="00:00:00.0004510" startTime="2025-04-02T13:20:37.1881087+00:00" endTime="2025-04-02T13:20:37.1885593+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6406e6ad-d127-4c22-b93d-c6776f578e86">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eebb93d1-4e6f-4db1-84bd-24ace266964d" testId="9e4aa725-664a-1182-271d-2d8c7b440fbc" testName="Import_gift_card_using_existing_configuration_id" computerName="ip-10-1-13-52" duration="00:00:00.0001940" startTime="2025-04-02T13:20:37.1968828+00:00" endTime="2025-04-02T13:20:37.1970771+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eebb93d1-4e6f-4db1-84bd-24ace266964d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1f43bbfa-f771-42a3-badc-1cb1ce84c04f" testId="b72cfc5a-52a2-2300-4d86-e48d0c012e1e" testName="ListRevisionsIncludingSystemRevisions" computerName="ip-10-1-13-52" duration="00:00:00.0171310" startTime="2025-04-02T13:20:35.0037047+00:00" endTime="2025-04-02T13:20:35.0207979+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f43bbfa-f771-42a3-badc-1cb1ce84c04f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="12c74e8a-2b02-484b-881e-206910c0d229" testId="9cf80740-9218-0e85-8642-834d66a8767e" testName="ListRevisionsWithProductID" computerName="ip-10-1-13-52" duration="00:00:00.0006870" startTime="2025-04-02T13:20:35.0223724+00:00" endTime="2025-04-02T13:20:35.0230597+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12c74e8a-2b02-484b-881e-206910c0d229">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8a4eac39-73b5-4782-9819-404b65090c72" testId="9922dd9b-ed27-2787-b2de-cb8b9fefbb1a" testName="Can_import_images(True)" computerName="ip-10-1-13-52" duration="00:00:00.0002460" startTime="2025-04-02T13:20:37.1958055+00:00" endTime="2025-04-02T13:20:37.1960518+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a4eac39-73b5-4782-9819-404b65090c72">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5c14b4cb-5983-4956-a872-17248fdd7a6c" testId="65ee6d7d-b447-025f-23bc-7115f93d97b9" testName="Can_search_by_category" computerName="ip-10-1-13-52" duration="00:00:00.3426620" startTime="2025-04-02T13:20:38.3179947+00:00" endTime="2025-04-02T13:20:38.6606566+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c14b4cb-5983-4956-a872-17248fdd7a6c" />
+    <UnitTestResult executionId="d74d6df9-c655-464c-b39a-e2d83bd362c2" testId="96c3b0e4-6d2e-789d-0e25-9e3e18e1cd4f" testName="Can_update_taxcode" computerName="ip-10-1-13-52" duration="00:00:00.0001689" startTime="2025-04-02T13:20:37.1962557+00:00" endTime="2025-04-02T13:20:37.1964243+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d74d6df9-c655-464c-b39a-e2d83bd362c2">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ffd3771-b5d3-4958-850f-f3bd87b45b7a" testId="2c222735-a87e-b030-53a6-5e6d46928261" testName="Can_specify_values_as_objects_with_a_property_called_value" computerName="ip-10-1-13-52" duration="00:00:00.0002780" startTime="2025-04-02T13:20:37.1858166+00:00" endTime="2025-04-02T13:20:37.1860940+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ffd3771-b5d3-4958-850f-f3bd87b45b7a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4908e141-71b7-49b2-b256-7dc67734e495" testId="08d6aba3-2a2f-48ac-9c93-9cfc4d696497" testName="Revision_status_is_set_to_applied" computerName="ip-10-1-13-52" duration="00:00:00.0001450" startTime="2025-04-02T13:20:35.0230834+00:00" endTime="2025-04-02T13:20:35.0232281+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4908e141-71b7-49b2-b256-7dc67734e495">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="74d1d7d3-cb0e-405c-a7de-ac1ba1c2b5d7" testId="3d799dca-e57d-f9f6-1823-e9da37f21919" testName="Can_create_multiword_synonyms" computerName="ip-10-1-13-52" duration="00:00:00.0002860" startTime="2025-04-02T13:20:38.8776477+00:00" endTime="2025-04-02T13:20:38.8779337+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74d1d7d3-cb0e-405c-a7de-ac1ba1c2b5d7">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae128b3f-16b8-44cf-89d4-73c2e677a452" testId="567308e8-74a4-9e12-88aa-f0d05a2ed980" testName="Product_search_returns_if_product_is_part_of_bundle" computerName="ip-10-1-13-52" duration="00:00:00.0002470" startTime="2025-04-02T13:20:38.8763017+00:00" endTime="2025-04-02T13:20:38.8765487+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae128b3f-16b8-44cf-89d4-73c2e677a452">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0c79af53-a38b-46bb-9492-2fa2f35b4a64" testId="748ea817-04ff-4481-57bf-215afbcd8ec7" testName="Updating__and_partial_Create_Configurable_Properties_ImportProducts" computerName="ip-10-1-13-52" duration="00:00:00.0002140" startTime="2025-04-02T13:20:37.1983619+00:00" endTime="2025-04-02T13:20:37.1985755+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c79af53-a38b-46bb-9492-2fa2f35b4a64">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cd67b7c8-bd2c-4657-9a06-939039cb3c1b" testId="7bff7a98-b723-6afa-ba9b-732d065a2916" testName="Can_exclude_second_chance_products_from_product_search" computerName="ip-10-1-13-52" duration="00:00:00.0005930" startTime="2025-04-02T13:20:38.8749978+00:00" endTime="2025-04-02T13:20:38.8755908+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd67b7c8-bd2c-4657-9a06-939039cb3c1b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d4e46647-8046-4045-9ef3-19ec5eda8874" testId="71d3017e-00bc-1397-b43b-c48ad33962d7" testName="Can_create_new_properties" computerName="ip-10-1-13-52" duration="00:00:00.0004570" startTime="2025-04-02T13:20:37.1952298+00:00" endTime="2025-04-02T13:20:37.1956868+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4e46647-8046-4045-9ef3-19ec5eda8874">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="dc130f1a-682e-4ee8-aecf-db37844619b9" testId="8ee782c2-5827-1749-c650-465571e1ef47" testName="After_importing_a_valid_product_it_should_be_searchable" computerName="ip-10-1-13-52" duration="00:00:00.0004070" startTime="2025-04-02T13:20:37.1948035+00:00" endTime="2025-04-02T13:20:37.1952114+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc130f1a-682e-4ee8-aecf-db37844619b9">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="49011998-f2e6-410b-8c25-9faf6214841d" testId="aa39ba64-97a9-e15c-6017-97422f109913" testName="Can_use_EditProduct_to_edit_product_content" computerName="ip-10-1-13-52" duration="00:00:00.0002509" startTime="2025-04-02T13:20:37.1861100+00:00" endTime="2025-04-02T13:20:37.1863613+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49011998-f2e6-410b-8c25-9faf6214841d">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="42153ef1-0a2e-483b-90a7-d75b28403a8b" testId="e22e1de4-10e8-b8e5-ea1f-d0f440087ebe" testName="Multiple_products" computerName="ip-10-1-13-52" duration="00:00:00.0002550" startTime="2025-04-02T13:20:37.1978363+00:00" endTime="2025-04-02T13:20:37.1980921+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42153ef1-0a2e-483b-90a7-d75b28403a8b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2b4f619d-3267-46ab-9260-2aa3a849ae9a" testId="c09b50eb-2de0-2b25-738f-5b8550131a78" testName="Can_use_both_product_search_template_and_filters" computerName="ip-10-1-13-52" duration="00:00:00.0006230" startTime="2025-04-02T13:20:38.8756383+00:00" endTime="2025-04-02T13:20:38.8762610+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b4f619d-3267-46ab-9260-2aa3a849ae9a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d88a346-b671-4b5f-a599-205738feb89f" testId="338f8488-8b9a-ae52-7bca-44fe9ec14fa9" testName="Can_reindex_documens" computerName="ip-10-1-13-52" duration="00:00:00.9680410" startTime="2025-04-02T13:20:37.3495524+00:00" endTime="2025-04-02T13:20:38.3175923+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d88a346-b671-4b5f-a599-205738feb89f" />
+    <UnitTestResult executionId="c1481036-9bdf-4598-ad43-696f9bf38cdc" testId="74bbb5e4-4b6f-fa7f-73f1-b4b2808cff72" testName="Updating_SerialNumber_requirement_In_ImportProducts" computerName="ip-10-1-13-52" duration="00:00:00.0001940" startTime="2025-04-02T13:20:37.1988433+00:00" endTime="2025-04-02T13:20:37.1990369+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1481036-9bdf-4598-ad43-696f9bf38cdc">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6b5c19a4-3052-49ed-826d-37ef65aac234" testId="c4cd2600-2970-c620-8830-0798c3c4fd86" testName="Can_create_synonyms" computerName="ip-10-1-13-52" duration="00:00:00.0009460" startTime="2025-04-02T13:20:38.8779718+00:00" endTime="2025-04-02T13:20:38.8789181+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b5c19a4-3052-49ed-826d-37ef65aac234">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5ad8732d-44e8-462c-937c-ed22807ff2eb" testId="10fb0cfc-75ba-5071-54a2-b904db13da0e" testName="When_parent_has_no_content_but_the_children_do" computerName="ip-10-1-13-52" duration="00:00:00.0002010" startTime="2025-04-02T13:20:37.1994233+00:00" endTime="2025-04-02T13:20:37.1996247+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ad8732d-44e8-462c-937c-ed22807ff2eb">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="76ab5424-94ba-475b-a757-7e45f40fc987" testId="d4777f22-b0a1-5479-b90f-a4fef0e1d452" testName="DownloadProductExcelTest" computerName="ip-10-1-13-52" duration="00:00:00.0003430" startTime="2025-04-02T13:20:37.2016247+00:00" endTime="2025-04-02T13:20:37.2019676+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76ab5424-94ba-475b-a757-7e45f40fc987">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d3960477-f442-4f55-a1fa-67bf458f8d76" testId="11810d0e-d23b-349c-d53c-cd0872cc3b20" testName="Can_search_PPTs" computerName="ip-10-1-13-52" duration="00:00:00.0465610" startTime="2025-04-02T13:20:38.8279137+00:00" endTime="2025-04-02T13:20:38.8744740+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3960477-f442-4f55-a1fa-67bf458f8d76" />
+    <UnitTestResult executionId="079a87c5-a8bd-45cc-8e80-250ebcb66db5" testId="8372cd68-5fca-5544-a0ec-56679f9bdd36" testName="EditProductPropertyTypeShouldWorkWithoutContent" computerName="ip-10-1-13-52" duration="00:00:00.3316810" startTime="2025-04-02T13:20:38.8791042+00:00" endTime="2025-04-02T13:20:39.2107860+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="079a87c5-a8bd-45cc-8e80-250ebcb66db5" />
+    <UnitTestResult executionId="6777a612-7a11-4c4d-88d1-c04d582be417" testId="593aaae9-cd83-8619-90f7-cb05e06d8354" testName="Can_list_edits" computerName="ip-10-1-13-52" duration="00:00:00.0003210" startTime="2025-04-02T13:20:37.1998729+00:00" endTime="2025-04-02T13:20:37.2001937+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6777a612-7a11-4c4d-88d1-c04d582be417">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a6ac1495-d4b5-4585-8c2b-ad72441e25e4" testId="395edfb2-72c2-1137-e67d-5891e9682adf" testName="Search_by_id_works" computerName="ip-10-1-13-52" duration="00:00:00.0001440" startTime="2025-04-02T13:20:38.8767918+00:00" endTime="2025-04-02T13:20:38.8769359+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6ac1495-d4b5-4585-8c2b-ad72441e25e4">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="31fe1dd6-afc8-43da-bf2c-665284a7774b" testId="aab2a550-a744-baeb-7f81-2370d02e95f3" testName="Products_are_returned_in_the_expected_order_when_sorting_by_a_AlphabeticallySortable_property" computerName="ip-10-1-13-52" duration="00:00:00.0002330" startTime="2025-04-02T13:20:38.8771714+00:00" endTime="2025-04-02T13:20:38.8774043+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31fe1dd6-afc8-43da-bf2c-665284a7774b">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9de2c30a-3b15-40b6-bc37-01b929588674" testId="77789503-c10e-73a5-c7f4-f04379017023" testName="Configurable_products" computerName="ip-10-1-13-52" duration="00:00:00.0001950" startTime="2025-04-02T13:20:37.2052993+00:00" endTime="2025-04-02T13:20:37.2054940+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9de2c30a-3b15-40b6-bc37-01b929588674">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5c935da1-8de5-45f3-8f6a-566b6c47567f" testId="3c38e41f-40f4-6b6b-9587-0d62f0878250" testName="Can_create_large_edit" computerName="ip-10-1-13-52" duration="00:00:00.0005590" startTime="2025-04-02T13:20:37.1852346+00:00" endTime="2025-04-02T13:20:37.1857932+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c935da1-8de5-45f3-8f6a-566b6c47567f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="33985197-f5c7-431a-b78a-a9d53beb0a6f" testId="24140b41-e03b-b699-d074-82bee71ecb32" testName="TaxCode_is_required" computerName="ip-10-1-13-52" duration="00:00:00.0002370" startTime="2025-04-02T13:20:37.1981101+00:00" endTime="2025-04-02T13:20:37.1983469+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33985197-f5c7-431a-b78a-a9d53beb0a6f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bac52cdd-b0e9-46e8-8a7f-71f2b18ca33a" testId="08dcbf49-5bd8-bc4c-1aa7-81649d3c076a" testName="Dimension_data_should_work" computerName="ip-10-1-13-52" duration="00:00:00.0002070" startTime="2025-04-02T13:20:37.1863798+00:00" endTime="2025-04-02T13:20:37.1865862+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bac52cdd-b0e9-46e8-8a7f-71f2b18ca33a">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="293cd40c-1e57-4812-8541-e95b5b8d4212" testId="f4ebbea4-ce15-be9c-a99e-8ee04b97bc06" testName="Imported_products_with_images_appear_correctly_in_search_order" computerName="ip-10-1-13-52" duration="00:00:00.0002540" startTime="2025-04-02T13:20:37.1971840+00:00" endTime="2025-04-02T13:20:37.1974381+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="293cd40c-1e57-4812-8541-e95b5b8d4212">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="be0bdf2b-880c-41a0-b70d-7ea80c67024f" testId="06c35a3a-d052-99d8-db33-299fc49291f4" testName="Search_by_empty_ids_works" computerName="ip-10-1-13-52" duration="00:00:00.0002040" startTime="2025-04-02T13:20:38.8765760+00:00" endTime="2025-04-02T13:20:38.8767798+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be0bdf2b-880c-41a0-b70d-7ea80c67024f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa7ed79f-2fcd-4bcd-ae0b-865e01b5d03f" testId="965e3b69-18cf-5426-b529-c58405766ae5" testName="Can_import_images(False)" computerName="ip-10-1-13-52" duration="00:00:00.0001540" startTime="2025-04-02T13:20:37.1960693+00:00" endTime="2025-04-02T13:20:37.1962231+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa7ed79f-2fcd-4bcd-ae0b-865e01b5d03f">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f6b5a263-da2d-4d9c-b3a5-7057f7c94717" testId="cd452d7a-2ef8-6370-a73e-3b7c08064506" testName="Content_on_the_child_that_already_exists_on_the_child_is_not_duplicated" computerName="ip-10-1-13-52" duration="00:00:00.0001670" startTime="2025-04-02T13:20:37.1964319+00:00" endTime="2025-04-02T13:20:37.1965986+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6b5a263-da2d-4d9c-b3a5-7057f7c94717">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9c4f7cd3-87d4-424b-b571-3585b3d8fc30" testId="6f3bc40c-0379-385b-f1fa-d72ff169974f" testName="Can_delete_PPT_with_values_on_documents" computerName="ip-10-1-13-52" duration="00:00:00.0002799" startTime="2025-04-02T13:20:37.1873110+00:00" endTime="2025-04-02T13:20:37.1875910+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c4f7cd3-87d4-424b-b571-3585b3d8fc30">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6d165a06-3b8e-45b8-916b-42f319e631dd" testId="d0567a04-265a-d47b-46e7-d720a0a82d42" testName="Can_create_edit_for_swatches" computerName="ip-10-1-13-52" duration="00:00:00.0010470" startTime="2025-04-02T13:20:37.1841616+00:00" endTime="2025-04-02T13:20:37.1852080+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d165a06-3b8e-45b8-916b-42f319e631dd">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f5b5aa5c-d588-499f-b602-a9b829d7fbba" testId="02e9a14e-1f59-9eef-e7be-ee32e4eda2d3" testName="Can_search_new_PPTs" computerName="ip-10-1-13-52" duration="00:00:00.1671310" startTime="2025-04-02T13:20:38.6607228+00:00" endTime="2025-04-02T13:20:38.8278539+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5b5aa5c-d588-499f-b602-a9b829d7fbba" />
+    <UnitTestResult executionId="9366ef6a-106b-4cef-9434-1eede68e0928" testId="1c6fced8-1dca-377d-52ce-e0a84bf728e3" testName="FilterOnBothProductIDAndRevisionWorks" computerName="ip-10-1-13-52" duration="00:00:00.0002920" startTime="2025-04-02T13:20:37.1877958+00:00" endTime="2025-04-02T13:20:37.1880874+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9366ef6a-106b-4cef-9434-1eede68e0928">
+      <Output>
+        <StdOut>Skipping test: it does not belong to this partition.</StdOut>
+        <ErrorInfo>
+          <Message>Skipping test: it does not belong to this partition.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Can_use_Aggregate_completion" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="bb8e55a0-1ee1-d5cf-e703-0aa0ec0bb37d">
+      <Execution id="0e44702a-30b4-4c99-9b50-9adb2d63157b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.AutocompleteTests" name="Can_use_Aggregate_completion" />
+    </UnitTest>
+    <UnitTest name="Dimension_data_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="08dcbf49-5bd8-bc4c-1aa7-81649d3c076a">
+      <Execution id="bac52cdd-b0e9-46e8-8a7f-71f2b18ca33a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.CreateEditSharedTests" name="Dimension_data_should_work" />
+    </UnitTest>
+    <UnitTest name="Multiple_content_objects_for_the_same_layer_are_merged" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="91cf6225-a01a-893f-3144-d6cf34afae09">
+      <Execution id="8c09478e-27b5-4e01-a5c8-1de4e9ee51ad" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Multiple_content_objects_for_the_same_layer_are_merged" />
+    </UnitTest>
+    <UnitTest name="Can_create_edit_for_swatches" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="d0567a04-265a-d47b-46e7-d720a0a82d42">
+      <Execution id="6d165a06-3b8e-45b8-916b-42f319e631dd" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.CreateEditSharedTests" name="Can_create_edit_for_swatches" />
+    </UnitTest>
+    <UnitTest name="Can_update_taxcode" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="96c3b0e4-6d2e-789d-0e25-9e3e18e1cd4f">
+      <Execution id="d74d6df9-c655-464c-b39a-e2d83bd362c2" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Can_update_taxcode" />
+    </UnitTest>
+    <UnitTest name="searchtype_filter_can_be_fuzzy" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="18559dd1-62d6-13ac-0ac1-c39c4d111e20">
+      <Execution id="38425da8-a44b-4509-af77-4bb0d5bc3bf3" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ListProductPropertyTypeTests" name="searchtype_filter_can_be_fuzzy" />
+    </UnitTest>
+    <UnitTest name="ListRevisionsIncludingSystemRevisions" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="b72cfc5a-52a2-2300-4d86-e48d0c012e1e">
+      <Execution id="1f43bbfa-f771-42a3-badc-1cb1ce84c04f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ApplyRevisionTests" name="ListRevisionsIncludingSystemRevisions" />
+    </UnitTest>
+    <UnitTest name="Can_create_large_edit" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="3c38e41f-40f4-6b6b-9587-0d62f0878250">
+      <Execution id="5c935da1-8de5-45f3-8f6a-566b6c47567f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.CreateEditSharedTests" name="Can_create_large_edit" />
+    </UnitTest>
+    <UnitTest name="Can_create_new_AssortmentContentCulture_and_use_it_for_search" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="b4ca137f-11e7-074b-29c6-cd66b80210a9">
+      <Execution id="3b97cac6-e663-47bc-b93c-14d8e61f4b48" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.AssortmentContentCultureTests" name="Can_create_new_AssortmentContentCulture_and_use_it_for_search" />
+    </UnitTest>
+    <UnitTest name="ExportProductBaseExcelShouldWork" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="72a4de9b-34e0-4232-dd4c-f6d14a92a746">
+      <Execution id="7ab0e2a3-1ff6-4abd-a837-2a79760b69b7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductExcelTests" name="ExportProductBaseExcelShouldWork" />
+    </UnitTest>
+    <UnitTest name="Valid_product_hierarchy_with_content_import" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="84d3056c-e2ee-d4d3-094c-140fd0c39258">
+      <Execution id="353b75d0-3954-453b-b680-96cb0f7c23ad" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Valid_product_hierarchy_with_content_import" />
+    </UnitTest>
+    <UnitTest name="Content_on_the_child_that_already_exists_on_the_child_is_not_duplicated" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="cd452d7a-2ef8-6370-a73e-3b7c08064506">
+      <Execution id="f6b5a263-da2d-4d9c-b3a5-7057f7c94717" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Content_on_the_child_that_already_exists_on_the_child_is_not_duplicated" />
+    </UnitTest>
+    <UnitTest name="Creating_Configurable_Properties_ImportProducts" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="367d6c36-efd7-de8c-690f-1079351340e1">
+      <Execution id="60f0c967-cf30-438d-a367-08512c50bc3c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Creating_Configurable_Properties_ImportProducts" />
+    </UnitTest>
+    <UnitTest name="Can_use_both_product_search_template_and_filters" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="c09b50eb-2de0-2b25-738f-5b8550131a78">
+      <Execution id="2b4f619d-3267-46ab-9260-2aa3a849ae9a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductsTests" name="Can_use_both_product_search_template_and_filters" />
+    </UnitTest>
+    <UnitTest name="Can_import_images(False)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="965e3b69-18cf-5426-b529-c58405766ae5">
+      <Execution id="aa7ed79f-2fcd-4bcd-ae0b-865e01b5d03f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Can_import_images(False)" />
+    </UnitTest>
+    <UnitTest name="Search_by_id_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="395edfb2-72c2-1137-e67d-5891e9682adf">
+      <Execution id="a6ac1495-d4b5-4585-8c2b-ad72441e25e4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductsTests" name="Search_by_id_works" />
+    </UnitTest>
+    <UnitTest name="Can_search_PPTs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="11810d0e-d23b-349c-d53c-cd0872cc3b20">
+      <Execution id="d3960477-f442-4f55-a1fa-67bf458f8d76" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductPropertyTypeTests" name="Can_search_PPTs" />
+    </UnitTest>
+    <UnitTest name="Can_create_multiword_synonyms" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="3d799dca-e57d-f9f6-1823-e9da37f21919">
+      <Execution id="74d1d7d3-cb0e-405c-a7de-ac1ba1c2b5d7" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SynonymTests" name="Can_create_multiword_synonyms" />
+    </UnitTest>
+    <UnitTest name="Updating_SerialNumber_requirement_In_ImportProducts" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="74bbb5e4-4b6f-fa7f-73f1-b4b2808cff72">
+      <Execution id="c1481036-9bdf-4598-ad43-696f9bf38cdc" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Updating_SerialNumber_requirement_In_ImportProducts" />
+    </UnitTest>
+    <UnitTest name="After_importing_a_valid_product_it_should_be_searchable" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="8ee782c2-5827-1749-c650-465571e1ef47">
+      <Execution id="dc130f1a-682e-4ee8-aecf-db37844619b9" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="After_importing_a_valid_product_it_should_be_searchable" />
+    </UnitTest>
+    <UnitTest name="Updating__and_partial_Create_Configurable_Properties_ImportProducts" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="748ea817-04ff-4481-57bf-215afbcd8ec7">
+      <Execution id="0c79af53-a38b-46bb-9492-2fa2f35b4a64" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Updating__and_partial_Create_Configurable_Properties_ImportProducts" />
+    </UnitTest>
+    <UnitTest name="Products_are_returned_in_the_expected_order_when_sorting_by_a_AlphabeticallySortable_property" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="aab2a550-a744-baeb-7f81-2370d02e95f3">
+      <Execution id="31fe1dd6-afc8-43da-bf2c-665284a7774b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SortablePropertiesSharedTests" name="Products_are_returned_in_the_expected_order_when_sorting_by_a_AlphabeticallySortable_property" />
+    </UnitTest>
+    <UnitTest name="Can_specify_values_as_objects_with_a_property_called_value" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="2c222735-a87e-b030-53a6-5e6d46928261">
+      <Execution id="2ffd3771-b5d3-4958-850f-f3bd87b45b7a" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.CreateEditSharedTests" name="Can_specify_values_as_objects_with_a_property_called_value" />
+    </UnitTest>
+    <UnitTest name="Can_list_edits" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="593aaae9-cd83-8619-90f7-cb05e06d8354">
+      <Execution id="6777a612-7a11-4c4d-88d1-c04d582be417" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ListProductContentEditsTests" name="Can_list_edits" />
+    </UnitTest>
+    <UnitTest name="Can_search_new_PPTs" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="02e9a14e-1f59-9eef-e7be-ee32e4eda2d3">
+      <Execution id="f5b5aa5c-d588-499f-b602-a9b829d7fbba" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductPropertyTypeTests" name="Can_search_new_PPTs" />
+    </UnitTest>
+    <UnitTest name="Product_search_returns_if_product_is_part_of_bundle" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="567308e8-74a4-9e12-88aa-f0d05a2ed980">
+      <Execution id="ae128b3f-16b8-44cf-89d4-73c2e677a452" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductsTests" name="Product_search_returns_if_product_is_part_of_bundle" />
+    </UnitTest>
+    <UnitTest name="Revision_status_is_set_to_applied" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="08d6aba3-2a2f-48ac-9c93-9cfc4d696497">
+      <Execution id="4908e141-71b7-49b2-b256-7dc67734e495" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ApplyRevisionTests" name="Revision_status_is_set_to_applied" />
+    </UnitTest>
+    <UnitTest name="TaxCode_is_required" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="24140b41-e03b-b699-d074-82bee71ecb32">
+      <Execution id="33985197-f5c7-431a-b78a-a9d53beb0a6f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="TaxCode_is_required" />
+    </UnitTest>
+    <UnitTest name="FilterOnBothProductIDAndRevisionWorks" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="1c6fced8-1dca-377d-52ce-e0a84bf728e3">
+      <Execution id="9366ef6a-106b-4cef-9434-1eede68e0928" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.GetProductForEditTests" name="FilterOnBothProductIDAndRevisionWorks" />
+    </UnitTest>
+    <UnitTest name="Import_gift_card_using_existing_configuration_id" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="9e4aa725-664a-1182-271d-2d8c7b440fbc">
+      <Execution id="eebb93d1-4e6f-4db1-84bd-24ace266964d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Import_gift_card_using_existing_configuration_id" />
+    </UnitTest>
+    <UnitTest name="Leaving_query_null_does_not_cause_a_NullReference" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="bcb91360-94b2-5246-f551-a8bd76523258">
+      <Execution id="6b0e8bf2-0cf1-48db-95e6-0163b5739cfe" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductSearchStrategyTests" name="Leaving_query_null_does_not_cause_a_NullReference" />
+    </UnitTest>
+    <UnitTest name="When_parent_has_no_content_but_the_children_do" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="10fb0cfc-75ba-5071-54a2-b904db13da0e">
+      <Execution id="5ad8732d-44e8-462c-937c-ed22807ff2eb" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="When_parent_has_no_content_but_the_children_do" />
+    </UnitTest>
+    <UnitTest name="Should_be_able_to_create_a_property_and_change_its_data_type_afterwards" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="5ed8290f-d806-7f98-8ed6-6b604eea1826">
+      <Execution id="771a4fbc-6257-40fe-a117-7001ee1c60d4" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.DataTypeTests" name="Should_be_able_to_create_a_property_and_change_its_data_type_afterwards" />
+    </UnitTest>
+    <UnitTest name="Can_reindex_documens" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="338f8488-8b9a-ae52-7bca-44fe9ec14fa9">
+      <Execution id="0d88a346-b671-4b5f-a599-205738feb89f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ReindexTests" name="Can_reindex_documens" />
+    </UnitTest>
+    <UnitTest name="Can_delete_PPT_with_values_on_documents" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="6f3bc40c-0379-385b-f1fa-d72ff169974f">
+      <Execution id="9c4f7cd3-87d4-424b-b571-3585b3d8fc30" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.DeleteProductPropertyTypeTests" name="Can_delete_PPT_with_values_on_documents" />
+    </UnitTest>
+    <UnitTest name="UploadProductExcelTest_create_product" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="33125c07-9051-50b0-7e4f-863e1d83344d">
+      <Execution id="379d8fbc-9743-492e-9a04-b3a919cb7a35" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductExcelTests" name="UploadProductExcelTest_create_product" />
+    </UnitTest>
+    <UnitTest name="Imported_products_with_images_appear_correctly_in_search_order" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="f4ebbea4-ce15-be9c-a99e-8ee04b97bc06">
+      <Execution id="293cd40c-1e57-4812-8541-e95b5b8d4212" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Imported_products_with_images_appear_correctly_in_search_order" />
+    </UnitTest>
+    <UnitTest name="ProductChildren_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="18a54880-e051-a84c-6c30-d3aa252df99d">
+      <Execution id="1f514c2a-20f4-4016-baa8-6d4b6f23bd71" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductHierarchyTests" name="ProductChildren_test" />
+    </UnitTest>
+    <UnitTest name="Can_filter_on_availability" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="6a99016a-f976-93cf-b799-699a78c03a5f">
+      <Execution id="1ef2f4c9-7d72-4664-8e6d-91c396c26e6e" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductSearchStockTests" name="Can_filter_on_availability" />
+    </UnitTest>
+    <UnitTest name="ProductParents_test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="bd04489f-1f5c-70a9-1c0f-fc8e3238670f">
+      <Execution id="20d67b3d-e598-4839-a1d0-a7368377c691" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductHierarchyTests" name="ProductParents_test" />
+    </UnitTest>
+    <UnitTest name="Bundle_products" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="8d5a4d5c-1a09-4375-6afb-3f8f2488eef6">
+      <Execution id="ac70ab29-9300-48f1-8142-b5b0ace7f1df" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductSearchStockTests" name="Bundle_products" />
+    </UnitTest>
+    <UnitTest name="Can_exclude_second_chance_products_from_product_search" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="7bff7a98-b723-6afa-ba9b-732d065a2916">
+      <Execution id="cd67b7c8-bd2c-4657-9a06-939039cb3c1b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductsTests" name="Can_exclude_second_chance_products_from_product_search" />
+    </UnitTest>
+    <UnitTest name="New_AssortmentContentCulture_is_composed_after_creating_it" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="a899c7dc-010c-61d2-783a-1535428a7fd3">
+      <Execution id="92be0f4c-0d2d-4e0c-a436-4fe6cdcbab71" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.AssortmentContentCultureTests" name="New_AssortmentContentCulture_is_composed_after_creating_it" />
+    </UnitTest>
+    <UnitTest name="Can_use_property_autocomplete" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="47ebe5bc-45ff-ed18-2dc7-5dac4a8d4740">
+      <Execution id="e14827f9-60b2-4d7c-ba81-9a0971f544d8" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.AutocompleteTests" name="Can_use_property_autocomplete" />
+    </UnitTest>
+    <UnitTest name="Configurable_products" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="77789503-c10e-73a5-c7f4-f04379017023">
+      <Execution id="9de2c30a-3b15-40b6-bc37-01b929588674" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductSearchStockTests" name="Configurable_products" />
+    </UnitTest>
+    <UnitTest name="Can_create_new_properties" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="71d3017e-00bc-1397-b43b-c48ad33962d7">
+      <Execution id="d4e46647-8046-4045-9ef3-19ec5eda8874" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Can_create_new_properties" />
+    </UnitTest>
+    <UnitTest name="Search_by_empty_ids_works" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="06c35a3a-d052-99d8-db33-299fc49291f4">
+      <Execution id="be0bdf2b-880c-41a0-b70d-7ea80c67024f" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductsTests" name="Search_by_empty_ids_works" />
+    </UnitTest>
+    <UnitTest name="DownloadProductExcelTest" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="d4777f22-b0a1-5479-b90f-a4fef0e1d452">
+      <Execution id="76ab5424-94ba-475b-a757-7e45f40fc987" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductExcelTests" name="DownloadProductExcelTest" />
+    </UnitTest>
+    <UnitTest name="Can_use_EditProduct_to_edit_product_content" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="aa39ba64-97a9-e15c-6017-97422f109913">
+      <Execution id="49011998-f2e6-410b-8c25-9faf6214841d" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.CreateEditSharedTests" name="Can_use_EditProduct_to_edit_product_content" />
+    </UnitTest>
+    <UnitTest name="Can_create_synonyms" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="c4cd2600-2970-c620-8830-0798c3c4fd86">
+      <Execution id="6b5c19a4-3052-49ed-826d-37ef65aac234" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SynonymTests" name="Can_create_synonyms" />
+    </UnitTest>
+    <UnitTest name="Can_import_images(True)" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="9922dd9b-ed27-2787-b2de-cb8b9fefbb1a">
+      <Execution id="8a4eac39-73b5-4782-9819-404b65090c72" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Can_import_images(True)" />
+    </UnitTest>
+    <UnitTest name="Multiple_products" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="e22e1de4-10e8-b8e5-ea1f-d0f440087ebe">
+      <Execution id="42153ef1-0a2e-483b-90a7-d75b28403a8b" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Multiple_products" />
+    </UnitTest>
+    <UnitTest name="Can_sort_and_score_by_stock" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="c74eae40-d6da-c954-8439-98ee7f73eecf">
+      <Execution id="5669cd69-9b18-4eb0-b0da-d1e3bfbfa6ed" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductSearchStockTests" name="Can_sort_and_score_by_stock" />
+    </UnitTest>
+    <UnitTest name="Updating_Configurable_Properties_ImportProducts" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="66b49aa0-8bd6-3e93-e210-fad9eb969007">
+      <Execution id="d5decb6f-5b91-4092-87e7-86ece6c12849" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Updating_Configurable_Properties_ImportProducts" />
+    </UnitTest>
+    <UnitTest name="Test" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="dedadd88-9ca3-bf40-01ac-f6bab4a90c7f">
+      <Execution id="6406e6ad-d127-4c22-b93d-c6776f578e86" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.GetProductForEditTests" name="Test" />
+    </UnitTest>
+    <UnitTest name="ListRevisionsWithProductID" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="9cf80740-9218-0e85-8642-834d66a8767e">
+      <Execution id="12c74e8a-2b02-484b-881e-206910c0d229" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ApplyRevisionTests" name="ListRevisionsWithProductID" />
+    </UnitTest>
+    <UnitTest name="filter_on_id_should_work" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="261f180b-c850-b236-905f-d9f028e19ab9">
+      <Execution id="e96392d4-a0f7-4db8-8ddb-3d638ff625fd" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ListProductPropertyTypeTests" name="filter_on_id_should_work" />
+    </UnitTest>
+    <UnitTest name="ExportProductBaseExcelAsyncShouldWork" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="587fdef2-0bf2-38bf-d34d-f8f48aa8f1cd">
+      <Execution id="d60760b8-edc1-4d67-af46-a8de9f7695d5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ProductExcelTests" name="ExportProductBaseExcelAsyncShouldWork" />
+    </UnitTest>
+    <UnitTest name="Valid_product_hierarchy_import" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="8d58560c-3b8d-0177-f15d-709e143bbac9">
+      <Execution id="ffbb9435-d549-4885-a14d-1ee4fe7837e5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.ImportProductsSharedTests" name="Valid_product_hierarchy_import" />
+    </UnitTest>
+    <UnitTest name="EditProductPropertyTypeShouldWorkWithoutContent" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="8372cd68-5fca-5544-a0ec-56679f9bdd36">
+      <Execution id="079a87c5-a8bd-45cc-8e80-250ebcb66db5" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.UpdateProductPropertyTypeTests" name="EditProductPropertyTypeShouldWorkWithoutContent" />
+    </UnitTest>
+    <UnitTest name="Can_search_by_category" storage="/home/runner/_work/eva/eva/test/eva.testsuite.pim/bin/release/eva.testsuite.pim.dll" id="65ee6d7d-b447-025f-23bc-7115f93d97b9">
+      <Execution id="5c14b4cb-5983-4956-a872-17248fdd7a6c" />
+      <TestMethod codeBase="/home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll" adapterTypeName="executor://nunit3testexecutor/" className="EVA.TestSuite.PIM.SearchProductPropertyTypeTests" name="Can_search_by_category" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="a899c7dc-010c-61d2-783a-1535428a7fd3" executionId="92be0f4c-0d2d-4e0c-a436-4fe6cdcbab71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="261f180b-c850-b236-905f-d9f028e19ab9" executionId="e96392d4-a0f7-4db8-8ddb-3d638ff625fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="367d6c36-efd7-de8c-690f-1079351340e1" executionId="60f0c967-cf30-438d-a367-08512c50bc3c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84d3056c-e2ee-d4d3-094c-140fd0c39258" executionId="353b75d0-3954-453b-b680-96cb0f7c23ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="587fdef2-0bf2-38bf-d34d-f8f48aa8f1cd" executionId="d60760b8-edc1-4d67-af46-a8de9f7695d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb8e55a0-1ee1-d5cf-e703-0aa0ec0bb37d" executionId="0e44702a-30b4-4c99-9b50-9adb2d63157b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bcb91360-94b2-5246-f551-a8bd76523258" executionId="6b0e8bf2-0cf1-48db-95e6-0163b5739cfe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d5a4d5c-1a09-4375-6afb-3f8f2488eef6" executionId="ac70ab29-9300-48f1-8142-b5b0ace7f1df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a99016a-f976-93cf-b799-699a78c03a5f" executionId="1ef2f4c9-7d72-4664-8e6d-91c396c26e6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72a4de9b-34e0-4232-dd4c-f6d14a92a746" executionId="7ab0e2a3-1ff6-4abd-a837-2a79760b69b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ed8290f-d806-7f98-8ed6-6b604eea1826" executionId="771a4fbc-6257-40fe-a117-7001ee1c60d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91cf6225-a01a-893f-3144-d6cf34afae09" executionId="8c09478e-27b5-4e01-a5c8-1de4e9ee51ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33125c07-9051-50b0-7e4f-863e1d83344d" executionId="379d8fbc-9743-492e-9a04-b3a919cb7a35" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c74eae40-d6da-c954-8439-98ee7f73eecf" executionId="5669cd69-9b18-4eb0-b0da-d1e3bfbfa6ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd04489f-1f5c-70a9-1c0f-fc8e3238670f" executionId="20d67b3d-e598-4839-a1d0-a7368377c691" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="18a54880-e051-a84c-6c30-d3aa252df99d" executionId="1f514c2a-20f4-4016-baa8-6d4b6f23bd71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4ca137f-11e7-074b-29c6-cd66b80210a9" executionId="3b97cac6-e663-47bc-b93c-14d8e61f4b48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="66b49aa0-8bd6-3e93-e210-fad9eb969007" executionId="d5decb6f-5b91-4092-87e7-86ece6c12849" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="18559dd1-62d6-13ac-0ac1-c39c4d111e20" executionId="38425da8-a44b-4509-af77-4bb0d5bc3bf3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d58560c-3b8d-0177-f15d-709e143bbac9" executionId="ffbb9435-d549-4885-a14d-1ee4fe7837e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47ebe5bc-45ff-ed18-2dc7-5dac4a8d4740" executionId="e14827f9-60b2-4d7c-ba81-9a0971f544d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dedadd88-9ca3-bf40-01ac-f6bab4a90c7f" executionId="6406e6ad-d127-4c22-b93d-c6776f578e86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e4aa725-664a-1182-271d-2d8c7b440fbc" executionId="eebb93d1-4e6f-4db1-84bd-24ace266964d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b72cfc5a-52a2-2300-4d86-e48d0c012e1e" executionId="1f43bbfa-f771-42a3-badc-1cb1ce84c04f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cf80740-9218-0e85-8642-834d66a8767e" executionId="12c74e8a-2b02-484b-881e-206910c0d229" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9922dd9b-ed27-2787-b2de-cb8b9fefbb1a" executionId="8a4eac39-73b5-4782-9819-404b65090c72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65ee6d7d-b447-025f-23bc-7115f93d97b9" executionId="5c14b4cb-5983-4956-a872-17248fdd7a6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96c3b0e4-6d2e-789d-0e25-9e3e18e1cd4f" executionId="d74d6df9-c655-464c-b39a-e2d83bd362c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c222735-a87e-b030-53a6-5e6d46928261" executionId="2ffd3771-b5d3-4958-850f-f3bd87b45b7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08d6aba3-2a2f-48ac-9c93-9cfc4d696497" executionId="4908e141-71b7-49b2-b256-7dc67734e495" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d799dca-e57d-f9f6-1823-e9da37f21919" executionId="74d1d7d3-cb0e-405c-a7de-ac1ba1c2b5d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="567308e8-74a4-9e12-88aa-f0d05a2ed980" executionId="ae128b3f-16b8-44cf-89d4-73c2e677a452" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="748ea817-04ff-4481-57bf-215afbcd8ec7" executionId="0c79af53-a38b-46bb-9492-2fa2f35b4a64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7bff7a98-b723-6afa-ba9b-732d065a2916" executionId="cd67b7c8-bd2c-4657-9a06-939039cb3c1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71d3017e-00bc-1397-b43b-c48ad33962d7" executionId="d4e46647-8046-4045-9ef3-19ec5eda8874" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ee782c2-5827-1749-c650-465571e1ef47" executionId="dc130f1a-682e-4ee8-aecf-db37844619b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa39ba64-97a9-e15c-6017-97422f109913" executionId="49011998-f2e6-410b-8c25-9faf6214841d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e22e1de4-10e8-b8e5-ea1f-d0f440087ebe" executionId="42153ef1-0a2e-483b-90a7-d75b28403a8b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c09b50eb-2de0-2b25-738f-5b8550131a78" executionId="2b4f619d-3267-46ab-9260-2aa3a849ae9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="338f8488-8b9a-ae52-7bca-44fe9ec14fa9" executionId="0d88a346-b671-4b5f-a599-205738feb89f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="74bbb5e4-4b6f-fa7f-73f1-b4b2808cff72" executionId="c1481036-9bdf-4598-ad43-696f9bf38cdc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4cd2600-2970-c620-8830-0798c3c4fd86" executionId="6b5c19a4-3052-49ed-826d-37ef65aac234" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10fb0cfc-75ba-5071-54a2-b904db13da0e" executionId="5ad8732d-44e8-462c-937c-ed22807ff2eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4777f22-b0a1-5479-b90f-a4fef0e1d452" executionId="76ab5424-94ba-475b-a757-7e45f40fc987" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11810d0e-d23b-349c-d53c-cd0872cc3b20" executionId="d3960477-f442-4f55-a1fa-67bf458f8d76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8372cd68-5fca-5544-a0ec-56679f9bdd36" executionId="079a87c5-a8bd-45cc-8e80-250ebcb66db5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="593aaae9-cd83-8619-90f7-cb05e06d8354" executionId="6777a612-7a11-4c4d-88d1-c04d582be417" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="395edfb2-72c2-1137-e67d-5891e9682adf" executionId="a6ac1495-d4b5-4585-8c2b-ad72441e25e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aab2a550-a744-baeb-7f81-2370d02e95f3" executionId="31fe1dd6-afc8-43da-bf2c-665284a7774b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77789503-c10e-73a5-c7f4-f04379017023" executionId="9de2c30a-3b15-40b6-bc37-01b929588674" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3c38e41f-40f4-6b6b-9587-0d62f0878250" executionId="5c935da1-8de5-45f3-8f6a-566b6c47567f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24140b41-e03b-b699-d074-82bee71ecb32" executionId="33985197-f5c7-431a-b78a-a9d53beb0a6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08dcbf49-5bd8-bc4c-1aa7-81649d3c076a" executionId="bac52cdd-b0e9-46e8-8a7f-71f2b18ca33a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4ebbea4-ce15-be9c-a99e-8ee04b97bc06" executionId="293cd40c-1e57-4812-8541-e95b5b8d4212" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06c35a3a-d052-99d8-db33-299fc49291f4" executionId="be0bdf2b-880c-41a0-b70d-7ea80c67024f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="965e3b69-18cf-5426-b529-c58405766ae5" executionId="aa7ed79f-2fcd-4bcd-ae0b-865e01b5d03f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd452d7a-2ef8-6370-a73e-3b7c08064506" executionId="f6b5a263-da2d-4d9c-b3a5-7057f7c94717" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f3bc40c-0379-385b-f1fa-d72ff169974f" executionId="9c4f7cd3-87d4-424b-b571-3585b3d8fc30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0567a04-265a-d47b-46e7-d720a0a82d42" executionId="6d165a06-3b8e-45b8-916b-42f319e631dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02e9a14e-1f59-9eef-e7be-ee32e4eda2d3" executionId="f5b5aa5c-d588-499f-b602-a9b829d7fbba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c6fced8-1dca-377d-52ce-e0a84bf728e3" executionId="9366ef6a-106b-4cef-9434-1eede68e0928" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="61" executed="8" passed="8" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started
+Running all tests in /home/runner/_work/eva/eva/test/EVA.TestSuite.PIM/bin/Release/EVA.TestSuite.PIM.dll
+   NUnit3TestExecutor discovered 61 of 61 NUnit test cases using Current Discovery mode, Non-Explicit run
+ListRevisionsIncludingSystemRevisions: Skipping test: it does not belong to this partition.
+ListRevisionsWithProductID: Skipping test: it does not belong to this partition.
+Revision_status_is_set_to_applied: Skipping test: it does not belong to this partition.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/CreateOrganizationUnit required_field:ToCreate.CurrencyID - Field ToCreate.CurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/SearchProducts missing_includedfields - No IncludedFields specified for a SearchProducts request.
+
+Test 'ListRevisionsIncludingSystemRevisions' was skipped in the test run.
+Test 'ListRevisionsWithProductID' was skipped in the test run.
+Test 'Revision_status_is_set_to_applied' was skipped in the test run.
+Warning message/ListOrganizationUnits obsolete_service - EVA.Core.Services.OrganizationUnits.ListOrganizationUnits is deprecated and will be removed in 2.0.812: Use `ListOrganizationUnitDetailed` (authenticated) or `ListOrganizationUnitSummaries` (anonymous).
+Warning message/CreateOrganizationUnit required_field:ToCreate.CurrencyID - Field ToCreate.CurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/CreateOrganizationUnit required_field:ToCreate.CostPriceCurrencyID - Field ToCreate.CostPriceCurrencyID is required and will be enforced as such in 2.0.606.
+Warning message/GetOrganizationUnit obsolete_service - EVA.Core.Services.OrganizationUnits.GetOrganizationUnit is deprecated and will be removed in 2.0.812: Use `GetOrganizationUnitDetailed` (authenticated) or `GetOrganizationUnitSummary` (anonymous).
+Warning message/SearchProducts missing_includedfields - No IncludedFields specified for a SearchProducts request.
+
+Can_use_Aggregate_completion: Skipping test: it does not belong to this partition.
+Can_use_property_autocomplete: Skipping test: it does not belong to this partition.
+Can_create_edit_for_swatches: Skipping test: it does not belong to this partition.
+Can_create_large_edit: Skipping test: it does not belong to this partition.
+Can_specify_values_as_objects_with_a_property_called_value: Skipping test: it does not belong to this partition.
+Can_use_EditProduct_to_edit_product_content: Skipping test: it does not belong to this partition.
+Dimension_data_should_work: Skipping test: it does not belong to this partition.
+Test 'Can_use_Aggregate_completion' was skipped in the test run.
+Test 'Can_use_property_autocomplete' was skipped in the test run.
+Test 'Can_create_edit_for_swatches' was skipped in the test run.
+Test 'Can_create_large_edit' was skipped in the test run.
+Test 'Can_specify_values_as_objects_with_a_property_called_value' was skipped in the test run.
+Test 'Can_use_EditProduct_to_edit_product_content' was skipped in the test run.
+Test 'Dimension_data_should_work' was skipped in the test run.
+Should_be_able_to_create_a_property_and_change_its_data_type_afterwards: Skipping test: it does not belong to this partition.
+Can_delete_PPT_with_values_on_documents: Skipping test: it does not belong to this partition.
+FilterOnBothProductIDAndRevisionWorks: Skipping test: it does not belong to this partition.
+Test: Skipping test: it does not belong to this partition.
+After_importing_a_valid_product_it_should_be_searchable: Skipping test: it does not belong to this partition.
+Can_create_new_properties: Skipping test: it does not belong to this partition.
+Can_import_images(True): Skipping test: it does not belong to this partition.
+Can_import_images(False): Skipping test: it does not belong to this partition.
+Can_update_taxcode: Skipping test: it does not belong to this partition.
+Test 'Should_be_able_to_create_a_property_and_change_its_data_type_afterwards' was skipped in the test run.
+Test 'Can_delete_PPT_with_values_on_documents' was skipped in the test run.
+Test 'FilterOnBothProductIDAndRevisionWorks' was skipped in the test run.
+Test 'Test' was skipped in the test run.
+Test 'After_importing_a_valid_product_it_should_be_searchable' was skipped in the test run.
+Test 'Can_create_new_properties' was skipped in the test run.
+Test 'Can_import_images(True)' was skipped in the test run.
+Test 'Can_import_images(False)' was skipped in the test run.
+Test 'Can_update_taxcode' was skipped in the test run.
+Content_on_the_child_that_already_exists_on_the_child_is_not_duplicated: Skipping test: it does not belong to this partition.
+Creating_Configurable_Properties_ImportProducts: Skipping test: it does not belong to this partition.
+Import_gift_card_using_existing_configuration_id: Skipping test: it does not belong to this partition.
+Imported_products_with_images_appear_correctly_in_search_order: Skipping test: it does not belong to this partition.
+Multiple_content_objects_for_the_same_layer_are_merged: Skipping test: it does not belong to this partition.
+Multiple_products: Skipping test: it does not belong to this partition.
+TaxCode_is_required: Skipping test: it does not belong to this partition.
+Updating__and_partial_Create_Configurable_Properties_ImportProducts: Skipping test: it does not belong to this partition.
+Updating_Configurable_Properties_ImportProducts: Skipping test: it does not belong to this partition.
+Test 'Content_on_the_child_that_already_exists_on_the_child_is_not_duplicated' was skipped in the test run.
+Test 'Creating_Configurable_Properties_ImportProducts' was skipped in the test run.
+Test 'Import_gift_card_using_existing_configuration_id' was skipped in the test run.
+Test 'Imported_products_with_images_appear_correctly_in_search_order' was skipped in the test run.
+Test 'Multiple_content_objects_for_the_same_layer_are_merged' was skipped in the test run.
+Test 'Multiple_products' was skipped in the test run.
+Test 'TaxCode_is_required' was skipped in the test run.
+Test 'Updating__and_partial_Create_Configurable_Properties_ImportProducts' was skipped in the test run.
+Test 'Updating_Configurable_Properties_ImportProducts' was skipped in the test run.
+Updating_SerialNumber_requirement_In_ImportProducts: Skipping test: it does not belong to this partition.
+Valid_product_hierarchy_import: Skipping test: it does not belong to this partition.
+Valid_product_hierarchy_with_content_import: Skipping test: it does not belong to this partition.
+When_parent_has_no_content_but_the_children_do: Skipping test: it does not belong to this partition.
+Can_list_edits: Skipping test: it does not belong to this partition.
+filter_on_id_should_work: Skipping test: it does not belong to this partition.
+searchtype_filter_can_be_fuzzy: Skipping test: it does not belong to this partition.
+DownloadProductExcelTest: Skipping test: it does not belong to this partition.
+ExportProductBaseExcelAsyncShouldWork: Skipping test: it does not belong to this partition.
+Test 'Updating_SerialNumber_requirement_In_ImportProducts' was skipped in the test run.
+Test 'Valid_product_hierarchy_import' was skipped in the test run.
+Test 'Valid_product_hierarchy_with_content_import' was skipped in the test run.
+Test 'When_parent_has_no_content_but_the_children_do' was skipped in the test run.
+Test 'Can_list_edits' was skipped in the test run.
+Test 'filter_on_id_should_work' was skipped in the test run.
+Test 'searchtype_filter_can_be_fuzzy' was skipped in the test run.
+Test 'DownloadProductExcelTest' was skipped in the test run.
+Test 'ExportProductBaseExcelAsyncShouldWork' was skipped in the test run.
+ExportProductBaseExcelShouldWork: Skipping test: it does not belong to this partition.
+UploadProductExcelTest_create_product: Skipping test: it does not belong to this partition.
+ProductChildren_test: Skipping test: it does not belong to this partition.
+ProductParents_test: Skipping test: it does not belong to this partition.
+Bundle_products: Skipping test: it does not belong to this partition.
+Can_filter_on_availability: Skipping test: it does not belong to this partition.
+Can_sort_and_score_by_stock: Skipping test: it does not belong to this partition.
+Configurable_products: Skipping test: it does not belong to this partition.
+Warning message/SearchProducts missing_includedfields - No IncludedFields specified for a SearchProducts request.
+
+Test 'ExportProductBaseExcelShouldWork' was skipped in the test run.
+Test 'UploadProductExcelTest_create_product' was skipped in the test run.
+Test 'ProductChildren_test' was skipped in the test run.
+Test 'ProductParents_test' was skipped in the test run.
+Test 'Bundle_products' was skipped in the test run.
+Test 'Can_filter_on_availability' was skipped in the test run.
+Test 'Can_sort_and_score_by_stock' was skipped in the test run.
+Test 'Configurable_products' was skipped in the test run.
+Can_exclude_second_chance_products_from_product_search: Skipping test: it does not belong to this partition.
+Can_use_both_product_search_template_and_filters: Skipping test: it does not belong to this partition.
+Product_search_returns_if_product_is_part_of_bundle: Skipping test: it does not belong to this partition.
+Search_by_empty_ids_works: Skipping test: it does not belong to this partition.
+Search_by_id_works: Skipping test: it does not belong to this partition.
+Products_are_returned_in_the_expected_order_when_sorting_by_a_AlphabeticallySortable_property: Skipping test: it does not belong to this partition.
+Can_create_multiword_synonyms: Skipping test: it does not belong to this partition.
+Can_create_synonyms: Skipping test: it does not belong to this partition.
+Test 'Can_exclude_second_chance_products_from_product_search' was skipped in the test run.
+Test 'Can_use_both_product_search_template_and_filters' was skipped in the test run.
+Test 'Product_search_returns_if_product_is_part_of_bundle' was skipped in the test run.
+Test 'Search_by_empty_ids_works' was skipped in the test run.
+Test 'Search_by_id_works' was skipped in the test run.
+Test 'Products_are_returned_in_the_expected_order_when_sorting_by_a_AlphabeticallySortable_property' was skipped in the test run.
+Test 'Can_create_multiword_synonyms' was skipped in the test run.
+Test 'Can_create_synonyms' was skipped in the test run.
+NUnit Adapter 5.0.0.0: Test execution complete
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

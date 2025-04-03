@@ -16,8 +16,10 @@ import {getCheckRunContext} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
+import path from 'path'
 import bent from 'bent'
 import {cwd} from 'process'
+import {groupByDirectory} from './utils/merge-utils'
 
 async function main(): Promise<void> {
   try {
@@ -105,11 +107,11 @@ class TestReporter {
     if (this.resultsEndpoint?.length > 0) {
       try {
         const readStream = input.trxZip.toBuffer()
-        const version = fs.existsSync('test/EVA.TestSuite.Core/bin/Release/version.txt')
-          ? fs.readFileSync('test/EVA.TestSuite.Core/bin/Release/version.txt').toString()
+        const version = fs.existsSync('./metadata/version.txt')
+          ? fs.readFileSync('./metadata/version.txt').toString()
           : null
-        const commitID = fs.existsSync('test/EVA.TestSuite.Core/bin/Release/commit.txt')
-          ? fs.readFileSync('test/EVA.TestSuite.Core/bin/Release/commit.txt').toString()
+        const commitID = fs.existsSync('./metadata/commit.txt')
+          ? fs.readFileSync('./metadata/commit.txt').toString()
           : null
 
         core.info(
@@ -198,7 +200,7 @@ class TestReporter {
 
     core.info(`Processing test results for check run ${name}`)
 
-    const results: TestRunResult[] = []
+    var results: TestRunResult[] = []
     const result: TestRunResultWithUrl = new TestRunResultWithUrl(results, null)
 
     for (const {file, content} of files) {
@@ -211,6 +213,9 @@ class TestReporter {
         throw error
       }
     }
+
+    results = groupByDirectory(results)
+    results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
 
     core.info(`Creating check run ${name}`)
     try {
@@ -296,73 +301,77 @@ class TestReporter {
       core.info(`Check run details: ${resp.data.details_url}`)
       result.checkUrl = resp.data.html_url
 
-      if (this.slackWebhook && this.context.branch === 'master') {
-        const webhook = new IncomingWebhook(this.slackWebhook)
-        const passed = results.reduce((sum, tr) => sum + tr.passed, 0)
-        const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0)
-        const failed = results.reduce((sum, tr) => sum + tr.failed, 0)
-
-        const req = {
-          blocks: [
-            {
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: `*${name}*`
-              }
-            },
-            {
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: `:large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed} <${resp.data.html_url}|(view)>`
-              }
-            }
-          ]
-        }
-
-        results.map((tr, runIndex) => {
-          if (tr.failed === 0) return
-          let runName = tr.path.slice(0, tr.path.indexOf('/TestResults/'))
-          runName = runName.startsWith('test/') ? runName.slice(5) : runName
-
-          req.blocks.push({
-            type: 'section',
-            text: {
-              type: 'mrkdwn',
-              text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
-            }
-          })
-
-          if (failed <= 10) {
-            const failedTests: string[] = []
-            tr.failedSuites.map(suite => {
-              suite.failedGroups.map(group => {
-                group.failedTests.map(test => {
-                  failedTests.push(`- <${suite.link}|${test.name}>`)
-                })
-              })
-            })
-
-            req.blocks.push({
-              type: 'section',
-              text: {
-                type: 'mrkdwn',
-                text: failedTests.join('\n')
-              }
-            })
-          }
-        })
-
-        if (this.githubEvent === 'schedule' || failed > 0) {
-          await webhook.send(req)
-        }
-      }
+      await this.reportToSlack(results, name, resp)
     } catch (error) {
       core.error(`Could not create check to store the results`)
     }
 
     return result
+  }
+
+  private async reportToSlack(results: TestRunResult[], name: string, resp: any): Promise<void> {
+    if (this.slackWebhook && this.context.branch === 'master') {
+      const webhook = new IncomingWebhook(this.slackWebhook)
+      const passed = results.reduce((sum, tr) => sum + tr.passed, 0)
+      const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0)
+      const failed = results.reduce((sum, tr) => sum + tr.failed, 0)
+
+      const req = {
+        blocks: [
+          {
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: `*${name}*`
+            }
+          },
+          {
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: `:large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed} <${resp.data.html_url}|(view)>`
+            }
+          }
+        ]
+      }
+
+      results.map((tr, runIndex) => {
+        if (tr.failed === 0) return
+        let runName = path.basename(path.dirname(path.dirname(tr.path)))
+        runName = runName.startsWith('test/') ? runName.slice(5) : runName
+
+        req.blocks.push({
+          type: 'section',
+          text: {
+            type: 'mrkdwn',
+            text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
+          }
+        })
+
+        if (failed <= 10) {
+          const failedTests: string[] = []
+          tr.failedSuites.map(suite => {
+            suite.failedGroups.map(group => {
+              group.failedTests.map(test => {
+                failedTests.push(`- <${suite.link}|${test.name}>`)
+              })
+            })
+          })
+
+          req.blocks.push({
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: failedTests.join('\n')
+            }
+          })
+        }
+      })
+
+      if (this.githubEvent === 'schedule' || failed > 0) {
+        await webhook.send(req)
+      }
+    }
   }
 
   getParser(reporter: string, options: ParseOptions): TestParser {
