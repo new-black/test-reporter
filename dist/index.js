@@ -145,7 +145,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TestReporter = void 0;
 const core = __importStar(__nccwpck_require__(7484));
 const github = __importStar(__nccwpck_require__(3228));
 const local_file_provider_1 = __nccwpck_require__(922);
@@ -449,7 +448,6 @@ class TestReporter {
         return new dotnet_trx_parser_1.DotnetTrxParser(options);
     }
 }
-exports.TestReporter = TestReporter;
 main();
 
 
@@ -1086,6 +1084,16 @@ class TestRunResult {
                 suite.sort(deep);
             }
         }
+    }
+    toJSON() {
+        return {
+            path: this.path,
+            suites: this.suites,
+            time: this.time,
+            passed: this.passed,
+            failed: this.failed,
+            skipped: this.skipped
+        };
     }
 }
 exports.TestRunResult = TestRunResult;

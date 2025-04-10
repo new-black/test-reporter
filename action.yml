@@ -80,6 +80,10 @@ inputs:
     description: Slack webhook url
     required: false
     default: ''
+  github-event:
+    description: Event that triggers this test run
+    required: false
+    default: ''
   test-results-endpoint:
     description: Test results endpoint
     required: true

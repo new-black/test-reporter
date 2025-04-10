@@ -1,4 +1,4 @@
-import { TestCaseResult, TestGroupResult, TestRunResult, TestSuiteResult } from '../test-results'
+import {TestCaseResult, TestGroupResult, TestRunResult, TestSuiteResult} from '../test-results'
 import * as core from '@actions/core'
 import path from 'path'
 

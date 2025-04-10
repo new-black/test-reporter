@@ -5,7 +5,7 @@ exports[`matches report snapshot 1`] = `
   {
     "failed": 0,
     "passed": 30,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Adyen/TestResults/_ip-10-1-13-52_2025-04-02_13_11_16.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Adyen/TestResults/_ip-10-1-13-52_2025-04-02_13_11_16.trx",
     "skipped": 1,
     "suites": [
       TestSuiteResult {
@@ -363,7 +363,7 @@ exports[`matches report snapshot 1`] = `
   {
     "failed": 0,
     "passed": 35,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Auditing/TestResults/_ip-10-1-13-52_2025-04-02_13_11_19.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Auditing/TestResults/_ip-10-1-13-52_2025-04-02_13_11_19.trx",
     "skipped": 1,
     "suites": [
       TestSuiteResult {
@@ -723,7 +723,7 @@ exports[`matches report snapshot 1`] = `
   {
     "failed": 0,
     "passed": 15,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Authentication.OpenID/TestResults/_ip-10-1-13-52_2025-04-02_13_11_22.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Authentication.OpenID/TestResults/_ip-10-1-13-52_2025-04-02_13_11_22.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -848,7 +848,7 @@ exports[`matches report snapshot 1`] = `
   {
     "failed": 0,
     "passed": 2,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.BI/TestResults/_ip-10-1-13-52_2025-04-02_13_11_24.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.BI/TestResults/_ip-10-1-13-52_2025-04-02_13_11_24.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -882,7 +882,7 @@ exports[`matches report snapshot 1`] = `
   {
     "failed": 3,
     "passed": 3746,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Core/TestResults/_ip-10-1-13-52_2025-04-02_13_11_27.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Core/TestResults/_ip-10-1-13-52_2025-04-02_13_11_27.trx",
     "skipped": 37,
     "suites": [
       TestSuiteResult {
@@ -34941,7 +34941,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 1,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.KIKO/TestResults/_ip-10-1-13-52_2025-04-02_13_21_46.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.KIKO/TestResults/_ip-10-1-13-52_2025-04-02_13_21_46.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -34968,7 +34968,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 40,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.LiveGuard/TestResults/_ip-10-1-13-52_2025-04-02_13_21_29.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.LiveGuard/TestResults/_ip-10-1-13-52_2025-04-02_13_21_29.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -35323,7 +35323,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 1,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Nedap/TestResults/_ip-10-1-13-52_2025-04-02_13_21_44.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Nedap/TestResults/_ip-10-1-13-52_2025-04-02_13_21_44.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -35350,7 +35350,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 61,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.PIM/TestResults/_ip-10-1-13-52_2025-04-02_13_20_35.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.PIM/TestResults/_ip-10-1-13-52_2025-04-02_13_20_35.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -36006,7 +36006,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 36,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.RedWing/TestResults/_ip-10-1-13-52_2025-04-02_13_10_47.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.RedWing/TestResults/_ip-10-1-13-52_2025-04-02_13_10_47.trx",
     "skipped": 1,
     "suites": [
       TestSuiteResult {
@@ -36351,7 +36351,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 20,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Rituals/TestResults/_ip-10-1-13-52_2025-04-02_13_21_36.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Rituals/TestResults/_ip-10-1-13-52_2025-04-02_13_21_36.trx",
     "skipped": 4,
     "suites": [
       TestSuiteResult {
@@ -36594,7 +36594,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 3,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.SalesForce/TestResults/_ip-10-1-13-52_2025-04-02_13_20_41.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.SalesForce/TestResults/_ip-10-1-13-52_2025-04-02_13_20_41.trx",
     "skipped": 0,
     "suites": [
       TestSuiteResult {
@@ -36635,7 +36635,7 @@ System.String[]",
   {
     "failed": 0,
     "passed": 83,
-    "path": "C:/code/test-reporter/__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Symphony/TestResults/_ip-10-1-13-52_2025-04-02_13_20_46.trx",
+    "path": "./__tests__/fixtures/mssql-suite-test-results/EVA.TestSuite.Symphony/TestResults/_ip-10-1-13-52_2025-04-02_13_20_46.trx",
     "skipped": 1,
     "suites": [
       TestSuiteResult {
