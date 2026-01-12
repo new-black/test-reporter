@@ -1235,17 +1235,22 @@ const ANSI_TO_COLOR = {
     96: 'cyan',
     97: 'white'
 };
-// Background color codes (40-47, 100-107) - we'll extract these but can't render them
-const BACKGROUND_CODES = new Set([40, 41, 42, 43, 44, 45, 46, 47, 100, 101, 102, 103, 104, 105, 106, 107]);
-// Style codes we recognize but can't render in LaTeX
-const STYLE_CODES = new Set([0, 1, 2, 3, 4, 7, 8, 9, 22, 23, 24, 27, 28, 29]);
+// ESC character for ANSI sequences
+const ESC = '\x1b';
+/**
+ * Create regex for matching ANSI escape sequences
+ */
+function createAnsiRegex(global) {
+    // eslint-disable-next-line no-control-regex
+    return global ? /\x1b\[([0-9;]*)m/g : /\x1b\[([0-9;]*)m/;
+}
 /**
  * Parse ANSI escape sequences and extract text segments with their colors
  */
 function parseAnsiSegments(text) {
     const segments = [];
     // Match ANSI escape sequences: ESC[ followed by semicolon-separated numbers and ending with 'm'
-    const ansiRegex = /\x1b\[([0-9;]*)m/g;
+    const ansiRegex = createAnsiRegex(true);
     let lastIndex = 0;
     let currentColor = undefined;
     let match;
@@ -1258,7 +1263,10 @@ function parseAnsiSegments(text) {
             }
         }
         // Parse the escape sequence codes
-        const codes = match[1].split(';').map(Number).filter(n => !isNaN(n));
+        const codes = match[1]
+            .split(';')
+            .map(Number)
+            .filter(n => !isNaN(n));
         for (const code of codes) {
             if (code === 0) {
                 // Reset
@@ -1328,13 +1336,13 @@ function convertLineToLatex(line) {
  * Check if text contains ANSI escape sequences
  */
 function hasAnsiCodes(text) {
-    return /\x1b\[[0-9;]*m/.test(text);
+    return text.includes(ESC);
 }
 /**
  * Strip all ANSI escape sequences from text
  */
 function stripAnsiCodes(text) {
-    return text.replace(/\x1b\[[0-9;]*m/g, '');
+    return text.replace(createAnsiRegex(true), '');
 }
 /**
  * Convert ANSI-colored text to GitHub markdown with LaTeX colors.
@@ -1395,7 +1403,7 @@ function ansiToMarkdown(text) {
  */
 function escapeMarkdown(text) {
     // Escape characters that have special meaning in markdown
-    return text.replace(/([*_`\[\]()#>+\-!|\\])/g, '\\$1');
+    return text.replace(/([*_`[\]()#>+\-!|\\])/g, '\\$1');
 }
 
 
