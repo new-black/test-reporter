@@ -4,7 +4,7 @@ import {TestExecutionResult, TestRunResult, TestSuiteResult} from '../test-resul
 import {Align, formatTime, Icon, link, table} from '../utils/markdown-utils'
 import {getFirstNonEmptyLine} from '../utils/parse-utils'
 import {slug} from '../utils/slugger'
-import {hasAnsiCodes, ansiToHtml} from '../utils/ansi-utils'
+import {hasAnsiCodes, stripAnsiCodes} from '../utils/ansi-utils'
 import path from 'path'
 
 const MAX_REPORT_LENGTH = 65535
@@ -260,20 +260,17 @@ function getTestsReport(ts: TestSuiteResult, runIndex: number, suiteIndex: numbe
     }
   }
 
-  // Check if content has ANSI codes and convert if needed
+  // Check if content has ANSI codes and strip them for clean output
+  // Note: GitHub Check Run summaries don't support colored text, so we strip ANSI codes
   const contentText = contentLines.join('\n')
+  sections.push('```')
   if (hasAnsiCodes(contentText)) {
-    // Convert ANSI to HTML with inline color styles
-    core.info(`ANSI color codes detected in test suite "${ts.name}", converting to HTML colors`)
-    const converted = ansiToHtml(contentText)
-    core.info(`Converted content preview: ${converted.substring(0, 200)}...`)
-    sections.push(converted)
+    core.info(`ANSI color codes detected in test suite "${ts.name}", stripping for clean output`)
+    sections.push(stripAnsiCodes(contentText))
   } else {
-    // No ANSI codes, use regular code block
-    sections.push('```')
     sections.push(...contentLines)
-    sections.push('```')
   }
+  sections.push('```')
 
   return sections
 }

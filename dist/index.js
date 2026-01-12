@@ -997,21 +997,18 @@ function getTestsReport(ts, runIndex, suiteIndex, options) {
             }
         }
     }
-    // Check if content has ANSI codes and convert if needed
+    // Check if content has ANSI codes and strip them for clean output
+    // Note: GitHub Check Run summaries don't support colored text, so we strip ANSI codes
     const contentText = contentLines.join('\n');
+    sections.push('```');
     if ((0, ansi_utils_1.hasAnsiCodes)(contentText)) {
-        // Convert ANSI to HTML with inline color styles
-        core.info(`ANSI color codes detected in test suite "${ts.name}", converting to HTML colors`);
-        const converted = (0, ansi_utils_1.ansiToHtml)(contentText);
-        core.info(`Converted content preview: ${converted.substring(0, 200)}...`);
-        sections.push(converted);
+        core.info(`ANSI color codes detected in test suite "${ts.name}", stripping for clean output`);
+        sections.push((0, ansi_utils_1.stripAnsiCodes)(contentText));
     }
     else {
-        // No ANSI codes, use regular code block
-        sections.push('```');
         sections.push(...contentLines);
-        sections.push('```');
     }
+    sections.push('```');
     return sections;
 }
 function makeRunSlug(runIndex) {
