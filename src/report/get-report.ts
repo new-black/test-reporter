@@ -4,6 +4,7 @@ import {TestExecutionResult, TestRunResult, TestSuiteResult} from '../test-resul
 import {Align, formatTime, Icon, link, table} from '../utils/markdown-utils'
 import {getFirstNonEmptyLine} from '../utils/parse-utils'
 import {slug} from '../utils/slugger'
+import {hasAnsiCodes, ansiToMarkdown} from '../utils/ansi-utils'
 import path from 'path'
 
 const MAX_REPORT_LENGTH = 65535
@@ -239,26 +240,37 @@ function getTestsReport(ts: TestSuiteResult, runIndex: number, suiteIndex: numbe
   const icon = getResultIcon(ts.result)
   sections.push(`### ${icon}\xa0${tsNameLink}`)
 
-  sections.push('```')
+  // Build test content first to check for ANSI codes
+  const contentLines: string[] = []
   for (const grp of groups) {
     if (grp.name) {
-      sections.push(grp.name)
+      contentLines.push(grp.name)
     }
     const space = grp.name ? '  ' : ''
     for (const tc of grp.tests) {
       const result = getResultIcon(tc.result)
-      sections.push(`${space}${result} ${tc.name}`)
+      contentLines.push(`${space}${result} ${tc.name}`)
       if (tc.error) {
-        const lines = (tc.error.message ?? getFirstNonEmptyLine(tc.error.details)?.trim())
-          ?.split(/\r?\n/g)
-          .map(l => '\t' + l)
+        const errorText = tc.error.message ?? getFirstNonEmptyLine(tc.error.details)?.trim()
+        const lines = errorText?.split(/\r?\n/g).map(l => '\t' + l)
         if (lines) {
-          sections.push(...lines)
+          contentLines.push(...lines)
         }
       }
     }
   }
-  sections.push('```')
+
+  // Check if content has ANSI codes and convert if needed
+  const contentText = contentLines.join('\n')
+  if (hasAnsiCodes(contentText)) {
+    // Convert ANSI to GitHub LaTeX colors (not in code block)
+    sections.push(ansiToMarkdown(contentText))
+  } else {
+    // No ANSI codes, use regular code block
+    sections.push('```')
+    sections.push(...contentLines)
+    sections.push('```')
+  }
 
   return sections
 }

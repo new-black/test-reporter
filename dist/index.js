@@ -786,6 +786,7 @@ const node_utils_1 = __nccwpck_require__(5384);
 const markdown_utils_1 = __nccwpck_require__(5129);
 const parse_utils_1 = __nccwpck_require__(9633);
 const slugger_1 = __nccwpck_require__(9537);
+const ansi_utils_1 = __nccwpck_require__(2379);
 const path_1 = __importDefault(__nccwpck_require__(6928));
 const MAX_REPORT_LENGTH = 65535;
 const defaultOptions = {
@@ -955,7 +956,7 @@ function getSuitesReport(tr, runIndex, options) {
     return sections;
 }
 function getTestsReport(ts, runIndex, suiteIndex, options) {
-    var _a, _b, _c;
+    var _a, _b;
     if (options.listTests === 'failed' && ts.result !== 'failed') {
         return [];
     }
@@ -969,24 +970,37 @@ function getTestsReport(ts, runIndex, suiteIndex, options) {
     const tsNameLink = `<a id="${tsSlug.id}" href="${ts.link}">${tsName}</a>`;
     const icon = getResultIcon(ts.result);
     sections.push(`### ${icon}\xa0${tsNameLink}`);
-    sections.push('```');
+    // Build test content first to check for ANSI codes
+    const contentLines = [];
     for (const grp of groups) {
         if (grp.name) {
-            sections.push(grp.name);
+            contentLines.push(grp.name);
         }
         const space = grp.name ? '  ' : '';
         for (const tc of grp.tests) {
             const result = getResultIcon(tc.result);
-            sections.push(`${space}${result} ${tc.name}`);
+            contentLines.push(`${space}${result} ${tc.name}`);
             if (tc.error) {
-                const lines = (_c = ((_a = tc.error.message) !== null && _a !== void 0 ? _a : (_b = (0, parse_utils_1.getFirstNonEmptyLine)(tc.error.details)) === null || _b === void 0 ? void 0 : _b.trim())) === null || _c === void 0 ? void 0 : _c.split(/\r?\n/g).map(l => '\t' + l);
+                const errorText = (_a = tc.error.message) !== null && _a !== void 0 ? _a : (_b = (0, parse_utils_1.getFirstNonEmptyLine)(tc.error.details)) === null || _b === void 0 ? void 0 : _b.trim();
+                const lines = errorText === null || errorText === void 0 ? void 0 : errorText.split(/\r?\n/g).map(l => '\t' + l);
                 if (lines) {
-                    sections.push(...lines);
+                    contentLines.push(...lines);
                 }
             }
         }
     }
-    sections.push('```');
+    // Check if content has ANSI codes and convert if needed
+    const contentText = contentLines.join('\n');
+    if ((0, ansi_utils_1.hasAnsiCodes)(contentText)) {
+        // Convert ANSI to GitHub LaTeX colors (not in code block)
+        sections.push((0, ansi_utils_1.ansiToMarkdown)(contentText));
+    }
+    else {
+        // No ANSI codes, use regular code block
+        sections.push('```');
+        sections.push(...contentLines);
+        sections.push('```');
+    }
     return sections;
 }
 function makeRunSlug(runIndex) {
@@ -1186,6 +1200,203 @@ class TestCaseResult {
     }
 }
 exports.TestCaseResult = TestCaseResult;
+
+
+/***/ }),
+
+/***/ 2379:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.hasAnsiCodes = hasAnsiCodes;
+exports.stripAnsiCodes = stripAnsiCodes;
+exports.ansiToGithubLatex = ansiToGithubLatex;
+exports.ansiToMarkdown = ansiToMarkdown;
+// ANSI foreground color codes to GitHub LaTeX color names
+const ANSI_TO_COLOR = {
+    // Standard colors (30-37)
+    30: 'gray', // Black -> gray for visibility
+    31: 'red',
+    32: 'green',
+    33: 'yellow',
+    34: 'blue',
+    35: 'magenta',
+    36: 'cyan',
+    37: 'lightgray',
+    // Bright colors (90-97)
+    90: 'gray',
+    91: 'red',
+    92: 'lightgreen',
+    93: 'orange', // Bright yellow -> orange for better visibility
+    94: 'lightblue',
+    95: 'magenta',
+    96: 'cyan',
+    97: 'white'
+};
+// Background color codes (40-47, 100-107) - we'll extract these but can't render them
+const BACKGROUND_CODES = new Set([40, 41, 42, 43, 44, 45, 46, 47, 100, 101, 102, 103, 104, 105, 106, 107]);
+// Style codes we recognize but can't render in LaTeX
+const STYLE_CODES = new Set([0, 1, 2, 3, 4, 7, 8, 9, 22, 23, 24, 27, 28, 29]);
+/**
+ * Parse ANSI escape sequences and extract text segments with their colors
+ */
+function parseAnsiSegments(text) {
+    const segments = [];
+    // Match ANSI escape sequences: ESC[ followed by semicolon-separated numbers and ending with 'm'
+    const ansiRegex = /\x1b\[([0-9;]*)m/g;
+    let lastIndex = 0;
+    let currentColor = undefined;
+    let match;
+    while ((match = ansiRegex.exec(text)) !== null) {
+        // Add text before this escape sequence
+        if (match.index > lastIndex) {
+            const textContent = text.slice(lastIndex, match.index);
+            if (textContent) {
+                segments.push({ text: textContent, color: currentColor });
+            }
+        }
+        // Parse the escape sequence codes
+        const codes = match[1].split(';').map(Number).filter(n => !isNaN(n));
+        for (const code of codes) {
+            if (code === 0) {
+                // Reset
+                currentColor = undefined;
+            }
+            else if (ANSI_TO_COLOR[code]) {
+                // Foreground color
+                currentColor = ANSI_TO_COLOR[code];
+            }
+            // Ignore background and style codes (we can't render them)
+        }
+        lastIndex = ansiRegex.lastIndex;
+    }
+    // Add remaining text
+    if (lastIndex < text.length) {
+        const textContent = text.slice(lastIndex);
+        if (textContent) {
+            segments.push({ text: textContent, color: currentColor });
+        }
+    }
+    return segments;
+}
+/**
+ * Escape special characters for LaTeX math mode
+ */
+function escapeForLatex(text) {
+    // In LaTeX math mode, we need to escape certain characters
+    // and use \text{} for regular text, but for simplicity we'll use \textsf{}
+    // Special chars: _ ^ { } \ $ & % # ~
+    return text
+        .replace(/\\/g, '\\backslash ')
+        .replace(/[_^{}$&%#~]/g, char => '\\' + char)
+        .replace(/ /g, '\\space ')
+        .replace(/\n/g, '\n'); // Preserve newlines for later processing
+}
+/**
+ * Convert a single line with ANSI codes to GitHub LaTeX colored markdown
+ */
+function convertLineToLatex(line) {
+    const segments = parseAnsiSegments(line);
+    if (segments.length === 0) {
+        return line;
+    }
+    // Check if the entire line has no colors
+    const hasColors = segments.some(s => s.color);
+    if (!hasColors) {
+        // Just strip ANSI codes and return plain text
+        return segments.map(s => s.text).join('');
+    }
+    // Build the LaTeX expression
+    const parts = [];
+    for (const segment of segments) {
+        if (!segment.text)
+            continue;
+        const escapedText = escapeForLatex(segment.text);
+        if (segment.color) {
+            parts.push(`{\\color{${segment.color}}${escapedText}}`);
+        }
+        else {
+            parts.push(escapedText);
+        }
+    }
+    // Wrap in $$ for GitHub LaTeX rendering
+    return `$$${parts.join('')}$$`;
+}
+/**
+ * Check if text contains ANSI escape sequences
+ */
+function hasAnsiCodes(text) {
+    return /\x1b\[[0-9;]*m/.test(text);
+}
+/**
+ * Strip all ANSI escape sequences from text
+ */
+function stripAnsiCodes(text) {
+    return text.replace(/\x1b\[[0-9;]*m/g, '');
+}
+/**
+ * Convert ANSI-colored text to GitHub markdown with LaTeX colors.
+ * Each line with colors is wrapped in $$ for LaTeX rendering.
+ * Lines without colors are returned as plain text.
+ */
+function ansiToGithubLatex(text) {
+    if (!hasAnsiCodes(text)) {
+        return text;
+    }
+    const lines = text.split('\n');
+    const convertedLines = lines.map(line => {
+        if (!hasAnsiCodes(line)) {
+            return line;
+        }
+        return convertLineToLatex(line);
+    });
+    return convertedLines.join('\n');
+}
+/**
+ * Convert ANSI-colored text to GitHub markdown, preserving formatting
+ * for use outside of code blocks. This escapes markdown special characters
+ * in non-colored segments.
+ */
+function ansiToMarkdown(text) {
+    if (!hasAnsiCodes(text)) {
+        return escapeMarkdown(text);
+    }
+    const lines = text.split('\n');
+    const convertedLines = lines.map(line => {
+        if (!hasAnsiCodes(line)) {
+            return escapeMarkdown(line);
+        }
+        const segments = parseAnsiSegments(line);
+        const hasColors = segments.some(s => s.color);
+        if (!hasColors) {
+            return escapeMarkdown(segments.map(s => s.text).join(''));
+        }
+        // Build LaTeX expression for colored line
+        const parts = [];
+        for (const segment of segments) {
+            if (!segment.text)
+                continue;
+            const escapedText = escapeForLatex(segment.text);
+            if (segment.color) {
+                parts.push(`{\\color{${segment.color}}${escapedText}}`);
+            }
+            else {
+                parts.push(escapedText);
+            }
+        }
+        return `$$${parts.join('')}$$`;
+    });
+    return convertedLines.join('\n');
+}
+/**
+ * Escape markdown special characters
+ */
+function escapeMarkdown(text) {
+    // Escape characters that have special meaning in markdown
+    return text.replace(/([*_`\[\]()#>+\-!|\\])/g, '\\$1');
+}
 
 
 /***/ }),
