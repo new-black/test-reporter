@@ -1,10 +1,12 @@
 import {createWriteStream} from 'fs'
+import * as fs from 'fs'
 import * as core from '@actions/core'
 import * as github from '@actions/github'
 import {GitHub} from '@actions/github/lib/utils'
 import * as stream from 'stream'
 import {promisify} from 'util'
 import got from 'got'
+import Zip from 'adm-zip'
 const asyncStream = promisify(stream.pipeline)
 
 export function getCheckRunContext(): {sha: string; runId: number; branch: string} {
@@ -131,4 +133,67 @@ async function listGitTree(octokit: InstanceType<typeof GitHub>, sha: string, pa
   }
 
   return result
+}
+
+export async function downloadAndExtractArtifact(
+  octokit: InstanceType<typeof GitHub>,
+  runId: number,
+  artifactName: string,
+  token: string,
+  extractPath: string
+): Promise<boolean> {
+  core.startGroup(`Downloading and extracting artifact '${artifactName}'`)
+  try {
+    core.info(`Looking for artifact '${artifactName}' in workflow run ${runId}`)
+
+    // List artifacts for the workflow run
+    const artifacts = await octokit.rest.actions.listWorkflowRunArtifacts({
+      ...github.context.repo,
+      run_id: runId
+    })
+
+    // Find artifact by name (supports exact match or regex)
+    let artifact = artifacts.data.artifacts.find(a => a.name === artifactName)
+
+    if (!artifact) {
+      // Try as regex pattern
+      try {
+        const regex = new RegExp(artifactName)
+        artifact = artifacts.data.artifacts.find(a => regex.test(a.name))
+      } catch {
+        // Not a valid regex, ignore
+      }
+    }
+
+    if (!artifact) {
+      const available = artifacts.data.artifacts.map(a => a.name).join(', ')
+      core.warning(`Artifact '${artifactName}' not found. Available artifacts: ${available}`)
+      return false
+    }
+
+    core.info(`Found artifact: ${artifact.name} (ID: ${artifact.id}, Size: ${artifact.size_in_bytes} bytes)`)
+
+    // Download artifact
+    const zipFileName = `${artifact.name}.zip`
+    await downloadArtifact(octokit, artifact.id, zipFileName, token)
+
+    // Extract artifact
+    core.info(`Extracting ${zipFileName} to ${extractPath}`)
+    const zip = new Zip(zipFileName)
+    zip.extractAllTo(extractPath, true)
+
+    // List extracted files
+    const entries = zip.getEntries()
+    core.info(`Extracted ${entries.length} files:`)
+    for (const entry of entries) {
+      core.info(`  - ${entry.entryName}`)
+    }
+
+    // Clean up zip file
+    fs.unlinkSync(zipFileName)
+
+    return true
+  } finally {
+    core.endGroup()
+  }
 }

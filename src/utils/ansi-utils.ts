@@ -263,3 +263,43 @@ function escapeMarkdown(text: string): string {
   // Escape characters that have special meaning in markdown
   return text.replace(/([*_`[\]()#>+\-!|\\])/g, '\\$1')
 }
+
+/**
+ * Escape HTML special characters
+ */
+function escapeHtml(text: string): string {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
+/**
+ * Convert ANSI-colored text to HTML with inline color styles.
+ * Uses <span style="color:..."> for colored text.
+ * Wraps output in <pre> to preserve whitespace and formatting.
+ */
+export function ansiToHtml(text: string): string {
+  core.info('ansiToHtml: Processing text for ANSI color conversion')
+
+  if (!hasAnsiCodes(text)) {
+    core.info('ansiToHtml: No ANSI codes detected in text')
+    return `<pre>${escapeHtml(text)}</pre>`
+  }
+
+  core.info('ansiToHtml: ANSI codes detected, converting to HTML colors')
+
+  const segments = parseAnsiSegments(text)
+
+  const parts: string[] = []
+  for (const segment of segments) {
+    if (!segment.text) continue
+
+    const escapedText = escapeHtml(segment.text)
+    if (segment.color) {
+      parts.push(`<span style="color:${segment.color}">${escapedText}</span>`)
+    } else {
+      parts.push(escapedText)
+    }
+  }
+
+  core.info(`ansiToHtml: Converted ${segments.length} segments`)
+  return `<pre>${parts.join('')}</pre>`
+}

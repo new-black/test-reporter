@@ -217,6 +217,14 @@ class TestReporter {
                 process.chdir(this.workDirInput);
             }
             core.info(`Check runs will be created with SHA=${this.context.sha}`);
+            // Download artifact if specified (for workflow_run triggered workflows)
+            if (this.artifact) {
+                core.info(`Artifact '${this.artifact}' specified, downloading from workflow run ${this.context.runId}`);
+                const success = yield (0, github_utils_1.downloadAndExtractArtifact)(this.octokit, this.context.runId, this.artifact, this.token, process.cwd());
+                if (!success) {
+                    core.warning(`Failed to download artifact '${this.artifact}', continuing with local files`);
+                }
+            }
             // Split path pattern by ',' and optionally convert all backslashes to forward slashes
             // fast-glob (micromatch) always interprets backslashes as escape characters instead of directory separators
             const pathsList = this.path.split(',');
@@ -992,15 +1000,14 @@ function getTestsReport(ts, runIndex, suiteIndex, options) {
     // Check if content has ANSI codes and convert if needed
     const contentText = contentLines.join('\n');
     if ((0, ansi_utils_1.hasAnsiCodes)(contentText)) {
-        // Convert ANSI to GitHub LaTeX colors (not in code block)
-        core.info(`ANSI color codes detected in test suite "${ts.name}", converting to LaTeX colors`);
-        const converted = (0, ansi_utils_1.ansiToMarkdown)(contentText);
+        // Convert ANSI to HTML with inline color styles
+        core.info(`ANSI color codes detected in test suite "${ts.name}", converting to HTML colors`);
+        const converted = (0, ansi_utils_1.ansiToHtml)(contentText);
         core.info(`Converted content preview: ${converted.substring(0, 200)}...`);
         sections.push(converted);
     }
     else {
         // No ANSI codes, use regular code block
-        core.info(`No ANSI codes in test suite "${ts.name}", using code block`);
         sections.push('```');
         sections.push(...contentLines);
         sections.push('```');
@@ -1251,6 +1258,7 @@ exports.hasAnsiCodes = hasAnsiCodes;
 exports.stripAnsiCodes = stripAnsiCodes;
 exports.ansiToGithubLatex = ansiToGithubLatex;
 exports.ansiToMarkdown = ansiToMarkdown;
+exports.ansiToHtml = ansiToHtml;
 const core = __importStar(__nccwpck_require__(7484));
 // ANSI foreground color codes to GitHub LaTeX color names
 const ANSI_TO_COLOR = {
@@ -1479,6 +1487,40 @@ function escapeMarkdown(text) {
     // Escape characters that have special meaning in markdown
     return text.replace(/([*_`[\]()#>+\-!|\\])/g, '\\$1');
 }
+/**
+ * Escape HTML special characters
+ */
+function escapeHtml(text) {
+    return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+/**
+ * Convert ANSI-colored text to HTML with inline color styles.
+ * Uses <span style="color:..."> for colored text.
+ * Wraps output in <pre> to preserve whitespace and formatting.
+ */
+function ansiToHtml(text) {
+    core.info('ansiToHtml: Processing text for ANSI color conversion');
+    if (!hasAnsiCodes(text)) {
+        core.info('ansiToHtml: No ANSI codes detected in text');
+        return `<pre>${escapeHtml(text)}</pre>`;
+    }
+    core.info('ansiToHtml: ANSI codes detected, converting to HTML colors');
+    const segments = parseAnsiSegments(text);
+    const parts = [];
+    for (const segment of segments) {
+        if (!segment.text)
+            continue;
+        const escapedText = escapeHtml(segment.text);
+        if (segment.color) {
+            parts.push(`<span style="color:${segment.color}">${escapedText}</span>`);
+        }
+        else {
+            parts.push(escapedText);
+        }
+    }
+    core.info(`ansiToHtml: Converted ${segments.length} segments`);
+    return `<pre>${parts.join('')}</pre>`;
+}
 
 
 /***/ }),
@@ -1537,12 +1579,15 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getCheckRunContext = getCheckRunContext;
 exports.downloadArtifact = downloadArtifact;
 exports.listFiles = listFiles;
+exports.downloadAndExtractArtifact = downloadAndExtractArtifact;
 const fs_1 = __nccwpck_require__(9896);
+const fs = __importStar(__nccwpck_require__(9896));
 const core = __importStar(__nccwpck_require__(7484));
 const github = __importStar(__nccwpck_require__(3228));
 const stream = __importStar(__nccwpck_require__(2203));
 const util_1 = __nccwpck_require__(9023);
 const got_1 = __importDefault(__nccwpck_require__(2947));
+const adm_zip_1 = __importDefault(__nccwpck_require__(1316));
 const asyncStream = (0, util_1.promisify)(stream.pipeline);
 function getCheckRunContext() {
     let branch = github.context.ref;
@@ -1643,6 +1688,53 @@ function listGitTree(octokit, sha, path) {
             }
         }
         return result;
+    });
+}
+function downloadAndExtractArtifact(octokit, runId, artifactName, token, extractPath) {
+    return __awaiter(this, void 0, void 0, function* () {
+        core.startGroup(`Downloading and extracting artifact '${artifactName}'`);
+        try {
+            core.info(`Looking for artifact '${artifactName}' in workflow run ${runId}`);
+            // List artifacts for the workflow run
+            const artifacts = yield octokit.rest.actions.listWorkflowRunArtifacts(Object.assign(Object.assign({}, github.context.repo), { run_id: runId }));
+            // Find artifact by name (supports exact match or regex)
+            let artifact = artifacts.data.artifacts.find(a => a.name === artifactName);
+            if (!artifact) {
+                // Try as regex pattern
+                try {
+                    const regex = new RegExp(artifactName);
+                    artifact = artifacts.data.artifacts.find(a => regex.test(a.name));
+                }
+                catch (_a) {
+                    // Not a valid regex, ignore
+                }
+            }
+            if (!artifact) {
+                const available = artifacts.data.artifacts.map(a => a.name).join(', ');
+                core.warning(`Artifact '${artifactName}' not found. Available artifacts: ${available}`);
+                return false;
+            }
+            core.info(`Found artifact: ${artifact.name} (ID: ${artifact.id}, Size: ${artifact.size_in_bytes} bytes)`);
+            // Download artifact
+            const zipFileName = `${artifact.name}.zip`;
+            yield downloadArtifact(octokit, artifact.id, zipFileName, token);
+            // Extract artifact
+            core.info(`Extracting ${zipFileName} to ${extractPath}`);
+            const zip = new adm_zip_1.default(zipFileName);
+            zip.extractAllTo(extractPath, true);
+            // List extracted files
+            const entries = zip.getEntries();
+            core.info(`Extracted ${entries.length} files:`);
+            for (const entry of entries) {
+                core.info(`  - ${entry.entryName}`);
+            }
+            // Clean up zip file
+            fs.unlinkSync(zipFileName);
+            return true;
+        }
+        finally {
+            core.endGroup();
+        }
     });
 }
 

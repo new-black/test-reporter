@@ -12,7 +12,7 @@ import {getReport} from './report/get-report'
 import {DotnetTrxParser} from './parsers/dotnet-trx/dotnet-trx-parser'
 
 import {normalizeDirPath, normalizeFilePath} from './utils/path-utils'
-import {getCheckRunContext} from './utils/github-utils'
+import {getCheckRunContext, downloadAndExtractArtifact} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
@@ -78,6 +78,21 @@ class TestReporter {
     }
 
     core.info(`Check runs will be created with SHA=${this.context.sha}`)
+
+    // Download artifact if specified (for workflow_run triggered workflows)
+    if (this.artifact) {
+      core.info(`Artifact '${this.artifact}' specified, downloading from workflow run ${this.context.runId}`)
+      const success = await downloadAndExtractArtifact(
+        this.octokit,
+        this.context.runId,
+        this.artifact,
+        this.token,
+        process.cwd()
+      )
+      if (!success) {
+        core.warning(`Failed to download artifact '${this.artifact}', continuing with local files`)
+      }
+    }
 
     // Split path pattern by ',' and optionally convert all backslashes to forward slashes
     // fast-glob (micromatch) always interprets backslashes as escape characters instead of directory separators

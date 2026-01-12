@@ -4,7 +4,7 @@ import {TestExecutionResult, TestRunResult, TestSuiteResult} from '../test-resul
 import {Align, formatTime, Icon, link, table} from '../utils/markdown-utils'
 import {getFirstNonEmptyLine} from '../utils/parse-utils'
 import {slug} from '../utils/slugger'
-import {hasAnsiCodes, ansiToMarkdown} from '../utils/ansi-utils'
+import {hasAnsiCodes, ansiToHtml} from '../utils/ansi-utils'
 import path from 'path'
 
 const MAX_REPORT_LENGTH = 65535
@@ -263,14 +263,13 @@ function getTestsReport(ts: TestSuiteResult, runIndex: number, suiteIndex: numbe
   // Check if content has ANSI codes and convert if needed
   const contentText = contentLines.join('\n')
   if (hasAnsiCodes(contentText)) {
-    // Convert ANSI to GitHub LaTeX colors (not in code block)
-    core.info(`ANSI color codes detected in test suite "${ts.name}", converting to LaTeX colors`)
-    const converted = ansiToMarkdown(contentText)
+    // Convert ANSI to HTML with inline color styles
+    core.info(`ANSI color codes detected in test suite "${ts.name}", converting to HTML colors`)
+    const converted = ansiToHtml(contentText)
     core.info(`Converted content preview: ${converted.substring(0, 200)}...`)
     sections.push(converted)
   } else {
     // No ANSI codes, use regular code block
-    core.info(`No ANSI codes in test suite "${ts.name}", using code block`)
     sections.push('```')
     sections.push(...contentLines)
     sections.push('```')
