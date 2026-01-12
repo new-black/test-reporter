@@ -1,3 +1,5 @@
+import * as core from '@actions/core'
+
 // ANSI foreground color codes to GitHub LaTeX color names
 const ANSI_TO_COLOR: Record<number, string> = {
   // Standard colors (30-37)
@@ -23,13 +25,22 @@ const ANSI_TO_COLOR: Record<number, string> = {
 // ESC character for ANSI sequences
 const ESC = '\x1b'
 
+// Literal escaped representations that may appear in source files
+const ESCAPED_ESC_PATTERNS = [
+  '\\u001b', // Unicode escape (lowercase)
+  '\\u001B', // Unicode escape (uppercase)
+  '\\x1b', // Hex escape (lowercase)
+  '\\x1B', // Hex escape (uppercase)
+  '\\e' // Some systems use \e
+]
+
 interface AnsiSegment {
   text: string
   color?: string
 }
 
 /**
- * Create regex for matching ANSI escape sequences
+ * Create regex for matching ANSI escape sequences (after normalization)
  */
 function createAnsiRegex(global: boolean): RegExp {
   // eslint-disable-next-line no-control-regex
@@ -37,9 +48,41 @@ function createAnsiRegex(global: boolean): RegExp {
 }
 
 /**
+ * Normalize escaped ANSI sequences to actual escape characters.
+ * Converts literal strings like "\u001b" to the actual ESC character.
+ */
+function normalizeEscapeSequences(text: string): string {
+  let result = text
+  for (const pattern of ESCAPED_ESC_PATTERNS) {
+    result = result.split(pattern).join(ESC)
+  }
+  return result
+}
+
+/**
+ * Check if text contains ANSI escape sequences (either real or escaped literal form)
+ */
+export function hasAnsiCodes(text: string): boolean {
+  // Check for actual ESC character
+  if (text.includes(ESC)) {
+    return true
+  }
+  // Check for literal escaped representations
+  for (const pattern of ESCAPED_ESC_PATTERNS) {
+    if (text.includes(pattern)) {
+      return true
+    }
+  }
+  return false
+}
+
+/**
  * Parse ANSI escape sequences and extract text segments with their colors
  */
 function parseAnsiSegments(text: string): AnsiSegment[] {
+  // First normalize any escaped sequences to actual ESC characters
+  const normalizedText = normalizeEscapeSequences(text)
+
   const segments: AnsiSegment[] = []
   // Match ANSI escape sequences: ESC[ followed by semicolon-separated numbers and ending with 'm'
   const ansiRegex = createAnsiRegex(true)
@@ -48,10 +91,10 @@ function parseAnsiSegments(text: string): AnsiSegment[] {
   let currentColor: string | undefined = undefined
   let match: RegExpExecArray | null
 
-  while ((match = ansiRegex.exec(text)) !== null) {
+  while ((match = ansiRegex.exec(normalizedText)) !== null) {
     // Add text before this escape sequence
     if (match.index > lastIndex) {
-      const textContent = text.slice(lastIndex, match.index)
+      const textContent = normalizedText.slice(lastIndex, match.index)
       if (textContent) {
         segments.push({text: textContent, color: currentColor})
       }
@@ -78,8 +121,8 @@ function parseAnsiSegments(text: string): AnsiSegment[] {
   }
 
   // Add remaining text
-  if (lastIndex < text.length) {
-    const textContent = text.slice(lastIndex)
+  if (lastIndex < normalizedText.length) {
+    const textContent = normalizedText.slice(lastIndex)
     if (textContent) {
       segments.push({text: textContent, color: currentColor})
     }
@@ -137,17 +180,11 @@ function convertLineToLatex(line: string): string {
 }
 
 /**
- * Check if text contains ANSI escape sequences
- */
-export function hasAnsiCodes(text: string): boolean {
-  return text.includes(ESC)
-}
-
-/**
  * Strip all ANSI escape sequences from text
  */
 export function stripAnsiCodes(text: string): string {
-  return text.replace(createAnsiRegex(true), '')
+  const normalized = normalizeEscapeSequences(text)
+  return normalized.replace(createAnsiRegex(true), '')
 }
 
 /**
@@ -177,9 +214,14 @@ export function ansiToGithubLatex(text: string): string {
  * in non-colored segments.
  */
 export function ansiToMarkdown(text: string): string {
+  core.info('ansiToMarkdown: Processing text for ANSI color conversion')
+
   if (!hasAnsiCodes(text)) {
+    core.info('ansiToMarkdown: No ANSI codes detected in text')
     return escapeMarkdown(text)
   }
+
+  core.info('ansiToMarkdown: ANSI codes detected, converting to LaTeX colors')
 
   const lines = text.split('\n')
   const convertedLines = lines.map(line => {
@@ -210,6 +252,7 @@ export function ansiToMarkdown(text: string): string {
     return `$$${parts.join('')}$$`
   })
 
+  core.info(`ansiToMarkdown: Converted ${lines.length} lines`)
   return convertedLines.join('\n')
 }
 

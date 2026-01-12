@@ -796,7 +796,7 @@ const defaultOptions = {
     onlySummary: false
 };
 function getReport(results, options = defaultOptions) {
-    core.info('Generating check run summary');
+    core.info('Generating check run summary (with ANSI color support)');
     applySort(results);
     const opts = Object.assign({}, options);
     let lines = renderReport(results, opts);
@@ -993,10 +993,14 @@ function getTestsReport(ts, runIndex, suiteIndex, options) {
     const contentText = contentLines.join('\n');
     if ((0, ansi_utils_1.hasAnsiCodes)(contentText)) {
         // Convert ANSI to GitHub LaTeX colors (not in code block)
-        sections.push((0, ansi_utils_1.ansiToMarkdown)(contentText));
+        core.info(`ANSI color codes detected in test suite "${ts.name}", converting to LaTeX colors`);
+        const converted = (0, ansi_utils_1.ansiToMarkdown)(contentText);
+        core.info(`Converted content preview: ${converted.substring(0, 200)}...`);
+        sections.push(converted);
     }
     else {
         // No ANSI codes, use regular code block
+        core.info(`No ANSI codes in test suite "${ts.name}", using code block`);
         sections.push('```');
         sections.push(...contentLines);
         sections.push('```');
@@ -1205,15 +1209,49 @@ exports.TestCaseResult = TestCaseResult;
 /***/ }),
 
 /***/ 2379:
-/***/ ((__unused_webpack_module, exports) => {
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.hasAnsiCodes = hasAnsiCodes;
 exports.stripAnsiCodes = stripAnsiCodes;
 exports.ansiToGithubLatex = ansiToGithubLatex;
 exports.ansiToMarkdown = ansiToMarkdown;
+const core = __importStar(__nccwpck_require__(7484));
 // ANSI foreground color codes to GitHub LaTeX color names
 const ANSI_TO_COLOR = {
     // Standard colors (30-37)
@@ -1237,27 +1275,64 @@ const ANSI_TO_COLOR = {
 };
 // ESC character for ANSI sequences
 const ESC = '\x1b';
+// Literal escaped representations that may appear in source files
+const ESCAPED_ESC_PATTERNS = [
+    '\\u001b', // Unicode escape (lowercase)
+    '\\u001B', // Unicode escape (uppercase)
+    '\\x1b', // Hex escape (lowercase)
+    '\\x1B', // Hex escape (uppercase)
+    '\\e' // Some systems use \e
+];
 /**
- * Create regex for matching ANSI escape sequences
+ * Create regex for matching ANSI escape sequences (after normalization)
  */
 function createAnsiRegex(global) {
     // eslint-disable-next-line no-control-regex
     return global ? /\x1b\[([0-9;]*)m/g : /\x1b\[([0-9;]*)m/;
 }
 /**
+ * Normalize escaped ANSI sequences to actual escape characters.
+ * Converts literal strings like "\u001b" to the actual ESC character.
+ */
+function normalizeEscapeSequences(text) {
+    let result = text;
+    for (const pattern of ESCAPED_ESC_PATTERNS) {
+        result = result.split(pattern).join(ESC);
+    }
+    return result;
+}
+/**
+ * Check if text contains ANSI escape sequences (either real or escaped literal form)
+ */
+function hasAnsiCodes(text) {
+    // Check for actual ESC character
+    if (text.includes(ESC)) {
+        return true;
+    }
+    // Check for literal escaped representations
+    for (const pattern of ESCAPED_ESC_PATTERNS) {
+        if (text.includes(pattern)) {
+            return true;
+        }
+    }
+    return false;
+}
+/**
  * Parse ANSI escape sequences and extract text segments with their colors
  */
 function parseAnsiSegments(text) {
+    // First normalize any escaped sequences to actual ESC characters
+    const normalizedText = normalizeEscapeSequences(text);
     const segments = [];
     // Match ANSI escape sequences: ESC[ followed by semicolon-separated numbers and ending with 'm'
     const ansiRegex = createAnsiRegex(true);
     let lastIndex = 0;
     let currentColor = undefined;
     let match;
-    while ((match = ansiRegex.exec(text)) !== null) {
+    while ((match = ansiRegex.exec(normalizedText)) !== null) {
         // Add text before this escape sequence
         if (match.index > lastIndex) {
-            const textContent = text.slice(lastIndex, match.index);
+            const textContent = normalizedText.slice(lastIndex, match.index);
             if (textContent) {
                 segments.push({ text: textContent, color: currentColor });
             }
@@ -1281,8 +1356,8 @@ function parseAnsiSegments(text) {
         lastIndex = ansiRegex.lastIndex;
     }
     // Add remaining text
-    if (lastIndex < text.length) {
-        const textContent = text.slice(lastIndex);
+    if (lastIndex < normalizedText.length) {
+        const textContent = normalizedText.slice(lastIndex);
         if (textContent) {
             segments.push({ text: textContent, color: currentColor });
         }
@@ -1333,16 +1408,11 @@ function convertLineToLatex(line) {
     return `$$${parts.join('')}$$`;
 }
 /**
- * Check if text contains ANSI escape sequences
- */
-function hasAnsiCodes(text) {
-    return text.includes(ESC);
-}
-/**
  * Strip all ANSI escape sequences from text
  */
 function stripAnsiCodes(text) {
-    return text.replace(createAnsiRegex(true), '');
+    const normalized = normalizeEscapeSequences(text);
+    return normalized.replace(createAnsiRegex(true), '');
 }
 /**
  * Convert ANSI-colored text to GitHub markdown with LaTeX colors.
@@ -1368,9 +1438,12 @@ function ansiToGithubLatex(text) {
  * in non-colored segments.
  */
 function ansiToMarkdown(text) {
+    core.info('ansiToMarkdown: Processing text for ANSI color conversion');
     if (!hasAnsiCodes(text)) {
+        core.info('ansiToMarkdown: No ANSI codes detected in text');
         return escapeMarkdown(text);
     }
+    core.info('ansiToMarkdown: ANSI codes detected, converting to LaTeX colors');
     const lines = text.split('\n');
     const convertedLines = lines.map(line => {
         if (!hasAnsiCodes(line)) {
@@ -1396,6 +1469,7 @@ function ansiToMarkdown(text) {
         }
         return `$$${parts.join('')}$$`;
     });
+    core.info(`ansiToMarkdown: Converted ${lines.length} lines`);
     return convertedLines.join('\n');
 }
 /**

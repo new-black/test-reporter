@@ -24,7 +24,7 @@ const defaultOptions: ReportOptions = {
 }
 
 export function getReport(results: TestRunResult[], options: ReportOptions = defaultOptions): string {
-  core.info('Generating check run summary')
+  core.info('Generating check run summary (with ANSI color support)')
 
   applySort(results)
 
@@ -264,9 +264,13 @@ function getTestsReport(ts: TestSuiteResult, runIndex: number, suiteIndex: numbe
   const contentText = contentLines.join('\n')
   if (hasAnsiCodes(contentText)) {
     // Convert ANSI to GitHub LaTeX colors (not in code block)
-    sections.push(ansiToMarkdown(contentText))
+    core.info(`ANSI color codes detected in test suite "${ts.name}", converting to LaTeX colors`)
+    const converted = ansiToMarkdown(contentText)
+    core.info(`Converted content preview: ${converted.substring(0, 200)}...`)
+    sections.push(converted)
   } else {
     // No ANSI codes, use regular code block
+    core.info(`No ANSI codes in test suite "${ts.name}", using code block`)
     sections.push('```')
     sections.push(...contentLines)
     sections.push('```')
