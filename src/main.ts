@@ -99,7 +99,7 @@ class TestReporter {
     }
 
     core.info(`Using test report parser '${this.reporter}'`)
-    const parser = this.getParser(this.reporter, options)
+    const parser = this.getParser(options)
 
     const results: TestRunResultWithUrl[] = []
     const input = await inputProvider.load()
@@ -200,7 +200,7 @@ class TestReporter {
 
     core.info(`Processing test results for check run ${name}`)
 
-    var results: TestRunResult[] = []
+    let results: TestRunResult[] = []
     const result: TestRunResultWithUrl = new TestRunResultWithUrl(results, null)
 
     for (const {file, content} of files) {
@@ -374,7 +374,7 @@ class TestReporter {
     }
   }
 
-  getParser(reporter: string, options: ParseOptions): TestParser {
+  getParser(options: ParseOptions): TestParser {
     return new DotnetTrxParser(options)
   }
 }
