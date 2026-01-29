@@ -102,3 +102,7 @@ lib/**/*
 __tests__/__results__
 
 .idea
+.vscode/
+
+# Claude Code settings
+.claude/

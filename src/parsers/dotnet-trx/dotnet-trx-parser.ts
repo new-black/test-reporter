@@ -1,4 +1,4 @@
-import {parseStringPromise} from 'xml2js'
+import {XMLParser} from 'fast-xml-parser'
 
 import {ErrorInfo, Outcome, TrxReport, UnitTest, UnitTestResult} from './dotnet-trx-types'
 import {ParseOptions, TestParser} from '../../test-parser'
@@ -14,6 +14,28 @@ import {
   TestCaseResult,
   TestCaseError
 } from '../../test-results'
+
+// Elements that should always be parsed as arrays
+const arrayElements = [
+  'Times',
+  'Results',
+  'TestDefinitions',
+  'UnitTest',
+  'UnitTestResult',
+  'TestMethod',
+  'Output',
+  'ErrorInfo',
+  'Message',
+  'StackTrace'
+]
+
+const xmlParser = new XMLParser({
+  ignoreAttributes: false,
+  attributeNamePrefix: '',
+  attributesGroupName: '$',
+  isArray: (name: string) => arrayElements.includes(name),
+  trimValues: true
+})
 
 class TestClass {
   constructor(readonly name: string) {}
@@ -47,16 +69,16 @@ export class DotnetTrxParser implements TestParser {
   constructor(readonly options: ParseOptions) {}
 
   async parse(path: string, content: string): Promise<TestRunResult> {
-    const trx = await this.getTrxReport(path, content)
+    const trx = this.getTrxReport(path, content)
     const tc = this.getTestClasses(trx)
     const tr = this.getTestRunResult(path, trx, tc)
     tr.sort(true)
     return tr
   }
 
-  private async getTrxReport(path: string, content: string): Promise<TrxReport> {
+  private getTrxReport(path: string, content: string): TrxReport {
     try {
-      return (await parseStringPromise(content)) as TrxReport
+      return xmlParser.parse(content) as TrxReport
     } catch (e) {
       throw new Error(`Invalid XML at ${path}\n\n${e}`)
     }
@@ -91,7 +113,8 @@ export class DotnetTrxParser implements TestParser {
       if (r.result.$.outcome === 'NotExecuted') {
         if (r.result.Output?.length > 0) {
           if (r.result.Output[0].ErrorInfo?.length > 0) {
-            if (r.result.Output[0].ErrorInfo[0].Message[0].trim().match(/it does not belong to this partition/)) {
+            const msg = this.getTextContent(r.result.Output[0].ErrorInfo[0].Message)
+            if (msg?.trim().match(/it does not belong to this partition/)) {
               continue
             }
           }
@@ -149,23 +172,33 @@ export class DotnetTrxParser implements TestParser {
     return error
   }
 
+  // Helper to extract text content - fast-xml-parser may return string directly or in #text
+  private getTextContent(value: unknown): string | undefined {
+    if (typeof value === 'string') {
+      return value
+    }
+    if (Array.isArray(value) && value.length > 0) {
+      return this.getTextContent(value[0])
+    }
+    if (value && typeof value === 'object' && '#text' in value) {
+      return (value as {'#text': string})['#text']
+    }
+    return undefined
+  }
+
   private getError(test: Test): TestCaseError | undefined {
     if (!this.options.parseErrors || !test.error) {
       return undefined
     }
 
     const error = test.error
-    if (
-      !Array.isArray(error.Message) ||
-      error.Message.length === 0 ||
-      !Array.isArray(error.StackTrace) ||
-      error.StackTrace.length === 0
-    ) {
+    const message = this.getTextContent(error.Message)
+    const stackTrace = this.getTextContent(error.StackTrace)
+
+    if (!message || !stackTrace) {
       return undefined
     }
 
-    const message = test.error.Message[0]
-    const stackTrace = test.error.StackTrace[0]
     let path
     let line
 
