@@ -185,7 +185,11 @@ class TestReporter {
     }
   }
 
-  async createReport(parser: DotnetTrxParser, name: string, files: FileContent[]): Promise<TestRunResultWithUrl | null> {
+  async createReport(
+    parser: DotnetTrxParser,
+    name: string,
+    files: FileContent[]
+  ): Promise<TestRunResultWithUrl | null> {
     if (files.length === 0) {
       core.warning(`No file matches path ${this.path}`)
     }
@@ -360,7 +364,6 @@ class TestReporter {
       }
     }
   }
-
 }
 
 main()

@@ -179,9 +179,7 @@ describe('TestRunResult', () => {
 })
 
 describe('TestRunResultWithUrl', () => {
-  const suite = new TestSuiteResult('suite', [
-    new TestGroupResult('g', [new TestCaseResult('1', 't', 'failed', 10)])
-  ])
+  const suite = new TestSuiteResult('suite', [new TestGroupResult('g', [new TestCaseResult('1', 't', 'failed', 10)])])
   const run = new TestRunResult('/path', [suite])
 
   it('tracks check URL', () => {
@@ -207,9 +205,7 @@ describe('TestRunResultWithUrl', () => {
 
   it('aggregates counts from all results', () => {
     const run2 = new TestRunResult('/path2', [
-      new TestSuiteResult('s2', [
-        new TestGroupResult('g2', [new TestCaseResult('2', 't2', 'success', 20)])
-      ])
+      new TestSuiteResult('s2', [new TestGroupResult('g2', [new TestCaseResult('2', 't2', 'success', 20)])])
     ])
     const result = new TestRunResultWithUrl([run, run2], null)
     expect(result.passed).toBe(1)
