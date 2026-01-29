@@ -93,10 +93,10 @@ export class TestSuiteResult {
     private totalTime?: number
   ) {
     for (const grp of groups) {
-      var map = new Map<string, TestCaseResult[]>()
+      const map = new Map<string, TestCaseResult[]>()
       for (const tc of grp.tests) {
-        var key = tc.id
-        var existing = map.get(key) || []
+        const key = tc.id
+        const existing = map.get(key) || []
         existing.push(tc)
         map.set(key, existing)
       }

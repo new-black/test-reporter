@@ -53423,40 +53423,6 @@ var LocalFileProvider = class {
   }
 };
 
-// src/utils/path-utils.ts
-function normalizeDirPath(path5, addTrailingSlash) {
-  if (!path5) {
-    return path5;
-  }
-  path5 = normalizeFilePath(path5);
-  if (addTrailingSlash && !path5.endsWith("/")) {
-    path5 += "/";
-  }
-  return path5;
-}
-function normalizeFilePath(path5) {
-  if (!path5) {
-    return path5;
-  }
-  return path5.trim().replace(/\\/g, "/");
-}
-function getBasePath(path5, trackedFiles) {
-  if (trackedFiles.includes(path5)) {
-    return "";
-  }
-  let max = "";
-  for (const file of trackedFiles) {
-    if (path5.endsWith(file) && file.length > max.length) {
-      max = file;
-    }
-  }
-  if (max === "") {
-    return void 0;
-  }
-  const base = path5.substr(0, path5.length - max.length);
-  return base;
-}
-
 // src/utils/node-utils.ts
 var DEFAULT_LOCALE = "en-US";
 
@@ -53540,10 +53506,10 @@ var TestSuiteResult = class {
     this.groups = groups;
     this.totalTime = totalTime;
     for (const grp of groups) {
-      var map = /* @__PURE__ */ new Map();
+      const map = /* @__PURE__ */ new Map();
       for (const tc of grp.tests) {
-        var key = tc.id;
-        var existing = map.get(key) || [];
+        const key = tc.id;
+        const existing = map.get(key) || [];
         existing.push(tc);
         map.set(key, existing);
       }
@@ -53648,7 +53614,7 @@ function ellipsis(text, maxLength) {
   if (text.length <= maxLength) {
     return text;
   }
-  return text.substr(0, maxLength - 3) + "...";
+  return text.slice(0, maxLength - 3) + "...";
 }
 function formatTime(ms) {
   if (ms > 1e3) {
@@ -54011,6 +53977,42 @@ function getResultIcon(result) {
 
 // src/parsers/dotnet-trx/dotnet-trx-parser.ts
 var import_xml2js = __toESM(require_xml2js());
+
+// src/utils/path-utils.ts
+function normalizeDirPath(path5, addTrailingSlash) {
+  if (!path5) {
+    return path5;
+  }
+  path5 = normalizeFilePath(path5);
+  if (addTrailingSlash && !path5.endsWith("/")) {
+    path5 += "/";
+  }
+  return path5;
+}
+function normalizeFilePath(path5) {
+  if (!path5) {
+    return path5;
+  }
+  return path5.trim().replace(/\\/g, "/");
+}
+function getBasePath(path5, trackedFiles) {
+  if (trackedFiles.includes(path5)) {
+    return "";
+  }
+  let max = "";
+  for (const file of trackedFiles) {
+    if (path5.endsWith(file) && file.length > max.length) {
+      max = file;
+    }
+  }
+  if (max === "") {
+    return void 0;
+  }
+  const base = path5.slice(0, path5.length - max.length);
+  return base;
+}
+
+// src/parsers/dotnet-trx/dotnet-trx-parser.ts
 var TestClass = class {
   constructor(name) {
     this.name = name;
@@ -54091,7 +54093,7 @@ ${e}`);
       const durationAttr = r.result.$.duration;
       const duration = durationAttr ? parseNetDuration(durationAttr) : 0;
       const resultTestName = r.result.$.testName;
-      const testName = resultTestName.startsWith(className) && resultTestName[className.length] === "." ? resultTestName.substr(className.length + 1) : resultTestName;
+      const testName = resultTestName.startsWith(className) && resultTestName[className.length] === "." ? resultTestName.slice(className.length + 1) : resultTestName;
       const test = new Test(r.test.$.id, testName, r.result.$.outcome, duration, error2);
       tc.tests.push(test);
     }
@@ -54158,7 +54160,7 @@ ${stackTrace}`
         const filePath = normalizeFilePath(fileStr);
         const workDir = this.getWorkDir(filePath);
         if (workDir) {
-          const file = filePath.substr(workDir.length);
+          const file = filePath.slice(workDir.length);
           if (trackedFiles.includes(file)) {
             const line = parseInt(lineStr);
             return { path: file, line };
@@ -54254,7 +54256,7 @@ function mergeTestRunResults(results) {
 function groupByDirectory(results) {
   const pathMap = /* @__PURE__ */ new Map();
   for (const result of results) {
-    var dir = import_path3.default.dirname(result.path);
+    const dir = import_path3.default.dirname(result.path);
     info(`Grouping test results from ${dir}`);
     const existing = pathMap.get(dir) || [];
     pathMap.set(dir, [...existing, result]);

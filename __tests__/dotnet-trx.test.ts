@@ -14,18 +14,16 @@ it('matches report snapshot', async () => {
   const parser = new DotnetTrxParser(opts)
   const input = await inputProvider.load()
 
+  let results: TestRunResult[] = []
   for (const [reportName, files] of Object.entries(input.reports)) {
-    var results: TestRunResult[] = []
-    const result: TestRunResultWithUrl = new TestRunResultWithUrl(results, null)
-    for (const [reportName, files] of Object.entries(input.reports)) {
-      for (const {file, content} of files) {
-        const tr = await parser.parse(file, content)
-        results.push(tr)
-      }
-
-      results = groupByDirectory(results)
-      results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
+    for (const {file, content} of files) {
+      const tr = await parser.parse(file, content)
+      results.push(tr)
     }
-    expect(results).toMatchSnapshot()
   }
+
+  results = groupByDirectory(results)
+  results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
+
+  expect(results).toMatchSnapshot()
 })
