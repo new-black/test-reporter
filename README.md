@@ -30,11 +30,11 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: dotnet test --logger "trx;LogFileName=test-results.trx"
 
       - name: Test Report
-        uses: dorny/test-reporter@v1
+        uses: new-black/test-reporter@main
         if: success() || failure()
         with:
           name: .NET Tests
@@ -44,7 +44,7 @@ jobs:
 ## Usage
 
 ```yaml
-- uses: dorny/test-reporter@v1
+- uses: new-black/test-reporter@main
   with:
     # Name of the Check Run which will be created
     name: ''
@@ -135,7 +135,7 @@ Unfortunately, there are some known issues and limitations caused by GitHub API:
 
 - Test report (i.e. Check Run summary) is markdown text. No custom styling or HTML is possible.
 - Maximum report size is 65535 bytes. Input parameters `list-suites` and `list-tests` will be automatically adjusted if max size is exceeded.
-- Test report can't reference any additional files (e.g. screenshots). You can use `actions/upload-artifact@v4` to upload them and inspect them manually.
+- Test report can't reference any additional files (e.g. screenshots). You can use `actions/upload-artifact@v6` to upload them and inspect them manually.
 - Check Runs are created for specific commit SHA. It's not possible to specify under which workflow test report should belong if more workflows are running for the same SHA.
 
 ## License
