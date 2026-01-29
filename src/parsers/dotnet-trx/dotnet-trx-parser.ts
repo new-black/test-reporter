@@ -105,7 +105,7 @@ export class DotnetTrxParser implements TestParser {
       const resultTestName = r.result.$.testName
       const testName =
         resultTestName.startsWith(className) && resultTestName[className.length] === '.'
-          ? resultTestName.substr(className.length + 1)
+          ? resultTestName.slice(className.length + 1)
           : resultTestName
 
       const test = new Test(r.test.$.id, testName, r.result.$.outcome, duration, error)
@@ -195,7 +195,7 @@ export class DotnetTrxParser implements TestParser {
         const filePath = normalizeFilePath(fileStr)
         const workDir = this.getWorkDir(filePath)
         if (workDir) {
-          const file = filePath.substr(workDir.length)
+          const file = filePath.slice(workDir.length)
           if (trackedFiles.includes(file)) {
             const line = parseInt(lineStr)
             return {path: file, line}

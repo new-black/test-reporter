@@ -77,7 +77,7 @@ export function groupByDirectory(results: TestRunResult[]): TestRunResult[] {
   const pathMap = new Map<string, TestRunResult[]>()
 
   for (const result of results) {
-    var dir = path.dirname(result.path)
+    const dir = path.dirname(result.path)
     core.info(`Grouping test results from ${dir}`)
     const existing = pathMap.get(dir) || []
     pathMap.set(dir, [...existing, result])
