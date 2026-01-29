@@ -47524,32 +47524,51 @@ function getSuitesReport(tr, runIndex, options) {
   const time = formatTime(tr.time);
   const headingLine2 = tr.tests > 0 ? `**${tr.tests}** tests were completed in **${time}** with **${tr.passed}** passed, **${tr.failed}** failed and **${tr.skipped}** skipped.` : "No tests found";
   sections.push(headingLine2);
-  const suites = options.listSuites === "failed" ? tr.failedSuites : tr.suites;
-  if (suites.length > 0) {
-    const suitesTable = table(
-      ["Test suite", "Passed", "Failed", "Skipped", "Time"],
-      [":---" /* Left */, "---:" /* Right */, "---:" /* Right */, "---:" /* Right */, "---:" /* Right */],
-      ...suites.map((s, suiteIndex) => {
-        const tsTime = formatTime(s.time);
-        const tsName = s.name.startsWith(name) ? s.name.slice(name.length + 1) : s.name;
-        const skipLink = options.listTests === "none" || options.listTests === "failed" && s.result !== "failed";
-        s.link = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
-        const tsNameLink = skipLink ? tsName : link(tsName, s.link);
-        const passed = s.passed > 0 ? `${s.passed}${Icon.success}` : "";
-        const failed = s.failed > 0 ? `${s.failed}${Icon.fail}` : "";
-        const skipped = s.skipped > 0 ? `${s.skipped}${Icon.skip}` : "";
-        return [tsNameLink, passed, failed, skipped, tsTime];
-      })
-    );
-    sections.push(suitesTable);
+  const failedSuites = tr.suites.filter((s) => s.result === "failed");
+  const passedSuites = tr.suites.filter((s) => s.result !== "failed");
+  const hasFailedSuites = failedSuites.length > 0;
+  const suitesToShow = options.listSuites === "failed" ? failedSuites : hasFailedSuites ? failedSuites : tr.suites;
+  if (suitesToShow.length > 0) {
+    sections.push(renderSuitesTable(suitesToShow, name, runIndex, options));
   }
   if (options.listTests !== "none") {
-    const tests = suites.map((ts, suiteIndex) => getTestsReport(ts, runIndex, suiteIndex, options)).flat();
+    const tests = suitesToShow.map((ts) => {
+      const originalIndex = tr.suites.indexOf(ts);
+      return getTestsReport(ts, runIndex, originalIndex, options);
+    }).flat();
     if (tests.length > 1) {
       sections.push(...tests);
     }
   }
+  if (hasFailedSuites && passedSuites.length > 0 && options.listSuites === "all") {
+    const passedCount = passedSuites.reduce((sum, s) => sum + s.passed, 0);
+    sections.push("");
+    sections.push("<details>");
+    sections.push(`<summary>${Icon.success} ${passedCount} passed tests in ${passedSuites.length} suites</summary>`);
+    sections.push("");
+    sections.push(renderSuitesTable(passedSuites, name, runIndex, options));
+    sections.push("");
+    sections.push("</details>");
+  }
   return sections;
+}
+function renderSuitesTable(suites, runName, runIndex, options) {
+  return table(
+    ["Test suite", "Passed", "Failed", "Skipped", "Time"],
+    [":---" /* Left */, "---:" /* Right */, "---:" /* Right */, "---:" /* Right */, "---:" /* Right */],
+    ...suites.map((s) => {
+      const suiteIndex = suites.indexOf(s);
+      const tsTime = formatTime(s.time);
+      const tsName = s.name.startsWith(runName) ? s.name.slice(runName.length + 1) : s.name;
+      const skipLink = options.listTests === "none" || options.listTests === "failed" && s.result !== "failed";
+      s.link = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
+      const tsNameLink = skipLink ? tsName : link(tsName, s.link);
+      const passed = s.passed > 0 ? `${s.passed}${Icon.success}` : "";
+      const failed = s.failed > 0 ? `${s.failed}${Icon.fail}` : "";
+      const skipped = s.skipped > 0 ? `${s.skipped}${Icon.skip}` : "";
+      return [tsNameLink, passed, failed, skipped, tsTime];
+    })
+  );
 }
 function getTestsReport(ts, runIndex, suiteIndex, options) {
   if (options.listTests === "failed" && ts.result !== "failed") {
