@@ -3973,11 +3973,11 @@ var require_util2 = __commonJS({
     var { isUint8Array } = require("node:util/types");
     var { webidl } = require_webidl();
     var supportedHashes = [];
-    var crypto3;
+    var crypto2;
     try {
-      crypto3 = require("node:crypto");
+      crypto2 = require("node:crypto");
       const possibleRelevantHashes = ["sha256", "sha384", "sha512"];
-      supportedHashes = crypto3.getHashes().filter((hash) => possibleRelevantHashes.includes(hash));
+      supportedHashes = crypto2.getHashes().filter((hash) => possibleRelevantHashes.includes(hash));
     } catch {
     }
     function responseURL(response) {
@@ -4250,7 +4250,7 @@ var require_util2 = __commonJS({
       }
     }
     function bytesMatch(bytes, metadataList) {
-      if (crypto3 === void 0) {
+      if (crypto2 === void 0) {
         return true;
       }
       const parsedMetadata = parseMetadata(metadataList);
@@ -4265,7 +4265,7 @@ var require_util2 = __commonJS({
       for (const item of metadata) {
         const algorithm = item.algo;
         const expectedValue = item.hash;
-        let actualValue = crypto3.createHash(algorithm).update(bytes).digest("base64");
+        let actualValue = crypto2.createHash(algorithm).update(bytes).digest("base64");
         if (actualValue[actualValue.length - 1] === "=") {
           if (actualValue[actualValue.length - 2] === "=") {
             actualValue = actualValue.slice(0, -2);
@@ -5329,8 +5329,8 @@ var require_body = __commonJS({
     var { multipartFormDataParser } = require_formdata_parser();
     var random;
     try {
-      const crypto3 = require("node:crypto");
-      random = (max) => crypto3.randomInt(0, max);
+      const crypto2 = require("node:crypto");
+      random = (max) => crypto2.randomInt(0, max);
     } catch {
       random = (max) => Math.floor(Math.random(max));
     }
@@ -16734,13 +16734,13 @@ var require_frame = __commonJS({
     "use strict";
     var { maxUnsigned16Bit } = require_constants5();
     var BUFFER_SIZE = 16386;
-    var crypto3;
+    var crypto2;
     var buffer = null;
     var bufIdx = BUFFER_SIZE;
     try {
-      crypto3 = require("node:crypto");
+      crypto2 = require("node:crypto");
     } catch {
-      crypto3 = {
+      crypto2 = {
         // not full compatibility, but minimum.
         randomFillSync: function randomFillSync(buffer2, _offset, _size) {
           for (let i = 0; i < buffer2.length; ++i) {
@@ -16753,7 +16753,7 @@ var require_frame = __commonJS({
     function generateMask() {
       if (bufIdx === BUFFER_SIZE) {
         bufIdx = 0;
-        crypto3.randomFillSync(buffer ??= Buffer.allocUnsafe(BUFFER_SIZE), 0, BUFFER_SIZE);
+        crypto2.randomFillSync(buffer ??= Buffer.allocUnsafe(BUFFER_SIZE), 0, BUFFER_SIZE);
       }
       return [buffer[bufIdx++], buffer[bufIdx++], buffer[bufIdx++], buffer[bufIdx++]];
     }
@@ -16825,9 +16825,9 @@ var require_connection = __commonJS({
     var { Headers: Headers2, getHeadersList } = require_headers();
     var { getDecodeSplit } = require_util2();
     var { WebsocketFrameSend } = require_frame();
-    var crypto3;
+    var crypto2;
     try {
-      crypto3 = require("node:crypto");
+      crypto2 = require("node:crypto");
     } catch {
     }
     function establishWebSocketConnection(url, protocols, client, ws, onEstablish, options) {
@@ -16847,7 +16847,7 @@ var require_connection = __commonJS({
         const headersList = getHeadersList(new Headers2(options.headers));
         request2.headersList = headersList;
       }
-      const keyValue = crypto3.randomBytes(16).toString("base64");
+      const keyValue = crypto2.randomBytes(16).toString("base64");
       request2.headersList.append("sec-websocket-key", keyValue);
       request2.headersList.append("sec-websocket-version", "13");
       for (const protocol of protocols) {
@@ -16877,7 +16877,7 @@ var require_connection = __commonJS({
             return;
           }
           const secWSAccept = response.headersList.get("Sec-WebSocket-Accept");
-          const digest = crypto3.createHash("sha1").update(keyValue + uid).digest("base64");
+          const digest = crypto2.createHash("sha1").update(keyValue + uid).digest("base64");
           if (secWSAccept !== digest) {
             failWebsocketConnection(ws, "Incorrect hash received in Sec-WebSocket-Accept header.");
             return;
@@ -43422,7 +43422,7 @@ var require_form_data = __commonJS({
     var parseUrl2 = require("url").parse;
     var fs5 = require("fs");
     var Stream = require("stream").Stream;
-    var crypto3 = require("crypto");
+    var crypto2 = require("crypto");
     var mime = require_mime_types();
     var asynckit = require_asynckit();
     var setToStringTag = require_es_set_tostringtag();
@@ -43628,7 +43628,7 @@ var require_form_data = __commonJS({
       return Buffer.concat([dataBuffer, Buffer.from(this._lastBoundary())]);
     };
     FormData2.prototype._generateBoundary = function() {
-      this._boundary = "--------------------------" + crypto3.randomBytes(12).toString("hex");
+      this._boundary = "--------------------------" + crypto2.randomBytes(12).toString("hex");
     };
     FormData2.prototype.getLengthSync = function() {
       var knownLength = this._overheadLength + this._valueLength;
@@ -45083,7 +45083,7 @@ var require_axios = __commonJS({
   "node_modules/axios/dist/node/axios.cjs"(exports2, module2) {
     "use strict";
     var FormData$1 = require_form_data();
-    var crypto3 = require("crypto");
+    var crypto2 = require("crypto");
     var url = require("url");
     var proxyFromEnv = require_proxy_from_env();
     var http = require("http");
@@ -45098,7 +45098,7 @@ var require_axios = __commonJS({
       return e && typeof e === "object" && "default" in e ? e : { "default": e };
     }
     var FormData__default = /* @__PURE__ */ _interopDefaultLegacy(FormData$1);
-    var crypto__default = /* @__PURE__ */ _interopDefaultLegacy(crypto3);
+    var crypto__default = /* @__PURE__ */ _interopDefaultLegacy(crypto2);
     var url__default = /* @__PURE__ */ _interopDefaultLegacy(url);
     var proxyFromEnv__default = /* @__PURE__ */ _interopDefaultLegacy(proxyFromEnv);
     var http__default = /* @__PURE__ */ _interopDefaultLegacy(http);
@@ -48793,473 +48793,6 @@ var require_dist = __commonJS({
   }
 });
 
-// node_modules/is-stream/index.js
-var require_is_stream = __commonJS({
-  "node_modules/is-stream/index.js"(exports2, module2) {
-    "use strict";
-    var isStream = (stream) => stream !== null && typeof stream === "object" && typeof stream.pipe === "function";
-    isStream.writable = (stream) => isStream(stream) && stream.writable !== false && typeof stream._write === "function" && typeof stream._writableState === "object";
-    isStream.readable = (stream) => isStream(stream) && stream.readable !== false && typeof stream._read === "function" && typeof stream._readableState === "object";
-    isStream.duplex = (stream) => isStream.writable(stream) && isStream.readable(stream);
-    isStream.transform = (stream) => isStream.duplex(stream) && typeof stream._transform === "function";
-    module2.exports = isStream;
-  }
-});
-
-// node_modules/caseless/index.js
-var require_caseless = __commonJS({
-  "node_modules/caseless/index.js"(exports2, module2) {
-    function Caseless(dict) {
-      this.dict = dict || {};
-    }
-    Caseless.prototype.set = function(name, value, clobber) {
-      if (typeof name === "object") {
-        for (var i in name) {
-          this.set(i, name[i], value);
-        }
-      } else {
-        if (typeof clobber === "undefined") clobber = true;
-        var has = this.has(name);
-        if (!clobber && has) this.dict[has] = this.dict[has] + "," + value;
-        else this.dict[has || name] = value;
-        return has;
-      }
-    };
-    Caseless.prototype.has = function(name) {
-      var keys = Object.keys(this.dict), name = name.toLowerCase();
-      for (var i = 0; i < keys.length; i++) {
-        if (keys[i].toLowerCase() === name) return keys[i];
-      }
-      return false;
-    };
-    Caseless.prototype.get = function(name) {
-      name = name.toLowerCase();
-      var result, _key;
-      var headers = this.dict;
-      Object.keys(headers).forEach(function(key) {
-        _key = key.toLowerCase();
-        if (name === _key) result = headers[key];
-      });
-      return result;
-    };
-    Caseless.prototype.swap = function(name) {
-      var has = this.has(name);
-      if (has === name) return;
-      if (!has) throw new Error('There is no header than matches "' + name + '"');
-      this.dict[name] = this.dict[has];
-      delete this.dict[has];
-    };
-    Caseless.prototype.del = function(name) {
-      var has = this.has(name);
-      return delete this.dict[has || name];
-    };
-    module2.exports = function(dict) {
-      return new Caseless(dict);
-    };
-    module2.exports.httpify = function(resp, headers) {
-      var c = new Caseless(headers);
-      resp.setHeader = function(key, value, clobber) {
-        if (typeof value === "undefined") return;
-        return c.set(key, value, clobber);
-      };
-      resp.hasHeader = function(key) {
-        return c.has(key);
-      };
-      resp.getHeader = function(key) {
-        return c.get(key);
-      };
-      resp.removeHeader = function(key) {
-        return c.del(key);
-      };
-      resp.headers = c.dict;
-      return c;
-    };
-  }
-});
-
-// node_modules/bytesish/core.js
-var require_core = __commonJS({
-  "node_modules/bytesish/core.js"(exports2, module2) {
-    "use strict";
-    var length = (a, b) => {
-      if (a.byteLength === b.byteLength) return a.byteLength;
-      else if (a.byteLength > b.byteLength) return a.byteLength;
-      return b.byteLength;
-    };
-    var bytes = (_from, encoding) => bytes.from(_from, encoding);
-    bytes.sorter = (a, b) => {
-      a = bytes(a);
-      b = bytes(b);
-      const len = length(a, b);
-      let i = 0;
-      while (i < len - 1) {
-        if (i >= a.byteLength) return 1;
-        else if (i >= b.byteLength) return -1;
-        if (a.getUint8(i) < b.getUint8(i)) return -1;
-        else if (a.getUint8(i) > b.getUint8(i)) return 1;
-        i++;
-      }
-      return 0;
-    };
-    bytes.compare = (a, b) => !bytes.sorter(a, b);
-    bytes.memcopy = (_from, encoding) => {
-      const b = bytes(_from, encoding);
-      return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
-    };
-    bytes.arrayBuffer = (_from, encoding) => {
-      _from = bytes(_from, encoding);
-      if (_from.buffer.byteLength === _from.byteLength) return _from.buffer;
-      return _from.buffer.slice(_from.byteOffset, _from.byteOffset + _from.byteLength);
-    };
-    var sliceOptions = (_from, start = 0, end = null) => {
-      _from = bytes(_from);
-      end = (end === null ? _from.byteLength : end) - start;
-      return [_from.buffer, _from.byteOffset + start, end];
-    };
-    bytes.slice = (_from, start, end) => new DataView(...sliceOptions(_from, start, end));
-    bytes.memcopySlice = (_from, start, end) => {
-      const [buffer, offset, length2] = sliceOptions(_from, start, end);
-      return buffer.slice(offset, length2 + offset);
-    };
-    bytes.typedArray = (_from, _Class = Uint8Array) => {
-      _from = bytes(_from);
-      return new _Class(_from.buffer, _from.byteOffset, _from.byteLength / _Class.BYTES_PER_ELEMENT);
-    };
-    bytes.concat = (_from) => {
-      _from = Array.from(_from);
-      _from = _from.map((b) => bytes(b));
-      const length2 = _from.reduce((x, y) => x + y.byteLength, 0);
-      const ret = new Uint8Array(length2);
-      let i = 0;
-      for (const part of _from) {
-        const view = bytes.typedArray(part);
-        ret.set(view, i);
-        i += view.byteLength;
-      }
-      return ret.buffer;
-    };
-    var maxEntropy = 65536;
-    bytes.random = (length2) => {
-      const ab = new ArrayBuffer(length2);
-      if (length2 > maxEntropy) {
-        let i = 0;
-        while (i < ab.byteLength) {
-          let len;
-          if (i + maxEntropy > ab.byteLength) len = ab.byteLength - i;
-          else len = maxEntropy;
-          const view = new Uint8Array(ab, i, len);
-          i += maxEntropy;
-          bytes._randomFill(view);
-        }
-      } else {
-        const view = new Uint8Array(ab);
-        bytes._randomFill(view);
-      }
-      return ab;
-    };
-    module2.exports = bytes;
-  }
-});
-
-// node_modules/bytesish/browser.js
-var require_browser2 = __commonJS({
-  "node_modules/bytesish/browser.js"(exports2, module2) {
-    "use strict";
-    var bytes = require_core();
-    bytes.from = (_from, _encoding) => {
-      if (_from instanceof DataView) return _from;
-      if (_from instanceof ArrayBuffer) return new DataView(_from);
-      let buffer;
-      if (typeof _from === "string") {
-        if (!_encoding) {
-          _encoding = "utf-8";
-        } else if (_encoding === "base64") {
-          buffer = Uint8Array.from(atob(_from), (c) => c.charCodeAt(0)).buffer;
-          return new DataView(buffer);
-        }
-        if (_encoding !== "utf-8") throw new Error("Browser support for encodings other than utf-8 not implemented");
-        return new DataView(new TextEncoder().encode(_from).buffer);
-      } else if (typeof _from === "object") {
-        if (ArrayBuffer.isView(_from)) {
-          if (_from.byteLength === _from.buffer.byteLength) return new DataView(_from.buffer);
-          else return new DataView(_from.buffer, _from.byteOffset, _from.byteLength);
-        }
-      }
-      throw new Error("Unkown type. Cannot convert to ArrayBuffer");
-    };
-    bytes.toString = (_from, encoding) => {
-      _from = bytes(_from, encoding);
-      const uint = new Uint8Array(_from.buffer, _from.byteOffset, _from.byteLength);
-      const str = String.fromCharCode(...uint);
-      if (encoding === "base64") {
-        return btoa(str);
-      } else {
-        return str;
-      }
-    };
-    bytes.native = (_from, encoding) => {
-      if (_from instanceof Uint8Array) return _from;
-      _from = bytes.from(_from, encoding);
-      return new Uint8Array(_from.buffer, _from.byteOffset, _from.byteLength);
-    };
-    if (process.browser) bytes._randomFill = (...args) => crypto.getRandomValues(...args);
-    module2.exports = bytes;
-  }
-});
-
-// node_modules/bytesish/node.js
-var require_node2 = __commonJS({
-  "node_modules/bytesish/node.js"(exports2, module2) {
-    "use strict";
-    var crypto3 = require("crypto");
-    var fallback = require_browser2().from;
-    var bytes = require_core();
-    bytes.from = (_from, encoding) => {
-      if (_from instanceof DataView) return _from;
-      if (_from instanceof ArrayBuffer) return new DataView(_from);
-      if (typeof _from === "string") {
-        _from = Buffer.from(_from, encoding);
-      }
-      if (Buffer.isBuffer(_from)) {
-        return new DataView(_from.buffer, _from.byteOffset, _from.byteLength);
-      }
-      return fallback(_from, encoding);
-    };
-    bytes.toString = (_from, encoding) => {
-      _from = bytes(_from);
-      return Buffer.from(_from.buffer, _from.byteOffset, _from.byteLength).toString(encoding);
-    };
-    bytes.native = (_from, encoding) => {
-      if (Buffer.isBuffer(_from)) return _from;
-      _from = bytes(_from, encoding);
-      return Buffer.from(_from.buffer, _from.byteOffset, _from.byteLength);
-    };
-    bytes._randomFill = crypto3.randomFillSync;
-    module2.exports = bytes;
-  }
-});
-
-// node_modules/bent/src/core.js
-var require_core2 = __commonJS({
-  "node_modules/bent/src/core.js"(exports2, module2) {
-    "use strict";
-    var encodings = /* @__PURE__ */ new Set(["json", "buffer", "string"]);
-    module2.exports = (mkrequest) => (...args) => {
-      const statusCodes = /* @__PURE__ */ new Set();
-      let method;
-      let encoding;
-      let headers;
-      let baseurl = "";
-      args.forEach((arg) => {
-        if (typeof arg === "string") {
-          if (arg.toUpperCase() === arg) {
-            if (method) {
-              const msg = `Can't set method to ${arg}, already set to ${method}.`;
-              throw new Error(msg);
-            } else {
-              method = arg;
-            }
-          } else if (arg.startsWith("http:") || arg.startsWith("https:")) {
-            baseurl = arg;
-          } else {
-            if (encodings.has(arg)) {
-              encoding = arg;
-            } else {
-              throw new Error(`Unknown encoding, ${arg}`);
-            }
-          }
-        } else if (typeof arg === "number") {
-          statusCodes.add(arg);
-        } else if (typeof arg === "object") {
-          if (Array.isArray(arg) || arg instanceof Set) {
-            arg.forEach((code) => statusCodes.add(code));
-          } else {
-            if (headers) {
-              throw new Error("Cannot set headers twice.");
-            }
-            headers = arg;
-          }
-        } else {
-          throw new Error(`Unknown type: ${typeof arg}`);
-        }
-      });
-      if (!method) method = "GET";
-      if (statusCodes.size === 0) {
-        statusCodes.add(200);
-      }
-      return mkrequest(statusCodes, method, encoding, headers, baseurl);
-    };
-  }
-});
-
-// node_modules/bent/src/nodejs.js
-var require_nodejs = __commonJS({
-  "node_modules/bent/src/nodejs.js"(exports2, module2) {
-    "use strict";
-    var http = require("http");
-    var https = require("https");
-    var { URL: URL2 } = require("url");
-    var isStream = require_is_stream();
-    var caseless = require_caseless();
-    var bytes = require_node2();
-    var bent2 = require_core2();
-    var zlib = require("zlib");
-    var { PassThrough } = require("stream");
-    var compression = {};
-    if (zlib.createBrotliDecompress) compression.br = () => zlib.createBrotliDecompress();
-    if (zlib.createGunzip) compression.gzip = () => zlib.createGunzip();
-    if (zlib.createInflate) compression.deflate = () => zlib.createInflate();
-    var acceptEncoding = Object.keys(compression).join(", ");
-    var getResponse = (resp) => {
-      const ret = new PassThrough();
-      ret.statusCode = resp.statusCode;
-      ret.status = resp.statusCode;
-      ret.statusMessage = resp.statusMessage;
-      ret.headers = resp.headers;
-      ret._response = resp;
-      if (ret.headers["content-encoding"]) {
-        const encodings = ret.headers["content-encoding"].split(", ").reverse();
-        while (encodings.length) {
-          const enc = encodings.shift();
-          if (compression[enc]) {
-            const decompress = compression[enc]();
-            decompress.on("error", (e) => ret.emit("error", new Error("ZBufError", e)));
-            resp = resp.pipe(decompress);
-          } else {
-            break;
-          }
-        }
-      }
-      return resp.pipe(ret);
-    };
-    var StatusError = class _StatusError extends Error {
-      constructor(res, ...params) {
-        super(...params);
-        Error.captureStackTrace(this, _StatusError);
-        this.name = "StatusError";
-        this.message = res.statusMessage;
-        this.statusCode = res.statusCode;
-        this.json = res.json;
-        this.text = res.text;
-        this.arrayBuffer = res.arrayBuffer;
-        this.headers = res.headers;
-        let buffer;
-        const get = () => {
-          if (!buffer) buffer = this.arrayBuffer();
-          return buffer;
-        };
-        Object.defineProperty(this, "responseBody", { get });
-      }
-    };
-    var getBuffer = (stream) => new Promise((resolve, reject) => {
-      const parts = [];
-      stream.on("error", reject);
-      stream.on("end", () => resolve(Buffer.concat(parts)));
-      stream.on("data", (d) => parts.push(d));
-    });
-    var decodings = (res) => {
-      let _buffer;
-      res.arrayBuffer = () => {
-        if (!_buffer) {
-          _buffer = getBuffer(res);
-          return _buffer;
-        } else {
-          throw new Error("body stream is locked");
-        }
-      };
-      res.text = () => res.arrayBuffer().then((buff) => buff.toString());
-      res.json = async () => {
-        const str = await res.text();
-        try {
-          return JSON.parse(str);
-        } catch (e) {
-          e.message += `str"${str}"`;
-          throw e;
-        }
-      };
-    };
-    var mkrequest = (statusCodes, method, encoding, headers, baseurl) => (_url, body = null, _headers = {}) => {
-      _url = baseurl + (_url || "");
-      const parsed = new URL2(_url);
-      let h;
-      if (parsed.protocol === "https:") {
-        h = https;
-      } else if (parsed.protocol === "http:") {
-        h = http;
-      } else {
-        throw new Error(`Unknown protocol, ${parsed.protocol}`);
-      }
-      const request2 = {
-        path: parsed.pathname + parsed.search,
-        port: parsed.port,
-        method,
-        headers: { ...headers || {}, ..._headers },
-        hostname: parsed.hostname
-      };
-      if (parsed.username || parsed.password) {
-        request2.auth = [parsed.username, parsed.password].join(":");
-      }
-      const c = caseless(request2.headers);
-      if (encoding === "json") {
-        if (!c.get("accept")) {
-          c.set("accept", "application/json");
-        }
-      }
-      if (!c.has("accept-encoding")) {
-        c.set("accept-encoding", acceptEncoding);
-      }
-      return new Promise((resolve, reject) => {
-        const req = h.request(request2, async (res) => {
-          res = getResponse(res);
-          res.on("error", reject);
-          decodings(res);
-          res.status = res.statusCode;
-          if (!statusCodes.has(res.statusCode)) {
-            return reject(new StatusError(res));
-          }
-          if (!encoding) return resolve(res);
-          else {
-            if (encoding === "buffer") {
-              resolve(res.arrayBuffer());
-            } else if (encoding === "json") {
-              resolve(res.json());
-            } else if (encoding === "string") {
-              resolve(res.text());
-            }
-          }
-        });
-        req.on("error", reject);
-        if (body) {
-          if (body instanceof ArrayBuffer || ArrayBuffer.isView(body)) {
-            body = bytes.native(body);
-          }
-          if (Buffer.isBuffer(body)) {
-          } else if (typeof body === "string") {
-            body = Buffer.from(body);
-          } else if (isStream(body)) {
-            body.pipe(req);
-            body = null;
-          } else if (typeof body === "object") {
-            if (!c.has("content-type")) {
-              req.setHeader("content-type", "application/json");
-            }
-            body = Buffer.from(JSON.stringify(body));
-          } else {
-            reject(new Error("Unknown body type."));
-          }
-          if (body) {
-            req.setHeader("content-length", body.length);
-            req.end(body);
-          }
-        } else {
-          req.end();
-        }
-      });
-    };
-    module2.exports = bent2(mkrequest);
-  }
-});
-
 // node_modules/@actions/core/lib/command.js
 var os = __toESM(require("os"), 1);
 
@@ -49335,7 +48868,7 @@ function escapeProperty(s) {
 }
 
 // node_modules/@actions/core/lib/file-command.js
-var crypto2 = __toESM(require("crypto"), 1);
+var crypto = __toESM(require("crypto"), 1);
 var fs = __toESM(require("fs"), 1);
 var os2 = __toESM(require("os"), 1);
 function issueFileCommand(command, message) {
@@ -49351,7 +48884,7 @@ function issueFileCommand(command, message) {
   });
 }
 function prepareKeyValueMessage(key, value) {
-  const delimiter = `ghadelimiter_${crypto2.randomUUID()}`;
+  const delimiter = `ghadelimiter_${crypto.randomUUID()}`;
   const convertedValue = toCommandValue(value);
   if (key.includes(delimiter)) {
     throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
@@ -54204,7 +53737,6 @@ function getCheckRunContext() {
 var import_webhook = __toESM(require_dist());
 var import_fs3 = __toESM(require("fs"));
 var import_path4 = __toESM(require("path"));
-var import_bent = __toESM(require_nodejs());
 var import_process = require("process");
 
 // src/utils/merge-utils.ts
@@ -54342,11 +53874,14 @@ var TestReporter = class {
         info(
           `Using EVA version ${version}, commit ${commitID}, branch ${this.context.branch}, current directory: ${(0, import_process.cwd)()}`
         );
-        const post = (0, import_bent.default)(this.resultsEndpoint, "POST", {}, 200);
-        await post(
-          `TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ""}${commitID ? "&EVACommitID=" + commitID : ""}&EVABranch=${encodeURI(this.context.branch)}`,
-          readStream
-        );
+        const url = `${this.resultsEndpoint}TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ""}${commitID ? "&EVACommitID=" + commitID : ""}&EVABranch=${encodeURI(this.context.branch)}`;
+        const response = await fetch(url, {
+          method: "POST",
+          body: new Uint8Array(readStream)
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
         info(`Uploaded TRX files`);
       } catch (ex) {
         warning(`Could not upload TRX ZIP file: ${ex}`);

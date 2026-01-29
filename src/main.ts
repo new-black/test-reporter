@@ -17,7 +17,6 @@ import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
 import path from 'path'
-import bent from 'bent'
 import {cwd} from 'process'
 import {groupByDirectory} from './utils/merge-utils'
 
@@ -116,13 +115,16 @@ class TestReporter {
           `Using EVA version ${version}, commit ${commitID}, branch ${this.context.branch}, current directory: ${cwd()}`
         )
 
-        const post = bent(this.resultsEndpoint, 'POST', {}, 200)
-        await post(
-          `TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${
-            commitID ? '&EVACommitID=' + commitID : ''
-          }&EVABranch=${encodeURI(this.context.branch)}`,
-          readStream
-        )
+        const url = `${this.resultsEndpoint}TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${
+          commitID ? '&EVACommitID=' + commitID : ''
+        }&EVABranch=${encodeURI(this.context.branch)}`
+        const response = await fetch(url, {
+          method: 'POST',
+          body: new Uint8Array(readStream)
+        })
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+        }
         core.info(`Uploaded TRX files`)
       } catch (ex) {
         core.warning(`Could not upload TRX ZIP file: ${ex}`)
