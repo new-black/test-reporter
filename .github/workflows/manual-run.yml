@@ -19,4 +19,3 @@ jobs:
         with:
           name: JEST Tests
           path: __tests__/__results__/*.xml
-          reporter: jest-junit
