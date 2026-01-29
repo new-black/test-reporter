@@ -54282,21 +54282,19 @@ async function main() {
 }
 var TestReporter = class {
   constructor() {
-    this.artifact = getInput("artifact", { required: false });
     this.name = getInput("name", { required: true });
     this.path = getInput("path", { required: true });
     this.pathReplaceBackslashes = getInput("path-replace-backslashes", { required: false }) === "true";
-    this.reporter = getInput("reporter", { required: true });
-    this.listSuites = getInput("list-suites", { required: true });
-    this.listTests = getInput("list-tests", { required: true });
-    this.maxAnnotations = parseInt(getInput("max-annotations", { required: true }));
-    this.failOnError = getInput("fail-on-error", { required: true }) === "true";
-    this.failOnEmpty = getInput("fail-on-empty", { required: true }) === "true";
+    this.listSuites = getInput("list-suites", { required: false });
+    this.listTests = getInput("list-tests", { required: false });
+    this.maxAnnotations = parseInt(getInput("max-annotations", { required: false }) || "10");
+    this.failOnError = getInput("fail-on-error", { required: false }) !== "false";
+    this.failOnEmpty = getInput("fail-on-empty", { required: false }) !== "false";
     this.workDirInput = getInput("working-directory", { required: false });
     this.onlySummary = getInput("only-summary", { required: false }) === "true";
-    this.token = getInput("token", { required: true });
+    this.token = getInput("token", { required: false }) || process.env.GITHUB_TOKEN || "";
     this.slackWebhook = getInput("slack-url", { required: false });
-    this.githubEvent = getInput("github-event", { required: false });
+    this.slackBranch = getInput("slack-branch", { required: false }) || "master";
     this.resultsEndpoint = getInput("test-results-endpoint", { required: false });
     this.resultsEndpointSecret = getInput("test-results-endpoint-secret", { required: false });
     this.context = getCheckRunContext();
@@ -54325,15 +54323,15 @@ var TestReporter = class {
     const inputProvider = new LocalFileProvider(this.name, pattern);
     const parseErrors = this.maxAnnotations > 0;
     const trackedFiles = parseErrors ? await inputProvider.listTrackedFiles() : [];
-    const workDir = this.artifact ? void 0 : normalizeDirPath(process.cwd(), true);
+    const workDir = normalizeDirPath(process.cwd(), true);
     if (parseErrors) info(`Found ${trackedFiles.length} files tracked by GitHub`);
     const options = {
       workDir,
       trackedFiles,
       parseErrors
     };
-    info(`Using test report parser '${this.reporter}'`);
-    const parser = this.getParser(options);
+    info(`Using dotnet-trx test report parser`);
+    const parser = new DotnetTrxParser(options);
     const results = [];
     const input = await inputProvider.load();
     if (this.resultsEndpoint?.length > 0) {
@@ -54494,7 +54492,7 @@ var TestReporter = class {
     return result;
   }
   async reportToSlack(results, name, checkRunUrl) {
-    if (this.slackWebhook && this.context.branch === "master") {
+    if (this.slackWebhook && this.context.branch === this.slackBranch) {
       const webhook = new import_webhook.IncomingWebhook(this.slackWebhook);
       const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
       const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
@@ -54541,13 +54539,10 @@ var TestReporter = class {
           });
         }
       }
-      if (this.githubEvent === "schedule" || failed > 0) {
+      if (failed > 0) {
         await webhook.send(req);
       }
     }
-  }
-  getParser(options) {
-    return new DotnetTrxParser(options);
   }
 };
 main();

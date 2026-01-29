@@ -4,7 +4,7 @@ import {GitHub} from '@actions/github/lib/utils'
 
 import {LocalFileProvider} from './input-providers/local-file-provider'
 import {FileContent} from './input-providers/input-provider'
-import {ParseOptions, TestParser} from './test-parser'
+import {ParseOptions} from './test-parser'
 import {TestRunResult, TestRunResultWithUrl} from './test-results'
 import {getAnnotations} from './report/get-annotations'
 import {getReport} from './report/get-report'
@@ -32,21 +32,19 @@ async function main(): Promise<void> {
 }
 
 class TestReporter {
-  readonly artifact = core.getInput('artifact', {required: false})
   readonly name = core.getInput('name', {required: true})
   readonly path = core.getInput('path', {required: true})
   readonly pathReplaceBackslashes = core.getInput('path-replace-backslashes', {required: false}) === 'true'
-  readonly reporter = core.getInput('reporter', {required: true})
-  readonly listSuites = core.getInput('list-suites', {required: true}) as 'all' | 'failed'
-  readonly listTests = core.getInput('list-tests', {required: true}) as 'all' | 'failed' | 'none'
-  readonly maxAnnotations = parseInt(core.getInput('max-annotations', {required: true}))
-  readonly failOnError = core.getInput('fail-on-error', {required: true}) === 'true'
-  readonly failOnEmpty = core.getInput('fail-on-empty', {required: true}) === 'true'
+  readonly listSuites = core.getInput('list-suites', {required: false}) as 'all' | 'failed'
+  readonly listTests = core.getInput('list-tests', {required: false}) as 'all' | 'failed' | 'none'
+  readonly maxAnnotations = parseInt(core.getInput('max-annotations', {required: false}) || '10')
+  readonly failOnError = core.getInput('fail-on-error', {required: false}) !== 'false'
+  readonly failOnEmpty = core.getInput('fail-on-empty', {required: false}) !== 'false'
   readonly workDirInput = core.getInput('working-directory', {required: false})
   readonly onlySummary = core.getInput('only-summary', {required: false}) === 'true'
-  readonly token = core.getInput('token', {required: true})
+  readonly token = core.getInput('token', {required: false}) || process.env.GITHUB_TOKEN || ''
   readonly slackWebhook = core.getInput('slack-url', {required: false})
-  readonly githubEvent = core.getInput('github-event', {required: false})
+  readonly slackBranch = core.getInput('slack-branch', {required: false}) || 'master'
   readonly resultsEndpoint = core.getInput('test-results-endpoint', {required: false})
   readonly resultsEndpointSecret = core.getInput('test-results-endpoint-secret', {required: false})
   readonly octokit: InstanceType<typeof GitHub>
@@ -88,7 +86,7 @@ class TestReporter {
 
     const parseErrors = this.maxAnnotations > 0
     const trackedFiles = parseErrors ? await inputProvider.listTrackedFiles() : []
-    const workDir = this.artifact ? undefined : normalizeDirPath(process.cwd(), true)
+    const workDir = normalizeDirPath(process.cwd(), true)
 
     if (parseErrors) core.info(`Found ${trackedFiles.length} files tracked by GitHub`)
 
@@ -98,8 +96,8 @@ class TestReporter {
       parseErrors
     }
 
-    core.info(`Using test report parser '${this.reporter}'`)
-    const parser = this.getParser(options)
+    core.info(`Using dotnet-trx test report parser`)
+    const parser = new DotnetTrxParser(options)
 
     const results: TestRunResultWithUrl[] = []
     const input = await inputProvider.load()
@@ -185,7 +183,7 @@ class TestReporter {
     }
   }
 
-  async createReport(parser: TestParser, name: string, files: FileContent[]): Promise<TestRunResultWithUrl | null> {
+  async createReport(parser: DotnetTrxParser, name: string, files: FileContent[]): Promise<TestRunResultWithUrl | null> {
     if (files.length === 0) {
       core.warning(`No file matches path ${this.path}`)
     }
@@ -302,7 +300,7 @@ class TestReporter {
   }
 
   private async reportToSlack(results: TestRunResult[], name: string, checkRunUrl: string): Promise<void> {
-    if (this.slackWebhook && this.context.branch === 'master') {
+    if (this.slackWebhook && this.context.branch === this.slackBranch) {
       const webhook = new IncomingWebhook(this.slackWebhook)
       const passed = results.reduce((sum, tr) => sum + tr.passed, 0)
       const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0)
@@ -355,15 +353,12 @@ class TestReporter {
         }
       }
 
-      if (this.githubEvent === 'schedule' || failed > 0) {
+      if (failed > 0) {
         await webhook.send(req)
       }
     }
   }
 
-  getParser(options: ParseOptions): TestParser {
-    return new DotnetTrxParser(options)
-  }
 }
 
 main()

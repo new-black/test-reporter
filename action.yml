@@ -3,9 +3,6 @@ description: |
   Shows test results in GitHub UI: .NET (xUnit, NUnit, MSTest) via TRX format
 author: Michal Dorner <dorner.michal@gmail.com>
 inputs:
-  artifact:
-    description: Name or regex of artifact containing test results
-    required: false
   name:
     description: Name of the check run
     required: true
@@ -22,11 +19,6 @@ inputs:
       It might be useful when path input variable is composed dynamically from existing directory paths on Windows.
     default: 'false'
     required: false
-  reporter:
-    description: |
-      Format of test results. Supported options:
-        - dotnet-trx
-    required: true
   list-suites:
     description: |
       Limits which test suites are listed. Supported options:
@@ -54,7 +46,7 @@ inputs:
     default: 'true'
   fail-on-empty:
     description: Set this action as failed if no test results were found
-    required: true
+    required: false
     default: 'true'
   working-directory:
     description: Relative path under $GITHUB_WORKSPACE where the repository was checked out
@@ -74,17 +66,17 @@ inputs:
     description: Slack webhook url
     required: false
     default: ''
-  github-event:
-    description: Event that triggers this test run
+  slack-branch:
+    description: Branch name to send Slack notifications for (default 'master')
     required: false
-    default: ''
+    default: 'master'
   test-results-endpoint:
-    description: Test results endpoint
-    required: true
+    description: Test results endpoint for uploading TRX files
+    required: false
     default: ''
   test-results-endpoint-secret:
     description: Test results endpoint secret
-    required: true
+    required: false
     default: ''
 outputs:
   conclusion:
