@@ -863,8 +863,33 @@ function renderReport(results, options) {
     const sections = [];
     const badge = getReportBadge(results);
     sections.push(badge);
-    const runs = getTestRunsReport(results, options);
-    sections.push(...runs);
+    // Separate failed and passed runs
+    const failedRuns = results.filter(tr => tr.result === 'failed');
+    const passedRuns = results.filter(tr => tr.result !== 'failed');
+    const hasFailures = failedRuns.length > 0;
+    if (hasFailures) {
+        // Show failed runs first (expanded)
+        const failedReport = getTestRunsReport(failedRuns, results, options);
+        sections.push(...failedReport);
+        // Show passed runs in collapsible section
+        if (passedRuns.length > 0) {
+            const passedCount = passedRuns.reduce((sum, tr) => sum + tr.passed, 0);
+            const passedSuiteCount = passedRuns.reduce((sum, tr) => sum + tr.suites.length, 0);
+            sections.push('');
+            sections.push(`<details>`);
+            sections.push(`<summary>✅ Passed Tests (${passedCount} tests in ${passedSuiteCount} suites)</summary>`);
+            sections.push('');
+            const passedReport = getTestRunsReport(passedRuns, results, options);
+            sections.push(...passedReport);
+            sections.push('');
+            sections.push(`</details>`);
+        }
+    }
+    else {
+        // No failures - show all runs normally
+        const runs = getTestRunsReport(results, results, options);
+        sections.push(...runs);
+    }
     return sections;
 }
 function getReportBadge(results) {
@@ -896,10 +921,15 @@ function getBadge(passed, failed, skipped) {
     const uri = encodeURIComponent(`tests-${message}-${color}`);
     return `![${hint}](https://img.shields.io/badge/${uri})`;
 }
-function getTestRunsReport(testRuns, options) {
+function getTestRunsReport(testRuns, allRuns, options) {
     const sections = [];
+    // Create a map of test run to its original index in allRuns
+    const runIndexMap = new Map();
+    allRuns.forEach((tr, idx) => runIndexMap.set(tr, idx));
     if (testRuns.length > 1 || options.onlySummary) {
-        const tableData = testRuns.map((tr, runIndex) => {
+        const tableData = testRuns.map(tr => {
+            var _a;
+            const runIndex = (_a = runIndexMap.get(tr)) !== null && _a !== void 0 ? _a : 0;
             const time = (0, markdown_utils_1.formatTime)(tr.time);
             const name = path_1.default.basename(path_1.default.dirname(path_1.default.dirname(tr.path)));
             const addr = options.baseUrl + makeRunSlug(runIndex).link;
@@ -913,7 +943,11 @@ function getTestRunsReport(testRuns, options) {
         sections.push(resultsTable);
     }
     if (options.onlySummary === false) {
-        const suitesReports = testRuns.map((tr, i) => getSuitesReport(tr, i, options)).flat();
+        const suitesReports = testRuns.map(tr => {
+            var _a;
+            const runIndex = (_a = runIndexMap.get(tr)) !== null && _a !== void 0 ? _a : 0;
+            return getSuitesReport(tr, runIndex, options);
+        }).flat();
         sections.push(...suitesReports);
     }
     return sections;
