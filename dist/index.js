@@ -54378,22 +54378,10 @@ var TestReporter = class {
     setOutput("time", time);
     if (results.some((r) => r.shouldFail)) {
       setFailed(`Failed test were found and the results could not be written to github, so fail this step.`);
-      let counter = 0;
+      const failedTests = results.filter((r) => r.shouldFail).flatMap((r) => r.results).flatMap((rr) => rr.failedSuites).flatMap((s) => s.failedGroups).flatMap((g) => g.failedTests);
       startGroup("Failed tests");
-      for (const r of results.filter((r2) => r2.shouldFail)) {
-        for (const rr of r.results) {
-          for (const s of rr.failedSuites) {
-            for (const g of s.failedGroups) {
-              for (const t of g.failedTests) {
-                if (++counter > 10) {
-                  endGroup();
-                  return;
-                }
-                info(`${t.name}: ${t.error?.message}`);
-              }
-            }
-          }
-        }
+      for (const t of failedTests.slice(0, 10)) {
+        info(`${t.name}: ${t.error?.message}`);
       }
       endGroup();
       return;
@@ -54499,13 +54487,13 @@ var TestReporter = class {
       setOutput("url_html", resp.data.html_url);
       info(`Check run details: ${resp.data.details_url}`);
       result.checkUrl = resp.data.html_url;
-      await this.reportToSlack(results, name, resp);
+      await this.reportToSlack(results, name, resp.data.html_url ?? "");
     } catch (error2) {
       error(`Could not create check to store the results`);
     }
     return result;
   }
-  async reportToSlack(results, name, resp) {
+  async reportToSlack(results, name, checkRunUrl) {
     if (this.slackWebhook && this.context.branch === "master") {
       const webhook = new import_webhook.IncomingWebhook(this.slackWebhook);
       const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
@@ -54524,31 +54512,26 @@ var TestReporter = class {
             type: "section",
             text: {
               type: "mrkdwn",
-              text: `:large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed} <${resp.data.html_url}|(view)>`
+              text: `:large_green_circle: ${passed} :large_orange_circle: ${skipped} :red_circle: ${failed} <${checkRunUrl}|(view)>`
             }
           }
         ]
       };
-      results.map((tr, runIndex) => {
-        if (tr.failed === 0) return;
+      for (const [runIndex, tr] of results.entries()) {
+        if (tr.failed === 0) continue;
         let runName = import_path4.default.basename(import_path4.default.dirname(import_path4.default.dirname(tr.path)));
         runName = runName.startsWith("test/") ? runName.slice(5) : runName;
         req.blocks.push({
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `:red_circle: ${tr.failed} in <${resp.data.html_url}#r${runIndex}|${runName}>`
+            text: `:red_circle: ${tr.failed} in <${checkRunUrl}#r${runIndex}|${runName}>`
           }
         });
         if (failed <= 10) {
-          const failedTests = [];
-          tr.failedSuites.map((suite) => {
-            suite.failedGroups.map((group) => {
-              group.failedTests.map((test) => {
-                failedTests.push(`- <${suite.link}|${test.name}>`);
-              });
-            });
-          });
+          const failedTests = tr.failedSuites.flatMap(
+            (suite) => suite.failedGroups.flatMap((group) => group.failedTests.map((test) => `- <${suite.link}|${test.name}>`))
+          );
           req.blocks.push({
             type: "section",
             text: {
@@ -54557,7 +54540,7 @@ var TestReporter = class {
             }
           });
         }
-      });
+      }
       if (this.githubEvent === "schedule" || failed > 0) {
         await webhook.send(req);
       }

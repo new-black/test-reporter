@@ -74,7 +74,14 @@ export class TestRunResult {
     }
   }
 
-  toJSON(): any {
+  toJSON(): {
+    path: string
+    suites: TestSuiteResult[]
+    time: number
+    passed: number
+    failed: number
+    skipped: number
+  } {
     return {
       path: this.path,
       suites: this.suites,
