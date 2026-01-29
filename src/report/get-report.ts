@@ -236,7 +236,7 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
   const suitesToShow = options.listSuites === 'failed' ? failedSuites : hasFailedSuites ? failedSuites : tr.suites
 
   if (suitesToShow.length > 0) {
-    sections.push(renderSuitesTable(suitesToShow, name, runIndex, options))
+    sections.push(renderSuitesTable(suitesToShow, tr.suites, name, runIndex, options))
   }
 
   // Show detailed test results for failed suites
@@ -260,7 +260,7 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
     sections.push('<details>')
     sections.push(`<summary>${Icon.success} ${passedCount} passed tests in ${passedSuites.length} suites</summary>`)
     sections.push('')
-    sections.push(renderSuitesTable(passedSuites, name, runIndex, options))
+    sections.push(renderSuitesTable(passedSuites, tr.suites, name, runIndex, options))
     sections.push('')
     sections.push('</details>')
   }
@@ -270,6 +270,7 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
 
 function renderSuitesTable(
   suites: TestSuiteResult[],
+  allSuites: TestSuiteResult[],
   runName: string,
   runIndex: number,
   options: ReportOptions
@@ -278,7 +279,7 @@ function renderSuitesTable(
     ['Test suite', 'Passed', 'Failed', 'Skipped', 'Time'],
     [Align.Left, Align.Right, Align.Right, Align.Right, Align.Right],
     ...suites.map(s => {
-      const suiteIndex = suites.indexOf(s)
+      const suiteIndex = allSuites.indexOf(s)
       const tsTime = formatTime(s.time)
       const tsName = s.name.startsWith(runName) ? s.name.slice(runName.length + 1) : s.name
       const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed')

@@ -47529,7 +47529,7 @@ function getSuitesReport(tr, runIndex, options) {
   const hasFailedSuites = failedSuites.length > 0;
   const suitesToShow = options.listSuites === "failed" ? failedSuites : hasFailedSuites ? failedSuites : tr.suites;
   if (suitesToShow.length > 0) {
-    sections.push(renderSuitesTable(suitesToShow, name, runIndex, options));
+    sections.push(renderSuitesTable(suitesToShow, tr.suites, name, runIndex, options));
   }
   if (options.listTests !== "none") {
     const tests = suitesToShow.map((ts) => {
@@ -47546,18 +47546,18 @@ function getSuitesReport(tr, runIndex, options) {
     sections.push("<details>");
     sections.push(`<summary>${Icon.success} ${passedCount} passed tests in ${passedSuites.length} suites</summary>`);
     sections.push("");
-    sections.push(renderSuitesTable(passedSuites, name, runIndex, options));
+    sections.push(renderSuitesTable(passedSuites, tr.suites, name, runIndex, options));
     sections.push("");
     sections.push("</details>");
   }
   return sections;
 }
-function renderSuitesTable(suites, runName, runIndex, options) {
+function renderSuitesTable(suites, allSuites, runName, runIndex, options) {
   return table(
     ["Test suite", "Passed", "Failed", "Skipped", "Time"],
     [":---" /* Left */, "---:" /* Right */, "---:" /* Right */, "---:" /* Right */, "---:" /* Right */],
     ...suites.map((s) => {
-      const suiteIndex = suites.indexOf(s);
+      const suiteIndex = allSuites.indexOf(s);
       const tsTime = formatTime(s.time);
       const tsName = s.name.startsWith(runName) ? s.name.slice(runName.length + 1) : s.name;
       const skipLink = options.listTests === "none" || options.listTests === "failed" && s.result !== "failed";
