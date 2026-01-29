@@ -16,3 +16,10 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
+
+      - name: Test action with TRX sample
+        uses: ./
+        if: success() || failure()
+        with:
+          name: Sample TRX Report
+          path: __tests__/fixtures/dotnet-trx.trx
