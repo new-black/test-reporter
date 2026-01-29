@@ -943,11 +943,13 @@ function getTestRunsReport(testRuns, allRuns, options) {
         sections.push(resultsTable);
     }
     if (options.onlySummary === false) {
-        const suitesReports = testRuns.map(tr => {
+        const suitesReports = testRuns
+            .map(tr => {
             var _a;
             const runIndex = (_a = runIndexMap.get(tr)) !== null && _a !== void 0 ? _a : 0;
             return getSuitesReport(tr, runIndex, options);
-        }).flat();
+        })
+            .flat();
         sections.push(...suitesReports);
     }
     return sections;

@@ -198,10 +198,12 @@ function getTestRunsReport(testRuns: TestRunResult[], allRuns: TestRunResult[], 
   }
 
   if (options.onlySummary === false) {
-    const suitesReports = testRuns.map(tr => {
-      const runIndex = runIndexMap.get(tr) ?? 0
-      return getSuitesReport(tr, runIndex, options)
-    }).flat()
+    const suitesReports = testRuns
+      .map(tr => {
+        const runIndex = runIndexMap.get(tr) ?? 0
+        return getSuitesReport(tr, runIndex, options)
+      })
+      .flat()
     sections.push(...suitesReports)
   }
   return sections
