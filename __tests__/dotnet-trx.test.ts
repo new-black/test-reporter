@@ -1,7 +1,8 @@
+import * as fs from 'fs'
 import {DotnetTrxParser} from '../src/parsers/dotnet-trx/dotnet-trx-parser'
 import {ParseOptions} from '../src/test-parser'
 import {LocalFileProvider} from '../src/input-providers/local-file-provider'
-import {TestRunResult, TestRunResultWithUrl} from '../src/test-results'
+import {TestRunResult} from '../src/test-results'
 import {groupByDirectory} from '../src/utils/merge-utils'
 
 it('matches report snapshot', async () => {
@@ -15,11 +16,10 @@ it('matches report snapshot', async () => {
   const input = await inputProvider.load()
 
   let results: TestRunResult[] = []
-  for (const [reportName, files] of Object.entries(input.reports)) {
-    for (const {file, content} of files) {
-      const tr = await parser.parse(file, content)
-      results.push(tr)
-    }
+  for (const file of input.files) {
+    const content = await fs.promises.readFile(file, {encoding: 'utf8'})
+    const tr = await parser.parse(file, content)
+    results.push(tr)
   }
 
   results = groupByDirectory(results)

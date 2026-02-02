@@ -3,7 +3,6 @@ import * as github from '@actions/github'
 import {GitHub} from '@actions/github/lib/utils'
 
 import {LocalFileProvider} from './input-providers/local-file-provider'
-import {FileContent} from './input-providers/input-provider'
 import {ParseOptions} from './test-parser'
 import {TestRunResult, TestRunResultWithUrl} from './test-results'
 import {getAnnotations} from './report/get-annotations'
@@ -103,7 +102,8 @@ class TestReporter {
 
     if (this.resultsEndpoint?.length > 0) {
       try {
-        const readStream = input.trxZip.toBuffer()
+        const zip = input.createZip()
+        const readStream = zip.toBuffer()
         const version = fs.existsSync('./metadata/version.txt')
           ? fs.readFileSync('./metadata/version.txt').toString()
           : null
@@ -131,16 +131,14 @@ class TestReporter {
       }
     }
 
-    for (const [reportName, files] of Object.entries(input.reports)) {
-      try {
-        core.startGroup(`Creating test report ${reportName}`)
-        const tr = await this.createReport(parser, reportName, files)
-        if (tr != null) {
-          results.push(tr)
-        }
-      } finally {
-        core.endGroup()
+    try {
+      core.startGroup(`Creating test report ${this.name}`)
+      const tr = await this.createReport(parser, this.name, input.files)
+      if (tr != null) {
+        results.push(tr)
       }
+    } finally {
+      core.endGroup()
     }
 
     const isFailed = results.some(tr => tr.results.some(r => r.isFailed))
@@ -185,11 +183,7 @@ class TestReporter {
     }
   }
 
-  async createReport(
-    parser: DotnetTrxParser,
-    name: string,
-    files: FileContent[]
-  ): Promise<TestRunResultWithUrl | null> {
+  async createReport(parser: DotnetTrxParser, name: string, files: string[]): Promise<TestRunResultWithUrl | null> {
     if (files.length === 0) {
       core.warning(`No file matches path ${this.path}`)
     }
@@ -199,9 +193,10 @@ class TestReporter {
     let results: TestRunResult[] = []
     const result: TestRunResultWithUrl = new TestRunResultWithUrl(results, null)
 
-    for (const {file, content} of files) {
+    for (const file of files) {
       try {
         core.info(`Processing test results from ${file}`)
+        const content = await fs.promises.readFile(file, {encoding: 'utf8'})
         const tr = await parser.parse(file, content)
         results.push(tr)
       } catch (error) {

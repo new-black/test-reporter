@@ -22762,8 +22762,8 @@ var require_utils4 = __commonJS({
     exports2.array = array;
     var errno = require_errno();
     exports2.errno = errno;
-    var fs5 = require_fs();
-    exports2.fs = fs5;
+    var fs4 = require_fs();
+    exports2.fs = fs4;
     var path5 = require_path();
     exports2.path = path5;
     var pattern = require_pattern();
@@ -22947,12 +22947,12 @@ var require_fs2 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.createFileSystemAdapter = exports2.FILE_SYSTEM_ADAPTER = void 0;
-    var fs5 = require("fs");
+    var fs4 = require("fs");
     exports2.FILE_SYSTEM_ADAPTER = {
-      lstat: fs5.lstat,
-      stat: fs5.stat,
-      lstatSync: fs5.lstatSync,
-      statSync: fs5.statSync
+      lstat: fs4.lstat,
+      stat: fs4.stat,
+      lstatSync: fs4.lstatSync,
+      statSync: fs4.statSync
     };
     function createFileSystemAdapter(fsMethods) {
       if (fsMethods === void 0) {
@@ -22969,12 +22969,12 @@ var require_settings = __commonJS({
   "node_modules/@nodelib/fs.stat/out/settings.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    var fs5 = require_fs2();
+    var fs4 = require_fs2();
     var Settings = class {
       constructor(_options = {}) {
         this._options = _options;
         this.followSymbolicLink = this._getValue(this._options.followSymbolicLink, true);
-        this.fs = fs5.createFileSystemAdapter(this._options.fs);
+        this.fs = fs4.createFileSystemAdapter(this._options.fs);
         this.markSymbolicLink = this._getValue(this._options.markSymbolicLink, false);
         this.throwErrorOnBrokenSymbolicLink = this._getValue(this._options.throwErrorOnBrokenSymbolicLink, true);
       }
@@ -23129,8 +23129,8 @@ var require_utils5 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.fs = void 0;
-    var fs5 = require_fs3();
-    exports2.fs = fs5;
+    var fs4 = require_fs3();
+    exports2.fs = fs4;
   }
 });
 
@@ -23325,14 +23325,14 @@ var require_fs4 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.createFileSystemAdapter = exports2.FILE_SYSTEM_ADAPTER = void 0;
-    var fs5 = require("fs");
+    var fs4 = require("fs");
     exports2.FILE_SYSTEM_ADAPTER = {
-      lstat: fs5.lstat,
-      stat: fs5.stat,
-      lstatSync: fs5.lstatSync,
-      statSync: fs5.statSync,
-      readdir: fs5.readdir,
-      readdirSync: fs5.readdirSync
+      lstat: fs4.lstat,
+      stat: fs4.stat,
+      lstatSync: fs4.lstatSync,
+      statSync: fs4.statSync,
+      readdir: fs4.readdir,
+      readdirSync: fs4.readdirSync
     };
     function createFileSystemAdapter(fsMethods) {
       if (fsMethods === void 0) {
@@ -23351,12 +23351,12 @@ var require_settings2 = __commonJS({
     Object.defineProperty(exports2, "__esModule", { value: true });
     var path5 = require("path");
     var fsStat = require_out();
-    var fs5 = require_fs4();
+    var fs4 = require_fs4();
     var Settings = class {
       constructor(_options = {}) {
         this._options = _options;
         this.followSymbolicLinks = this._getValue(this._options.followSymbolicLinks, false);
-        this.fs = fs5.createFileSystemAdapter(this._options.fs);
+        this.fs = fs4.createFileSystemAdapter(this._options.fs);
         this.pathSegmentSeparator = this._getValue(this._options.pathSegmentSeparator, path5.sep);
         this.stats = this._getValue(this._options.stats, false);
         this.throwErrorOnBrokenSymbolicLink = this._getValue(this._options.throwErrorOnBrokenSymbolicLink, true);
@@ -24714,16 +24714,16 @@ var require_settings4 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.DEFAULT_FILE_SYSTEM_ADAPTER = void 0;
-    var fs5 = require("fs");
+    var fs4 = require("fs");
     var os5 = require("os");
     var CPU_COUNT = Math.max(os5.cpus().length, 1);
     exports2.DEFAULT_FILE_SYSTEM_ADAPTER = {
-      lstat: fs5.lstat,
-      lstatSync: fs5.lstatSync,
-      stat: fs5.stat,
-      statSync: fs5.statSync,
-      readdir: fs5.readdir,
-      readdirSync: fs5.readdirSync
+      lstat: fs4.lstat,
+      lstatSync: fs4.lstatSync,
+      stat: fs4.stat,
+      statSync: fs4.statSync,
+      readdir: fs4.readdir,
+      readdirSync: fs4.readdirSync
     };
     var Settings = class {
       constructor(_options = {}) {
@@ -25410,7 +25410,7 @@ var require_utils6 = __commonJS({
 var require_fattr = __commonJS({
   "node_modules/adm-zip/util/fattr.js"(exports2, module2) {
     var pth = require("path");
-    module2.exports = function(path5, { fs: fs5 }) {
+    module2.exports = function(path5, { fs: fs4 }) {
       var _path = path5 || "", _obj = newAttr(), _stat = null;
       function newAttr() {
         return {
@@ -25422,8 +25422,8 @@ var require_fattr = __commonJS({
           atime: 0
         };
       }
-      if (_path && fs5.existsSync(_path)) {
-        _stat = fs5.statSync(_path);
+      if (_path && fs4.existsSync(_path)) {
+        _stat = fs4.statSync(_path);
         _obj.directory = _stat.isDirectory();
         _obj.mtime = _stat.mtime;
         _obj.atime = _stat.atime;
@@ -37516,7 +37516,7 @@ var require_form_data = __commonJS({
     var http = require("http");
     var https = require("https");
     var parseUrl2 = require("url").parse;
-    var fs5 = require("fs");
+    var fs4 = require("fs");
     var Stream = require("stream").Stream;
     var crypto2 = require("crypto");
     var mime = require_mime_types();
@@ -37583,7 +37583,7 @@ var require_form_data = __commonJS({
         if (value.end != void 0 && value.end != Infinity && value.start != void 0) {
           callback(null, value.end + 1 - (value.start ? value.start : 0));
         } else {
-          fs5.stat(value.path, function(err, stat2) {
+          fs4.stat(value.path, function(err, stat2) {
             if (err) {
               callback(err);
               return;
@@ -42654,8 +42654,8 @@ var require_axios = __commonJS({
     axios.toFormData = toFormData;
     axios.AxiosError = AxiosError$1;
     axios.Cancel = axios.CanceledError;
-    axios.all = function all(promises4) {
-      return Promise.all(promises4);
+    axios.all = function all(promises3) {
+      return Promise.all(promises3);
     };
     axios.spread = spread;
     axios.isAxiosError = isAxiosError;
@@ -47019,7 +47019,6 @@ function getOctokit(token, options, ...additionalPlugins) {
 }
 
 // src/input-providers/local-file-provider.ts
-var fs3 = __toESM(require("fs"));
 var import_fast_glob = __toESM(require_out4());
 var import_adm_zip = __toESM(require_adm_zip());
 var import_path = __toESM(require("path"));
@@ -47029,21 +47028,20 @@ var LocalFileProvider = class {
     this.pattern = pattern;
   }
   async load() {
-    const result = [];
-    const zip = new import_adm_zip.default();
+    const files = [];
     for (const pat of this.pattern) {
       const paths = await (0, import_fast_glob.default)(pat, { dot: true });
-      for (const file of paths) {
-        const dir = import_path.default.dirname(file);
-        zip.addLocalFile(file, dir);
-        const content = await fs3.promises.readFile(file, { encoding: "utf8" });
-        result.push({ file, content });
-      }
+      files.push(...paths);
     }
     return {
-      trxZip: zip,
-      reports: {
-        [this.name]: result
+      files,
+      createZip: () => {
+        const zip = new import_adm_zip.default();
+        for (const file of files) {
+          const dir = import_path.default.dirname(file);
+          zip.addLocalFile(file, dir);
+        }
+        return zip;
       }
     };
   }
@@ -49465,7 +49463,8 @@ var TestReporter = class {
     const input = await inputProvider.load();
     if (this.resultsEndpoint?.length > 0) {
       try {
-        const readStream = input.trxZip.toBuffer();
+        const zip = input.createZip();
+        const readStream = zip.toBuffer();
         const version = import_fs3.default.existsSync("./metadata/version.txt") ? import_fs3.default.readFileSync("./metadata/version.txt").toString() : null;
         const commitID = import_fs3.default.existsSync("./metadata/commit.txt") ? import_fs3.default.readFileSync("./metadata/commit.txt").toString() : null;
         info(
@@ -49484,16 +49483,14 @@ var TestReporter = class {
         warning(`Could not upload TRX ZIP file: ${ex}`);
       }
     }
-    for (const [reportName, files] of Object.entries(input.reports)) {
-      try {
-        startGroup(`Creating test report ${reportName}`);
-        const tr = await this.createReport(parser, reportName, files);
-        if (tr != null) {
-          results.push(tr);
-        }
-      } finally {
-        endGroup();
+    try {
+      startGroup(`Creating test report ${this.name}`);
+      const tr = await this.createReport(parser, this.name, input.files);
+      if (tr != null) {
+        results.push(tr);
       }
+    } finally {
+      endGroup();
     }
     const isFailed = results.some((tr) => tr.results.some((r) => r.isFailed));
     const conclusion = isFailed ? "failure" : "success";
@@ -49532,9 +49529,10 @@ var TestReporter = class {
     info(`Processing test results for check run ${name}`);
     let results = [];
     const result = new TestRunResultWithUrl(results, null);
-    for (const { file, content } of files) {
+    for (const file of files) {
       try {
         info(`Processing test results from ${file}`);
+        const content = await import_fs3.default.promises.readFile(file, { encoding: "utf8" });
         const tr = await parser.parse(file, content);
         results.push(tr);
       } catch (error2) {

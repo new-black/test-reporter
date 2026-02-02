@@ -1,15 +1,8 @@
 import Zip from 'adm-zip'
 
 export interface ReportInput {
-  trxZip: Zip
-  reports: {
-    [reportName: string]: FileContent[]
-  }
-}
-
-export interface FileContent {
-  file: string
-  content: string
+  files: string[]
+  createZip(): Zip
 }
 
 export interface InputProvider {
