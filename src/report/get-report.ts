@@ -248,7 +248,9 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
       })
       .flat()
 
-    if (tests.length > 1) {
+    if (tests.length > 0) {
+      // Add blank line before test details for proper markdown rendering
+      sections.push('')
       sections.push(...tests)
     }
   }
