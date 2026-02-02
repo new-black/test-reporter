@@ -47534,7 +47534,8 @@ function getSuitesReport(tr, runIndex, options) {
       const originalIndex = tr.suites.indexOf(ts);
       return getTestsReport(ts, runIndex, originalIndex, options);
     }).flat();
-    if (tests.length > 1) {
+    if (tests.length > 0) {
+      sections.push("");
       sections.push(...tests);
     }
   }
