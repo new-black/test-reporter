@@ -49473,8 +49473,16 @@ var TestReporter = class {
         info(
           `Using EVA version ${version}, commit ${commitID}, branch ${this.context.branch}, current directory: ${(0, import_process.cwd)()}`
         );
-        const url = `${this.resultsEndpoint}TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ""}${commitID ? "&EVACommitID=" + commitID : ""}&EVABranch=${encodeURI(this.context.branch)}&Type=${encodeURI(this.resultsType)}${this.resultsDbType ? "&DbType=" + encodeURI(this.resultsDbType) : ""}`;
-        const headers = {};
+        const params = new URLSearchParams();
+        if (version) params.set("EVAVersion", version);
+        if (commitID) params.set("EVACommitID", commitID);
+        params.set("EVABranch", this.context.branch);
+        params.set("Type", this.resultsType);
+        if (this.resultsDbType) params.set("DbType", this.resultsDbType);
+        const url = `${this.resultsEndpoint}TestResults?${params.toString()}`;
+        const headers = {
+          Authorization: `Bearer ${this.resultsEndpointSecret}`
+        };
         const pr = context2.payload.pull_request;
         if (pr) {
           headers["X-GitHub-Token"] = this.token;
