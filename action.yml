@@ -78,6 +78,14 @@ inputs:
     description: Test results endpoint secret
     required: false
     default: ''
+  test-results-type:
+    description: Type of test run (integration, auditing, watchtower)
+    required: false
+    default: 'integration'
+  test-results-db-type:
+    description: Database type (mssql, yugabyte, postgres) — used for PR failure comments
+    required: false
+    default: ''
 outputs:
   conclusion:
     description: |

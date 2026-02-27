@@ -45,6 +45,8 @@ class TestReporter {
   readonly slackBranch = core.getInput('slack-branch', {required: false}) || 'master'
   readonly resultsEndpoint = core.getInput('test-results-endpoint', {required: false})
   readonly resultsEndpointSecret = core.getInput('test-results-endpoint-secret', {required: false})
+  readonly resultsType = core.getInput('test-results-type', {required: false}) || 'integration'
+  readonly resultsDbType = core.getInput('test-results-db-type', {required: false})
   readonly octokit: InstanceType<typeof GitHub>
   readonly context = getCheckRunContext()
 
@@ -117,10 +119,24 @@ class TestReporter {
 
         const url = `${this.resultsEndpoint}TestResults?Secret=${this.resultsEndpointSecret}${version ? '&EVAVersion=' + version : ''}${
           commitID ? '&EVACommitID=' + commitID : ''
-        }&EVABranch=${encodeURI(this.context.branch)}`
+        }&EVABranch=${encodeURI(this.context.branch)}&Type=${encodeURI(this.resultsType)}${
+          this.resultsDbType ? '&DbType=' + encodeURI(this.resultsDbType) : ''
+        }`
+
+        const headers: Record<string, string> = {}
+        const pr = github.context.payload.pull_request
+        if (pr) {
+          headers['X-GitHub-Token'] = this.token
+          headers['X-PR-Number'] = pr.number.toString()
+          headers['X-GitHub-Repo'] = `${github.context.repo.owner}/${github.context.repo.repo}`
+          headers['X-GitHub-Run-URL'] =
+            `${github.context.serverUrl}/${github.context.repo.owner}/${github.context.repo.repo}/actions/runs/${github.context.runId}`
+        }
+
         const response = await fetch(url, {
           method: 'POST',
-          body: new Uint8Array(readStream)
+          body: new Uint8Array(readStream),
+          headers
         })
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`)
