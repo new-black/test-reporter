@@ -49489,6 +49489,9 @@ var TestReporter = class {
           headers["X-PR-Number"] = pr.number.toString();
           headers["X-GitHub-Repo"] = `${context2.repo.owner}/${context2.repo.repo}`;
           headers["X-GitHub-Run-URL"] = `${context2.serverUrl}/${context2.repo.owner}/${context2.repo.repo}/actions/runs/${context2.runId}`;
+          info(`PR context: #${pr.number}, repo=${context2.repo.owner}/${context2.repo.repo}`);
+        } else {
+          info(`No PR context available (event: ${context2.eventName})`);
         }
         const response = await fetch(url, {
           method: "POST",

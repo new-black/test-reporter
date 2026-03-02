@@ -135,6 +135,9 @@ class TestReporter {
           headers['X-GitHub-Repo'] = `${github.context.repo.owner}/${github.context.repo.repo}`
           headers['X-GitHub-Run-URL'] =
             `${github.context.serverUrl}/${github.context.repo.owner}/${github.context.repo.repo}/actions/runs/${github.context.runId}`
+          core.info(`PR context: #${pr.number}, repo=${github.context.repo.owner}/${github.context.repo.repo}`)
+        } else {
+          core.info(`No PR context available (event: ${github.context.eventName})`)
         }
 
         const response = await fetch(url, {
