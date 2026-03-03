@@ -49425,6 +49425,8 @@ var TestReporter = class {
     this.slackBranch = getInput("slack-branch", { required: false }) || "master";
     this.resultsEndpoint = getInput("test-results-endpoint", { required: false });
     this.resultsEndpointSecret = getInput("test-results-endpoint-secret", { required: false });
+    this.resultsType = getInput("test-results-type", { required: false }) || "integration";
+    this.resultsDbType = getInput("test-results-db-type", { required: false });
     this.context = getCheckRunContext();
     this.octokit = getOctokit(this.token);
     if (this.listSuites !== "all" && this.listSuites !== "failed") {
@@ -49471,10 +49473,30 @@ var TestReporter = class {
         info(
           `Using EVA version ${version}, commit ${commitID}, branch ${this.context.branch}, current directory: ${(0, import_process.cwd)()}`
         );
-        const url = `${this.resultsEndpoint}TestResults?Secret=${this.resultsEndpointSecret}${version ? "&EVAVersion=" + version : ""}${commitID ? "&EVACommitID=" + commitID : ""}&EVABranch=${encodeURI(this.context.branch)}`;
+        const params = new URLSearchParams();
+        if (version) params.set("EVAVersion", version);
+        if (commitID) params.set("EVACommitID", commitID);
+        params.set("EVABranch", this.context.branch);
+        params.set("Type", this.resultsType);
+        if (this.resultsDbType) params.set("DbType", this.resultsDbType);
+        const url = `${this.resultsEndpoint}TestResults?${params.toString()}`;
+        const headers = {
+          Authorization: `Bearer ${this.resultsEndpointSecret}`
+        };
+        const pr = context2.payload.pull_request;
+        if (pr) {
+          headers["X-GitHub-Token"] = this.token;
+          headers["X-PR-Number"] = pr.number.toString();
+          headers["X-GitHub-Repo"] = `${context2.repo.owner}/${context2.repo.repo}`;
+          headers["X-GitHub-Run-URL"] = `${context2.serverUrl}/${context2.repo.owner}/${context2.repo.repo}/actions/runs/${context2.runId}`;
+          info(`PR context: #${pr.number}, repo=${context2.repo.owner}/${context2.repo.repo}`);
+        } else {
+          info(`No PR context available (event: ${context2.eventName})`);
+        }
         const response = await fetch(url, {
           method: "POST",
-          body: new Uint8Array(readStream)
+          body: new Uint8Array(readStream),
+          headers
         });
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
