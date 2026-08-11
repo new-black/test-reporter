@@ -9,7 +9,7 @@
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "package": "esbuild src/main.ts --bundle --platform=node --target=node20 --outfile=dist/index.js --format=cjs && eolConverter lf dist/*",
+    "package": "esbuild src/main.ts --bundle --platform=node --target=node24 --outfile=dist/index.js --format=cjs && eolConverter lf dist/*",
     "version": "npm run build && npm run package && git add dist/*",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --reporters=default --reporters=jest-junit",
     "jest:updatesnapshot": "node --experimental-vm-modules node_modules/jest/bin/jest.js --updateSnapshot",
