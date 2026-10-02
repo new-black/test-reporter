@@ -91,6 +91,12 @@ jobs:
     # Default: ${{ github.token }}
     token: ''
 
+    # Token used only for Checks API calls (creating and updating the check run).
+    # Use a GitHub App installation token so the check run is attached to the app's own
+    # check suite instead of a workflow's.
+    # Default: same as `token`
+    checks-token: ''
+
     # Slack webhook URL for notifications (optional)
     slack-url: ''
 
@@ -136,7 +142,7 @@ Unfortunately, there are some known issues and limitations caused by GitHub API:
 - Test report (i.e. Check Run summary) is markdown text. No custom styling or HTML is possible.
 - Maximum report size is 65535 bytes. Input parameters `list-suites` and `list-tests` will be automatically adjusted if max size is exceeded.
 - Test report can't reference any additional files (e.g. screenshots). You can use `actions/upload-artifact@v6` to upload them and inspect them manually.
-- Check Runs are created for specific commit SHA. It's not possible to specify under which workflow test report should belong if more workflows are running for the same SHA.
+- Check Runs are created for specific commit SHA. It's not possible to specify under which workflow test report should belong if more workflows are running for the same SHA. As a workaround, pass a GitHub App installation token as `checks-token`: check runs created by an app are attached to that app's own check suite, independent of any workflow.
 
 ## License
 

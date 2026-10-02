@@ -62,6 +62,13 @@ inputs:
     description: GitHub Access Token
     required: false
     default: ${{ github.token }}
+  checks-token:
+    description: |
+      Token used only for Checks API calls (creating and updating the check run).
+      Use a GitHub App installation token to attach the check run to the app's own
+      check suite instead of a workflow's. Defaults to `token`.
+    required: false
+    default: ''
   slack-url:
     description: Slack webhook url
     required: false

@@ -1,6 +1,10 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
 
+export function resolveChecksToken(checksToken: string, token: string): string {
+  return checksToken.length > 0 ? checksToken : token
+}
+
 export function getCheckRunContext(): {sha: string; runId: number; branch: string} {
   let branch = github.context.ref
   if (branch.startsWith('refs/heads')) branch = branch.slice(11)
