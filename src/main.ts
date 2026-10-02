@@ -11,7 +11,7 @@ import {getReport} from './report/get-report'
 import {DotnetTrxParser} from './parsers/dotnet-trx/dotnet-trx-parser'
 
 import {normalizeDirPath, normalizeFilePath} from './utils/path-utils'
-import {getCheckRunContext} from './utils/github-utils'
+import {getCheckRunContext, resolveChecksToken} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
@@ -41,6 +41,7 @@ class TestReporter {
   readonly workDirInput = core.getInput('working-directory', {required: false})
   readonly onlySummary = core.getInput('only-summary', {required: false}) === 'true'
   readonly token = core.getInput('token', {required: false}) || process.env.GITHUB_TOKEN || ''
+  readonly checksToken = resolveChecksToken(core.getInput('checks-token', {required: false}), this.token)
   readonly slackWebhook = core.getInput('slack-url', {required: false})
   readonly slackBranch = core.getInput('slack-branch', {required: false}) || 'master'
   readonly resultsEndpoint = core.getInput('test-results-endpoint', {required: false})
@@ -51,7 +52,7 @@ class TestReporter {
   readonly context = getCheckRunContext()
 
   constructor() {
-    this.octokit = github.getOctokit(this.token)
+    this.octokit = github.getOctokit(this.checksToken)
 
     if (this.listSuites !== 'all' && this.listSuites !== 'failed') {
       core.setFailed(`Input parameter 'list-suites' has invalid value`)

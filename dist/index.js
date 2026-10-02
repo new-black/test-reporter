@@ -38371,6 +38371,9 @@ ${stackTrace}`
 };
 
 // src/utils/github-utils.ts
+function resolveChecksToken(checksToken, token) {
+  return checksToken.length > 0 ? checksToken : token;
+}
 function getCheckRunContext() {
   let branch = context2.ref;
   if (branch.startsWith("refs/heads")) branch = branch.slice(11);
@@ -38488,6 +38491,7 @@ var TestReporter = class {
     this.workDirInput = getInput("working-directory", { required: false });
     this.onlySummary = getInput("only-summary", { required: false }) === "true";
     this.token = getInput("token", { required: false }) || process.env.GITHUB_TOKEN || "";
+    this.checksToken = resolveChecksToken(getInput("checks-token", { required: false }), this.token);
     this.slackWebhook = getInput("slack-url", { required: false });
     this.slackBranch = getInput("slack-branch", { required: false }) || "master";
     this.resultsEndpoint = getInput("test-results-endpoint", { required: false });
@@ -38495,7 +38499,7 @@ var TestReporter = class {
     this.resultsType = getInput("test-results-type", { required: false }) || "integration";
     this.resultsDbType = getInput("test-results-db-type", { required: false });
     this.context = getCheckRunContext();
-    this.octokit = getOctokit(this.token);
+    this.octokit = getOctokit(this.checksToken);
     if (this.listSuites !== "all" && this.listSuites !== "failed") {
       setFailed(`Input parameter 'list-suites' has invalid value`);
       return;
