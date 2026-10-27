@@ -34371,7 +34371,7 @@ function trimReport(lines) {
   const maxReportLength = MAX_REPORT_LENGTH - maxErrorMsgLength;
   let reportLength = 0;
   let codeBlock = false;
-  let endLineIndex = 0;
+  let endLineIndex;
   for (endLineIndex = 0; endLineIndex < lines.length; endLineIndex++) {
     const line = lines[endLineIndex];
     const lineLength = getByteLength(line);

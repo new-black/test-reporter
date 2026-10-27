@@ -67,7 +67,7 @@ function trimReport(lines: string[]): string {
 
   let reportLength = 0
   let codeBlock = false
-  let endLineIndex = 0
+  let endLineIndex: number
   for (endLineIndex = 0; endLineIndex < lines.length; endLineIndex++) {
     const line = lines[endLineIndex]
     const lineLength = getByteLength(line)
