@@ -1,9 +1,7 @@
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import jest from 'eslint-plugin-jest'
-import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier'
-import github from 'eslint-plugin-github'
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -16,9 +14,7 @@ export default tseslint.config(
     plugins: {
       '@typescript-eslint': tseslint.plugin,
       jest,
-      import: importPlugin,
-      prettier,
-      github
+      prettier
     },
     languageOptions: {
       parser: tseslint.parser,
@@ -33,16 +29,6 @@ export default tseslint.config(
         jest: true
       }
     },
-    settings: {
-      'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx']
-      },
-      'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true
-        }
-      }
-    },
     rules: {
       'no-var': 'off',
       'no-console': 'off',
@@ -50,8 +36,6 @@ export default tseslint.config(
       'no-unused-vars': 'off',
       'prefer-template': 'off',
       camelcase: 'off',
-      'import/no-namespace': 'off',
-      'import/no-named-as-default': 'off',
       '@typescript-eslint/no-unused-vars': ['error', {varsIgnorePattern: '^_'}],
       '@typescript-eslint/explicit-member-accessibility': ['error', {accessibility: 'no-public'}],
       '@typescript-eslint/no-require-imports': 'error',
