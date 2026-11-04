@@ -54,7 +54,8 @@
     "typescript-eslint": "^8.72.1"
   },
   "overrides": {
-    "minimatch": "^11.0.1"
+    "minimatch": "11.0.1",
+    "@isaacs/nonrecursive-glob-match": "1.0.1"
   },
   "jest-junit": {
     "suiteName": "jest tests",
