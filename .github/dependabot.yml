@@ -4,6 +4,14 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    # Match the StepSecurity npm cooldown check: it flags versions newer than 7 days
+    # (observed to clear after 8 days, so keep a day of margin)
+    cooldown:
+      default-days: 8
+    ignore:
+      # ts-jest and typescript-eslint don't support TypeScript 7 (no JS compiler API) yet
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
