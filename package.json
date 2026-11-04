@@ -43,7 +43,7 @@
     "@types/node": "^26.6.6",
     "eol-converter-cli": "^1.1.0",
     "esbuild": "^0.28.2",
-    "eslint": "^10.14.0",
+    "eslint": "^10.13.0",
     "eslint-plugin-jest": "^29.17.0",
     "eslint-plugin-prettier": "^5.5.7",
     "jest": "^30.5.2",
