@@ -1,0 +1,110 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump_type:
+        description: 'Version bump type'
+        required: true
+        default: 'minor'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+      version:
+        description: 'Exact version (X.Y.Z), overrides the bump type. Leave empty to bump the current version'
+        required: false
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a # v2.22.4
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Bump version
+        id: version
+        env:
+          BUMP_TYPE: ${{ inputs.bump_type }}
+          EXACT_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+
+          if [ -n "$EXACT_VERSION" ]; then
+            VERSION="${EXACT_VERSION#v}"
+            if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "::error::'$EXACT_VERSION' is not a release version (expected X.Y.Z)"
+              exit 1
+            fi
+            npm version "$VERSION" --no-git-tag-version --ignore-scripts > /dev/null
+          else
+            npm version "$BUMP_TYPE" --no-git-tag-version --ignore-scripts > /dev/null
+            VERSION=$(node -p "require('./package.json').version")
+          fi
+
+          if git ls-remote --exit-code --tags origin "refs/tags/v$VERSION" > /dev/null; then
+            echo "::error::Tag v$VERSION already exists"
+            exit 1
+          fi
+
+          if git ls-remote --exit-code --heads origin "release/$VERSION" > /dev/null; then
+            echo "::error::Branch release/$VERSION already exists, a release PR may still be open"
+            exit 1
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create and push release branch
+        id: release
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+
+          BRANCH="release/$VERSION"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+          git add package.json package-lock.json
+          git commit -m "bump to $VERSION"
+          git push origin "$BRANCH"
+
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Create PR to main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+          BRANCH: ${{ steps.release.outputs.branch }}
+        run: |
+          set -euo pipefail
+
+          URL=$(gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "Release $VERSION" \
+            --body "Merging this PR publishes v$VERSION: the Publish Release workflow tags the merge commit and creates the GitHub release with generated notes.")
+
+          echo "Release PR: $URL" >> "$GITHUB_STEP_SUMMARY"
