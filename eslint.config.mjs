@@ -1,20 +1,16 @@
 import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
-import jest from 'eslint-plugin-jest'
-import prettier from 'eslint-plugin-prettier'
 
 export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ['node_modules/**', 'dist/**', 'lib/**', '**/*.js', '**/*.mjs', 'jest.config.js']
+    ignores: ['node_modules/**', 'dist/**', '**/*.js', '**/*.mjs', 'jest.config.js']
   },
   {
     files: ['src/**/*.ts', '__tests__/**/*.ts'],
     plugins: {
-      '@typescript-eslint': tseslint.plugin,
-      jest,
-      prettier
+      '@typescript-eslint': tseslint.plugin
     },
     languageOptions: {
       parser: tseslint.parser,

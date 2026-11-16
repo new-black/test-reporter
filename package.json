@@ -8,9 +8,9 @@
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
-    "package": "esbuild src/main.ts --bundle --platform=node --target=node24 --outfile=dist/index.js --format=cjs && eolConverter lf dist/*",
+    "package": "esbuild src/main.ts --bundle --platform=node --target=node24 --outfile=dist/index.js --format=cjs",
     "version": "npm run build && npm run package && git add dist/*",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --reporters=default --reporters=jest-junit",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --ci",
     "jest:updatesnapshot": "node --experimental-vm-modules node_modules/jest/bin/jest.js --updateSnapshot",
     "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
@@ -37,14 +37,10 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^26.6.6",
-    "eol-converter-cli": "^1.1.0",
+    "@types/node": "^24.19.2",
     "esbuild": "^0.28.2",
     "eslint": "^10.14.0",
-    "eslint-plugin-jest": "^29.17.0",
-    "eslint-plugin-prettier": "^5.5.7",
     "jest": "^30.5.2",
-    "jest-junit": "^17.0.0",
     "prettier": "^3.9.10",
     "ts-jest": "^29.4.15",
     "typescript": "~6.0.3",
@@ -53,15 +49,5 @@
   "overrides": {
     "minimatch": "11.0.1",
     "@isaacs/nonrecursive-glob-match": "1.0.1"
-  },
-  "jest-junit": {
-    "suiteName": "jest tests",
-    "outputDirectory": "__tests__/__results__",
-    "outputName": "jest-junit.xml",
-    "ancestorSeparator": " › ",
-    "uniqueOutputName": "false",
-    "suiteNameTemplate": "{filepath}",
-    "classNameTemplate": "{classname}",
-    "titleTemplate": "{title}"
   }
 }

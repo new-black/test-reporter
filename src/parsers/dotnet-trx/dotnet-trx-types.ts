@@ -2,13 +2,13 @@ export interface TrxReport {
   TestRun: TestRun
 }
 
-export interface TestRun {
+interface TestRun {
   Times: Times[]
   Results?: Results[]
   TestDefinitions?: TestDefinitions[]
 }
 
-export interface Times {
+interface Times {
   $: {
     creation: string
     queuing: string
@@ -17,7 +17,7 @@ export interface Times {
   }
 }
 
-export interface TestDefinitions {
+interface TestDefinitions {
   UnitTest: UnitTest[]
 }
 
@@ -28,14 +28,14 @@ export interface UnitTest {
   TestMethod: TestMethod[]
 }
 
-export interface TestMethod {
+interface TestMethod {
   $: {
     className: string
     name: string
   }
 }
 
-export interface Results {
+interface Results {
   UnitTestResult: UnitTestResult[]
 }
 
@@ -49,7 +49,7 @@ export interface UnitTestResult {
   Output: Output[]
 }
 
-export interface Output {
+interface Output {
   ErrorInfo: ErrorInfo[]
 }
 export interface ErrorInfo {
