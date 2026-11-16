@@ -8,8 +8,7 @@ import {groupByDirectory} from '../src/utils/merge-utils'
 it('matches report snapshot', async () => {
   const inputProvider = new LocalFileProvider('TestResults', ['./__tests__/fixtures/mssql-suite-test-results/**/*.trx'])
   const opts: ParseOptions = {
-    parseErrors: true,
-    trackedFiles: []
+    parseErrors: true
   }
 
   const parser = new DotnetTrxParser(opts)

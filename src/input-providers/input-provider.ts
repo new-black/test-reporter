@@ -7,5 +7,4 @@ export interface ReportInput {
 
 export interface InputProvider {
   load(): Promise<ReportInput>
-  listTrackedFiles(): Promise<string[]>
 }

@@ -17,7 +17,7 @@ describe('TestCaseResult', () => {
   })
 
   it('stores error information', () => {
-    const error = {path: 'file.ts', line: 10, message: 'Error', details: 'Stack trace'}
+    const error = {message: 'Error', details: 'Stack trace'}
     const tc = new TestCaseResult('id-1', 'failing test', 'failed', 50, error)
     expect(tc.error).toEqual(error)
   })
@@ -201,15 +201,5 @@ describe('TestRunResultWithUrl', () => {
   it('should not fail when has check URL', () => {
     const result = new TestRunResultWithUrl([run], 'https://check')
     expect(result.shouldFail).toBe(false)
-  })
-
-  it('aggregates counts from all results', () => {
-    const run2 = new TestRunResult('/path2', [
-      new TestSuiteResult('s2', [new TestGroupResult('g2', [new TestCaseResult('2', 't2', 'success', 20)])])
-    ])
-    const result = new TestRunResultWithUrl([run, run2], null)
-    expect(result.passed).toBe(1)
-    expect(result.failed).toBe(1)
-    expect(result.time).toBe(30)
   })
 })

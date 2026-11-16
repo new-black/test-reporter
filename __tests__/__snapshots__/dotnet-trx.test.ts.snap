@@ -17552,14 +17552,12 @@ at EVA.TestSuite.Core.HttpClient.EVAClient.CallService[TResponse](IResponseType\
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func\`1 invoke)
    at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
    at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)",
-                  "line": undefined,
                   "message": "EVA.TestSuite.Core.HttpClient.EVAServiceCallException : Error calling CreateCustomerReturn > (InternalServerError) Error message : Transaction (Process ID 62) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
 REQUEST:
 {"CreateInOriginalOrganizationUnit":false,"Lines":[{"OrderLineID":"880","Quantity":2}],"OrderID":"551","ReturnWithoutProducts":false}
 
 EVA STACKTRACE:
 System.String[]",
-                  "path": undefined,
                 },
                 "id": "9e0ee45e-20b1-3c7c-6c7f-29a591fef83a",
                 "name": "Can_push_return_order_as_offer",
@@ -20161,7 +20159,6 @@ at Assertive.DSL.Assert(Expression\`1 assertion)
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func\`1 invoke)
    at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
    at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)",
-                  "line": undefined,
                   "message": "Expected result.ProductVariations to not be null.
 
 Assertion: result.ProductVariations != null
@@ -20848,7 +20845,6 @@ Locals:
  },
  UserAgents = { ["EVA-TestSuite"] = { } }
 }",
-                  "path": undefined,
                 },
                 "id": "da619a22-2c41-b073-3d47-ac2166c1caad",
                 "name": "Can_exclude_aggregations",
@@ -23230,7 +23226,6 @@ at EVA.TestSuite.Core.HttpClient.EVAClient.CallService[TResponse](IResponseType\
    at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func\`1 invoke)
    at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
    at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)",
-                  "line": undefined,
                   "message": "EVA.TestSuite.Core.HttpClient.EVAServiceCallException : Error calling UpdatePriceList > (InternalServerError) Error message : Data modification failed on system-versioned table 'eva.dbo.PriceLists' because transaction time was earlier than period start time for affected records.
 The statement has been terminated.
 REQUEST:
@@ -23238,7 +23233,6 @@ REQUEST:
 
 EVA STACKTRACE:
 System.String[]",
-                  "path": undefined,
                 },
                 "id": "871c1543-23ec-c220-dcdd-3ee6fe958437",
                 "name": "Deactivating_pricelist_affects_prices_SUPPORT_1994",

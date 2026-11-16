@@ -1,11 +1,10 @@
 {
-  "name": "test-check",
+  "name": "test-reporter",
   "version": "2.1.0",
   "private": true,
-  "description": "Presents test results from popular testing frameworks as Github check run",
-  "main": "lib/main.js",
+  "description": "Presents .NET test results (TRX) as a GitHub check run",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --noEmit",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
@@ -13,12 +12,11 @@
     "version": "npm run build && npm run package && git add dist/*",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --ci --reporters=default --reporters=jest-junit",
     "jest:updatesnapshot": "node --experimental-vm-modules node_modules/jest/bin/jest.js --updateSnapshot",
-    "all": "npm run build && npm run format && npm run lint && npm run package && npm test",
-    "dotnet-fixture": "dotnet test reports/dotnet/DotnetTests.XUnitTests --logger \"trx;LogFileName=../../../../__tests__/fixtures/dotnet-trx.trx\""
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dorny/test-check.git"
+    "url": "git+https://github.com/new-black/test-reporter.git"
   },
   "keywords": [
     "actions",

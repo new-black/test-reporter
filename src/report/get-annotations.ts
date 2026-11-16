@@ -19,7 +19,6 @@ interface TestError {
   suiteName: string
   testName: string
   path: string
-  line: number
   message: string
   details: string
 }
@@ -41,10 +40,9 @@ export function getAnnotations(results: TestRunResult[], maxCount: number): Anno
           if (err === undefined) {
             continue
           }
-          const path = err.path ?? tr.path
-          const line = err.line ?? 0
+          const path = tr.path
           if (mergeDup) {
-            const dup = errors.find(e => path === e.path && line === e.line && err.details === e.details)
+            const dup = errors.find(e => path === e.path && err.details === e.details)
             if (dup !== undefined) {
               dup.testRunPaths.push(tr.path)
               continue
@@ -57,8 +55,7 @@ export function getAnnotations(results: TestRunResult[], maxCount: number): Anno
             testName: tg.name ? `${tg.name} ► ${tc.name}` : tc.name,
             details: err.details,
             message: err.message ?? getFirstNonEmptyLine(err.details) ?? 'Test failed',
-            path,
-            line
+            path
           })
         }
       }
@@ -76,10 +73,11 @@ export function getAnnotations(results: TestRunResult[], maxCount: number): Anno
       ident(fixEol(e.message), '  ')
     ].join('\n')
 
+    // Test results carry no source location, so annotations are attached to the results file itself
     return enforceCheckRunLimits({
       path: e.path,
-      start_line: e.line,
-      end_line: e.line,
+      start_line: 0,
+      end_line: 0,
       annotation_level: 'failure',
       title: `${e.suiteName} ► ${e.testName}`,
       raw_details: fixEol(e.details),

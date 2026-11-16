@@ -13,19 +13,6 @@ export class TestRunResultWithUrl {
   get shouldFail(): boolean {
     return !this.hasCheck && this.results.some(r => r.isFailed)
   }
-
-  get passed(): number {
-    return this.results.reduce((sum, g) => sum + g.passed, 0)
-  }
-  get failed(): number {
-    return this.results.reduce((sum, g) => sum + g.failed, 0)
-  }
-  get skipped(): number {
-    return this.results.reduce((sum, g) => sum + g.skipped, 0)
-  }
-  get time(): number {
-    return this.results.reduce((sum, g) => sum + g.time, 0)
-  }
 }
 
 export class TestRunResult {
@@ -198,8 +185,6 @@ export class TestCaseResult {
 export type TestExecutionResult = 'success' | 'skipped' | 'failed' | undefined
 
 export interface TestCaseError {
-  path?: string
-  line?: number
   message?: string
   details: string
 }

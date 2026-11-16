@@ -4081,11 +4081,11 @@ var require_util2 = __commonJS({
     var { isUint8Array } = require("node:util/types");
     var { webidl } = require_webidl();
     var supportedHashes = [];
-    var crypto2;
+    var crypto;
     try {
-      crypto2 = require("node:crypto");
+      crypto = require("node:crypto");
       const possibleRelevantHashes = ["sha256", "sha384", "sha512"];
-      supportedHashes = crypto2.getHashes().filter((hash) => possibleRelevantHashes.includes(hash));
+      supportedHashes = crypto.getHashes().filter((hash) => possibleRelevantHashes.includes(hash));
     } catch {
     }
     function responseURL(response) {
@@ -4358,7 +4358,7 @@ var require_util2 = __commonJS({
       }
     }
     function bytesMatch(bytes, metadataList) {
-      if (crypto2 === void 0) {
+      if (crypto === void 0) {
         return true;
       }
       const parsedMetadata = parseMetadata(metadataList);
@@ -4373,7 +4373,7 @@ var require_util2 = __commonJS({
       for (const item of metadata) {
         const algorithm = item.algo;
         const expectedValue = item.hash;
-        let actualValue = crypto2.createHash(algorithm).update(bytes).digest("base64");
+        let actualValue = crypto.createHash(algorithm).update(bytes).digest("base64");
         if (actualValue[actualValue.length - 1] === "=") {
           if (actualValue[actualValue.length - 2] === "=") {
             actualValue = actualValue.slice(0, -2);
@@ -5437,8 +5437,8 @@ var require_body = __commonJS({
     var { multipartFormDataParser } = require_formdata_parser();
     var random;
     try {
-      const crypto2 = require("node:crypto");
-      random = (max) => crypto2.randomInt(0, max);
+      const crypto = require("node:crypto");
+      random = (max) => crypto.randomInt(0, max);
     } catch {
       random = (max) => Math.floor(Math.random(max));
     }
@@ -17077,13 +17077,13 @@ var require_frame = __commonJS({
     "use strict";
     var { maxUnsigned16Bit } = require_constants5();
     var BUFFER_SIZE = 16386;
-    var crypto2;
+    var crypto;
     var buffer = null;
     var bufIdx = BUFFER_SIZE;
     try {
-      crypto2 = require("node:crypto");
+      crypto = require("node:crypto");
     } catch {
-      crypto2 = {
+      crypto = {
         // not full compatibility, but minimum.
         randomFillSync: function randomFillSync(buffer2, _offset, _size) {
           for (let i = 0; i < buffer2.length; ++i) {
@@ -17096,7 +17096,7 @@ var require_frame = __commonJS({
     function generateMask() {
       if (bufIdx === BUFFER_SIZE) {
         bufIdx = 0;
-        crypto2.randomFillSync(buffer ??= Buffer.allocUnsafe(BUFFER_SIZE), 0, BUFFER_SIZE);
+        crypto.randomFillSync(buffer ??= Buffer.allocUnsafe(BUFFER_SIZE), 0, BUFFER_SIZE);
       }
       return [buffer[bufIdx++], buffer[bufIdx++], buffer[bufIdx++], buffer[bufIdx++]];
     }
@@ -17168,9 +17168,9 @@ var require_connection = __commonJS({
     var { Headers: Headers2, getHeadersList } = require_headers();
     var { getDecodeSplit } = require_util2();
     var { WebsocketFrameSend } = require_frame();
-    var crypto2;
+    var crypto;
     try {
-      crypto2 = require("node:crypto");
+      crypto = require("node:crypto");
     } catch {
     }
     function establishWebSocketConnection(url, protocols, client, ws, onEstablish, options) {
@@ -17190,7 +17190,7 @@ var require_connection = __commonJS({
         const headersList = getHeadersList(new Headers2(options.headers));
         request2.headersList = headersList;
       }
-      const keyValue = crypto2.randomBytes(16).toString("base64");
+      const keyValue = crypto.randomBytes(16).toString("base64");
       request2.headersList.append("sec-websocket-key", keyValue);
       request2.headersList.append("sec-websocket-version", "13");
       for (const protocol of protocols) {
@@ -17220,7 +17220,7 @@ var require_connection = __commonJS({
             return;
           }
           const secWSAccept = response.headersList.get("Sec-WebSocket-Accept");
-          const digest = crypto2.createHash("sha1").update(keyValue + uid).digest("base64");
+          const digest = crypto.createHash("sha1").update(keyValue + uid).digest("base64");
           if (secWSAccept !== digest) {
             failWebsocketConnection(ws, "Incorrect hash received in Sec-WebSocket-Accept header.");
             return;
@@ -19986,9 +19986,9 @@ var require_path = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.convertPosixPathToPattern = exports2.convertWindowsPathToPattern = exports2.convertPathToPattern = exports2.escapePosixPath = exports2.escapeWindowsPath = exports2.escape = exports2.removeLeadingDotSegment = exports2.makeAbsolute = exports2.unixify = void 0;
-    var os5 = require("os");
+    var os4 = require("os");
     var path5 = require("path");
-    var IS_WINDOWS_PLATFORM = os5.platform() === "win32";
+    var IS_WINDOWS_PLATFORM = os4.platform() === "win32";
     var LEADING_DOT_SEGMENT_CHARACTERS_COUNT = 2;
     var POSIX_UNESCAPED_GLOB_SYMBOLS_RE = /(\\?)([()*?[\]{|}]|^!|[!+@](?=\()|\\(?![!()*+?@[\]{|}]))/g;
     var WINDOWS_UNESCAPED_GLOB_SYMBOLS_RE = /(\\?)([()[\]{}]|^!|[!+@](?=\())/g;
@@ -23530,8 +23530,8 @@ var require_utils4 = __commonJS({
     exports2.array = array;
     var errno = require_errno();
     exports2.errno = errno;
-    var fs4 = require_fs();
-    exports2.fs = fs4;
+    var fs3 = require_fs();
+    exports2.fs = fs3;
     var path5 = require_path();
     exports2.path = path5;
     var pattern = require_pattern();
@@ -23715,12 +23715,12 @@ var require_fs2 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.createFileSystemAdapter = exports2.FILE_SYSTEM_ADAPTER = void 0;
-    var fs4 = require("fs");
+    var fs3 = require("fs");
     exports2.FILE_SYSTEM_ADAPTER = {
-      lstat: fs4.lstat,
-      stat: fs4.stat,
-      lstatSync: fs4.lstatSync,
-      statSync: fs4.statSync
+      lstat: fs3.lstat,
+      stat: fs3.stat,
+      lstatSync: fs3.lstatSync,
+      statSync: fs3.statSync
     };
     function createFileSystemAdapter(fsMethods) {
       if (fsMethods === void 0) {
@@ -23737,12 +23737,12 @@ var require_settings = __commonJS({
   "node_modules/@nodelib/fs.stat/out/settings.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    var fs4 = require_fs2();
+    var fs3 = require_fs2();
     var Settings = class {
       constructor(_options = {}) {
         this._options = _options;
         this.followSymbolicLink = this._getValue(this._options.followSymbolicLink, true);
-        this.fs = fs4.createFileSystemAdapter(this._options.fs);
+        this.fs = fs3.createFileSystemAdapter(this._options.fs);
         this.markSymbolicLink = this._getValue(this._options.markSymbolicLink, false);
         this.throwErrorOnBrokenSymbolicLink = this._getValue(this._options.throwErrorOnBrokenSymbolicLink, true);
       }
@@ -23897,8 +23897,8 @@ var require_utils5 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.fs = void 0;
-    var fs4 = require_fs3();
-    exports2.fs = fs4;
+    var fs3 = require_fs3();
+    exports2.fs = fs3;
   }
 });
 
@@ -24093,14 +24093,14 @@ var require_fs4 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.createFileSystemAdapter = exports2.FILE_SYSTEM_ADAPTER = void 0;
-    var fs4 = require("fs");
+    var fs3 = require("fs");
     exports2.FILE_SYSTEM_ADAPTER = {
-      lstat: fs4.lstat,
-      stat: fs4.stat,
-      lstatSync: fs4.lstatSync,
-      statSync: fs4.statSync,
-      readdir: fs4.readdir,
-      readdirSync: fs4.readdirSync
+      lstat: fs3.lstat,
+      stat: fs3.stat,
+      lstatSync: fs3.lstatSync,
+      statSync: fs3.statSync,
+      readdir: fs3.readdir,
+      readdirSync: fs3.readdirSync
     };
     function createFileSystemAdapter(fsMethods) {
       if (fsMethods === void 0) {
@@ -24119,12 +24119,12 @@ var require_settings2 = __commonJS({
     Object.defineProperty(exports2, "__esModule", { value: true });
     var path5 = require("path");
     var fsStat = require_out();
-    var fs4 = require_fs4();
+    var fs3 = require_fs4();
     var Settings = class {
       constructor(_options = {}) {
         this._options = _options;
         this.followSymbolicLinks = this._getValue(this._options.followSymbolicLinks, false);
-        this.fs = fs4.createFileSystemAdapter(this._options.fs);
+        this.fs = fs3.createFileSystemAdapter(this._options.fs);
         this.pathSegmentSeparator = this._getValue(this._options.pathSegmentSeparator, path5.sep);
         this.stats = this._getValue(this._options.stats, false);
         this.throwErrorOnBrokenSymbolicLink = this._getValue(this._options.throwErrorOnBrokenSymbolicLink, true);
@@ -25506,16 +25506,16 @@ var require_settings4 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.DEFAULT_FILE_SYSTEM_ADAPTER = void 0;
-    var fs4 = require("fs");
-    var os5 = require("os");
-    var CPU_COUNT = Math.max(os5.cpus().length, 1);
+    var fs3 = require("fs");
+    var os4 = require("os");
+    var CPU_COUNT = Math.max(os4.cpus().length, 1);
     exports2.DEFAULT_FILE_SYSTEM_ADAPTER = {
-      lstat: fs4.lstat,
-      lstatSync: fs4.lstatSync,
-      stat: fs4.stat,
-      statSync: fs4.statSync,
-      readdir: fs4.readdir,
-      readdirSync: fs4.readdirSync
+      lstat: fs3.lstat,
+      lstatSync: fs3.lstatSync,
+      stat: fs3.stat,
+      statSync: fs3.statSync,
+      readdir: fs3.readdir,
+      readdirSync: fs3.readdirSync
     };
     var Settings = class {
       constructor(_options = {}) {
@@ -26305,7 +26305,7 @@ var require_utils6 = __commonJS({
 var require_fattr = __commonJS({
   "node_modules/adm-zip/util/fattr.js"(exports2, module2) {
     var pth = require("path");
-    module2.exports = function(path5, { fs: fs4 }) {
+    module2.exports = function(path5, { fs: fs3 }) {
       var _path = path5 || "", _obj = newAttr(), _stat = null;
       function newAttr() {
         return {
@@ -26317,8 +26317,8 @@ var require_fattr = __commonJS({
           atime: 0
         };
       }
-      if (_path && fs4.existsSync(_path)) {
-        _stat = fs4.statSync(_path);
+      if (_path && fs3.existsSync(_path)) {
+        _stat = fs3.statSync(_path);
         _obj.directory = _stat.isDirectory();
         _obj.mtime = _stat.mtime;
         _obj.atime = _stat.atime;
@@ -28966,12 +28966,12 @@ var require_instrument = __commonJS({
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.addAppMetadata = addAppMetadata;
     exports2.getUserAgent = getUserAgent2;
-    var os5 = __importStar(require("node:os"));
+    var os4 = __importStar(require("node:os"));
     var packageJson = require_package();
     function replaceSlashes(s) {
       return s.replace("/", ":");
     }
-    var baseUserAgent = `${replaceSlashes(packageJson.name)}/${packageJson.version} node/${process.version.replace("v", "")} ${os5.platform()}/${os5.release()}`;
+    var baseUserAgent = `${replaceSlashes(packageJson.name)}/${packageJson.version} node/${process.version.replace("v", "")} ${os4.platform()}/${os4.release()}`;
     var appMetadata = {};
     function addAppMetadata({ name, version }) {
       appMetadata[replaceSlashes(name)] = version;
@@ -29399,36 +29399,8 @@ function escapeProperty(s) {
   return toCommandValue(s).replace(/%/g, "%25").replace(/\r/g, "%0D").replace(/\n/g, "%0A").replace(/:/g, "%3A").replace(/,/g, "%2C");
 }
 
-// node_modules/@actions/core/lib/file-command.js
-var crypto = __toESM(require("crypto"), 1);
-var fs = __toESM(require("fs"), 1);
-var os2 = __toESM(require("os"), 1);
-function issueFileCommand(command, message) {
-  const filePath = process.env[`GITHUB_${command}`];
-  if (!filePath) {
-    throw new Error(`Unable to find environment variable for file command ${command}`);
-  }
-  if (!fs.existsSync(filePath)) {
-    throw new Error(`Missing file at path: ${filePath}`);
-  }
-  fs.appendFileSync(filePath, `${toCommandValue(message)}${os2.EOL}`, {
-    encoding: "utf8"
-  });
-}
-function prepareKeyValueMessage(key, value) {
-  const delimiter = `ghadelimiter_${crypto.randomUUID()}`;
-  const convertedValue = toCommandValue(value);
-  if (key.includes(delimiter)) {
-    throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
-  }
-  if (convertedValue.includes(delimiter)) {
-    throw new Error(`Unexpected input: value should not contain the delimiter "${delimiter}"`);
-  }
-  return `${key}<<${delimiter}${os2.EOL}${convertedValue}${os2.EOL}${delimiter}`;
-}
-
 // node_modules/@actions/core/lib/core.js
-var os4 = __toESM(require("os"), 1);
+var os3 = __toESM(require("os"), 1);
 
 // node_modules/@actions/http-client/lib/index.js
 var tunnel = __toESM(require_tunnel2(), 1);
@@ -29773,10 +29745,10 @@ var _summary = new Summary();
 var import_os2 = __toESM(require("os"), 1);
 
 // node_modules/@actions/io/lib/io-util.js
-var fs2 = __toESM(require("fs"), 1);
-var { chmod, copyFile, lstat, mkdir, open, readdir, rename, rm, rmdir, stat, symlink, unlink } = fs2.promises;
+var fs = __toESM(require("fs"), 1);
+var { chmod, copyFile, lstat, mkdir, open, readdir, rename, rm, rmdir, stat, symlink, unlink } = fs.promises;
 var IS_WINDOWS = process.platform === "win32";
-var READONLY = fs2.constants.O_RDONLY;
+var READONLY = fs.constants.O_RDONLY;
 
 // node_modules/@actions/exec/lib/toolrunner.js
 var IS_WINDOWS2 = process.platform === "win32";
@@ -29801,14 +29773,6 @@ function getInput(name, options) {
   }
   return val.trim();
 }
-function setOutput(name, value) {
-  const filePath = process.env["GITHUB_OUTPUT"] || "";
-  if (filePath) {
-    return issueFileCommand("OUTPUT", prepareKeyValueMessage(name, value));
-  }
-  process.stdout.write(os4.EOL);
-  issueCommand("set-output", { name }, toCommandValue(value));
-}
 function setFailed(message) {
   process.exitCode = ExitCode.Failure;
   error(message);
@@ -29820,7 +29784,7 @@ function warning(message, properties = {}) {
   issueCommand("warning", toCommandProperties(properties), message instanceof Error ? message.toString() : message);
 }
 function info(message) {
-  process.stdout.write(message + os4.EOL);
+  process.stdout.write(message + os3.EOL);
 }
 function startGroup(name) {
   issue("group", name);
@@ -34021,9 +33985,6 @@ var LocalFileProvider = class {
       }
     };
   }
-  async listTrackedFiles() {
-    return [];
-  }
 };
 
 // src/utils/node-utils.ts
@@ -34040,18 +34001,6 @@ var TestRunResultWithUrl = class {
   }
   get shouldFail() {
     return !this.hasCheck && this.results.some((r) => r.isFailed);
-  }
-  get passed() {
-    return this.results.reduce((sum, g) => sum + g.passed, 0);
-  }
-  get failed() {
-    return this.results.reduce((sum, g) => sum + g.failed, 0);
-  }
-  get skipped() {
-    return this.results.reduce((sum, g) => sum + g.skipped, 0);
-  }
-  get time() {
-    return this.results.reduce((sum, g) => sum + g.time, 0);
   }
 };
 var TestRunResult = class {
@@ -34263,10 +34212,9 @@ function getAnnotations(results, maxCount) {
           if (err === void 0) {
             continue;
           }
-          const path5 = err.path ?? tr.path;
-          const line = err.line ?? 0;
+          const path5 = tr.path;
           if (mergeDup) {
-            const dup = errors.find((e) => path5 === e.path && line === e.line && err.details === e.details);
+            const dup = errors.find((e) => path5 === e.path && err.details === e.details);
             if (dup !== void 0) {
               dup.testRunPaths.push(tr.path);
               continue;
@@ -34278,8 +34226,7 @@ function getAnnotations(results, maxCount) {
             testName: tg.name ? `${tg.name} \u25BA ${tc.name}` : tc.name,
             details: err.details,
             message: err.message ?? getFirstNonEmptyLine(err.details) ?? "Test failed",
-            path: path5,
-            line
+            path: path5
           });
         }
       }
@@ -34295,8 +34242,8 @@ function getAnnotations(results, maxCount) {
     ].join("\n");
     return enforceCheckRunLimits({
       path: e.path,
-      start_line: e.line,
-      end_line: e.line,
+      start_line: 0,
+      end_line: 0,
       annotation_level: "failure",
       title: `${e.suiteName} \u25BA ${e.testName}`,
       raw_details: fixEol(e.details),
@@ -34331,8 +34278,7 @@ var MAX_REPORT_LENGTH = 65535;
 var defaultOptions = {
   listSuites: "all",
   listTests: "all",
-  baseUrl: "",
-  onlySummary: false
+  baseUrl: ""
 };
 function getReport(results, options = defaultOptions) {
   info("Generating check run summary");
@@ -34459,7 +34405,7 @@ function getTestRunsReport(testRuns, allRuns, options) {
   const sections = [];
   const runIndexMap = /* @__PURE__ */ new Map();
   allRuns.forEach((tr, idx) => runIndexMap.set(tr, idx));
-  if (testRuns.length > 1 || options.onlySummary) {
+  if (testRuns.length > 1) {
     const tableData = testRuns.map((tr) => {
       const runIndex = runIndexMap.get(tr) ?? 0;
       const time = formatTime(tr.time);
@@ -34478,13 +34424,11 @@ function getTestRunsReport(testRuns, allRuns, options) {
     );
     sections.push(resultsTable);
   }
-  if (options.onlySummary === false) {
-    const suitesReports = testRuns.map((tr) => {
-      const runIndex = runIndexMap.get(tr) ?? 0;
-      return getSuitesReport(tr, runIndex, options);
-    }).flat();
-    sections.push(...suitesReports);
-  }
+  const suitesReports = testRuns.map((tr) => {
+    const runIndex = runIndexMap.get(tr) ?? 0;
+    return getSuitesReport(tr, runIndex, options);
+  }).flat();
+  sections.push(...suitesReports);
   return sections;
 }
 function getSuitesReport(tr, runIndex, options) {
@@ -34505,15 +34449,13 @@ function getSuitesReport(tr, runIndex, options) {
   if (suitesToShow.length > 0) {
     sections.push(renderSuitesTable(suitesToShow, tr.suites, name, runIndex, options));
   }
-  if (options.listTests !== "none") {
-    const tests = suitesToShow.map((ts) => {
-      const originalIndex = tr.suites.indexOf(ts);
-      return getTestsReport(ts, runIndex, originalIndex, options);
-    }).flat();
-    if (tests.length > 0) {
-      sections.push("");
-      sections.push(...tests);
-    }
+  const tests = suitesToShow.map((ts) => {
+    const originalIndex = tr.suites.indexOf(ts);
+    return getTestsReport(ts, runIndex, originalIndex, options);
+  }).flat();
+  if (tests.length > 0) {
+    sections.push("");
+    sections.push(...tests);
   }
   if (hasFailedSuites && passedSuites.length > 0 && options.listSuites === "all") {
     const passedCount = passedSuites.reduce((sum, s) => sum + s.passed, 0);
@@ -34535,7 +34477,7 @@ function renderSuitesTable(suites, allSuites, runName, runIndex, options) {
       const suiteIndex = allSuites.indexOf(s);
       const tsTime = formatTime(s.time);
       const tsName = s.name.startsWith(runName) ? s.name.slice(runName.length + 1) : s.name;
-      const skipLink = options.listTests === "none" || options.listTests === "failed" && s.result !== "failed";
+      const skipLink = options.listTests === "failed" && s.result !== "failed";
       s.link = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link;
       const tsNameLink = skipLink ? tsName : link(tsName, s.link);
       const passed = s.passed > 0 ? `${s.passed}${Icon.success}` : "";
@@ -38779,40 +38721,6 @@ var XMLParser = class {
   }
 };
 
-// src/utils/path-utils.ts
-function normalizeDirPath(path5, addTrailingSlash) {
-  if (!path5) {
-    return path5;
-  }
-  path5 = normalizeFilePath(path5);
-  if (addTrailingSlash && !path5.endsWith("/")) {
-    path5 += "/";
-  }
-  return path5;
-}
-function normalizeFilePath(path5) {
-  if (!path5) {
-    return path5;
-  }
-  return path5.trim().replace(/\\/g, "/");
-}
-function getBasePath(path5, trackedFiles) {
-  if (trackedFiles.includes(path5)) {
-    return "";
-  }
-  let max = "";
-  for (const file of trackedFiles) {
-    if (path5.endsWith(file) && file.length > max.length) {
-      max = file;
-    }
-  }
-  if (max === "") {
-    return void 0;
-  }
-  const base = path5.slice(0, path5.length - max.length);
-  return base;
-}
-
 // src/parsers/dotnet-trx/dotnet-trx-parser.ts
 var arrayElements = [
   "Times",
@@ -38968,43 +38876,11 @@ ${e}`);
     if (!message || !stackTrace) {
       return void 0;
     }
-    let path5;
-    let line;
-    const src = this.exceptionThrowSource(stackTrace);
-    if (src) {
-      path5 = src.path;
-      line = src.line;
-    }
     return {
-      path: path5,
-      line,
       message,
       details: `${message}
 ${stackTrace}`
     };
-  }
-  exceptionThrowSource(stackTrace) {
-    const lines = stackTrace.split(/\r*\n/);
-    const re = / in (.+):line (\d+)$/;
-    const { trackedFiles } = this.options;
-    for (const str of lines) {
-      const match = str.match(re);
-      if (match !== null) {
-        const [_, fileStr, lineStr] = match;
-        const filePath = normalizeFilePath(fileStr);
-        const workDir = this.getWorkDir(filePath);
-        if (workDir) {
-          const file = filePath.slice(workDir.length);
-          if (trackedFiles.includes(file)) {
-            const line = parseInt(lineStr);
-            return { path: file, line };
-          }
-        }
-      }
-    }
-  }
-  getWorkDir(path5) {
-    return this.options.workDir ?? this.assumedWorkDir ?? (this.assumedWorkDir = getBasePath(path5, this.options.trackedFiles));
   }
 };
 
@@ -39016,25 +38892,12 @@ function getCheckRunContext() {
   let branch = context2.ref;
   if (branch.startsWith("refs/heads")) branch = branch.slice(11);
   info("Branch: " + branch);
-  if (context2.eventName === "workflow_run") {
-    info("Action was triggered by workflow_run: using SHA and RUN_ID from triggering workflow");
-    const event = context2.payload;
-    if (!event.workflow_run) {
-      throw new Error("Event of type 'workflow_run' is missing 'workflow_run' field");
-    }
-    return {
-      sha: event.workflow_run.head_commit.id,
-      runId: event.workflow_run.id,
-      branch
-    };
-  }
-  const runId = context2.runId;
   if (context2.payload.pull_request) {
     info(`Action was triggered by ${context2.eventName}: using SHA from head of source branch`);
     const pr = context2.payload.pull_request;
-    return { sha: pr.head.sha, runId, branch };
+    return { sha: pr.head.sha, branch };
   }
-  return { sha: context2.sha, runId, branch };
+  return { sha: context2.sha, branch };
 }
 
 // src/main.ts
@@ -39120,14 +38983,11 @@ var TestReporter = class {
   constructor() {
     this.name = getInput("name", { required: true });
     this.path = getInput("path", { required: true });
-    this.pathReplaceBackslashes = getInput("path-replace-backslashes", { required: false }) === "true";
     this.listSuites = getInput("list-suites", { required: false });
     this.listTests = getInput("list-tests", { required: false });
     this.maxAnnotations = parseInt(getInput("max-annotations", { required: false }) || "10");
     this.failOnError = getInput("fail-on-error", { required: false }) !== "false";
     this.failOnEmpty = getInput("fail-on-empty", { required: false }) !== "false";
-    this.workDirInput = getInput("working-directory", { required: false });
-    this.onlySummary = getInput("only-summary", { required: false }) === "true";
     this.token = getInput("token", { required: false }) || process.env.GITHUB_TOKEN || "";
     this.checksToken = resolveChecksToken(getInput("checks-token", { required: false }), this.token);
     this.slackWebhook = getInput("slack-url", { required: false });
@@ -39142,7 +39002,7 @@ var TestReporter = class {
       setFailed(`Input parameter 'list-suites' has invalid value`);
       return;
     }
-    if (this.listTests !== "all" && this.listTests !== "failed" && this.listTests !== "none") {
+    if (this.listTests !== "all" && this.listTests !== "failed") {
       setFailed(`Input parameter 'list-tests' has invalid value`);
       return;
     }
@@ -39152,22 +39012,10 @@ var TestReporter = class {
     }
   }
   async run() {
-    if (this.workDirInput) {
-      info(`Changing directory to '${this.workDirInput}'`);
-      process.chdir(this.workDirInput);
-    }
     info(`Check runs will be created with SHA=${this.context.sha}`);
-    const pathsList = this.path.split(",");
-    const pattern = this.pathReplaceBackslashes ? pathsList.map(normalizeFilePath) : pathsList;
-    const inputProvider = new LocalFileProvider(this.name, pattern);
-    const parseErrors = this.maxAnnotations > 0;
-    const trackedFiles = parseErrors ? await inputProvider.listTrackedFiles() : [];
-    const workDir = normalizeDirPath(process.cwd(), true);
-    if (parseErrors) info(`Found ${trackedFiles.length} files tracked by GitHub`);
+    const inputProvider = new LocalFileProvider(this.name, this.path.split(","));
     const options = {
-      workDir,
-      trackedFiles,
-      parseErrors
+      parseErrors: this.maxAnnotations > 0
     };
     info(`Using dotnet-trx test report parser`);
     const parser = new DotnetTrxParser(options);
@@ -39225,16 +39073,6 @@ var TestReporter = class {
       endGroup();
     }
     const isFailed = results.some((tr) => tr.results.some((r) => r.isFailed));
-    const conclusion = isFailed ? "failure" : "success";
-    const passed = results.reduce((sum, tr) => sum + tr.passed, 0);
-    const failed = results.reduce((sum, tr) => sum + tr.failed, 0);
-    const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0);
-    const time = results.reduce((sum, tr) => sum + tr.time, 0);
-    setOutput("conclusion", conclusion);
-    setOutput("passed", passed);
-    setOutput("failed", failed);
-    setOutput("skipped", skipped);
-    setOutput("time", time);
     if (results.some((r) => r.shouldFail)) {
       setFailed(`Failed test were found and the results could not be written to github, so fail this step.`);
       const failedTests = results.filter((r) => r.shouldFail).flatMap((r) => r.results).flatMap((rr) => rr.failedSuites).flatMap((s) => s.failedGroups).flatMap((g) => g.failedTests);
@@ -39276,16 +39114,7 @@ var TestReporter = class {
     results.sort((a, b) => a.path.localeCompare(b.path, "en"));
     info(`Creating check run ${name}`);
     try {
-      const existingChecks = await this.octokit.rest.checks.listForRef({
-        ref: this.context.sha,
-        ...context2.repo,
-        check_name: name,
-        status: "queued"
-      });
-      const check = existingChecks?.data?.total_count > 0 ? await this.octokit.rest.checks.get({
-        check_run_id: existingChecks.data.check_runs[0].id,
-        ...context2.repo
-      }) : await this.octokit.rest.checks.create({
+      const check = await this.octokit.rest.checks.create({
         head_sha: this.context.sha,
         name,
         status: "in_progress",
@@ -39295,17 +39124,6 @@ var TestReporter = class {
         },
         ...context2.repo
       });
-      if (check.data.status === "queued") {
-        await this.octokit.rest.checks.update({
-          check_run_id: check.data.id,
-          status: "in_progress",
-          output: {
-            title: name,
-            summary: ""
-          },
-          ...context2.repo
-        });
-      }
       if (files.length === 0) {
         await this.octokit.rest.checks.update({
           check_run_id: check.data.id,
@@ -39320,9 +39138,9 @@ var TestReporter = class {
         return null;
       }
       info("Creating report summary");
-      const { listSuites, listTests, onlySummary } = this;
+      const { listSuites, listTests } = this;
       const baseUrl2 = check.data.html_url || "";
-      const summary2 = getReport(results, { listSuites, listTests, baseUrl: baseUrl2, onlySummary });
+      const summary2 = getReport(results, { listSuites, listTests, baseUrl: baseUrl2 });
       info("Creating annotations");
       const annotations = getAnnotations(results, this.maxAnnotations);
       const isFailed = results.some((tr) => tr.result === "failed");
@@ -39343,8 +39161,6 @@ var TestReporter = class {
       info(`Check run create response: ${resp.status}`);
       info(`Check run URL: ${resp.data.url}`);
       info(`Check run HTML: ${resp.data.html_url}`);
-      setOutput("url", resp.data.url);
-      setOutput("url_html", resp.data.html_url);
       info(`Check run details: ${resp.data.details_url}`);
       result.checkUrl = resp.data.html_url;
       await this.reportToSlack(results, name, resp.data.html_url ?? "");
@@ -39379,8 +39195,7 @@ var TestReporter = class {
       };
       for (const [runIndex, tr] of results.entries()) {
         if (tr.failed === 0) continue;
-        let runName = import_path4.default.basename(import_path4.default.dirname(import_path4.default.dirname(tr.path)));
-        runName = runName.startsWith("test/") ? runName.slice(5) : runName;
+        const runName = import_path4.default.basename(import_path4.default.dirname(import_path4.default.dirname(tr.path)));
         req.blocks.push({
           type: "section",
           text: {
