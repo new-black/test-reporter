@@ -10,7 +10,6 @@ import {getReport} from './report/get-report'
 
 import {DotnetTrxParser} from './parsers/dotnet-trx/dotnet-trx-parser'
 
-import {normalizeDirPath, normalizeFilePath} from './utils/path-utils'
 import {getCheckRunContext, resolveChecksToken} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
 import {IncomingWebhook} from '@slack/webhook'
@@ -32,14 +31,11 @@ async function main(): Promise<void> {
 class TestReporter {
   readonly name = core.getInput('name', {required: true})
   readonly path = core.getInput('path', {required: true})
-  readonly pathReplaceBackslashes = core.getInput('path-replace-backslashes', {required: false}) === 'true'
   readonly listSuites = core.getInput('list-suites', {required: false}) as 'all' | 'failed'
-  readonly listTests = core.getInput('list-tests', {required: false}) as 'all' | 'failed' | 'none'
+  readonly listTests = core.getInput('list-tests', {required: false}) as 'all' | 'failed'
   readonly maxAnnotations = parseInt(core.getInput('max-annotations', {required: false}) || '10')
   readonly failOnError = core.getInput('fail-on-error', {required: false}) !== 'false'
   readonly failOnEmpty = core.getInput('fail-on-empty', {required: false}) !== 'false'
-  readonly workDirInput = core.getInput('working-directory', {required: false})
-  readonly onlySummary = core.getInput('only-summary', {required: false}) === 'true'
   readonly token = core.getInput('token', {required: false}) || process.env.GITHUB_TOKEN || ''
   readonly checksToken = resolveChecksToken(core.getInput('checks-token', {required: false}), this.token)
   readonly slackWebhook = core.getInput('slack-url', {required: false})
@@ -59,7 +55,7 @@ class TestReporter {
       return
     }
 
-    if (this.listTests !== 'all' && this.listTests !== 'failed' && this.listTests !== 'none') {
+    if (this.listTests !== 'all' && this.listTests !== 'failed') {
       core.setFailed(`Input parameter 'list-tests' has invalid value`)
       return
     }
@@ -71,30 +67,12 @@ class TestReporter {
   }
 
   async run(): Promise<void> {
-    if (this.workDirInput) {
-      core.info(`Changing directory to '${this.workDirInput}'`)
-      process.chdir(this.workDirInput)
-    }
-
     core.info(`Check runs will be created with SHA=${this.context.sha}`)
 
-    // Split path pattern by ',' and optionally convert all backslashes to forward slashes
-    // fast-glob (micromatch) always interprets backslashes as escape characters instead of directory separators
-    const pathsList = this.path.split(',')
-    const pattern = this.pathReplaceBackslashes ? pathsList.map(normalizeFilePath) : pathsList
-
-    const inputProvider = new LocalFileProvider(this.name, pattern)
-
-    const parseErrors = this.maxAnnotations > 0
-    const trackedFiles = parseErrors ? await inputProvider.listTrackedFiles() : []
-    const workDir = normalizeDirPath(process.cwd(), true)
-
-    if (parseErrors) core.info(`Found ${trackedFiles.length} files tracked by GitHub`)
+    const inputProvider = new LocalFileProvider(this.name, this.path.split(','))
 
     const options: ParseOptions = {
-      workDir,
-      trackedFiles,
-      parseErrors
+      parseErrors: this.maxAnnotations > 0
     }
 
     core.info(`Using dotnet-trx test report parser`)
@@ -166,17 +144,6 @@ class TestReporter {
     }
 
     const isFailed = results.some(tr => tr.results.some(r => r.isFailed))
-    const conclusion = isFailed ? 'failure' : 'success'
-    const passed = results.reduce((sum, tr) => sum + tr.passed, 0)
-    const failed = results.reduce((sum, tr) => sum + tr.failed, 0)
-    const skipped = results.reduce((sum, tr) => sum + tr.skipped, 0)
-    const time = results.reduce((sum, tr) => sum + tr.time, 0)
-
-    core.setOutput('conclusion', conclusion)
-    core.setOutput('passed', passed)
-    core.setOutput('failed', failed)
-    core.setOutput('skipped', skipped)
-    core.setOutput('time', time)
 
     if (results.some(r => r.shouldFail)) {
       core.setFailed(`Failed test were found and the results could not be written to github, so fail this step.`)
@@ -234,41 +201,16 @@ class TestReporter {
 
     core.info(`Creating check run ${name}`)
     try {
-      const existingChecks = await this.octokit.rest.checks.listForRef({
-        ref: this.context.sha,
-        ...github.context.repo,
-        check_name: name,
-        status: 'queued'
+      const check = await this.octokit.rest.checks.create({
+        head_sha: this.context.sha,
+        name,
+        status: 'in_progress',
+        output: {
+          title: name,
+          summary: ''
+        },
+        ...github.context.repo
       })
-
-      const check =
-        existingChecks?.data?.total_count > 0
-          ? await this.octokit.rest.checks.get({
-              check_run_id: existingChecks.data.check_runs[0].id,
-              ...github.context.repo
-            })
-          : await this.octokit.rest.checks.create({
-              head_sha: this.context.sha,
-              name,
-              status: 'in_progress',
-              output: {
-                title: name,
-                summary: ''
-              },
-              ...github.context.repo
-            })
-
-      if (check.data.status === 'queued') {
-        await this.octokit.rest.checks.update({
-          check_run_id: check.data.id,
-          status: 'in_progress',
-          output: {
-            title: name,
-            summary: ''
-          },
-          ...github.context.repo
-        })
-      }
 
       if (files.length === 0) {
         await this.octokit.rest.checks.update({
@@ -285,9 +227,9 @@ class TestReporter {
       }
 
       core.info('Creating report summary')
-      const {listSuites, listTests, onlySummary} = this
+      const {listSuites, listTests} = this
       const baseUrl = check.data.html_url || ''
-      const summary = getReport(results, {listSuites, listTests, baseUrl, onlySummary})
+      const summary = getReport(results, {listSuites, listTests, baseUrl})
 
       core.info('Creating annotations')
       const annotations = getAnnotations(results, this.maxAnnotations)
@@ -311,8 +253,6 @@ class TestReporter {
       core.info(`Check run create response: ${resp.status}`)
       core.info(`Check run URL: ${resp.data.url}`)
       core.info(`Check run HTML: ${resp.data.html_url}`)
-      core.setOutput('url', resp.data.url)
-      core.setOutput('url_html', resp.data.html_url)
       core.info(`Check run details: ${resp.data.details_url}`)
       result.checkUrl = resp.data.html_url
 
@@ -352,8 +292,7 @@ class TestReporter {
 
       for (const [runIndex, tr] of results.entries()) {
         if (tr.failed === 0) continue
-        let runName = path.basename(path.dirname(path.dirname(tr.path)))
-        runName = runName.startsWith('test/') ? runName.slice(5) : runName
+        const runName = path.basename(path.dirname(path.dirname(tr.path)))
 
         req.blocks.push({
           type: 'section',

@@ -3,7 +3,6 @@ import {XMLParser} from 'fast-xml-parser'
 import {ErrorInfo, Outcome, TrxReport, UnitTest, UnitTestResult} from './dotnet-trx-types'
 import {ParseOptions, TestParser} from '../../test-parser'
 
-import {getBasePath, normalizeFilePath} from '../../utils/path-utils'
 import {parseIsoDate, parseNetDuration} from '../../utils/parse-utils'
 
 import {
@@ -64,8 +63,6 @@ class Test {
 }
 
 export class DotnetTrxParser implements TestParser {
-  assumedWorkDir: string | undefined
-
   constructor(readonly options: ParseOptions) {}
 
   async parse(path: string, content: string): Promise<TestRunResult> {
@@ -199,50 +196,9 @@ export class DotnetTrxParser implements TestParser {
       return undefined
     }
 
-    let path
-    let line
-
-    const src = this.exceptionThrowSource(stackTrace)
-    if (src) {
-      path = src.path
-      line = src.line
-    }
-
     return {
-      path,
-      line,
       message,
       details: `${message}\n${stackTrace}`
     }
-  }
-
-  private exceptionThrowSource(stackTrace: string): {path: string; line: number} | undefined {
-    const lines = stackTrace.split(/\r*\n/)
-    const re = / in (.+):line (\d+)$/
-    const {trackedFiles} = this.options
-
-    for (const str of lines) {
-      const match = str.match(re)
-      if (match !== null) {
-        const [_, fileStr, lineStr] = match
-        const filePath = normalizeFilePath(fileStr)
-        const workDir = this.getWorkDir(filePath)
-        if (workDir) {
-          const file = filePath.slice(workDir.length)
-          if (trackedFiles.includes(file)) {
-            const line = parseInt(lineStr)
-            return {path: file, line}
-          }
-        }
-      }
-    }
-  }
-
-  private getWorkDir(path: string): string | undefined {
-    return (
-      this.options.workDir ??
-      this.assumedWorkDir ??
-      (this.assumedWorkDir = getBasePath(path, this.options.trackedFiles))
-    )
   }
 }

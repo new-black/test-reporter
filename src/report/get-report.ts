@@ -10,16 +10,14 @@ const MAX_REPORT_LENGTH = 65535
 
 export interface ReportOptions {
   listSuites: 'all' | 'failed'
-  listTests: 'all' | 'failed' | 'none'
+  listTests: 'all' | 'failed'
   baseUrl: string
-  onlySummary: boolean
 }
 
 const defaultOptions: ReportOptions = {
   listSuites: 'all',
   listTests: 'all',
-  baseUrl: '',
-  onlySummary: false
+  baseUrl: ''
 }
 
 export function getReport(results: TestRunResult[], options: ReportOptions = defaultOptions): string {
@@ -176,7 +174,7 @@ function getTestRunsReport(testRuns: TestRunResult[], allRuns: TestRunResult[], 
   const runIndexMap = new Map<TestRunResult, number>()
   allRuns.forEach((tr, idx) => runIndexMap.set(tr, idx))
 
-  if (testRuns.length > 1 || options.onlySummary) {
+  if (testRuns.length > 1) {
     const tableData = testRuns.map(tr => {
       const runIndex = runIndexMap.get(tr) ?? 0
       const time = formatTime(tr.time)
@@ -197,15 +195,13 @@ function getTestRunsReport(testRuns: TestRunResult[], allRuns: TestRunResult[], 
     sections.push(resultsTable)
   }
 
-  if (options.onlySummary === false) {
-    const suitesReports = testRuns
-      .map(tr => {
-        const runIndex = runIndexMap.get(tr) ?? 0
-        return getSuitesReport(tr, runIndex, options)
-      })
-      .flat()
-    sections.push(...suitesReports)
-  }
+  const suitesReports = testRuns
+    .map(tr => {
+      const runIndex = runIndexMap.get(tr) ?? 0
+      return getSuitesReport(tr, runIndex, options)
+    })
+    .flat()
+  sections.push(...suitesReports)
   return sections
 }
 
@@ -240,19 +236,17 @@ function getSuitesReport(tr: TestRunResult, runIndex: number, options: ReportOpt
   }
 
   // Show detailed test results for failed suites
-  if (options.listTests !== 'none') {
-    const tests = suitesToShow
-      .map(ts => {
-        const originalIndex = tr.suites.indexOf(ts)
-        return getTestsReport(ts, runIndex, originalIndex, options)
-      })
-      .flat()
+  const tests = suitesToShow
+    .map(ts => {
+      const originalIndex = tr.suites.indexOf(ts)
+      return getTestsReport(ts, runIndex, originalIndex, options)
+    })
+    .flat()
 
-    if (tests.length > 0) {
-      // Add blank line before test details for proper markdown rendering
-      sections.push('')
-      sections.push(...tests)
-    }
+  if (tests.length > 0) {
+    // Add blank line before test details for proper markdown rendering
+    sections.push('')
+    sections.push(...tests)
   }
 
   // Show passed suites in collapsed section (only if we have failures and listSuites is 'all')
@@ -284,7 +278,7 @@ function renderSuitesTable(
       const suiteIndex = allSuites.indexOf(s)
       const tsTime = formatTime(s.time)
       const tsName = s.name.startsWith(runName) ? s.name.slice(runName.length + 1) : s.name
-      const skipLink = options.listTests === 'none' || (options.listTests === 'failed' && s.result !== 'failed')
+      const skipLink = options.listTests === 'failed' && s.result !== 'failed'
       s.link = options.baseUrl + makeSuiteSlug(runIndex, suiteIndex).link
       const tsNameLink = skipLink ? tsName : link(tsName, s.link)
       const passed = s.passed > 0 ? `${s.passed}${Icon.success}` : ''

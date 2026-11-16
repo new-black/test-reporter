@@ -28,8 +28,4 @@ export class LocalFileProvider implements InputProvider {
       }
     }
   }
-
-  async listTrackedFiles(): Promise<string[]> {
-    return []
-  }
 }
