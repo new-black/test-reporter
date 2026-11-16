@@ -1,0 +1,123 @@
+name: Publish Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  # Recovery path: run this after a release PR was merged to main when the
+  # automatic run failed or was skipped.
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish from main (for example 4.0.0)'
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || inputs.version }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.merged == true &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.event.pull_request.head.ref, 'release/'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a # v2.22.4
+        with:
+          egress-policy: audit
+
+      # Start from the exact commit the release PR produced on main, so a later
+      # merge can never end up inside the release
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha || 'main' }}
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Get version
+        id: version
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            VERSION="${INPUT_VERSION#v}"
+          else
+            VERSION="${HEAD_REF#release/}"
+          fi
+
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::'$VERSION' is not a release version (expected X.Y.Z)"
+            exit 1
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Check that package.json is at this version
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          set -euo pipefail
+
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          if [ "$PACKAGE_VERSION" != "$VERSION" ]; then
+            echo "::error::package.json is at $PACKAGE_VERSION, not $VERSION, on $(git rev-parse --short HEAD)"
+            exit 1
+          fi
+
+      # The action runs straight from dist/, so never tag a commit where it is stale
+      - name: Check that dist/ is up to date
+        run: |
+          set -euo pipefail
+
+          npm ci
+          npm run package
+
+          if ! git diff --ignore-space-at-eol --quiet -- dist/; then
+            echo "::error::dist/ is out of date at this commit, run 'npm run package' and commit the result"
+            exit 1
+          fi
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          set -euo pipefail
+
+          SHA=$(git rev-parse HEAD)
+
+          # Safe to re-run: an existing release is left alone
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "Release $TAG already exists, skipping"
+            exit 0
+          fi
+
+          TAG_SHA=$(git ls-remote origin "refs/tags/$TAG" | cut -f1)
+          if [ -n "$TAG_SHA" ] && [ "$TAG_SHA" != "$SHA" ]; then
+            echo "::error::Tag $TAG already points at $TAG_SHA, not at $SHA"
+            exit 1
+          fi
+
+          gh release create "$TAG" \
+            --target "$SHA" \
+            --title "Release $VERSION" \
+            --generate-notes
+
+          echo "Published $TAG: $(gh release view "$TAG" --json url --jq .url)" >> "$GITHUB_STEP_SUMMARY"

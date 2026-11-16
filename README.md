@@ -141,6 +141,19 @@ Unfortunately, there are some known issues and limitations caused by GitHub API:
 - Test report can't reference any additional files (e.g. screenshots). You can use `actions/upload-artifact@v6` to upload them and inspect them manually.
 - Check Runs are created for specific commit SHA. It's not possible to specify under which workflow test report should belong if more workflows are running for the same SHA. As a workaround, pass a GitHub App installation token as `checks-token`: check runs created by an app are attached to that app's own check suite, independent of any workflow.
 
+## Releasing
+
+Releases are cut from `main` with two workflows:
+
+1. Run **Create Release** from the Actions tab and pick a bump type, or enter an exact version. It bumps `package.json` on a `release/X.Y.Z` branch and opens a `Release X.Y.Z` pull request
+2. Merge that pull request. **Publish Release** then checks that `dist/` is up to date at the merge commit and creates the `vX.Y.Z` tag and the GitHub release with generated notes. If it was skipped or failed, run it manually with the version
+
+To pin a release, use its commit SHA and note the version in a comment:
+
+```yaml
+- uses: new-black/test-reporter@<commit sha> # vX.Y.Z
+```
+
 ## License
 
 The scripts and documentation in this project are released under the [MIT License](https://github.com/dorny/test-reporter/blob/main/LICENSE)
