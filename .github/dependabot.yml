@@ -12,6 +12,9 @@ updates:
       # ts-jest and typescript-eslint don't support TypeScript 7 (no JS compiler API) yet
       - dependency-name: "typescript"
         update-types: ["version-update:semver-major"]
+      # Keep the Node typings in line with the node24 runtime of the action
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
