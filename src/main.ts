@@ -12,6 +12,7 @@ import {DotnetTrxParser} from './parsers/dotnet-trx/dotnet-trx-parser'
 
 import {getCheckRunContext, resolveChecksToken} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
+import {describeError, withRetry} from './utils/retry-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
 import path from 'path'
@@ -213,16 +214,18 @@ class TestReporter {
       })
 
       if (files.length === 0) {
-        await this.octokit.rest.checks.update({
-          check_run_id: check.data.id,
-          status: 'completed',
-          output: {
-            title: name,
-            summary: 'No test result files found'
-          },
-          conclusion: 'failure',
-          ...github.context.repo
-        })
+        await withRetry(async () =>
+          this.octokit.rest.checks.update({
+            check_run_id: check.data.id,
+            status: 'completed',
+            output: {
+              title: name,
+              summary: 'No test result files found'
+            },
+            conclusion: 'failure',
+            ...github.context.repo
+          })
+        )
         return null
       }
 
@@ -239,17 +242,19 @@ class TestReporter {
       const icon = isFailed ? Icon.fail : Icon.success
 
       core.info(`Updating check run conclusion (${conclusion}) and output`)
-      const resp = await this.octokit.rest.checks.update({
-        check_run_id: check.data.id,
-        conclusion,
-        status: 'completed',
-        output: {
-          title: `${name} ${icon}`,
-          summary,
-          annotations
-        },
-        ...github.context.repo
-      })
+      const resp = await withRetry(async () =>
+        this.octokit.rest.checks.update({
+          check_run_id: check.data.id,
+          conclusion,
+          status: 'completed',
+          output: {
+            title: `${name} ${icon}`,
+            summary,
+            annotations
+          },
+          ...github.context.repo
+        })
+      )
       core.info(`Check run create response: ${resp.status}`)
       core.info(`Check run URL: ${resp.data.url}`)
       core.info(`Check run HTML: ${resp.data.html_url}`)
@@ -258,7 +263,7 @@ class TestReporter {
 
       await this.reportToSlack(results, name, resp.data.html_url ?? '')
     } catch (error) {
-      core.error(`Could not create check to store the results`)
+      core.error(`Could not create check to store the results: ${describeError(error)}`)
     }
 
     return result

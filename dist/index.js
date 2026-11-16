@@ -38900,6 +38900,51 @@ function getCheckRunContext() {
   return { sha: context2.sha, branch };
 }
 
+// src/utils/retry-utils.ts
+var MAX_RETRY_AFTER_SECONDS = 60;
+function asHttpError(error2) {
+  return typeof error2 === "object" && error2 !== null ? error2 : {};
+}
+function describeError(error2) {
+  const { status, message } = asHttpError(error2);
+  const text = ellipsis(message ?? String(error2), 300);
+  return status === void 0 ? text : `HTTP ${status}: ${text}`;
+}
+function isTransientError(error2) {
+  const { status, message } = asHttpError(error2);
+  if (status === void 0) {
+    return false;
+  }
+  return status >= 500 || status === 429 || status === 403 && /rate limit/i.test(message ?? "");
+}
+function retryDelayMs(error2, attempt) {
+  const retryAfter = Number(asHttpError(error2).response?.headers?.["retry-after"]);
+  if (retryAfter > 0) {
+    return Math.min(retryAfter, MAX_RETRY_AFTER_SECONDS) * 1e3;
+  }
+  return 1e3 * 2 ** attempt;
+}
+async function sleep(ms) {
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+async function withRetry(fn, options = {}) {
+  const { retries = 3, sleep: wait = sleep, warn = warning } = options;
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await fn();
+    } catch (error2) {
+      if (attempt >= retries || !isTransientError(error2)) {
+        throw error2;
+      }
+      const delay = retryDelayMs(error2, attempt);
+      warn(
+        `Request failed (${describeError(error2)}), retrying in ${delay / 1e3}s (attempt ${attempt + 2} of ${retries + 1})`
+      );
+      await wait(delay);
+    }
+  }
+}
+
 // src/main.ts
 var import_webhook = __toESM(require_dist());
 var import_fs3 = __toESM(require("fs"));
@@ -39125,16 +39170,18 @@ var TestReporter = class {
         ...context2.repo
       });
       if (files.length === 0) {
-        await this.octokit.rest.checks.update({
-          check_run_id: check.data.id,
-          status: "completed",
-          output: {
-            title: name,
-            summary: "No test result files found"
-          },
-          conclusion: "failure",
-          ...context2.repo
-        });
+        await withRetry(
+          async () => this.octokit.rest.checks.update({
+            check_run_id: check.data.id,
+            status: "completed",
+            output: {
+              title: name,
+              summary: "No test result files found"
+            },
+            conclusion: "failure",
+            ...context2.repo
+          })
+        );
         return null;
       }
       info("Creating report summary");
@@ -39147,17 +39194,19 @@ var TestReporter = class {
       const conclusion = isFailed ? "failure" : "success";
       const icon = isFailed ? Icon.fail : Icon.success;
       info(`Updating check run conclusion (${conclusion}) and output`);
-      const resp = await this.octokit.rest.checks.update({
-        check_run_id: check.data.id,
-        conclusion,
-        status: "completed",
-        output: {
-          title: `${name} ${icon}`,
-          summary: summary2,
-          annotations
-        },
-        ...context2.repo
-      });
+      const resp = await withRetry(
+        async () => this.octokit.rest.checks.update({
+          check_run_id: check.data.id,
+          conclusion,
+          status: "completed",
+          output: {
+            title: `${name} ${icon}`,
+            summary: summary2,
+            annotations
+          },
+          ...context2.repo
+        })
+      );
       info(`Check run create response: ${resp.status}`);
       info(`Check run URL: ${resp.data.url}`);
       info(`Check run HTML: ${resp.data.html_url}`);
@@ -39165,7 +39214,7 @@ var TestReporter = class {
       result.checkUrl = resp.data.html_url;
       await this.reportToSlack(results, name, resp.data.html_url ?? "");
     } catch (error2) {
-      error(`Could not create check to store the results`);
+      error(`Could not create check to store the results: ${describeError(error2)}`);
     }
     return result;
   }
