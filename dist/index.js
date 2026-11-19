@@ -38917,6 +38917,9 @@ function isTransientError(error2) {
   }
   return status >= 500 || status === 429 || status === 403 && /rate limit/i.test(message ?? "");
 }
+function isTransientOrNotFoundError(error2) {
+  return asHttpError(error2).status === 404 || isTransientError(error2);
+}
 function retryDelayMs(error2, attempt) {
   const retryAfter = Number(asHttpError(error2).response?.headers?.["retry-after"]);
   if (retryAfter > 0) {
@@ -38928,12 +38931,12 @@ async function sleep(ms) {
   await new Promise((resolve) => setTimeout(resolve, ms));
 }
 async function withRetry(fn, options = {}) {
-  const { retries = 3, sleep: wait = sleep, warn = warning } = options;
+  const { retries = 3, isRetryable = isTransientError, sleep: wait = sleep, warn = warning } = options;
   for (let attempt = 0; ; attempt++) {
     try {
       return await fn();
     } catch (error2) {
-      if (attempt >= retries || !isTransientError(error2)) {
+      if (attempt >= retries || !isRetryable(error2)) {
         throw error2;
       }
       const delay = retryDelayMs(error2, attempt);
@@ -39015,6 +39018,7 @@ function groupByDirectory(results) {
 }
 
 // src/main.ts
+var UPDATE_RETRY = { retries: 5, isRetryable: isTransientOrNotFoundError };
 async function main() {
   try {
     const testReporter = new TestReporter();
@@ -39158,6 +39162,7 @@ var TestReporter = class {
     results = groupByDirectory(results);
     results.sort((a, b) => a.path.localeCompare(b.path, "en"));
     info(`Creating check run ${name}`);
+    let checkRunId;
     try {
       const check = await this.octokit.rest.checks.create({
         head_sha: this.context.sha,
@@ -39169,6 +39174,7 @@ var TestReporter = class {
         },
         ...context2.repo
       });
+      checkRunId = check.data.id;
       if (files.length === 0) {
         await withRetry(
           async () => this.octokit.rest.checks.update({
@@ -39180,7 +39186,8 @@ var TestReporter = class {
             },
             conclusion: "failure",
             ...context2.repo
-          })
+          }),
+          UPDATE_RETRY
         );
         return null;
       }
@@ -39205,18 +39212,45 @@ var TestReporter = class {
             annotations
           },
           ...context2.repo
-        })
+        }),
+        UPDATE_RETRY
       );
       info(`Check run create response: ${resp.status}`);
       info(`Check run URL: ${resp.data.url}`);
       info(`Check run HTML: ${resp.data.html_url}`);
       info(`Check run details: ${resp.data.details_url}`);
       result.checkUrl = resp.data.html_url;
+      checkRunId = void 0;
       await this.reportToSlack(results, name, resp.data.html_url ?? "");
     } catch (error2) {
       error(`Could not create check to store the results: ${describeError(error2)}`);
+      if (checkRunId !== void 0) {
+        await this.abandonCheckRun(checkRunId, name, results);
+      }
     }
     return result;
+  }
+  // Never leave the check run in progress: that blocks the pull request indefinitely
+  async abandonCheckRun(checkRunId, name, results) {
+    const isFailed = results.some((tr) => tr.result === "failed");
+    try {
+      await withRetry(
+        async () => this.octokit.rest.checks.update({
+          check_run_id: checkRunId,
+          status: "completed",
+          conclusion: isFailed ? "failure" : "neutral",
+          output: {
+            title: name,
+            summary: `The test report could not be published. See the logs of workflow run ${context2.runId} for details.`
+          },
+          ...context2.repo
+        }),
+        UPDATE_RETRY
+      );
+      warning(`Check run ${name} was completed as ${isFailed ? "failure" : "neutral"} without the report`);
+    } catch (error2) {
+      setFailed(`Check run ${name} is left in progress: ${describeError(error2)}`);
+    }
   }
   async reportToSlack(results, name, checkRunUrl) {
     if (this.slackWebhook && this.context.branch === this.slackBranch) {

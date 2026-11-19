@@ -1,4 +1,4 @@
-import {describeError, isTransientError, withRetry} from '../../src/utils/retry-utils'
+import {describeError, isTransientError, isTransientOrNotFoundError, withRetry} from '../../src/utils/retry-utils'
 
 class HttpError extends Error {
   constructor(
@@ -93,6 +93,24 @@ describe('withRetry', () => {
     expect(delays).toEqual([])
   })
 
+  it('retries a 404 when asked to, because a new check run can briefly be unknown', async () => {
+    const {options, delays, warnings} = recorder()
+    const {fn, calls} = failingThen([new HttpError(404, 'Not Found'), new HttpError(404, 'Not Found')])
+    await expect(withRetry(fn, {...options, isRetryable: isTransientOrNotFoundError})).resolves.toBe('ok')
+    expect(calls()).toBe(3)
+    expect(delays).toEqual([1000, 2000])
+    expect(warnings[0]).toContain('HTTP 404: Not Found')
+  })
+
+  it('gives up on a persistent 404 and throws it', async () => {
+    const {options, delays} = recorder()
+    const errors = Array.from({length: 4}, () => new HttpError(404, 'Not Found'))
+    const {fn, calls} = failingThen(errors)
+    await expect(withRetry(fn, {...options, isRetryable: isTransientOrNotFoundError})).rejects.toBe(errors[3])
+    expect(calls()).toBe(4)
+    expect(delays).toEqual([1000, 2000, 4000])
+  })
+
   it('does not retry a 403 that is not a rate limit', async () => {
     const {options} = recorder()
     const error = new HttpError(403, 'Resource not accessible by integration')
@@ -148,6 +166,17 @@ describe('isTransientError', () => {
     expect(isTransientError(new Error('boom'))).toBe(false)
     expect(isTransientError('boom')).toBe(false)
     expect(isTransientError(undefined)).toBe(false)
+  })
+})
+
+describe('isTransientOrNotFoundError', () => {
+  it('treats a 404 as retryable on top of the transient errors', () => {
+    expect(isTransientOrNotFoundError(new HttpError(404, 'Not Found'))).toBe(true)
+    expect(isTransientOrNotFoundError(new HttpError(503, 'Unavailable'))).toBe(true)
+  })
+
+  it.each([400, 401, 422])('still treats HTTP %i as permanent', status => {
+    expect(isTransientOrNotFoundError(new HttpError(status, 'failure'))).toBe(false)
   })
 })
 

@@ -12,12 +12,14 @@ import {DotnetTrxParser} from './parsers/dotnet-trx/dotnet-trx-parser'
 
 import {getCheckRunContext, resolveChecksToken} from './utils/github-utils'
 import {Icon} from './utils/markdown-utils'
-import {describeError, withRetry} from './utils/retry-utils'
+import {describeError, isTransientOrNotFoundError, withRetry} from './utils/retry-utils'
 import {IncomingWebhook} from '@slack/webhook'
 import fs from 'fs'
 import path from 'path'
 import {cwd} from 'process'
 import {groupByDirectory} from './utils/merge-utils'
+
+const UPDATE_RETRY = {retries: 5, isRetryable: isTransientOrNotFoundError}
 
 async function main(): Promise<void> {
   try {
@@ -201,6 +203,7 @@ class TestReporter {
     results.sort((a, b) => a.path.localeCompare(b.path, 'en'))
 
     core.info(`Creating check run ${name}`)
+    let checkRunId: number | undefined
     try {
       const check = await this.octokit.rest.checks.create({
         head_sha: this.context.sha,
@@ -212,19 +215,22 @@ class TestReporter {
         },
         ...github.context.repo
       })
+      checkRunId = check.data.id
 
       if (files.length === 0) {
-        await withRetry(async () =>
-          this.octokit.rest.checks.update({
-            check_run_id: check.data.id,
-            status: 'completed',
-            output: {
-              title: name,
-              summary: 'No test result files found'
-            },
-            conclusion: 'failure',
-            ...github.context.repo
-          })
+        await withRetry(
+          async () =>
+            this.octokit.rest.checks.update({
+              check_run_id: check.data.id,
+              status: 'completed',
+              output: {
+                title: name,
+                summary: 'No test result files found'
+              },
+              conclusion: 'failure',
+              ...github.context.repo
+            }),
+          UPDATE_RETRY
         )
         return null
       }
@@ -242,31 +248,61 @@ class TestReporter {
       const icon = isFailed ? Icon.fail : Icon.success
 
       core.info(`Updating check run conclusion (${conclusion}) and output`)
-      const resp = await withRetry(async () =>
-        this.octokit.rest.checks.update({
-          check_run_id: check.data.id,
-          conclusion,
-          status: 'completed',
-          output: {
-            title: `${name} ${icon}`,
-            summary,
-            annotations
-          },
-          ...github.context.repo
-        })
+      const resp = await withRetry(
+        async () =>
+          this.octokit.rest.checks.update({
+            check_run_id: check.data.id,
+            conclusion,
+            status: 'completed',
+            output: {
+              title: `${name} ${icon}`,
+              summary,
+              annotations
+            },
+            ...github.context.repo
+          }),
+        UPDATE_RETRY
       )
       core.info(`Check run create response: ${resp.status}`)
       core.info(`Check run URL: ${resp.data.url}`)
       core.info(`Check run HTML: ${resp.data.html_url}`)
       core.info(`Check run details: ${resp.data.details_url}`)
       result.checkUrl = resp.data.html_url
+      checkRunId = undefined
 
       await this.reportToSlack(results, name, resp.data.html_url ?? '')
     } catch (error) {
       core.error(`Could not create check to store the results: ${describeError(error)}`)
+      if (checkRunId !== undefined) {
+        await this.abandonCheckRun(checkRunId, name, results)
+      }
     }
 
     return result
+  }
+
+  // Never leave the check run in progress: that blocks the pull request indefinitely
+  private async abandonCheckRun(checkRunId: number, name: string, results: TestRunResult[]): Promise<void> {
+    const isFailed = results.some(tr => tr.result === 'failed')
+    try {
+      await withRetry(
+        async () =>
+          this.octokit.rest.checks.update({
+            check_run_id: checkRunId,
+            status: 'completed',
+            conclusion: isFailed ? 'failure' : 'neutral',
+            output: {
+              title: name,
+              summary: `The test report could not be published. See the logs of workflow run ${github.context.runId} for details.`
+            },
+            ...github.context.repo
+          }),
+        UPDATE_RETRY
+      )
+      core.warning(`Check run ${name} was completed as ${isFailed ? 'failure' : 'neutral'} without the report`)
+    } catch (error) {
+      core.setFailed(`Check run ${name} is left in progress: ${describeError(error)}`)
+    }
   }
 
   private async reportToSlack(results: TestRunResult[], name: string, checkRunUrl: string): Promise<void> {
