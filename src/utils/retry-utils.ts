@@ -11,6 +11,7 @@ interface HttpErrorLike {
 
 export interface RetryOptions {
   retries?: number
+  isRetryable?: (error: unknown) => boolean
   sleep?: (ms: number) => Promise<void>
   warn?: (message: string) => void
 }
@@ -34,6 +35,11 @@ export function isTransientError(error: unknown): boolean {
   return status >= 500 || status === 429 || (status === 403 && /rate limit/i.test(message ?? ''))
 }
 
+// A check run that was just created can briefly 404 on update because GitHub has not caught up yet
+export function isTransientOrNotFoundError(error: unknown): boolean {
+  return asHttpError(error).status === 404 || isTransientError(error)
+}
+
 function retryDelayMs(error: unknown, attempt: number): number {
   const retryAfter = Number(asHttpError(error).response?.headers?.['retry-after'])
   if (retryAfter > 0) {
@@ -47,12 +53,12 @@ async function sleep(ms: number): Promise<void> {
 }
 
 export async function withRetry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
-  const {retries = 3, sleep: wait = sleep, warn = core.warning} = options
+  const {retries = 3, isRetryable = isTransientError, sleep: wait = sleep, warn = core.warning} = options
   for (let attempt = 0; ; attempt++) {
     try {
       return await fn()
     } catch (error) {
-      if (attempt >= retries || !isTransientError(error)) {
+      if (attempt >= retries || !isRetryable(error)) {
         throw error
       }
       const delay = retryDelayMs(error, attempt)
