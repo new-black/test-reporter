@@ -1,6 +1,6 @@
 {
   "name": "test-reporter",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "private": true,
   "description": "Presents .NET test results (TRX) as a GitHub check run",
   "scripts": {
